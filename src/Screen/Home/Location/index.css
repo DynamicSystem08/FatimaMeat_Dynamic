@@ -1,0 +1,35 @@
+.location_heading
+{
+    text-align: center;
+    padding-top: 100px;
+    margin-bottom: 30px;
+    color: white;
+}
+.location_img img
+{
+    width: 100%;
+    height: auto;
+    padding-bottom: 40px;
+}
+.our_location{
+    justify-content: center;
+    gap: 30px;
+    padding-bottom: 50px;
+}
+.our_location_text
+{
+    background-color: white;
+}
+.location_icon
+{
+    font-size: 30px;
+}
+.location_text
+{
+    padding-top: 12px;
+    font-size: 18px;
+}
+.location_text :hover{
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}

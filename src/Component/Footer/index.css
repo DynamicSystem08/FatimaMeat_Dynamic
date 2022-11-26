@@ -1,0 +1,26 @@
+.footer_bg_img{
+    background: linear-gradient(
+        rgba(58,26,15,0.9),
+        rgba(58,26,15,0.9)
+    ),url("../../Image/footerimg.jpg");
+    height: auto;
+}
+.footer_bg_img p{
+    text-align: center;
+    color: white;
+    font-size: 48px;
+    font-weight: 300;
+    padding-top: 50px;
+}
+.footer_text{
+    justify-content: center;
+    gap: 40px;
+}
+::-webkit-input-placeholder{
+    color: white;
+}
+.head_office p{
+    font-size: 30px;
+    margin-top: -45px;
+    text-align: start;
+}
