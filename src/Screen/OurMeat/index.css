@@ -1,0 +1,101 @@
+.our_meat_bg {
+    background-image: url("../../Image/IMG_1512_Beef_Mince\ -\ Copy.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 55vh;
+}
+
+.our_meat_text {
+
+    text-shadow: 6px 4px black;
+    font-size: 35px;
+    padding: 15px;
+    color: white;
+    margin-top:60px;
+}
+
+.our_Meat_main1 {
+    text-align: center;
+    font-size: 56px;
+    color: rgb(102, 128, 102);
+    margin-bottom: 10px;
+    font-weight: 400;
+
+}
+
+.our_meat_img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our_meat_img1 img {
+    width: 100%;
+    height: auto;
+    /* margin-left: 70px; */
+}
+
+.our_meat_text1 h1 {
+    margin-top: 45px;
+    font-weight: 900;
+}
+
+.Beef_main_imgs {
+    gap: 43px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.Beef_imgs p {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(109, 128, 109);
+    font-weight: 450;
+}
+
+.Beef_imgs img {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+    cursor: pointer;
+
+}
+.Beef_imgs img:hover{
+    transform: scale(0.9);
+}
+
+.mutton_main {
+    margin-top: 50px;
+    gap: 55px;
+    justify-content: center;
+}
+
+.mutton_main_imgs img {
+    width: 100%;
+    height: auto;
+    transition: 1s;
+    cursor: pointer;
+}
+.mutton_main img:hover{
+    transform: scale(0.9);
+
+}
+
+.mutton_main_imgs p {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(109, 128, 109);
+    font-weight: 450;
+}
+@media (max-width:450px)
+{
+    .our_Meat_main1{
+        font-size: 35px;
+    }
+
+    .our_meat_text1 h1{
+        margin-top: 35px;
+    }
+}

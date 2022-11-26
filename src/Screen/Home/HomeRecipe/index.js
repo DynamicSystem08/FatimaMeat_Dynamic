@@ -1,14 +1,15 @@
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
 
 import Recipe1 from "../../../Image/Recipe1.jpg"
 import Recipe2 from "../../../Image/Recipe2.jpg"
 import Recipe3 from "../../../Image/Recipe3.jpg"
 import "./index.css"
 function HomeRecipe() {
-    // const navigate = useNavigate()
+    // const navigated = useNavigate()
     return <div style={{ marginTop: "50px" }}>
         <Container>
             <Grid className='Recipes_Home_Main'>

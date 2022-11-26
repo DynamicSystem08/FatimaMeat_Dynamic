@@ -18,7 +18,7 @@ function NavScrollExample() {
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ height: '80px', marginLeft: "8%", width: "100%", fontSize: "20px"  }}
+            style={{ height: '87px', marginLeft: "8%", width: "100%", fontSize: "20px"  }}
             navbarScroll
           >
             {/* <Nav.Link href="#action1">Home</Nav.Link> */}
@@ -38,13 +38,13 @@ function NavScrollExample() {
             </Nav.Link> */}
              <Grid container>
                             <Grid item lg={1.5}  xs={2}className="text_Header">
-                                Home
+                                HOME
                             </Grid>
                             <Grid item lg={1.5} xs={2} className="text_Header">
-                                Product
+                                OUR MEAT
                             </Grid>
                             <Grid item lg={1.5} xs={2} className="text_Header">
-                                Recipes
+                                RECIPES
                             </Grid>
                             {/* <Grid item lg={0.5}></Grid> */}
                             <Grid item lg={2} xs={2} className="logo_img">
@@ -52,13 +52,13 @@ function NavScrollExample() {
                             </Grid>
                             <Grid item lg={0.6}></Grid>
                             <Grid item lg={1.5} xs={12} className="text_Header" >
-                                Home
+                                FATIMA FOOD
                             </Grid>
                             <Grid item lg={1.5} className="text_Header">
-                                Product
+                                PRODUCT
                             </Grid>
                             <Grid item lg={1.5} className="text_Header">
-                                Recipes
+                                CONTACT US
                             </Grid>
                         </Grid>
            </Nav> 
