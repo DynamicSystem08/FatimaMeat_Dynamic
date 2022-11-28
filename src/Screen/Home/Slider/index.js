@@ -11,97 +11,99 @@ import chicken2 from "../../../Image/chickenimg2.jpg"
 
 
 function Slider() {
-    return <div style={{paddingTop:"290px",backgroundColor:"rgb(58,26,15)"}}> 
-        <Container >
-            <Carousel className="sifer_main1" >
-                <Carousel.Item>
-                    {/* animate__rotateInUpRight */}
-                    <Container>
-                        <Grid container className='silder_main'>
-                            <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
-                                <h1 class="animate__animated animate__jello animate__delay-1s">Hight Quality Meat And Afordable Price</h1>
-                                {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
-                            </Grid>
-                            <Grid item lg={6.6} className="slider_img">
-                                <img src={slideimg1} alt=""/>
-                                {/* <img 
+    return <div>
+        <div className='slider_main1'></div>
+        <div style={{ marginTop: "-90px" }}>
+            <Container >
+                <Carousel className="sifer_main1" >
+                    <Carousel.Item>
+                        {/* animate__rotateInUpRight */}
+                        <Container>
+                            <Grid container className='silder_main'>
+                                <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
+                                    <h1 class="animate__animated animate__jello animate__delay-1s">Hight Quality Meat And Afordable Price</h1>
+                                    {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
+                                </Grid>
+                                <Grid item lg={6.6} className="slider_img">
+                                    <img src={slideimg1} alt="" />
+                                    {/* <img 
                              class="animate__animated animate__lightSpeedInRight animate__delay-0.7s"
                               src={img1} alt="" /> */}
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Container>
-                </Carousel.Item>
-                <Carousel.Item>
-                    {/* animate__rotateInUpRight */}
-                    <Container>
-                        <Grid container className='silder_main'>
-                            <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
-                                <h1 class="animate__animated animate__jello animate__delay-1s">Bilal Quality Meat And Afordable Price</h1>
-                                {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
-                            </Grid>
-                            <Grid item lg={6.6} className="slider_img">
-                            <img src={slideimg2} alt=""/>
-                                {/* <img 
+                        </Container>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        {/* animate__rotateInUpRight */}
+                        <Container>
+                            <Grid container className='silder_main'>
+                                <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
+                                    <h1 class="animate__animated animate__jello animate__delay-1s">Bilal Quality Meat And Afordable Price</h1>
+                                    {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
+                                </Grid>
+                                <Grid item lg={6.6} className="slider_img">
+                                    <img src={slideimg2} alt="" />
+                                    {/* <img 
                              class="animate__animated animate__lightSpeedInRight animate__delay-0.7s"
                               src={img1} alt="" /> */}
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Container>
-                </Carousel.Item>
-                <Carousel.Item>
-                    {/* animate__rotateInUpRight */}
-                    <Container>
-                        <Grid container className='silder_main'>
-                            <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
-                                <h1 class="animate__animated animate__jello animate__delay-1s">Bilal Quality Meat And Afordable Price</h1>
-                                {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
-                            </Grid>
-                            <Grid item lg={6.6} className="slider_img">
-                            <img src={slideimg3} alt=""/>
-                                {/* <img 
+                        </Container>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        {/* animate__rotateInUpRight */}
+                        <Container>
+                            <Grid container className='silder_main'>
+                                <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
+                                    <h1 class="animate__animated animate__jello animate__delay-1s">Bilal Quality Meat And Afordable Price</h1>
+                                    {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
+                                </Grid>
+                                <Grid item lg={6.6} className="slider_img">
+                                    <img src={slideimg3} alt="" />
+                                    {/* <img 
                              class="animate__animated animate__lightSpeedInRight animate__delay-0.7s"
                               src={img1} alt="" /> */}
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Container>
-                </Carousel.Item>
-                <Carousel.Item>
-                    {/* animate__rotateInUpRight */}
-                    <Container>
-                        <Grid container className='silder_main'>
-                            <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
-                                <h1 class="animate__animated animate__jello animate__delay-1s">Bilal Quality Meat And Afordable Price</h1>
-                                {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
-                            </Grid>
-                            <Grid item lg={6.6} className="slider_img">
-                            <img src={chicken1} alt=""/>
-                                {/* <img 
+                        </Container>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        {/* animate__rotateInUpRight */}
+                        <Container>
+                            <Grid container className='silder_main'>
+                                <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
+                                    <h1 class="animate__animated animate__jello animate__delay-1s">Bilal Quality Meat And Afordable Price</h1>
+                                    {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
+                                </Grid>
+                                <Grid item lg={6.6} className="slider_img">
+                                    <img src={chicken1} alt="" />
+                                    {/* <img 
                              class="animate__animated animate__lightSpeedInRight animate__delay-0.7s"
                               src={img1} alt="" /> */}
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Container>
-                </Carousel.Item>
-                <Carousel.Item>
-                    {/* animate__rotateInUpRight */}
-                    <Container>
-                        <Grid container className='silder_main'>
-                            <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
-                                <h1 class="animate__animated animate__jello animate__delay-1s">Bilal Quality Meat And Afordable Price</h1>
-                                {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
-                            </Grid>
-                            <Grid item lg={6.6} className="slider_img">
-                            <img src={chicken1} alt=""/>
-                                {/* <img 
+                        </Container>
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        {/* animate__rotateInUpRight */}
+                        <Container>
+                            <Grid container className='silder_main'>
+                                <Grid item lg={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
+                                    <h1 class="animate__animated animate__jello animate__delay-1s">Bilal Quality Meat And Afordable Price</h1>
+                                    {/* <div class="animate__animated animate__bounce animate__delay-2s">Example</div> */}
+                                </Grid>
+                                <Grid item lg={6.6} className="slider_img">
+                                    <img src={chicken1} alt="" />
+                                    {/* <img 
                              class="animate__animated animate__lightSpeedInRight animate__delay-0.7s"
                               src={img1} alt="" /> */}
+                                </Grid>
                             </Grid>
-                        </Grid>
-                    </Container>
-                </Carousel.Item>
-            </Carousel>
-        </Container>
+                        </Container>
+                    </Carousel.Item>
+                </Carousel>
+            </Container>
+        </div>
     </div>
-
 }
 export default Slider

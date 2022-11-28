@@ -1,0 +1,54 @@
+
+.our_shop_bg {
+    background-image: url("../../Image/fatimaFoodbgimg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    width: 100%;
+}
+
+.our_meat_text {
+
+    text-shadow: 6px 4px black;
+    font-size: 35px;
+    padding: 15px;
+    color: white;
+}
+.our_Meat_main1 {
+    text-align: center;
+    font-size: 56px;
+    color: rgb(102, 128, 102);
+    margin-bottom: 10px;
+    font-weight: 400;
+
+}
+.our_meat_img img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our_meat_img1 img {
+    width: 100%;
+    height: auto;
+    /* margin-left: 70px; */
+}
+.comimg_soon p{
+text-align: center;
+font-size: 26px;
+}
+@media (max-width:450px)
+{
+    .our_Meat_main1{
+        font-size: 35px;
+    }
+
+}
+@media(max-width:450px)
+{
+    .our_meat_img1
+    {
+        padding-top: 20px;
+    }
+}

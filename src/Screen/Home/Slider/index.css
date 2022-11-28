@@ -1,3 +1,10 @@
+.slider_main1{
+  background:linear-gradient(
+    rgb(58,26,15),
+    rgb(90,40,45)
+    ); 
+  height: 300px;
+}
 .silder_main
 {
     justify-content: center;

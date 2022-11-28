@@ -4,12 +4,14 @@ import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-
+import { useNavigate } from 'react-router-dom';
 import logo from "../../Image/logoFatima.png"
 import "./index.css"
 import Grid from '@mui/material/Grid';
 
+
 function NavScrollExample() {
+  const navigate=useNavigate()
   return <div>
     <Navbar bg="white" expand="lg" className="sticky-top">
       <Container fluid  id="header" style={{ position: "fixed", marginTop: "50px", backgroundColor: "rgb(213,188,157)" }} >
@@ -37,29 +39,33 @@ function NavScrollExample() {
               Link
             </Nav.Link> */}
              <Grid container>
-                            <Grid item lg={1.5}  xs={2}className="text_Header">
+                            <Grid item lg={1.5} onClick={()=>navigate("/home")} style={{cursor:"pointer"}} xs={2}className="text_Header">
                                 HOME
                             </Grid>
-                            <Grid item lg={1.5} xs={2} className="text_Header">
+                            <Grid item lg={1.5} xs={2} onClick={()=>navigate("/ourMeat")}  style={{cursor:"pointer"}} className="text_Header">
                                 OUR MEAT
                             </Grid>
-                            <Grid item lg={1.5} xs={2} className="text_Header">
+                            
+                            <Grid item lg={1.5} xs={2} onClick={()=>navigate("/recipes")} style={{cursor:"pointer"}} className="text_Header">
                                 RECIPES
+                              
                             </Grid>
                             {/* <Grid item lg={0.5}></Grid> */}
                             <Grid item lg={2} xs={2} className="logo_img">
                                 <img src={logo} alt="" id="img1" />
                             </Grid>
                             <Grid item lg={0.6}></Grid>
-                            <Grid item lg={1.5} xs={12} className="text_Header" >
+                            <Grid item lg={1.5} xs={12} onClick={()=>navigate("/fatimaFood")} style={{cursor:"pointer"}}  className="text_Header" >
                                 FATIMA FOOD
                             </Grid>
+                           
                             <Grid item lg={1.5} className="text_Header">
                                 PRODUCT
                             </Grid>
-                            <Grid item lg={1.5} className="text_Header">
+                            <Grid item lg={1.5} onClick={()=>navigate("/location")} style={{cursor:"pointer"}} className="text_Header">
                                 CONTACT US
                             </Grid>
+                         
                         </Grid>
            </Nav> 
           {/* <Form className="d-flex">

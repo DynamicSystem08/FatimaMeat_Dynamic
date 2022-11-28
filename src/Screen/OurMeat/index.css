@@ -1,10 +1,10 @@
 .our_meat_bg {
-    background-image: url("../../Image/IMG_1512_Beef_Mince\ -\ Copy.jpg");
+    background-image: url("../../Image/meatBackgroundimg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     width: 100%;
-    height: 55vh;
+    height: 80vh;
 }
 
 .our_meat_text {
@@ -14,6 +14,7 @@
     padding: 15px;
     color: white;
     margin-top:60px;
+    padding-top: 50px;
 }
 
 .our_Meat_main1 {
@@ -21,6 +22,7 @@
     font-size: 56px;
     color: rgb(102, 128, 102);
     margin-bottom: 10px;
+    margin-top: 50px;
     font-weight: 400;
 
 }

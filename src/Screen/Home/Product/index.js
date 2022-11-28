@@ -7,8 +7,18 @@ import Beaf from "../../../Image/cardImg1.png"
 
 import muttonimg1 from "../../../Image/muttonimg1.jpg"
 import muttonimg2 from "../../../Image/muttonimg2.jpg"
-import muttonimg3 from "../../../Image/muttoming3.jpg"
+import muttonimg3 from "../../../Image/muttonimg3.jpg"
 import muttonimg4 from "../../../Image/muttonimg4.jpg"
+import chickenimg1 from "../../../Image/chickenimg1.jpg"
+import chickenimg2 from "../../../Image/chickenimg2.jpg"
+import chickenimg3 from "../../../Image/chickenimg3.jpg"
+import chickenimg4 from "../../../Image/chickenimg4.jpg"
+import beefimg1 from "../../../Image/beefimg1.jpeg"
+import beefimg2 from "../../../Image/beefimg2.jpg"
+import beefimg3 from "../../../Image/beefimg3.jpg"
+import beefimg4 from "../../../Image/beefimg4.jpg"
+
+
 import "./index.css"
 function Product() {
     return <div>
@@ -25,7 +35,7 @@ function Product() {
         <Container style={{ marginTop: "100px" }}>
             <Grid container>
                 <Grid item lg={12} style={{ textAlign: "center" }}>
-                    <h1>Fatima Meat PRODUCT</h1>
+                    <h1>FATIMA MEAT PRODUCT</h1>
                 </Grid>
             </Grid>
 
@@ -43,7 +53,7 @@ function Product() {
                     <div class="container_Recipes">
                         <img src={muttonimg1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Reshmi Handi</p>
+                            <p>Mutton Whole Carcass </p>
                         </div>
                     </div>
                 </Grid>
@@ -51,7 +61,7 @@ function Product() {
                     <div class="container_Recipes">
                         <img src={muttonimg2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Mirchi Qeema</p>
+                            <p>Mutton Leg</p>
                         </div>
                     </div>
                 </Grid>
@@ -59,7 +69,7 @@ function Product() {
                     <div class="container_Recipes">
                         <img src={muttonimg3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Dum Qeema</p>
+                            <p>Mutton Mince</p>
                         </div>
                     </div>
                 </Grid>
@@ -67,7 +77,7 @@ function Product() {
                     <div class="container_Recipes">
                         <img src={muttonimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Bihari Boti</p>
+                            <p>Mutton Shoulder</p>
                         </div>
                     </div>
                 </Grid>
@@ -86,33 +96,33 @@ function Product() {
             <Grid container className='Conatainer_Recipes'>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg1} alt="Nature" style={{ width: "100%" }} />
+                        <img src={chickenimg1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Reshmi Handi</p>
+                            <p>Chicken Whole Neck</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg2} alt="Nature" style={{ width: "100%" }} />
+                        <img src={chickenimg2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Mirchi Qeema</p>
+                            <p>Chicken DrumStick</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg3} alt="Nature" style={{ width: "100%" }} />
+                        <img src={chickenimg3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Dum Qeema</p>
+                            <p>Chicken Wings</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg4} alt="Nature" style={{ width: "100%" }} />
+                        <img src={chickenimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Bihari Boti</p>
+                            <p>Chicken Breast BoneLess</p>
                         </div>
                     </div>
                 </Grid>
@@ -130,33 +140,33 @@ function Product() {
             <Grid container className='Conatainer_Recipes'>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg1} alt="Nature" style={{ width: "100%" }} />
+                        <img src={beefimg2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Reshmi Handi</p>
+                            <p>Beef Bone-in</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg2} alt="Nature" style={{ width: "100%" }} />
+                        <img src={beefimg1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Mirchi Qeema</p>
+                            <p>Beef Bone-Less</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg3} alt="Nature" style={{ width: "100%" }} />
+                        <img src={beefimg3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Dum Qeema</p>
+                            <p>Beef Mince</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg4} alt="Nature" style={{ width: "100%" }} />
+                        <img src={beefimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
-                            <p>Bihari Boti</p>
+                            <p>Beef Trotters</p>
                         </div>
                     </div>
                 </Grid>

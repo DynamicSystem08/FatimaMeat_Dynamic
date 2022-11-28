@@ -9,7 +9,7 @@ import Recipe2 from "../../../Image/Recipe2.jpg"
 import Recipe3 from "../../../Image/Recipe3.jpg"
 import "./index.css"
 function HomeRecipe() {
-    // const navigated = useNavigate()
+    const navigate= useNavigate()
     return <div style={{ marginTop: "50px" }}>
         <Container>
             <Grid className='Recipes_Home_Main'>
@@ -39,7 +39,7 @@ function HomeRecipe() {
                         </div>
                     </Grid>
                     <Button
-                    //  onClick={() => navigate("/recipes")}
+                     onClick={() => navigate("/recipes")}
                       style={{ backgroundColor: "rgba(213, 188,157)", width: "30%", padding: "10px", color: "white",marginTop:"20px",marginBottom:"60px",height:"50px" }}>View More Recipes</Button>
                 </Grid>
             </Grid>

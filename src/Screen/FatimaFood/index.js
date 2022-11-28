@@ -1,0 +1,71 @@
+import Grid from '@mui/material/Grid'
+import Container from '@mui/material/Container';
+import dividerDark from "../../Image/divider_dark.png"
+import { useEffect } from 'react';
+import MetaData from '../../Component/MetaData';
+import logo from "../../Image/logoFatima.png"
+import "./index.css"
+
+function ZabeehaShop() {
+  // useEffect(() => {
+  //   window.scroll(0, 0)
+  // })
+  return <div style={{ marginTop: "10px" }}>
+    <MetaData title="Fatima Meat | Fatima Foods" />
+    <Grid container>
+      <Grid item lg={12} className="our_shop_bg">
+        <h1 className='our_meat_text'>Our Shop</h1>
+      </Grid>
+      <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
+        <p className="our_Meat_main1">Locate Fatima Foods Shops</p>
+        <img src={dividerDark} alt="" style={{ width: "10%" }} />
+      </Grid>
+    </Grid>
+    <Container>
+      <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "30px" }}>
+        <Grid item lg={1.2} md={1.3} sm={2} xs={2.5} className="our_meat_img1">
+          <img src={logo} alt="" />
+        </Grid>
+        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+          <h1 style={{ marginTop: "60px" }}>Rawalpindi</h1>
+        </Grid>
+      </Grid>
+      <div style={{ borderBottom: "3px solid rgb(225,195,157)", paddingTop: "2px" }} ></div>
+      <Grid item lg={12} md={12} sm={12} xs={12} className="comimg_soon">
+        <p><i>COMING SOON</i></p>
+      </Grid>
+
+    </Container>
+
+    <Container>
+      <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "30px" }}>
+        <Grid item lg={1.2} md={1.3} sm={2} xs={2.5} className="our_meat_img1">
+          <img src={logo} alt="" />
+        </Grid>
+        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+          <h1 style={{ marginTop: "60px" }}>Lahore</h1>
+        </Grid>
+      </Grid>
+      <div style={{ borderBottom: "3px solid rgb(225,195,157)", paddingTop: "2px" }} ></div>
+      <Grid item lg={12} md={12} sm={12} xs={12} className="comimg_soon">
+        <p><i>COMING SOON</i></p>
+      </Grid>
+    </Container>
+
+    <Container>
+      <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "30px" }}>
+        <Grid item lg={1.2} md={1.3} sm={2} xs={2.5} className="our_meat_img1">
+          <img src={logo} alt="" />
+        </Grid>
+        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+          <h1 style={{ marginTop: "60px" }}>Karachi</h1>
+        </Grid>
+      </Grid>
+      <div style={{ borderBottom: "3px solid rgb(225,195,157)", paddingTop: "2px" }} ></div>
+      <Grid item lg={12} md={12} sm={12} xs={12} className="comimg_soon">
+        <p style={{paddingBottom:"50px"}}><i>COMING SOON</i></p>
+      </Grid>
+    </Container>
+  </div>
+}
+export default ZabeehaShop

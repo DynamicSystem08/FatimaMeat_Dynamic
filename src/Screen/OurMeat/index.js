@@ -16,15 +16,15 @@ import MuttonChops from "../../Image/MuttonChops.jpg"
 import MuttonLeg from "../../Image/MuttonLeg.jpg"
 import MuttonMince from "../../Image/MuttonMix.jpg"
 import MuttonMice from "../../Image/MuttonMince.jpg"
-// import MetaData from "../../Component/MetaData"
+import MetaData from "../../Component/MetaData"
 import { useEffect } from 'react';
 import "./index.css"
 function OurMeat() {
   useEffect(() => {
     window.scroll(0, 0)
   })
-  return <div style={{ marginTop: "-45px" }} >
-    {/* <MetaData title="Fatima Meat | Our Meat" /> */}
+  return <div style={{ marginTop: "-10px" }} >
+    <MetaData title="Fatima Meat | Our Meat" />
     <Grid container>
       <Grid item lg={12} className="our_meat_bg">
         <h1 className='our_meat_text'>Our Meat</h1>
