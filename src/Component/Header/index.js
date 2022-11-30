@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useNavigate } from 'react-router-dom';
-import logo from "../../Image/logoFatima.png"
+import logo from "../../Image/logo5.png"
 import "./index.css"
 import Grid from '@mui/material/Grid';
 
@@ -59,7 +59,7 @@ function NavScrollExample() {
                                 FATIMA FOOD
                             </Grid>
                            
-                            <Grid item lg={1.5} className="text_Header">
+                            <Grid item lg={1.5} onClick={()=>navigate("/product")} style={{cursor:"pointer"}} className="text_Header">
                                 PRODUCT
                             </Grid>
                             <Grid item lg={1.5} onClick={()=>navigate("/location")} style={{cursor:"pointer"}} className="text_Header">

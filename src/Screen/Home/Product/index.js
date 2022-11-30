@@ -17,22 +17,20 @@ import beefimg1 from "../../../Image/beefimg1.jpeg"
 import beefimg2 from "../../../Image/beefimg2.jpg"
 import beefimg3 from "../../../Image/beefimg3.jpg"
 import beefimg4 from "../../../Image/beefimg4.jpg"
+import rabbitimg1 from "../../../Image/rabbitimg1.jpg"
+import rabbitimg2 from "../../../Image/rabbitimg2.jpg"
+import rabbitimg3 from "../../../Image/rabbitimg3.jpg"
+import rabbitimg4 from "../../../Image/rabbitimg4.jpg"
+
 
 
 import "./index.css"
 function Product() {
-    return <div>
-        <Container>
-            <Grid container style={{ textAlign: "center", marginTop: "50px" }}>
-                <Grid item lg={12} className="about_text">
-                    <h1>About Fatima Meat</h1>
-                    <p>Launched in February 2014, Khaas Meat is a special chain of retail stores which provides its customers with fresh, healthy and quality meat in the most affordable rates. Our primary objective is to provide customers with premium quality meat processed in a hygienic environment. Also, we offer customers with a wide range of products to choose from which includes beef, mutton and chicken. With Khaas Meat, you name it and we have it!</p>
-                </Grid>
-            </Grid>
-        </Container>
+    return <div style={{backgroundColor:"white"}}>
+ 
 
         {/* Meat Product */}
-        <Container style={{ marginTop: "100px" }}>
+        <Container style={{paddingTop: "130px",paddingBottom:"50px" }}>
             <Grid container>
                 <Grid item lg={12} style={{ textAlign: "center" }}>
                     <h1>FATIMA MEAT PRODUCT</h1>
@@ -82,9 +80,9 @@ function Product() {
                     </div>
                 </Grid>
             </Grid>
-{/* chicken */}
+            {/* chicken */}
 
-<Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+            <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={chicken} alt="" />
                 </Grid>
@@ -127,8 +125,8 @@ function Product() {
                     </div>
                 </Grid>
             </Grid>
-{/* Beaf */}
-<Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+            {/* Beaf */}
+            <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={Beaf} alt="" />
                 </Grid>
@@ -167,6 +165,51 @@ function Product() {
                         <img src={beefimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
                             <p>Beef Trotters</p>
+                        </div>
+                    </div>
+                </Grid>
+            </Grid>
+
+            {/* Rabit */}
+            <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+                <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
+                    <img src={Beaf} alt="" />
+                </Grid>
+                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+                    <h1>Rabbit</h1>
+                </Grid>
+            </Grid>
+
+            <Grid container className='Conatainer_Recipes'>
+                <Grid item lg={2.7}>
+                    <div class="container_Recipes">
+                        <img src={rabbitimg1} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes">
+                            <p>Rabbit Whole Carcass</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7}>
+                    <div class="container_Recipes">
+                        <img src={rabbitimg2} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes">
+                            <p>Rabbit Breast Boneless</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7}>
+                    <div class="container_Recipes">
+                        <img src={rabbitimg3} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes">
+                            <p>Rabbit Wings</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7}>
+                    <div class="container_Recipes">
+                        <img src={rabbitimg4} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes">
+                            <p>Rabbit Bone-Less</p>
                         </div>
                     </div>
                 </Grid>

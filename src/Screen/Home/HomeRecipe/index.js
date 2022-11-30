@@ -10,7 +10,7 @@ import Recipe3 from "../../../Image/Recipe3.jpg"
 import "./index.css"
 function HomeRecipe() {
     const navigate= useNavigate()
-    return <div style={{ marginTop: "50px" }}>
+    return <div style={{paddingTop: "50px",backgroundColor:"white" }}>
         <Container>
             <Grid className='Recipes_Home_Main'>
                 <Grid container className='Recipes_Home_Container'>

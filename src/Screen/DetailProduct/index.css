@@ -1,0 +1,86 @@
+.product_detail_slider img{
+    width: 100%;
+    height: auto;
+}
+.product_detail_slider{
+    padding-top: 80px;
+}
+.product_detail_main
+{
+    justify-content: center;
+    gap:50px
+}
+.product_detail_text h1{
+    font-weight: 700;
+}
+.product_detail_text p{
+    margin-top: 40px;
+    font-size: 50px;
+}
+
+select {
+    /* margin: 40px; */
+    /* background: rgba(0, 0, 0, 0.3); */
+    color:rgb(58,26,15);
+    /* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); */
+  }
+.detail_product_input ::-webkit-input-placeholder
+{
+    color: black;
+    /* padding-left: 30px; */
+}
+.product_descripton_btn
+{
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+.Rabbit_meat_ul{
+    padding: 30px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+
+
+
+#app { height: 100% }
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
+
+
+
+

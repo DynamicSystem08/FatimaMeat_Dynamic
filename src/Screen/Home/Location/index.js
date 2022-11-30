@@ -24,7 +24,7 @@ function Location() {
     const gurJawalaClose = () => setGurjawal(false)
 
 
-    return <div style={{ marginTop: "50px", backgroundColor: "rgb(58,26,15)" }}>
+    return <div style={{ backgroundColor: "rgb(58,26,15)" }}>
         <MetaData title="Fatima Meat | Location" />
 
         <h1 className="location_heading">FATIMA MEAT LOCATION</h1>

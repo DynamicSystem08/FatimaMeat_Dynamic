@@ -6,6 +6,8 @@ import Recipes from '../Recipes';
 import OurMeat from "../OurMeat"
 import Location from '../Home/Location';
 import FatimaFood from '../FatimaFood';
+import ProductDetail from '../DetailProduct';
+import Product from '../Home/Product';
 import Footer from '../../Component/Footer';
 function Routering()
 {
@@ -15,11 +17,14 @@ function Routering()
             <Header />
         </div>
     <Routes>
+    {/* <Route path="/" element={<ProductDetail/>}/> */}
+    
         <Route path="/" element={<HomeComponent/>}/>
         <Route path="/home" element={<HomeComponent/>}/>
         <Route path="/recipes" element={<Recipes/>}/>
         <Route path="/ourMeat" element={<OurMeat/>}/>
         <Route path="/location" element={<Location/>}/>
+        <Route path="/product" element={<Product/>}/>
         <Route path="/fatimaFood" element={<FatimaFood/>}/>
     </Routes>
     <Footer/>

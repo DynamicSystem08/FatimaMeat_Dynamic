@@ -27,7 +27,7 @@ function HeaderTop() {
                             <FacebookIcon style={{color:"rgba(213,188,157,0.9)",paddingTop:"3px",backgroundColor:"white",borderRadius:"50%"}} />
                         </Grid>
                         <Grid item lg={10} style={{paddingTop:"3px",paddingBottom:"5px",color:"white"}}>
-                            <text>Change To Urdu</text>
+                            <text>Fllow Us</text>
                         </Grid>
                     </Grid>
                 </Grid>
