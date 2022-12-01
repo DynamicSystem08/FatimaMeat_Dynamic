@@ -32,19 +32,21 @@ import { useNavigate } from 'react-router-dom';
 
 import "./index.css"
 function Product() {
-    const navigate=useNavigate()
-    return <div style={{backgroundColor:"white"}}>
- 
+    const navigate = useNavigate()
+    return <div style={{ backgroundColor: "white" }}>
+
 
         {/* Meat Product */}
-        <Container style={{paddingTop: "130px",paddingBottom:"50px" }}>
+        <Container style={{ paddingTop: "130px", paddingBottom: "50px" }}>
             <Grid container>
                 <Grid item lg={12} style={{ textAlign: "center" }}>
                     <h1>FATIMA MEAT PRODUCT</h1>
                 </Grid>
             </Grid>
 
-            <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+            <Grid
+                onClick={() => navigate(`/product/mutton-meat`)}
+                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={Mutton} alt="" />
                 </Grid>
@@ -56,7 +58,9 @@ function Product() {
             <Grid container className='Conatainer_Recipes'>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg1} alt="Nature" style={{ width: "100%",cursor:"pointer" }} onClick={()=>navigate("/productdetail")} />
+                        <img src={muttonimg1} alt="Nature" style={{ width: "100%", cursor: "pointer" }}
+                        // onClick={() => navigate("/productdetail")} 
+                        />
                         <div class="text-block_Recipes">
                             <p>Mutton Whole Carcass </p>
                         </div>
@@ -89,7 +93,9 @@ function Product() {
             </Grid>
             {/* chicken */}
 
-            <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+            <Grid
+                onClick={() => navigate(`/product/chicken-meat`)}
+                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={chicken} alt="" />
                 </Grid>
@@ -133,7 +139,9 @@ function Product() {
                 </Grid>
             </Grid>
             {/* Beaf */}
-            <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+            <Grid
+                onClick={() => navigate(`/product/beef-meat`)}
+                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={Beaf} alt="" />
                 </Grid>
@@ -178,7 +186,9 @@ function Product() {
             </Grid>
 
             {/* Rabit */}
-            <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+            <Grid
+                onClick={() => navigate(`/product/rabbit-meat`)}
+                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={rabbitIcom} alt="" />
                 </Grid>
@@ -222,10 +232,10 @@ function Product() {
                 </Grid>
             </Grid>
 
-
-
-                        {/* camel*/}
-                        <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+            {/* camel*/}
+            <Grid
+                onClick={() => navigate(`/product/camel-meat`)}
+                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={Beaf} alt="" />
                 </Grid>

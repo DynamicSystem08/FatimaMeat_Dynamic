@@ -75,7 +75,7 @@ function Recipes() {
         <MetaData title="Fatima Meat | Recipes" />
         <Grid container>
             <Grid item lg={12} className="our_Recipe_bg">
-                <h1 className='our_meat_text' style={{padding:"100px"}}>Our Recipes</h1>
+                <h1 className='our_meat_text' style={{ padding: "100px" }}>Our Recipes</h1>
             </Grid>
             <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
                 <p className="our_Meat_main1" style={{ marginBottom: "50px", textAlign: "center", marginTop: "50px", fontSize: "50px" }}>Our Recipes</p>
@@ -137,7 +137,7 @@ function Recipes() {
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={fourOpen} src={ourRecipes3} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={fourOpen} src={ourRecipes3} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={four}
                             onClose={fourClose}
@@ -154,15 +154,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes3} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes3} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Dum Qeema</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={fourOpen} src={ourRecipes4} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={fourOpen} src={ourRecipes4} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={four}
                             onClose={fourClose}
@@ -179,8 +179,8 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes4} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes4} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Bihari Boti</p>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ function Recipes() {
 
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={sixOpen} src={ourRecipes5} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={sixOpen} src={ourRecipes5} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={six}
                             onClose={sixClose}
@@ -205,15 +205,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes5} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes5} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Pishawari Chapli Kabab</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={sixOpen} src={ourRecipes6} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={sixOpen} src={ourRecipes6} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={six}
                             onClose={sixClose}
@@ -230,15 +230,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes6} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes6} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Nawabi Kabab</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={eightOpen} src={ourRecipes7} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={eightOpen} src={ourRecipes7} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={eight}
                             onClose={eightClose}
@@ -255,15 +255,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes7} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes7} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Mutton Kunna</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={eightOpen} src={ourRecipes8} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={eightOpen} src={ourRecipes8} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={eight}
                             onClose={eightClose}
@@ -280,8 +280,8 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes8} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes8} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Hyderabadi Mutton</p>
                         </div>
                     </div>
@@ -289,7 +289,7 @@ function Recipes() {
 
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={tenOpen} src={ourRecipes9} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={tenOpen} src={ourRecipes9} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={ten}
                             onClose={tenClose}
@@ -306,15 +306,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes9} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes9} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Chicken Shawrama</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={tenOpen} src={ourRecipes10} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={tenOpen} src={ourRecipes10} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={ten}
                             onClose={tenClose}
@@ -331,15 +331,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes10} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes10} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Chicken Paratha</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={therteenOpen} src={ourRecipes11} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={therteenOpen} src={ourRecipes11} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={therteen}
                             onClose={therteenClose}
@@ -356,15 +356,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes11} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes11} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Chicken Donuts</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={therteenOpen} src={ourRecipes12} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={therteenOpen} src={ourRecipes12} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={therteen}
                             onClose={therteenClose}
@@ -381,8 +381,8 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes12} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes12} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Chicken Lasanga</p>
                         </div>
                     </div>
@@ -390,7 +390,7 @@ function Recipes() {
 
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={fourteenOpen} src={ourRecipes13} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={fourteenOpen} src={ourRecipes13} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={fourteen}
                             onClose={fourteenClose}
@@ -407,15 +407,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes13} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes13} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Chicken Jalfrezi</p>
-                        </div> 
-                     </div>
+                        </div>
+                    </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={fourteenOpen} src={ourRecipes14} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={fourteenOpen} src={ourRecipes14} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={fourteen}
                             onClose={fourteenClose}
@@ -432,15 +432,15 @@ function Recipes() {
                             </Box>
                         </Modal>
 
-                    {/* <img src={ourRecipes14} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes14} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Chicken Manchurian</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                    <img onClick={sixteenOpen} src={ourRecipes15} alt="" style={{width:"100%",cursor:"pointer"}} />
+                        <img onClick={sixteenOpen} src={ourRecipes15} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={sixteen}
                             onClose={sixteenClose}
@@ -458,15 +458,15 @@ function Recipes() {
                         </Modal>
 
 
-                    {/* <img src={ourRecipes15} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        {/* <img src={ourRecipes15} alt="Nature" style={{ width: "100%" }} /> */}
+                        <div class="text-block_Recipes">
                             <p>Beef Stake</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7}>
-                     <div class="container_Recipes">
-                     <img onClick={sixteenOpen} src={ourRecipes16} alt="" style={{width:"100%",cursor:"pointer"}} />
+                    <div class="container_Recipes">
+                        <img onClick={sixteenOpen} src={ourRecipes16} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={sixteen}
                             onClose={sixteenClose}
@@ -485,7 +485,7 @@ function Recipes() {
 
 
                         {/* <img src={ourRecipes16} alt="Nature" style={{ width: "100%" }} /> */}
-                    <div class="text-block_Recipes">
+                        <div class="text-block_Recipes">
                             <p>Beef Pasanday</p>
                         </div>
                     </div>
