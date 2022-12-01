@@ -8,12 +8,13 @@
     width: 100%;
 }
 
-.our_meat_text {
+.our_meat_text1 {
 
-    text-shadow: 6px 4px black;
+    text-shadow: 2px 2px white;
     font-size: 35px;
     padding: 15px;
     color: white;
+    font-weight: 900;
 }
 .our_Meat_main1 {
     text-align: center;

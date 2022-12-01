@@ -75,7 +75,7 @@ function Recipes() {
         <MetaData title="Fatima Meat | Recipes" />
         <Grid container>
             <Grid item lg={12} className="our_Recipe_bg">
-                <h1 className='our_meat_text'>Our Recipes</h1>
+                <h1 className='our_meat_text' style={{padding:"100px"}}>Our Recipes</h1>
             </Grid>
             <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
                 <p className="our_Meat_main1" style={{ marginBottom: "50px", textAlign: "center", marginTop: "50px", fontSize: "50px" }}>Our Recipes</p>

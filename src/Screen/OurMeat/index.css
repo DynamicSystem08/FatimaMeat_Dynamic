@@ -1,5 +1,5 @@
 .our_meat_bg {
-    background-image: url("../../Image/meatBackgroundimg.jpg");
+    background-image: url("../../Image/ourMeat1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -14,7 +14,7 @@
     padding: 15px;
     color: white;
     margin-top:60px;
-    padding-top: 50px;
+    padding-top:50px;
 }
 
 .our_Meat_main1 {

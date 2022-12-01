@@ -17,15 +17,22 @@ import beefimg1 from "../../../Image/beefimg1.jpeg"
 import beefimg2 from "../../../Image/beefimg2.jpg"
 import beefimg3 from "../../../Image/beefimg3.jpg"
 import beefimg4 from "../../../Image/beefimg4.jpg"
+import rabbitIcom from "../../../Image/rabbiticon.png"
 import rabbitimg1 from "../../../Image/rabbitimg1.jpg"
 import rabbitimg2 from "../../../Image/rabbitimg2.jpg"
 import rabbitimg3 from "../../../Image/rabbitimg3.jpg"
 import rabbitimg4 from "../../../Image/rabbitimg4.jpg"
+import camelimg1 from "../../../Image/camelimg1.jpg"
+import camelimg2 from "../../../Image/camelimg2.png"
+import camelimg3 from "../../../Image/camelimg3.jpg"
+import camelimg4 from "../../../Image/camelimg4.jpg"
 
+import { useNavigate } from 'react-router-dom';
 
 
 import "./index.css"
 function Product() {
+    const navigate=useNavigate()
     return <div style={{backgroundColor:"white"}}>
  
 
@@ -49,7 +56,7 @@ function Product() {
             <Grid container className='Conatainer_Recipes'>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img src={muttonimg1} alt="Nature" style={{ width: "100%" }} />
+                        <img src={muttonimg1} alt="Nature" style={{ width: "100%",cursor:"pointer" }} onClick={()=>navigate("/productdetail")} />
                         <div class="text-block_Recipes">
                             <p>Mutton Whole Carcass </p>
                         </div>
@@ -173,7 +180,7 @@ function Product() {
             {/* Rabit */}
             <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
-                    <img src={Beaf} alt="" />
+                    <img src={rabbitIcom} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
                     <h1>Rabbit</h1>
@@ -210,6 +217,53 @@ function Product() {
                         <img src={rabbitimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
                             <p>Rabbit Bone-Less</p>
+                        </div>
+                    </div>
+                </Grid>
+            </Grid>
+
+
+
+                        {/* camel*/}
+                        <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+                <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
+                    <img src={Beaf} alt="" />
+                </Grid>
+                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+                    <h1>Camel</h1>
+                </Grid>
+            </Grid>
+
+            <Grid container className='Conatainer_Recipes'>
+                <Grid item lg={2.7}>
+                    <div class="container_Recipes">
+                        <img src={camelimg1} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes">
+                            <p>Camel Whole Carcass</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7}>
+                    <div class="container_Recipes">
+                        <img src={camelimg2} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes">
+                            <p>Camel Breast Boneless</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7}>
+                    <div class="container_Recipes">
+                        <img src={camelimg3} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes">
+                            <p>Camel Wings</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7}>
+                    <div class="container_Recipes">
+                        <img src={camelimg4} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes">
+                            <p>Camel Bone-Less</p>
                         </div>
                     </div>
                 </Grid>

@@ -23,11 +23,11 @@ function OurMeat() {
   useEffect(() => {
     window.scroll(0, 0)
   })
-  return <div style={{ marginTop: "-10px" }} >
+  return <div style={{ marginTop: "-10px" ,backgroundColor:"white"}} >
     <MetaData title="Fatima Meat | Our Meat" />
     <Grid container>
       <Grid item lg={12} className="our_meat_bg">
-        <h1 className='our_meat_text'>Our Meat</h1>
+        <h1 className='our_meat_text' style={{padding:"100px"}}>Our Meat</h1>
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
         <p className="our_Meat_main1">‘Meat’ Fatima</p>

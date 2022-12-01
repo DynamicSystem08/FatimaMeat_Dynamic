@@ -14,7 +14,7 @@ function ZabeehaShop() {
     <MetaData title="Fatima Meat | Fatima Foods" />
     <Grid container>
       <Grid item lg={12} className="our_shop_bg">
-        <h1 className='our_meat_text'>Our Shop</h1>
+        <h1 className='our_meat_text1' style={{padding:"100px",color:"black"}}>Our Shop</h1>
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
         <p className="our_Meat_main1">Locate Fatima Foods Shops</p>

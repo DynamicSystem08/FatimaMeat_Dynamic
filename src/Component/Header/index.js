@@ -39,14 +39,14 @@ function NavScrollExample() {
               Link
             </Nav.Link> */}
              <Grid container>
-                            <Grid item lg={1.5} onClick={()=>navigate("/home")} style={{cursor:"pointer"}} xs={2}className="text_Header">
+                            <Grid item lg={1} onClick={()=>navigate("/home")} style={{cursor:"pointer"}} xs={2}className="text_Header">
                                 HOME
                             </Grid>
-                            <Grid item lg={1.5} xs={2} onClick={()=>navigate("/ourMeat")}  style={{cursor:"pointer"}} className="text_Header">
+                            <Grid item lg={1.4} xs={2} onClick={()=>navigate("/ourMeat")}  style={{cursor:"pointer"}} className="text_Header">
                                 OUR MEAT
                             </Grid>
                             
-                            <Grid item lg={1.5} xs={2} onClick={()=>navigate("/recipes")} style={{cursor:"pointer"}} className="text_Header">
+                            <Grid item lg={2} xs={2} onClick={()=>navigate("/recipes")} style={{cursor:"pointer"}} className="text_Header">
                                 RECIPES
                               
                             </Grid>
@@ -55,15 +55,15 @@ function NavScrollExample() {
                                 <img src={logo} alt="" id="img1" />
                             </Grid>
                             <Grid item lg={0.6}></Grid>
-                            <Grid item lg={1.5} xs={12} onClick={()=>navigate("/fatimaFood")} style={{cursor:"pointer"}}  className="text_Header" >
+                            <Grid item lg={1.6} xs={12} onClick={()=>navigate("/fatimaFood")} style={{cursor:"pointer"}}  className="text_Header" >
                                 FATIMA FOOD
                             </Grid>
                            
-                            <Grid item lg={1.5} onClick={()=>navigate("/product")} style={{cursor:"pointer"}} className="text_Header">
+                            <Grid item lg={1.3} onClick={()=>navigate("/product")} style={{cursor:"pointer"}} className="text_Header">
                                 PRODUCT
                             </Grid>
-                            <Grid item lg={1.5} onClick={()=>navigate("/location")} style={{cursor:"pointer"}} className="text_Header">
-                                CONTACT US
+                            <Grid item lg={2} onClick={()=>navigate("/card")} style={{cursor:"pointer"}} className="text_Header">
+                                CART
                             </Grid>
                          
                         </Grid>
