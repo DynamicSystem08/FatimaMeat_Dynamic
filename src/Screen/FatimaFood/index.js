@@ -10,11 +10,11 @@ function ZabeehaShop() {
   // useEffect(() => {
   //   window.scroll(0, 0)
   // })
-  return <div style={{ marginTop: "10px" }}>
+  return <div style={{ marginTop: "10px",backgroundColor:"white",paddingBottom:"20px" }}>
     <MetaData title="Fatima Meat | Fatima Foods" />
     <Grid container>
       <Grid item lg={12} className="our_shop_bg">
-        <h1 className='our_meat_text1' style={{padding:"100px",color:"black"}}>Our Shop</h1>
+        <h1 className='our_meat_text1' style={{padding:"100px",color:"white"}}>Our Shop</h1>
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
         <p className="our_Meat_main1">Locate Fatima Foods Shops</p>
@@ -26,7 +26,7 @@ function ZabeehaShop() {
         <Grid item lg={1.2} md={1.3} sm={2} xs={2.5} className="our_meat_img1">
           <img src={logo} alt="" />
         </Grid>
-        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text3">
           <h1 style={{ marginTop: "60px" }}>Rawalpindi</h1>
         </Grid>
       </Grid>
@@ -42,7 +42,7 @@ function ZabeehaShop() {
         <Grid item lg={1.2} md={1.3} sm={2} xs={2.5} className="our_meat_img1">
           <img src={logo} alt="" />
         </Grid>
-        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text3">
           <h1 style={{ marginTop: "60px" }}>Lahore</h1>
         </Grid>
       </Grid>
@@ -57,7 +57,7 @@ function ZabeehaShop() {
         <Grid item lg={1.2} md={1.3} sm={2} xs={2.5} className="our_meat_img1">
           <img src={logo} alt="" />
         </Grid>
-        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text3">
           <h1 style={{ marginTop: "60px" }}>Karachi</h1>
         </Grid>
       </Grid>

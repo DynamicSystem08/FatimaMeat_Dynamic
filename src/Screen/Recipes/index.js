@@ -46,24 +46,48 @@ function Recipes() {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    const [one,setOne]=useState(false);
+    const oneOpen=()=>setOne(true);
+    const oneClose=()=>setOne(false)
+    const [two,setTwo]=useState(false);
+    const twoOpen=()=>setTwo(true);
+    const twoClose=()=>setTwo(false)
     const [four, setFour] = useState(false)
     const fourOpen = () => setFour(true)
     const fourClose = () => setFour(false)
+    const [five, setFive] = useState(false)
+    const fiveOpen = () => setFive(true)
+    const fiveClose = () => setFive(false)
     const [six, setSix] = useState(false)
     const sixOpen = () => setSix(true)
     const sixClose = () => setSix(false)
+    const [seven, setSeven] = useState(false)
+    const sevenOpen = () => setSeven(true)
+    const sevenClose = () => setSeven(false)
     const [eight, setEight] = useState(false)
     const eightOpen = () => setEight(true)
     const eightClose = () => setEight(false)
+    const [nine, setNine] = useState(false)
+    const nineOpen = () => setNine(true)
+    const nineClose = () => setNine(false)
     const [ten, setTen] = useState(false)
     const tenOpen = () => setTen(true)
     const tenClose = () => setTen(false)
+    const [tens, setTens] = useState(false)
+    const tensOpen = () => setTens(true)
+    const tensClose = () => setTens(false)
     const [therteen, setTherteen] = useState(false)
     const therteenOpen = () => setTherteen(true)
     const therteenClose = () => setTherteen(false)
     const [fourteen, setFourteen] = useState(false)
     const fourteenOpen = () => setFourteen(true)
     const fourteenClose = () => setFourteen(false)
+    const [fiveteen, setFiveteen] = useState(false)
+    const fiveteenOpen = () => setFiveteen(true)
+    const fiveteenClose = () => setFiveteen(false)
+    const [seventeen, setSeventeen] = useState(false)
+    const seventeenOpen = () => setSeventeen(true)
+    const seventeenClose = () => setSeventeen(false)
     const [sixteen, setSixteen] = useState(false)
     const sixteenOpen = () => setSixteen(true)
     const sixteenClose = () => setSixteen(false)
@@ -71,7 +95,7 @@ function Recipes() {
     // useEffect(() => {
     //     window.scroll(0, 0)
     // })
-    return <div style={{ marginTop: "-10px" }} className="Recipes_bg">
+    return <div style={{ marginTop: "-10px",backgroundColor:"white",paddingBottom:"30px" }} className="Recipes_bg">
         <MetaData title="Fatima Meat | Recipes" />
         <Grid container>
             <Grid item lg={12} className="our_Recipe_bg">
@@ -112,10 +136,10 @@ function Recipes() {
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img onClick={handleOpen} src={ourRecipes2} alt="" style={{ width: "100%", cursor: "pointer" }} />
+                        <img onClick={oneOpen} src={ourRecipes2} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
-                            open={open}
-                            onClose={handleClose}
+                            open={one}
+                            onClose={oneClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
@@ -124,7 +148,7 @@ function Recipes() {
                                     Text in a Second
                                 </Typography>
                                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                                  Bilal  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
                                 </Typography>
                             </Box>
                         </Modal>
@@ -137,16 +161,16 @@ function Recipes() {
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img onClick={fourOpen} src={ourRecipes3} alt="" style={{ width: "100%", cursor: "pointer" }} />
+                        <img onClick={twoOpen} src={ourRecipes3} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
-                            open={four}
-                            onClose={fourClose}
+                            open={two}
+                            onClose={twoClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
                             <Box sx={style}>
                                 <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
+                                    T in a modal
                                 </Typography>
                                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                                     Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
@@ -188,16 +212,16 @@ function Recipes() {
 
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img onClick={sixOpen} src={ourRecipes5} alt="" style={{ width: "100%", cursor: "pointer" }} />
+                        <img onClick={fiveOpen} src={ourRecipes5} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
-                            open={six}
-                            onClose={sixClose}
+                            open={five}
+                            onClose={fiveClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
                             <Box sx={style}>
                                 <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
+                                    Text in a 
                                 </Typography>
                                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                                     Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
@@ -238,16 +262,16 @@ function Recipes() {
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img onClick={eightOpen} src={ourRecipes7} alt="" style={{ width: "100%", cursor: "pointer" }} />
+                        <img onClick={sevenOpen} src={ourRecipes7} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
-                            open={eight}
-                            onClose={eightClose}
+                            open={seven}
+                            onClose={sevenClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
                             <Box sx={style}>
                                 <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
+                                    {/* Text in a modal */}
                                 </Typography>
                                 <Typography id="modal-modal-description" sx={{ mt: 2 }}>
                                     Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
@@ -289,10 +313,10 @@ function Recipes() {
 
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img onClick={tenOpen} src={ourRecipes9} alt="" style={{ width: "100%", cursor: "pointer" }} />
+                        <img onClick={nineOpen} src={ourRecipes9} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
-                            open={ten}
-                            onClose={tenClose}
+                            open={nine}
+                            onClose={nineClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
@@ -339,10 +363,10 @@ function Recipes() {
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img onClick={therteenOpen} src={ourRecipes11} alt="" style={{ width: "100%", cursor: "pointer" }} />
+                        <img onClick={tensOpen} src={ourRecipes11} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
-                            open={therteen}
-                            onClose={therteenClose}
+                            open={tens}
+                            onClose={tensClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
@@ -415,10 +439,10 @@ function Recipes() {
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img onClick={fourteenOpen} src={ourRecipes14} alt="" style={{ width: "100%", cursor: "pointer" }} />
+                        <img onClick={fiveteenOpen} src={ourRecipes14} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
-                            open={fourteen}
-                            onClose={fourteenClose}
+                            open={fiveteen}
+                            onClose={fiveteenClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
@@ -466,10 +490,10 @@ function Recipes() {
                 </Grid>
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
-                        <img onClick={sixteenOpen} src={ourRecipes16} alt="" style={{ width: "100%", cursor: "pointer" }} />
+                        <img onClick={seventeenOpen} src={ourRecipes16} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
-                            open={sixteen}
-                            onClose={sixteenClose}
+                            open={seventeen}
+                            onClose={seventeenClose}
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >

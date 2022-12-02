@@ -21,11 +21,13 @@ function HeaderTop() {
                 </Grid>
                 <Grid item lg={6.5}></Grid>
                 <Grid item lg={1.5}>
-                    <p style={{ marginTop: "2px", color: "white" }}>CONTACT US</p>
+                    <text style={{ color: "white" }}>CONTACT US</text>
                 </Grid>
                 <Grid item lg={2}>
                     <Grid container>
-                        <p style={{color:"white",paddingTop:"2px",cursor:"pointer"}}>Login/Register</p>
+                        {/* <p style={{color:"white",paddingTop:"2px",cursor:"pointer"}}>Login/Register</p> */}
+                        <text style={{ color: "white", cursor: "pointer" }}>Login/Register</text>
+
                         {/* <Grid item lg={12}>
                             <Button style={{ backgroundColor: "transparent", width: "100%", color: "white",paddingTop:"-10px" }}>View More Recipes</Button>
                         </Grid> */}

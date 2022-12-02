@@ -26,6 +26,7 @@ import camelimg1 from "../../../Image/camelimg1.jpg"
 import camelimg2 from "../../../Image/camelimg2.png"
 import camelimg3 from "../../../Image/camelimg3.jpg"
 import camelimg4 from "../../../Image/camelimg4.jpg"
+import cameIcon from "../../../Image/camelimg.png"
 
 import { useNavigate } from 'react-router-dom';
 
@@ -50,7 +51,7 @@ function Product() {
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={Mutton} alt="" />
                 </Grid>
-                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
                     <h1>MUTTON</h1>
                 </Grid>
             </Grid>
@@ -99,7 +100,7 @@ function Product() {
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={chicken} alt="" />
                 </Grid>
-                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
                     <h1>Chicken</h1>
                 </Grid>
             </Grid>
@@ -145,8 +146,8 @@ function Product() {
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={Beaf} alt="" />
                 </Grid>
-                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
-                    <h1>Beaf</h1>
+                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
+                    <h1>Beef</h1>
                 </Grid>
             </Grid>
 
@@ -192,7 +193,7 @@ function Product() {
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={rabbitIcom} alt="" />
                 </Grid>
-                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
                     <h1>Rabbit</h1>
                 </Grid>
             </Grid>
@@ -237,9 +238,9 @@ function Product() {
                 onClick={() => navigate(`/product/camel-meat`)}
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
-                    <img src={Beaf} alt="" />
+                    <img src={cameIcon} alt="" />
                 </Grid>
-                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
                     <h1>Camel</h1>
                 </Grid>
             </Grid>

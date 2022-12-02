@@ -10,7 +10,7 @@
 
 .our_meat_text1 {
 
-    text-shadow: 2px 2px white;
+    text-shadow: 4px 3px black;
     font-size: 35px;
     padding: 15px;
     color: white;
@@ -52,4 +52,9 @@ font-size: 26px;
     {
         padding-top: 20px;
     }
+}
+.our_meat_text3 h1
+{
+   font-size: 25px;
+   padding-top: 10px;
 }
