@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { updateCartItems, removeCartItems } from '../../store/slices/cartSlice'
 
+import swal from 'sweetalert';
 import img1 from "../../Image/footerimg.jpg"
 import "./index.css"
 
@@ -46,9 +47,9 @@ function Cart() {
         navigte("/shipingDeatils")
     }
 
-    if (!reduxCartItems[0]) {
-        return <div>Cart Is Empty</div>
-    }
+    // if (!reduxCartItems[0]) {
+    //     return <div>Cart Is Empty</div>
+    // }
 
     return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }}>
         <Container>
@@ -67,7 +68,7 @@ function Cart() {
                 </Grid>
             </Grid>
             {
-                reduxCartItems.map((item, index) => {
+                reduxCartItems[0] ? reduxCartItems.map((item, index) => {
 
                     cartTotal = cartTotal + (item.meatType.price * item.quantity)
 
@@ -95,10 +96,31 @@ function Cart() {
                                 style={{ height: "30px", backgroundColor: "rgb(52, 52, 52)", color: "white", cursor: "pointer" }}>+</button>
                         </Grid>
                         <Grid item lg={2}>
-                            <p style={{ fontSize: "18px" }}>Rs. {item.meatType.price * item.quantity}</p>
+                            <p style={{ fontSize: "18px" }}>Rs. {item.meatType.price * item.quantity} </p>
                         </Grid>
+                        <p style={{ cursor: "pointer" }}
+                            onClick={() => {
+                                swal({
+                                    title: "Are you sure?",
+                                    text: "You can add to cart again!",
+                                    icon: "warning",
+                                    buttons: true,
+                                    dangerMode: true,
+                                })
+                                    .then((willDelete) => {
+                                        if (willDelete) {
+                                            removeItem(index)
+                                            swal("Item Removed!", {
+                                                icon: "success",
+                                            });
+                                        }
+                                    });
+                            }}
+                        >X</p>
                     </Grid>
                 })
+                    :
+                    <div>Cart Is Empty</div>
             }
 
             <Grid container>
@@ -126,11 +148,14 @@ function Cart() {
                     <p>Rs: {cartTotal}</p>
                 </Grid>
             </Grid>
-            <Grid container>
-                <Grid item lg={4}>
-                    <Button style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "40px", marginBottom: "30px" }} onClick={handleClick}>PROCEED TO CHECKOUT</Button>
+            {
+                reduxCartItems[0] && <Grid container>
+                    <Grid item lg={4}>
+                        <Button style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "40px", marginBottom: "30px" }} onClick={handleClick}>PROCEED TO CHECKOUT</Button>
+                    </Grid>
                 </Grid>
-            </Grid>
+            }
+
             <Grid container>
                 <Grid item lg={3}>
                     <Button style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "20px", marginBottom: "30px" }}>Return To Shop</Button>

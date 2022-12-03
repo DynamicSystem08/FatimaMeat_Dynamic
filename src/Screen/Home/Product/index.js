@@ -46,7 +46,6 @@ function Product() {
             </Grid>
 
             <Grid
-                onClick={() => navigate(`/product/mutton-meat`)}
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={Mutton} alt="" />
@@ -56,7 +55,9 @@ function Product() {
                 </Grid>
             </Grid>
 
-            <Grid container className='Conatainer_Recipes'>
+            <Grid container className='Conatainer_Recipes'
+                onClick={() => navigate(`/product/mutton-meat`)}
+            >
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
                         <img src={muttonimg1} alt="Nature" style={{ width: "100%", cursor: "pointer" }}
@@ -95,7 +96,6 @@ function Product() {
             {/* chicken */}
 
             <Grid
-                onClick={() => navigate(`/product/chicken-meat`)}
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={chicken} alt="" />
@@ -105,7 +105,9 @@ function Product() {
                 </Grid>
             </Grid>
 
-            <Grid container className='Conatainer_Recipes'>
+            <Grid container className='Conatainer_Recipes'
+                onClick={() => navigate(`/product/chicken-meat`)}
+            >
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
                         <img src={chickenimg1} alt="Nature" style={{ width: "100%" }} />
@@ -141,7 +143,6 @@ function Product() {
             </Grid>
             {/* Beaf */}
             <Grid
-                onClick={() => navigate(`/product/beef-meat`)}
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={Beaf} alt="" />
@@ -151,7 +152,9 @@ function Product() {
                 </Grid>
             </Grid>
 
-            <Grid container className='Conatainer_Recipes'>
+            <Grid container className='Conatainer_Recipes'
+                onClick={() => navigate(`/product/beef-meat`)}
+            >
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
                         <img src={beefimg2} alt="Nature" style={{ width: "100%" }} />
@@ -188,7 +191,6 @@ function Product() {
 
             {/* Rabit */}
             <Grid
-                onClick={() => navigate(`/product/rabbit-meat`)}
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={rabbitIcom} alt="" />
@@ -198,7 +200,9 @@ function Product() {
                 </Grid>
             </Grid>
 
-            <Grid container className='Conatainer_Recipes'>
+            <Grid container className='Conatainer_Recipes'
+                onClick={() => navigate(`/product/rabbit-meat`)}
+            >
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
                         <img src={rabbitimg1} alt="Nature" style={{ width: "100%" }} />
@@ -235,7 +239,6 @@ function Product() {
 
             {/* camel*/}
             <Grid
-                onClick={() => navigate(`/product/camel-meat`)}
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
                     <img src={cameIcon} alt="" />
@@ -245,7 +248,9 @@ function Product() {
                 </Grid>
             </Grid>
 
-            <Grid container className='Conatainer_Recipes'>
+            <Grid container className='Conatainer_Recipes'
+                onClick={() => navigate(`/product/camel-meat`)}
+            >
                 <Grid item lg={2.7}>
                     <div class="container_Recipes">
                         <img src={camelimg1} alt="Nature" style={{ width: "100%" }} />
