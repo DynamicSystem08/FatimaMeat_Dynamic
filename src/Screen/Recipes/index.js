@@ -19,6 +19,12 @@ import ourRecipes13 from "../../Image/ourRecipes13.jpg"
 import ourRecipes14 from "../../Image/ourRecipes14.jpg"
 import ourRecipes15 from "../../Image/ourRecipes15.jpg"
 import ourRecipes16 from "../../Image/ourRecipes16.jpg"
+
+import FatimeMeatRecipes1 from "../../Image/Fatima_meat_recipes1.jpg"
+import FatimeMeatRecipes2 from "../../Image/Fatima_meat_recipes2.jpg"
+import FatimeMeatRecipes3 from "../../Image/Fatima_meat_recipes3.jpg"
+import FatimeMeatRecipes4 from "../../Image/Fatima_meat_recipes4.jpg"
+
 import "./index.css"
 import * as React from 'react';
 import Box from '@mui/material/Box';
@@ -29,15 +35,29 @@ import img1 from "../../Image/BeefBoneless.jpg"
 
 const style = {
     position: 'absolute',
-    top: '50%',
+    top: '47%',
     left: '50%',
+    right:"50%",
     transform: 'translate(-50%, -50%)',
-    width: 400,
-    bgcolor: 'background.paper',
-    border: 'none',
-    boxShadow: 24,
-    p: 4,
+    width: 800,
+    // bgcolor: 'background.paper',
+    // border: 'none',
+    // boxShadow: 24,
+    height:500,
+    // p: 4,
 };
+const style1={
+    position: 'absolute',
+    top: '47%',
+    left: '50%',
+    right:"50%",
+    transform: 'translate(-50%, -50%)',
+    width: 800,
+    // height:690,
+    height:"100vh",
+    overflow:"scroll"
+
+}
 
 
 
@@ -118,12 +138,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a First
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                            <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -143,12 +160,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a Second
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                  Bilal  Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                          <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes2} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -168,12 +182,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    T in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                           <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes3} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -193,12 +204,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                          <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes4} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -219,12 +227,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a 
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                          <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -244,12 +249,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                           <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -269,12 +271,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    {/* Text in a modal */}
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                        <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -294,12 +293,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                       <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -320,12 +316,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                       <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -345,12 +338,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                          <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -370,12 +360,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                          <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -395,12 +382,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                         <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -421,12 +405,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                          <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -446,12 +427,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                     <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -471,12 +449,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                       <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -497,12 +472,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                            <Box sx={style}>
-                                <Typography id="modal-modal-title" variant="h6" component="h2">
-                                    Text in a modal
-                                </Typography>
-                                <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-                                    Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
+                         <Box style={style1}>
+                                <Typography   style={{className:"fatima_modals_img"}}>
+                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>

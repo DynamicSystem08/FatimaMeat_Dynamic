@@ -4,8 +4,8 @@ import "./index.css"
 
 function Dashboard()
 {
-    return<div>
-        <Container style={{marginTop:"140px",marginBottom:"50px"}}>
+    return<div style={{backgroundColor:"white"}}>
+        <Container style={{paddingTop:"140px",paddingBottom:"50px"}}>
             <Grid container>
                 <Grid item lg={3} style={{padding:"20px"}} className="side_bar_dashboadr">
                     <h2><b>My Account</b></h2>

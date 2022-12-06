@@ -14,6 +14,8 @@ import ShipingDeatil from '../Checkout/ShipingDetail';
 import ConformOrder from '../Checkout/ConformOrder';
 import Payment from "../Checkout/Payment"
 import Dashboard from '../Dashboard';
+import Login from '../Login';
+import SignUp from '../SignUp';
 
 function Routering() {
     return <BrowserRouter>
@@ -22,7 +24,9 @@ function Routering() {
             <Header />
         </div>
         <Routes>
-            <Route path="/" element={<HomeComponent />} />
+             <Route path="/" element={<HomeComponent />} />
+             {/* <Route path="/singUp" element={<SignUp />} />  */}
+        
             <Route path="/home" element={<HomeComponent />} />
             <Route path="/ourMeat" element={<OurMeat />} />
             <Route path="/recipes" element={<Recipes />} />
