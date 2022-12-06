@@ -7,6 +7,12 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import PersonIcon from '@mui/icons-material/Person';
 import TextField from '@mui/material/TextField';
+import IconButton from '@mui/material/IconButton';
+import Visibility from '@mui/icons-material/Visibility';
+import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import InputAdornment from '@mui/material/InputAdornment';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import Input from '@mui/material/Input';
 
 import { useForm } from "react-hook-form";
 
@@ -19,34 +25,65 @@ function Login(props) {
     const dispatch = useDispatch()
     const color = "black"
 
-    const [formData, setFormData] = useState({
-        email: "FatimaMeat.com",
-        password: "123456"
-    })
-    console.log("formData", formData)
+    // const [formData, setFormData] = useState({
+    //     email: "FatimaMeat.com",
+    //     password: "123456"
+    // })
+    // const [values, setValues] = useState({
+    //     showPassword: false,
+    // });
+    // console.log("formData", formData)
 
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => submit(data)
 
-    const handelChange = (e, key) => {
-        setFormData({ ...formData, [key]: e.target.value })
-    }
+    // const handelChange = (e, key) => {
+    //     setFormData({ ...formData, [key]: e.target.value })
+    // }
 
-    const submit = () => {
-        if (!formData.email.includes('@') || !formData.email.includes('.com')) {
-            swal("Error!", "Please enter your email", "error");
+    // const handleClickShowPassword = () => {
+    //     setValues({
+    //         ...values,
+    //         showPassword: !values.showPassword,
+    //     });
+    // };
+
+    // const handleMouseDownPassword = (event) => {
+    //     event.preventDefault();
+    // };
+
+    const submit = async (data) => {
+        if (!data.email || !data.password) {
             return
         }
-        if (formData.password.length !== 6) {
-            swal("Error!", "Please enter password of 6 characters", "error");
+        if (!data.email.includes('@')) {
+            swal("Error!", "Please enter a proper email", "error");
             return
         }
-        swal({
-            title: "Success!",
-            icon: "success",
-            button: "Ok!",
-        });
-        dispatch(loginUser(formData))
+        if (data.password.length !== 6) {
+            swal("Error!", "Password must be at least 6 characters long", "error");
+            return
+        }
+
+        const { payload } = await dispatch(loginUser(data))
+        console.log(payload)
+
+        if (payload.error) {
+            swal({
+                title: "Error!",
+                icon: "error",
+                text: payload.message,
+                button: "Ok!",
+            });
+        }
+        else {
+            swal({
+                title: "Success!",
+                icon: "success",
+                text: payload.message,
+                button: "Ok!",
+            });
+        }
     }
 
     return <div style={{ backgroundColor: "white", paddingTop: "100px" }}>
@@ -63,11 +100,11 @@ function Login(props) {
                         <Grid container>
                             <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
-                                <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }}>
+                                <div style={{ marginTop: "35px" }}>
                                     {/* <input onChange={e => handelChange(e, "email")} value={formData.email}
                                     placeholder="Email" type="text" style={{ width: "50%", height: "35px", border: "none", outline: "none" }} /> */}
                                     <TextField
-                                        id="outlined-basic"
+                                        // id="outlined-basic"
                                         label="E-mail"
                                         variant="outlined"
                                         fullWidth
@@ -83,9 +120,42 @@ function Login(props) {
                         <Grid container>
                             <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
-                                <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }}>
-                                    <input onChange={e => handelChange(e, "Password")} value={formData.password}
-                                        placeholder="Password" type="password" style={{ width: "50%", height: "35px", border: "none", outline: "none" }} />
+                                <div style={{ marginTop: "35px" }}>
+                                    <TextField
+                                        id="outlined-basic"
+                                        label="Password"
+                                        variant="outlined"
+                                        fullWidth
+                                        name="password"
+                                        type="password"
+                                        text
+                                        // hidden={true}
+                                        {...register("password", { required: "Password is required." })}
+                                        error={Boolean(errors.password)}
+                                        helperText={errors.password?.message}
+                                    />
+                                    {/* <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined"> */}
+                                    {/* <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel> */}
+                                    {/* <Input
+                                        id="standard-adornment-password"
+                                        type={values.showPassword ? 'text' : 'password'}
+                                        value={values.password}
+                                        // onChange={handleChange('password')}
+                                        endAdornment={
+                                            <InputAdornment position="end">
+                                                <IconButton
+                                                    aria-label="toggle password visibility"
+                                                    onClick={handleClickShowPassword}
+                                                    onMouseDown={handleMouseDownPassword}
+                                                >
+                                                    {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                                </IconButton>
+                                            </InputAdornment>
+                                        }
+                                    /> */}
+                                    {/* </FormControl> */}
+                                    {/* <input onChange={e => handelChange(e, "Password")} value={formData.password}
+                                        placeholder="Password" type="password" style={{ width: "50%", height: "35px", border: "none", outline: "none" }} /> */}
                                 </div>
                             </Grid>
                         </Grid>

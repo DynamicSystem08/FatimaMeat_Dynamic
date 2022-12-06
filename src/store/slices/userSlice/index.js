@@ -1,16 +1,26 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { registerUser, signinUser } from '../../../config/firebase'
 
 const initialState = {
   user: "",
   allUsers: []
 }
 
+export const createUser = createAsyncThunk(
+  'createUser',
+  async (data) => {
+    const response = await signinUser(data)
+    return response
+  }
+)
+
 export const loginUser = createAsyncThunk(
   'loginUser',
-  // async (userData) => {
-  //   const response = await axios.post('http://localhost:5000/login-user', userData)
-  //   return response.data
-  // }
+  async (data) => {
+    const response = await signinUser(data)
+    console.log(response)
+    return response
+  }
 )
 
 export const fetchUsers = createAsyncThunk(
@@ -31,7 +41,12 @@ export const userSlice = createSlice({
   },
   extraReducers: (builder) => {
 
+    builder.addCase(createUser.fulfilled, (state, action) => {
+      state.user = action.payload
+    })
+
     builder.addCase(loginUser.fulfilled, (state, action) => {
+      console.log(action.payload)
       state.user = action.payload
     })
 
