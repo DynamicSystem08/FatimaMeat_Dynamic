@@ -3,9 +3,12 @@ import Container from '@mui/material/Container';
 import CallIcon from '@mui/icons-material/Call';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Button from '@mui/material/Button';
+import { useNavigate } from 'react-router-dom';
 
 
 function HeaderTop() {
+    const navigate = useNavigate()
+
     return <div style={{ backgroundColor: "black", marginBottom: "50px" }}>
         <Container>
             <Grid container style={{ paddingTop: "5px" }}>
@@ -26,7 +29,9 @@ function HeaderTop() {
                 <Grid item lg={2}>
                     <Grid container>
                         {/* <p style={{color:"white",paddingTop:"2px",cursor:"pointer"}}>Login/Register</p> */}
-                        <text style={{ color: "white", cursor: "pointer" }}>Login/Register</text>
+                        <text
+                            onClick={() => navigate('/auth')}
+                            style={{ color: "white", cursor: "pointer" }}>Login/Register</text>
 
                         {/* <Grid item lg={12}>
                             <Button style={{ backgroundColor: "transparent", width: "100%", color: "white",paddingTop:"-10px" }}>View More Recipes</Button>

@@ -11,7 +11,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import { loginUser } from '../../store/slices/userSlice'
 import "./index.css"
 
-function SignUp() {
+function SignUp(props) {
     const dispatch = useDispatch()
 
     const [formData, setFormData] = useState({
@@ -20,8 +20,8 @@ function SignUp() {
     })
     console.log(formData)
 
-    const handelChange = (key, value) => {
-        setFormData({ ...formData, [key]: value.target.value })
+    const handelChange = (key, e) => {
+        setFormData({ ...formData, [key]: e.target.value })
     }
 
     const submit = () => {
@@ -57,48 +57,67 @@ function SignUp() {
                         <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
                             <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
                                 <input
-                                    //  onChange={e => handelChange(e,"user_Name")} 
-                                    //  value={formData.user_Name}
+                                    onChange={e => handelChange(e, "user_Name")}
+                                    value={formData.user_Name}
                                     placeholder="Enter Name" type="text" style={{ width: "50%", height: "35px", border: "none", outline: "none", backgroundColor: "transparent" }} />
                             </div>
                         </Grid>
                     </Grid>
-
 
                     <Grid container>
                         <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
                         <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
                             <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
                                 <input
-                                    //  onChange={e => handelChange(e, "Password")}  
-                                    //  value={formData.password} 
+                                    onChange={e => handelChange(e, "email")}
+                                    value={formData.email}
                                     placeholder="Enter Email" type="email" style={{ width: "50%", height: "35px", border: "none", outline: "none" }} />
                             </div>
                         </Grid>
-
-
-
                     </Grid>
 
+                    <Grid container>
+                        <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
+                        <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
+                                <input
+                                    onChange={e => handelChange(e, "password")}
+                                    value={formData.password}
+                                    placeholder="Enter Password" type="text" style={{ width: "50%", height: "35px", border: "none", outline: "none", backgroundColor: "transparent" }} />
+                            </div>
+                        </Grid>
+                    </Grid>
+
+                    <Grid container>
+                        <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
+                        <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
+                                <input
+                                    onChange={e => handelChange(e, "re-password")}
+                                    value={formData.repassword}
+                                    placeholder="Re-Enter Password" type="text" style={{ width: "50%", height: "35px", border: "none", outline: "none", backgroundColor: "transparent" }} />
+                            </div>
+                        </Grid>
+                    </Grid>
 
                     <Button onClick={submit}
                         style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Submit</Button>
 
                     <Grid container>
-                        <Grid item lg={1} md={1} sm={1} ></Grid>
-                        <Grid item lg={10} md={9} sm={9} xs={12} style={{ marginTop: "-15px", paddingBottom: "40px" }}>
-                            <text
-                                // onClick={() => navigate("/signup")} 
-                                style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", marginTop: "-10px", marginRight: "150px" }}>Retype Password</text>
-                            <text
-                                // onClick={() => navigate("/forgetpassword")} 
-                                style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", marginTop: "-10px" }}>Password</text>
+                        <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
+                        <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
+                                <text
+                                    // onClick={() => navigate("/signup")}
+                                    onClick={() => props.setScreen(true)}
+                                    style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Already Have an account?{'\n'}Click here to Login!</text>
+                                <text
+                                    style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>    </text>
+                            </div>
                         </Grid>
                     </Grid>
 
                 </Grid>
-
-
             </Grid>
         </Container>
     </div >

@@ -1,4 +1,4 @@
-import Router from "./Screen/Router";
+import Router from "./Router";
 
 function App() {
   return (
