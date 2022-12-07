@@ -24,6 +24,19 @@ import FatimeMeatRecipes1 from "../../Image/Fatima_meat_recipes1.jpg"
 import FatimeMeatRecipes2 from "../../Image/Fatima_meat_recipes2.jpg"
 import FatimeMeatRecipes3 from "../../Image/Fatima_meat_recipes3.jpg"
 import FatimeMeatRecipes4 from "../../Image/Fatima_meat_recipes4.jpg"
+import FatimeMeatRecipes5 from "../../Image/Fatima_meat_recipes5.jpg"
+import FatimeMeatRecipes6 from "../../Image/Fatima_meat_recipes6.jpg"
+import FatimeMeatRecipes7 from "../../Image/Fatima_meat_recipes7.jpg"
+import FatimeMeatRecipes8 from "../../Image/Fatima_meat_recipes8.jpg"
+import FatimeMeatRecipes9 from "../../Image/Fatima_meat_recipes9.jpg"
+import FatimeMeatRecipes10 from "../../Image/Fatima_meat_recipes10.jpg"
+import FatimeMeatRecipes11 from "../../Image/Fatima_meat_recipes11.jpg"
+import FatimeMeatRecipes12 from "../../Image/Fatima_meat_recipes12.jpg"
+import FatimeMeatRecipes13 from "../../Image/Fatima_meat_recipes13.jpg"
+import FatimeMeatRecipes14 from "../../Image/Fatima_meat_recipes14.jpg"
+import FatimeMeatRecipes15 from "../../Image/Fatima_meat_recipes15.jpg"
+import FatimeMeatRecipes16 from "../../Image/Fatima_meat_recipes16.jpg"
+
 
 import "./index.css"
 import * as React from 'react';
@@ -52,9 +65,9 @@ const style1={
     left: '50%',
     right:"50%",
     transform: 'translate(-50%, -50%)',
-    width: 800,
+    width: "50%",
     // height:690,
-    height:"100vh",
+    height:"100%",
     overflow:"scroll"
 
 }
@@ -135,8 +148,8 @@ function Recipes() {
                         <Modal
                             open={open}
                             onClose={handleClose}
-                            aria-labelledby="modal-modal-title"
-                            aria-describedby="modal-modal-description"
+                            // aria-labelledby="modal-modal-title"
+                            // aria-describedby="modal-modal-description"
                         >
                             <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
@@ -229,7 +242,7 @@ function Recipes() {
                         >
                           <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes5} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -251,7 +264,7 @@ function Recipes() {
                         >
                            <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes6} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -273,7 +286,7 @@ function Recipes() {
                         >
                         <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes7} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -295,7 +308,7 @@ function Recipes() {
                         >
                        <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes8} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -318,7 +331,7 @@ function Recipes() {
                         >
                        <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes9} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -340,7 +353,7 @@ function Recipes() {
                         >
                           <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes10} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -362,7 +375,7 @@ function Recipes() {
                         >
                           <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes11} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -384,7 +397,7 @@ function Recipes() {
                         >
                          <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes12} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -407,7 +420,7 @@ function Recipes() {
                         >
                           <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes13} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -429,14 +442,14 @@ function Recipes() {
                         >
                      <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes14} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
 
                         {/* <img src={ourRecipes14} alt="Nature" style={{ width: "100%" }} /> */}
                         <div class="text-block_Recipes">
-                            <p>Chicken Manchurian</p>
+                            <p>Beef Manchurian</p>
                         </div>
                     </div>
                 </Grid>
@@ -451,7 +464,7 @@ function Recipes() {
                         >
                        <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes15} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -474,7 +487,7 @@ function Recipes() {
                         >
                          <Box style={style1}>
                                 <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                                <img src={FatimeMeatRecipes16} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
                                 </Typography>
                             </Box>
                         </Modal>
