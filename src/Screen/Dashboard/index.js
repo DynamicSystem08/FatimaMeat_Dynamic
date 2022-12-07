@@ -1,9 +1,11 @@
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
+import { useNavigate } from 'react-router-dom';
 import "./index.css"
 
 function Dashboard()
 {
+    const navigate=useNavigate()
     return<div style={{backgroundColor:"white"}}>
         <Container style={{paddingTop:"140px",paddingBottom:"50px"}}>
             <Grid container>
@@ -11,8 +13,8 @@ function Dashboard()
                     <h2><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p>Dashboard</p><br></br>
-                    <p>Orders</p><br></br>
-                    <p>DownLoads</p><br></br>
+                    <p onClick={()=>navigate("/order")}>Orders</p><br></br>
+                    <p onClick={()=>navigate("/myAccount")}>My Accounts</p><br></br>
                     <p>Addresses</p><br></br>
                     <p>Accounts details</p><br></br>
                     <p>Logout</p><br></br>                   
