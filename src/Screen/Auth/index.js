@@ -1,7 +1,6 @@
 import { useState } from 'react'
-import Login from '../Login'
-import SignUp from '../SignUp'
-import Form from './Form'
+import Login from './Login'
+import SignUp from './SignUp'
 
 function Auth() {
 
@@ -12,7 +11,6 @@ function Auth() {
             screen ? <Login setScreen={setScreen} />
                 : <SignUp setScreen={setScreen} />
         }
-        {/* <Form /> */}
     </div >
 }
 
