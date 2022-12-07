@@ -4,7 +4,7 @@ import HeaderTop from '../Component/HeaderTop';
 import Header from '../Component/Header';
 import Recipes from '../Screen/Recipes';
 import OurMeat from "../Screen/OurMeat"
-import Location from '../Screen/Home/Location';
+// import Location from '../Screen/Home/Location';
 import FatimaFood from '../Screen/FatimaFood';
 import ProductDetail from '../Screen/DetailProduct';
 import Cart from '../Screen/Cart';
@@ -15,8 +15,6 @@ import ConformOrder from '../Screen/Checkout/ConformOrder';
 import Payment from "../Screen/Checkout/Payment"
 import Dashboard from '../Screen/Dashboard';
 import Auth from '../Screen/Auth'
-import Login from '../Screen/Login';
-import SignUp from '../Screen/SignUp';
 
 function Routering() {
     return <BrowserRouter>
@@ -25,9 +23,8 @@ function Routering() {
             <Header />
         </div>
         <Routes>
-             <Route path="/" element={<HomeComponent />} />
-             {/* <Route path="/singUp" element={<SignUp />} />  */}
-        
+            <Route path="/" element={<HomeComponent />} />
+
             <Route path="/home" element={<HomeComponent />} />
             <Route path="/ourMeat" element={<OurMeat />} />
             <Route path="/recipes" element={<Recipes />} />

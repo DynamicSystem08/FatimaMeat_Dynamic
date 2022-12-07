@@ -9,7 +9,7 @@ const initialState = {
 export const createUser = createAsyncThunk(
   'createUser',
   async (data) => {
-    const response = await signinUser(data)
+    const response = await registerUser(data)
     return response
   }
 )
@@ -18,7 +18,6 @@ export const loginUser = createAsyncThunk(
   'loginUser',
   async (data) => {
     const response = await signinUser(data)
-    console.log(response)
     return response
   }
 )
@@ -46,7 +45,6 @@ export const userSlice = createSlice({
     })
 
     builder.addCase(loginUser.fulfilled, (state, action) => {
-      console.log(action.payload)
       state.user = action.payload
     })
 
