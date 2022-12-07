@@ -10,14 +10,17 @@ import { updateCartItems, removeCartItems } from '../../store/slices/cartSlice'
 import swal from 'sweetalert';
 import img1 from "../../Image/footerimg.jpg"
 import "./index.css"
+import { setCartTotal } from '../../store/slices/orderSlice';
+import { useEffect } from 'react';
 
 function Cart() {
     const dispatch = useDispatch()
     const reduxCartItems = useSelector(state => state.cartReducer.cart)
     console.log('cart', reduxCartItems)
     let cartTotal = 0
+    console.log(cartTotal)
 
-    const navigte = useNavigate()
+    const navigate = useNavigate()
 
     const updateQuantity = (key, item, index) => {
         let copyCartItems = [...reduxCartItems]
@@ -35,21 +38,20 @@ function Cart() {
             copyCartItems[index] = copyData
             dispatch(updateCartItems(copyCartItems))
         }
+        dispatch(setCartTotal(cartTotal))
     }
 
     const removeItem = (index) => {
         let copyData = [...reduxCartItems]
         copyData.splice(index, 1)
         dispatch(updateCartItems(copyData))
+        dispatch(setCartTotal(cartTotal))
     }
 
     const handleClick = () => {
-        navigte("/shipingDeatils")
+        navigate("/checkout/shippingDetails")
+        dispatch(setCartTotal(cartTotal))
     }
-
-    // if (!reduxCartItems[0]) {
-    //     return <div>Cart Is Empty</div>
-    // }
 
     return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }}>
         <Container>
@@ -102,7 +104,7 @@ function Cart() {
                             onClick={() => {
                                 swal({
                                     title: "Are you sure?",
-                                    text: "You can add to cart again!",
+                                    text: "This item will be removed from cart!",
                                     icon: "warning",
                                     buttons: true,
                                     dangerMode: true,
@@ -127,7 +129,24 @@ function Cart() {
                 <Grid item lg={10}></Grid>
                 <Grid item lg={2}>
                     <Button
-                        onClick={() => { dispatch(removeCartItems()) }}
+                        onClick={() => {
+                            swal({
+                                title: "Are you sure?",
+                                text: "All items in the cart will be removed!",
+                                icon: "warning",
+                                buttons: true,
+                                dangerMode: true,
+                            })
+                                .then((willDelete) => {
+                                    if (willDelete) {
+                                        dispatch(removeCartItems())
+                                        dispatch(setCartTotal(cartTotal))
+                                        swal("Successfully cleared!", {
+                                            icon: "success",
+                                        });
+                                    }
+                                })
+                        }}
                         style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "30px", marginBottom: "30px" }}
                     >CLEAR CART</Button>
                 </Grid>
@@ -151,14 +170,19 @@ function Cart() {
             {
                 reduxCartItems[0] && <Grid container>
                     <Grid item lg={4}>
-                        <Button style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "40px", marginBottom: "30px" }} onClick={handleClick}>PROCEED TO CHECKOUT</Button>
+                        <Button
+                            style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "40px", marginBottom: "30px" }}
+                            onClick={handleClick}>PROCEED TO CHECKOUT</Button>
                     </Grid>
                 </Grid>
             }
 
             <Grid container>
                 <Grid item lg={3}>
-                    <Button style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "20px", marginBottom: "30px" }}>Return To Shop</Button>
+                    <Button
+                        onClick={() => navigate('/product')}
+                        style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "20px", marginBottom: "30px" }}>
+                        Return To Shop</Button>
                 </Grid>
             </Grid>
         </Container>

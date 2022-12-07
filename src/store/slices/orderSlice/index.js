@@ -3,7 +3,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
     order: "",
-    shippingDetails: {},
+    shippingDetails: { name: "" },
     paymentDetails: {},
     totalOrderAmount: "",
     cartTotal: "",
@@ -13,12 +13,12 @@ const initialState = {
 
 export const fetchOrders = createAsyncThunk(
     'fetchOrders',
-    
+
 )
 
 export const createOrder = createAsyncThunk(
     'createOrder',
-   
+
 )
 
 export const orderSlice = createSlice({

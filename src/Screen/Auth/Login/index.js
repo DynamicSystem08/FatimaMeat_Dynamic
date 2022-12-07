@@ -87,24 +87,24 @@ function Login(props) {
                             <Grid item lg={2} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={7.5} md={6.5} sm={6.5} xs={8}>
                                 <div style={{ marginTop: "35px" }}>
-                                <ThemeProvider theme={theme}>
-                                    <TextField
-                                        label="E-mail"
-                                        variant="outlined"
-                                        fullWidth
-                                        name="email"
-                                        {...register("email", { required: "E-mail Address is required." })}
-                                        error={Boolean(errors.email)}
-                                        helperText={errors.email?.message}
-                                        // fullWidth required
-                                        size="small"
-                                        sx={{
-                                            "& .MuiInputLabel-root": { color:'rgb(58,26,15)' },//styles the label
-                                            "& .MuiOutlinedInput-root": {
-                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
-                                            },
-                                        }}
-                                    />
+                                    <ThemeProvider theme={theme}>
+                                        <TextField
+                                            label="E-mail"
+                                            variant="outlined"
+                                            fullWidth
+                                            name="email"
+                                            {...register("email", { required: "E-mail Address is required." })}
+                                            error={Boolean(errors.email)}
+                                            helperText={errors.email?.message}
+                                            // fullWidth required
+                                            size="small"
+                                            sx={{
+                                                "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                                "& .MuiOutlinedInput-root": {
+                                                    "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                                },
+                                            }}
+                                        />
                                     </ThemeProvider>
                                 </div>
                             </Grid>
@@ -114,28 +114,28 @@ function Login(props) {
                             <Grid item lg={2} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={7.5} md={6.5} sm={6.5} xs={8}>
                                 <div style={{ marginTop: "35px" }}>
-                                <ThemeProvider theme={theme}>
+                                    <ThemeProvider theme={theme}>
 
-                                    <TextField
-                                        size="small"
-                                        id="outlined-basic"
-                                        label="Password"
-                                        variant="outlined"
-                                        fullWidth
-                                        name="password"
-                                        type="password"
-                                        text
-                                        // hidden={true}
-                                        {...register("password", { required: "Password is required." })}
-                                        error={Boolean(errors.password)}
-                                        helperText={errors.password?.message}
-                                        sx={{
-                                            "& .MuiInputLabel-root": { color:'rgb(58,26,15)' },//styles the label
-                                            "& .MuiOutlinedInput-root": {
-                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
-                                            },
-                                        }}
-                                    />
+                                        <TextField
+                                            size="small"
+                                            id="outlined-basic"
+                                            label="Password"
+                                            variant="outlined"
+                                            fullWidth
+                                            name="password"
+                                            type="password"
+                                            text
+                                            // hidden={true}
+                                            {...register("password", { required: "Password is required." })}
+                                            error={Boolean(errors.password)}
+                                            helperText={errors.password?.message}
+                                            sx={{
+                                                "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                                "& .MuiOutlinedInput-root": {
+                                                    "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                                },
+                                            }}
+                                        />
                                     </ThemeProvider>
                                 </div>
                             </Grid>
@@ -153,16 +153,16 @@ function Login(props) {
 
 
 
-                        {/* <Grid container>
+                        <Grid container>
                             <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
                                 <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
-                               
                                     <text
-                                        style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>    </text>
+                                        onClick={() => props.setScreen(false)}
+                                        style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Click here to Register</text>
                                 </div>
                             </Grid>
-                        </Grid> */}
+                        </Grid>
 
                     </form>
 

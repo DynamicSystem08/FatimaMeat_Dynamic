@@ -1,5 +1,5 @@
 import { useState } from 'react';
-// import { useSelector, useDispatch } from "react-redux"
+import { useSelector, useDispatch } from "react-redux"
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 
@@ -18,7 +18,8 @@ import MuiAccordionSummary, {
 import MuiAccordionDetails from '@mui/material/AccordionDetails';
 import Typography from '@mui/material/Typography';
 
-// import { createOrder, deleteOrderState } from '../../../store/slices/orderSlice'
+import { createOrder, deleteOrderState } from '../../../store/slices/orderSlice'
+
 // import { clearEntireCart } from '../../../store/slices/productSlice'
 
 
@@ -67,13 +68,13 @@ function Payment() {
             setExpanded(newExpanded ? panel : false);
         };
 
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
     const navigate = useNavigate()
 
-    // const totalOrderAmount = useSelector(state => state.orderReducer.totalOrderAmount)
-    // const shippingDetails = useSelector(state => state.orderReducer.shippingDetails)
-    // const buyerDetails = useSelector(state => state.userReducer.user)
-    // const cartItems = useSelector(state => state.productReducer.cart)
+    const totalOrderAmount = useSelector(state => state.orderReducer.totalOrderAmount)
+    const shippingDetails = useSelector(state => state.orderReducer.shippingDetails)
+    const buyerDetails = useSelector(state => state.userReducer.user)
+    const cartItems = useSelector(state => state.productReducer.cart)
 
     const [formData, setFormData] = useState({
         bankName: "COD",
@@ -107,14 +108,14 @@ function Payment() {
 
         let data = {}
 
-        // data.totalOrderAmount = totalOrderAmount
-        // data.shippingDetails = shippingDetails
-        // data.buyerDetails = buyerDetails
-        // data.cartItems = cartItems
-        // data.paymentInfo = formData
+        data.totalOrderAmount = totalOrderAmount
+        data.shippingDetails = shippingDetails
+        data.buyerDetails = buyerDetails
+        data.cartItems = cartItems
+        data.paymentInfo = formData
 
-        // dispatch(createOrder(data))
-        // dispatch(deleteOrderState())
+        dispatch(createOrder(data))
+        dispatch(deleteOrderState())
         // dispatch(clearEntireCart())
 
         swal({
@@ -126,7 +127,7 @@ function Payment() {
         navigate("/home")
     }
 
-    return <div style={{backgroundColor:"white"}}>
+    return <div style={{ backgroundColor: "white" }}>
         <Container style={{ textAlign: "center", paddingTop: "140px" }} maxWidth="md">
             <Grid container>
                 <Grid item lg={5.5} md={5.5} sm={5.5} xs={5.5} >
@@ -161,9 +162,9 @@ function Payment() {
         <Grid container>
             <Grid item lg={12} md={12} sm={12} xs={12} style={{ marginTop: "40px" }}>
                 <p style={{ fontSize: "25px", textAlign: "center" }}>CARD INFO</p>
-                <Grid container style={{justifyContent:"center"}}>
+                <Grid container style={{ justifyContent: "center" }}>
                     <Grid item lg={2}>
-                    <hr style={{ width: "250px" }}></hr>
+                        <hr style={{ width: "250px" }}></hr>
                     </Grid>
                 </Grid>
             </Grid>
@@ -173,7 +174,7 @@ function Payment() {
                 <Grid item lg={12} style={{ marginTop: "30px" }}>
 
                     <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" onClick={() => handelChange('bankName', 'easypaisa')} > 
+                        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" onClick={() => handelChange('bankName', 'easypaisa')} >
                             <Typography >Easy Paisa</Typography>
                         </AccordionSummary>
                         <AccordionDetails>
@@ -219,11 +220,11 @@ function Payment() {
                             </Typography>
                         </AccordionDetails>
                     </Accordion>
-                    <div style={{ textAlign: "center", marginTop: "30px", width: "400px",marginBottom:"50px" }}>
-                        <Button onClick={()=>navigate("/dashboard")}
+                    <div style={{ textAlign: "center", marginTop: "30px", width: "400px", marginBottom: "50px" }}>
+                        <Button onClick={() => navigate("/dashboard")}
                             style={{ backgroundColor: "rgb(58,26,15)", color: "white", width: "200px" }}>Pay
-                             {/* {totalOrderAmount} */}
-                             </Button>
+                            {/* {totalOrderAmount} */}
+                        </Button>
                     </div>
                 </Grid>
             </Grid>

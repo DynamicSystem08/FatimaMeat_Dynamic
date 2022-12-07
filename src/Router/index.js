@@ -28,7 +28,6 @@ function Router() {
     const dispatch = useDispatch()
     const reduxCart = useSelector(state => state.cartReducer.cart)
     const [user, setUser] = useState()
-    console.log(user)
 
     const protectedRoute = (component) => {
         if (!user || !reduxCart[0]) {
@@ -51,7 +50,6 @@ function Router() {
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                console.log(user)
                 setUser(user)
                 dispatch(setUser(user))
             } else {
@@ -82,14 +80,14 @@ function Router() {
 
             <Route path="/cart" element={<Cart />} />
 
-            <Route path="/shipingDeatils" element={protectedRoute(<ShipingDeatil />)} />
-            <Route path="/conformOrder" element={<ConformOrder />} />
-            <Route path="/payment" element={<Payment />} />
+            <Route path="/checkout/shippingDetails" element={protectedRoute(<ShipingDeatil />)} />
+            <Route path="/checkout/confirmOrder" element={<ConformOrder />} />
+            <Route path="/checkout/payment" element={<Payment />} />
 
             <Route path="/dashboard" element={protectedRouteAuth(<Dashboard />)} />
             {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-            <Route path='/order' element={<Order/>}/>
-            <Route path='/myAccount' element={<MyAccount/>}/>
+            <Route path='/order' element={<Order />} />
+            <Route path='/myAccount' element={<MyAccount />} />
         </Routes>
 
         <Footer />

@@ -6,6 +6,6 @@ import cartReducer from './slices/cartSlice'
 
 export default combineReducers({
     userReducer,
-    // orderReducer,
+    orderReducer,
     cartReducer
 })

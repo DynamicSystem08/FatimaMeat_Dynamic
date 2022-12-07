@@ -32,7 +32,7 @@ function HeaderTop(props) {
                         {
                             props.user ? <text
                                 onClick={() => navigate('/dashboard')}
-                                style={{ color: "white", cursor: "pointer" }}>Welcome! {props.user.email}</text>
+                                style={{ color: "white", cursor: "pointer" }}>Welcome! {props.user.displayName}</text>
                                 :
                                 <text
                                     onClick={() => navigate('/auth')}
