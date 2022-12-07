@@ -9,9 +9,23 @@ import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
 import PersonIcon from '@mui/icons-material/Person';
 import TextField from '@mui/material/TextField';
+import { ThemeProvider } from '@mui/material/styles';
 
 import { loginUser } from '../../../store/slices/userSlice'
 import "./index.css"
+
+import { createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: 'rgb(58,26,15)',
+        },
+        text: {
+            primary: 'rgb(58,26,15)'
+        }
+    }
+})
 
 function Login(props) {
     const dispatch = useDispatch()
@@ -64,15 +78,16 @@ function Login(props) {
             <Grid container>
                 <Grid item lg={12} md={12} sm={12} xs={12} id="login1" style={{ marginTop: "50px", marginBottom: "50px" }}>
 
-                    <h1 style={{ marginTop: "40px", color: "rgb(58,26,15)" }}>User <strong>Login</strong></h1>
+                    <h1 style={{ marginTop: "40px", color: "rgb(58,26,15)" }}><strong>User Login</strong></h1>
                     <PersonIcon sx={{ fontSize: 100, color: "rgb(58,26,15)" }} />
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <Grid container>
-                            <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <Grid item lg={2} md={3} sm={3} xs={2} ></Grid>
+                            <Grid item lg={7.5} md={6.5} sm={6.5} xs={8}>
                                 <div style={{ marginTop: "35px" }}>
+                                <ThemeProvider theme={theme}>
                                     <TextField
                                         label="E-mail"
                                         variant="outlined"
@@ -81,16 +96,28 @@ function Login(props) {
                                         {...register("email", { required: "E-mail Address is required." })}
                                         error={Boolean(errors.email)}
                                         helperText={errors.email?.message}
+                                        // fullWidth required
+                                        size="small"
+                                        sx={{
+                                            "& .MuiInputLabel-root": { color:'rgb(58,26,15)' },//styles the label
+                                            "& .MuiOutlinedInput-root": {
+                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                            },
+                                        }}
                                     />
+                                    </ThemeProvider>
                                 </div>
                             </Grid>
                         </Grid>
 
                         <Grid container>
-                            <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <Grid item lg={2} md={3} sm={3} xs={2} ></Grid>
+                            <Grid item lg={7.5} md={6.5} sm={6.5} xs={8}>
                                 <div style={{ marginTop: "35px" }}>
+                                <ThemeProvider theme={theme}>
+
                                     <TextField
+                                        size="small"
                                         id="outlined-basic"
                                         label="Password"
                                         variant="outlined"
@@ -102,29 +129,40 @@ function Login(props) {
                                         {...register("password", { required: "Password is required." })}
                                         error={Boolean(errors.password)}
                                         helperText={errors.password?.message}
+                                        sx={{
+                                            "& .MuiInputLabel-root": { color:'rgb(58,26,15)' },//styles the label
+                                            "& .MuiOutlinedInput-root": {
+                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                            },
+                                        }}
                                     />
+                                    </ThemeProvider>
                                 </div>
                             </Grid>
                         </Grid>
 
-                        <Button
-                            disabled={loading}
-                            type="submit"
-                            style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "50px", width: "200px", marginTop: "20px" }}>Login</Button>
-
                         <Grid container>
+                            <Grid item lg={2.3}></Grid>
+                            <Grid item lg={7}>
+                                <Button
+                                    disabled={loading}
+                                    type="submit"
+                                    style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "50px", width: "200px", marginTop: "40px" }}>Login</Button>
+                            </Grid>
+                        </Grid>
+
+
+
+                        {/* <Grid container>
                             <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
                                 <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
-                                    <text
-                                        // onClick={() => navigate("/signup")}
-                                        onClick={() => props.setScreen(false)}
-                                        style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Already Have an account?{'\n'}Click here to Login!</text>
+                               
                                     <text
                                         style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>    </text>
                                 </div>
                             </Grid>
-                        </Grid>
+                        </Grid> */}
 
                     </form>
 
