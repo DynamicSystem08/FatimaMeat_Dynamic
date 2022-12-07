@@ -1,5 +1,8 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import {
+    getAuth, createUserWithEmailAndPassword, signOut,
+    signInWithEmailAndPassword, onAuthStateChanged, updateProfile
+} from "firebase/auth";
 import { getFirestore, collection, addDoc } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -16,14 +19,21 @@ const auth = getAuth(app);
 const db = getFirestore(app);
 
 async function registerUser(data) {
-    const { name, email, password } = data
+    const { username, email, password } = data
 
     try {
         const res = await createUserWithEmailAndPassword(auth, email, password)
         const { user } = res
+        console.log("firebase user ==>", user.uid)
+
+        await updateProfile(auth.currentUser, {
+            displayName: username,
+            // photoURL: "https://example.com/jane-q-user/profile.jpg"
+        })
+
         const docRef = await addDoc(collection(db, "users"), {
             email,
-            name,
+            username,
             uid: user.uid
         });
         console.log(docRef)
@@ -48,7 +58,15 @@ async function signinUser(data) {
     }
 }
 
+async function signOutUser() {
+    const result = await signOut(auth)
+    return result
+}
+
 export {
+    auth,
+    onAuthStateChanged,
     registerUser,
-    signinUser
+    signinUser,
+    signOutUser
 }

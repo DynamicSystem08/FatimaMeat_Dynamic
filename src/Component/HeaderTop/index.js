@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
 
 
-function HeaderTop() {
+function HeaderTop(props) {
     const navigate = useNavigate()
 
     return <div style={{ backgroundColor: "black", marginBottom: "50px" }}>
@@ -29,9 +29,18 @@ function HeaderTop() {
                 <Grid item lg={2}>
                     <Grid container>
                         {/* <p style={{color:"white",paddingTop:"2px",cursor:"pointer"}}>Login/Register</p> */}
-                        <text
+                        {
+                            props.user ? <text
+                                onClick={() => navigate('/dashboard')}
+                                style={{ color: "white", cursor: "pointer" }}>Welcome! {props.user.email}</text>
+                                :
+                                <text
+                                    onClick={() => navigate('/auth')}
+                                    style={{ color: "white", cursor: "pointer" }}>Login/Register</text>
+                        }
+                        {/* <text
                             onClick={() => navigate('/auth')}
-                            style={{ color: "white", cursor: "pointer" }}>Login/Register</text>
+                            style={{ color: "white", cursor: "pointer" }}>Login/Register</text> */}
 
                         {/* <Grid item lg={12}>
                             <Button style={{ backgroundColor: "transparent", width: "100%", color: "white",paddingTop:"-10px" }}>View More Recipes</Button>

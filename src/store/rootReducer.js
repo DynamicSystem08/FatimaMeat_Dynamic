@@ -5,7 +5,7 @@ import orderReducer from './slices/orderSlice'
 import cartReducer from './slices/cartSlice'
 
 export default combineReducers({
-    // userReducer,
+    userReducer,
     // orderReducer,
     cartReducer
 })

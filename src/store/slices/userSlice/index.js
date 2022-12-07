@@ -22,6 +22,13 @@ export const loginUser = createAsyncThunk(
   }
 )
 
+export const setReduxUser = createAsyncThunk(
+  'setReduxUser',
+  async (data) => {
+    return data
+  }
+)
+
 export const fetchUsers = createAsyncThunk(
   'fetchUsers',
   // async () => {
@@ -45,6 +52,10 @@ export const userSlice = createSlice({
     })
 
     builder.addCase(loginUser.fulfilled, (state, action) => {
+      state.user = action.payload
+    })
+
+    builder.addCase(setReduxUser.fulfilled, (state, action) => {
       state.user = action.payload
     })
 
