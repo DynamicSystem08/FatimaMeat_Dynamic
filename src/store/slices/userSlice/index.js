@@ -23,12 +23,13 @@ export const loginUser = createAsyncThunk(
   }
 )
 
-export const setReduxUser = createAsyncThunk(
-  'setReduxUser',
-  async (data) => {
-    return data
-  }
-)
+// export const setReduxUser = createAsyncThunk(
+//   'setReduxUser',
+//   async (data) => {
+
+//     return data
+//   }
+// )
 
 export const fetchUsers = createAsyncThunk(
   'fetchUsers',
@@ -51,6 +52,10 @@ export const userSlice = createSlice({
   initialState,
   reducers: {
 
+    setReduxUser: (state, action) => {
+      state.user = action.payload
+    },
+
     logoutUser: (state) => {
       state.user = null
     },
@@ -72,9 +77,9 @@ export const userSlice = createSlice({
       state.user = action.payload
     })
 
-    builder.addCase(setReduxUser.fulfilled, (state, action) => {
-      state.user = action.payload
-    })
+    // builder.addCase(setReduxUser.fulfilled, (state, action) => {
+    //   state.user = action.payload
+    // })
 
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
       state.allUsers = action.payload
@@ -88,6 +93,6 @@ export const userSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { logoutUser, getAllUser, emailSupportTeam } = userSlice.actions
+export const { logoutUser, getAllUser, emailSupportTeam, setReduxUser } = userSlice.actions
 
 export default userSlice.reducer

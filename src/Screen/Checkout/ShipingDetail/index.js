@@ -120,34 +120,34 @@ function Shippingdetails() {
 
                     <Grid item lg={12} md={12} sm={12} xs={12} id="create1" style={{ marginBottom: "20px", marginTop: "-1px" }} className="input12">
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }} className="shping_detail_input">< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
-                            <input type="text" placeholder='Enter Name ' onChange={(e) => handelChange("name", e.target.value)}
+                            <input type="text" placeholder='Enter Name ' onChange={(e) => handelChange("name", e.target.value)} value={details.name}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", paddingLeft: "20px", border: "none", fontSize: "15px" }} />
                         </div>
                         {/* <input type="text" placeholder="Enter Nme" /> */}
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}>< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
-                            <input type="text" placeholder=' Address ' onChange={(e) => handelChange("address", e.target.value)}
+                            <input type="text" placeholder=' Address ' onChange={(e) => handelChange("address", e.target.value)} value={details.address}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", paddingLeft: "20px", border: "none", fontSize: "15px" }} />
                         </div>
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><  LocationCityIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
-                            <input type="text" placeholder=' City ' onChange={(e) => handelChange("city", e.target.value)}
+                            <input type="text" placeholder=' City ' onChange={(e) => handelChange("city", e.target.value)} value={details.city}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><PersonPinCircleIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
-                            <input type="text" placeholder=' Pin Code ' onChange={(e) => handelChange("pinCode", e.target.value)}
+                            <input type="text" placeholder=' Pin Code ' onChange={(e) => handelChange("zipCode", e.target.value)} value={details.zipCode}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><CallIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
-                            <input type="text" placeholder=' Phone Number ' onChange={(e) => handelChange("phoneNumber", e.target.value)}
+                            <input type="text" placeholder=' Phone Number ' onChange={(e) => handelChange("phoneNumber", e.target.value)} value={details.phoneNumber}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", paddingLeft: "10px" }}><PublicIcon style={{ paddingLeft: "10px", fontSize: "32px" }} />
+                        {/* <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", paddingLeft: "10px" }}><PublicIcon style={{ paddingLeft: "10px", fontSize: "32px" }} />
                             <select type="file" style={{ outline: "none", marginLeft: "25px", marginRight: "90px", paddingRight: "40px", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", fontSize: "15px" }} >
                                 <option value="saab">Country</option>
                                 <option value="Web">Mobile</option>
                                 <option value="opel">Opel</option>
                                 <option value="audi">Audi</option>
                             </select>
-                        </div>
+                        </div> */}
 
 
                     </Grid>

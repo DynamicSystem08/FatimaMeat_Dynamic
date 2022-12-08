@@ -89,42 +89,40 @@ function ConfirmOrder() {
             <Grid container>
                 <Grid item lg={8} md={8} sm={6} xs={12} style={{ marginTop: "30px" }}>
                     <h3 style={{ fontSize: "25px" }}>Shipping Info</h3>
-                    <p style={{ marginLeft: "20px" }}><b>Name:</b>Bilal
-                        {/* {details.name} */}
+                    <p style={{ marginLeft: "20px" }}><b>Name: </b>
+                        {details.name}
                     </p>
-                    <p style={{ marginLeft: "20px" }}><b>Phone:</b> 0314-5838753
-                        {/* {details.phoneNumber} */}
-
+                    <p style={{ marginLeft: "20px" }}><b>Phone: </b>
+                        {details.phoneNumber}
                     </p>
-                    <p style={{ marginLeft: "20px" }}><b>City:</b>Karachi
-                        {/* {details.city} */}
+                    <p style={{ marginLeft: "20px" }}><b>City: </b>
+                        {details.city}
                     </p>
-                    <p style={{ marginLeft: "20px" }}><b>Adress:</b> Surjani Town Karachi
-                        {/* {details.address} */}
+                    <p style={{ marginLeft: "20px" }}><b>Adress: </b>
+                        {details.address}
                     </p>
 
                     {/* yahn map cahala hai */}
                     <h3 style={{ fontSize: "25px", marginTop: "50px" }}>Your Cart Items:</h3>
-                    {/* {cartItems.map((item, index) => { */}
-
-                    {/* return <div key={index}> */}
-                    <Grid container style={{ marginTop: "50px", marginLeft: "30px" }}>
-                        <Grid item lg={2} className="confirm_order_img" >
-                            <img src={img14} />
-                        </Grid>
-                        <Grid item lg={2} md={7} sm={5} xs={5} className="confirm_Order_text" >
-                            {/* <p>{item.title}{" ("}x{item.quantity}{")"}</p> */}
-                            <p>Bilal Hussain</p>
-                        </Grid>
-                        {/* <Grid item lg={2} md={5} sm={5} xs={5} >
+                    {cartItems.map((item, index) => {
+                        console.log(item)
+                        return <div key={index}>
+                            <Grid container style={{ marginTop: "50px", marginLeft: "30px" }}>
+                                <Grid item lg={2} className="confirm_order_img" >
+                                    <img src={img14} />
+                                </Grid>
+                                <Grid item lg={2} md={7} sm={5} xs={5} className="confirm_Order_text" >
+                                    <p>{item.name}{" ("}x{item.quantity}{")"}</p>
+                                </Grid>
+                                <Grid item lg={2} md={5} sm={5} xs={5} >
                                     <p>X{item.quantity}</p>
-                                </Grid> */}
-                        <Grid item lg={6} style={{ textAlign: "end" }}>
-                            {/* <p>Rs. {item.price} </p> */}
-                        </Grid>
-                    </Grid>
-                    {/* </div> */}
-                    {/* })} */}
+                                </Grid>
+                                <Grid item lg={6} style={{ textAlign: "end" }}>
+                                    <p>Rs. {item.meatType.price} </p>
+                                </Grid>
+                            </Grid>
+                        </div>
+                    })}
 
                 </Grid>
                 <Grid item lg={4} md={4} sm={4} xs={12} style={{ borderLeft: "1px solid black" }}>
@@ -137,12 +135,12 @@ function ConfirmOrder() {
                             <p>GST:</p>
                         </Grid>
                         <Grid item lg={2}>
-                            <p>Rs:1000</p>
+                            {/* <p>Rs:1000</p>
                             <p>Rs:400</p>
-                            <p>Rs:5000</p>
-                            {/* <p>Rs. {cartTotal}</p>
+                            <p>Rs:5000</p> */}
+                            <p>Rs. {cartTotal}</p>
                             <p>Rs. {shippingCharges}</p>
-                            <p>Rs. {gst}</p> */}
+                            <p>Rs. {gst}</p>
                         </Grid>
                     </Grid>
                     <hr style={{ width: "300px" }}></hr>
@@ -152,8 +150,8 @@ function ConfirmOrder() {
                             <b>Total:</b>
                         </Grid>
                         <Grid item lg={2}>
-                            <b>Rs:6000</b>
-                            {/* <b>Rs. {totalAmmount}</b> */}
+                            {/* <b>Rs:6000</b> */}
+                            <b>Rs. {totalAmmount}</b>
                         </Grid>
                     </Grid>
                     <div style={{ textAlign: "center", marginTop: "30px" }}>
