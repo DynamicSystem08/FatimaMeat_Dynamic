@@ -39,7 +39,7 @@ function OurMeat() {
         <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
           <img src={imgFatima} alt="" />
         </Grid>
-        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text5">
           <h1>Beef</h1>
         </Grid>
       </Grid>
@@ -89,7 +89,7 @@ function OurMeat() {
         <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
           <img src={imgFatimaM} alt="" />
         </Grid>
-        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text1">
+        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text5">
           <h1>Mutton</h1>
         </Grid>
       </Grid>

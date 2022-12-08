@@ -1,35 +1,53 @@
 .container {
-    position: relative;
-    font-family: Arial;
-  }
-  
-  .text-block {
-    position: absolute;
-    bottom: 0.1px;
-    /* bottom: 28.5%; */
-    /* right: 20px; */
-    background-color:rgba(213,188,157,0.9);
-    color: white;
-    /* padding-left: 10px; */
-    /* padding-right: 20px; */
-    width: 93%;
-  }
-  .text-block p{
-    text-align: center;
-    font-size: 25px;
-    padding-top: 10px;
+  position: relative;
+  font-family: Arial;
+}
 
+.text-block {
+  position: absolute;
+  bottom: 0.1px;
+  /* bottom: 28.5%; */
+  /* right: 20px; */
+  background-color: rgba(213, 188, 157, 0.9);
+  color: white;
+  /* padding-left: 10px; */
+  /* padding-right: 20px; */
+  width: 93%;
+}
+
+.text-block p {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 10px;
+
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.Recipes_Home_Container {
+  justify-content: center;
+  gap: 40px;
+}
+
+.button_Recipes {
+  background-color: rgb(213, 188, 157);
+}
+
+
+/* @media((max-width:900px) and (min-width:600px)) {
+  .our_Home_Recipes_101 img {
+    margin-left: -45px;
   }
-  .container img{
-    width: 100%;
-    height: auto;
+  .our_Home_Recipes_101 p{
+    padding-left: -50px;
   }
-  .Recipes_Home_Container
-  {
-    justify-content: center;
-    gap: 40px;
-  }
-  .button_Recipes
-  {
-    background-color: rgb(213, 188,157);
-  }
+} */
+ 
+@media (max-width:414px){
+     .our_home_recipe_botton{
+      width: 50%;
+     }
+}

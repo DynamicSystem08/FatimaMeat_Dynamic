@@ -156,10 +156,10 @@ function Login(props) {
                         <Grid container>
                             <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
-                                <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
+                                <div style={{marginTop:"-10px",paddingBottom:"20px"}} className="sign_Up_Input">
                                     <text
                                         onClick={() => props.setScreen(false)}
-                                        style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Click here to Register</text>
+                                        style={{ color: "", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Click here to Register</text>
                                 </div>
                             </Grid>
                         </Grid>

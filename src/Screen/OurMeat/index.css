@@ -44,6 +44,26 @@
     font-weight: 900;
 }
 
+.our_meat_text5 h1{
+    font-size:26px;
+    color:black;
+    margin-top: 50px;
+    font-weight: 900;
+}
+
+@media (max-width:500px){
+    .our_meat_text5 h1{
+        margin-top: 60px;
+    }
+  }
+  
+  @media ((max-width:900px) and (min-width:501px)){
+    .our_meat_text5 h1{
+        margin-top:60px;
+    }
+  }
+  
+
 .Beef_main_imgs {
     gap: 43px;
     margin-top: 50px;

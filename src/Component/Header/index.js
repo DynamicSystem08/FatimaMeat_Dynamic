@@ -41,7 +41,7 @@ function NavScrollExample() {
               Link
             </Nav.Link> */}
             <Grid container>
-              <Grid item lg={0.8}></Grid>
+              <Grid item lg={0.8} md={0.6}></Grid>
               <Grid item lg={0.9} md={1} sm={1} xs={12} onClick={() => navigate("/home")} style={{ cursor: "pointer" }} className="text_Header">
                 HOME
               </Grid>
@@ -53,7 +53,7 @@ function NavScrollExample() {
                 RECIPES
               </Grid>
               {/* <Grid item lg={0.5}></Grid> */}
-              <Grid item lg={2} xs={12} className="logo_img">
+              <Grid item lg={2} md={2} xs={12} className="logo_img">
                 <img src={logo} alt="" id="img1" />
               </Grid>
               <Grid item lg={0.6} md={0.6}></Grid>
@@ -64,7 +64,7 @@ function NavScrollExample() {
               <Grid item lg={1.3} md={1.3} xs={10} onClick={() => navigate("/product")} style={{ cursor: "pointer" }} className="text_Header">
                 PRODUCT
               </Grid>
-              <Grid item lg={1} xs={10} onClick={() => navigate("/cart")} style={{ cursor: "pointer" }} className="text_Header">
+              <Grid item lg={1} md={1} xs={10} onClick={() => navigate("/cart")} style={{ cursor: "pointer" }} className="text_Header">
                 CART
               </Grid>
 

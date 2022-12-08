@@ -50,25 +50,27 @@ const style = {
     position: 'absolute',
     top: '47%',
     left: '50%',
-    right:"50%",
+    right: "50%",
     transform: 'translate(-50%, -50%)',
     width: 800,
     // bgcolor: 'background.paper',
     // border: 'none',
     // boxShadow: 24,
-    height:500,
+    height: 500,
     // p: 4,
 };
-const style1={
+const style1 = {
     position: 'absolute',
-    top: '47%',
+    top: '50%',
     left: '50%',
-    right:"50%",
+    right: "50%",
     transform: 'translate(-50%, -50%)',
     width: "50%",
     // height:690,
-    height:"100%",
-    overflow:"scroll"
+    height: "100%",
+    overflow: "scroll",
+    // border:"1px solid white",
+    outline:"none"
 
 }
 
@@ -79,12 +81,12 @@ function Recipes() {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
-    const [one,setOne]=useState(false);
-    const oneOpen=()=>setOne(true);
-    const oneClose=()=>setOne(false)
-    const [two,setTwo]=useState(false);
-    const twoOpen=()=>setTwo(true);
-    const twoClose=()=>setTwo(false)
+    const [one, setOne] = useState(false);
+    const oneOpen = () => setOne(true);
+    const oneClose = () => setOne(false)
+    const [two, setTwo] = useState(false);
+    const twoOpen = () => setTwo(true);
+    const twoClose = () => setTwo(false)
     const [four, setFour] = useState(false)
     const fourOpen = () => setFour(true)
     const fourClose = () => setFour(false)
@@ -128,32 +130,31 @@ function Recipes() {
     // useEffect(() => {
     //     window.scroll(0, 0)
     // })
-    return <div style={{ marginTop: "-10px",backgroundColor:"white",paddingBottom:"30px" }} className="Recipes_bg">
+    return <div style={{ marginTop: "-10px", backgroundColor: "white", paddingBottom: "30px" }} className="Recipes_bg">
         <MetaData title="Fatima Meat | Recipes" />
         <Grid container>
-            <Grid item lg={12} className="our_Recipe_bg">
+            <Grid item lg={12} md={12} sm={12} xs={12} className="our_Recipe_bg">
                 <h1 className='our_meat_text' style={{ padding: "100px" }}>Our Recipes</h1>
             </Grid>
             <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
                 <p className="our_Meat_main1" style={{ marginBottom: "50px", textAlign: "center", marginTop: "50px", fontSize: "50px" }}>Our Recipes</p>
-                {/* <img src={dividerDark} alt="" style={{ width: "10%" }} /> */}
             </Grid>
         </Grid>
         <Container>
             <Grid container className='Conatainer_Recipes'>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
 
                         <img onClick={handleOpen} src={ourRecipes1} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
                             open={open}
                             onClose={handleClose}
-                            // aria-labelledby="modal-modal-title"
-                            // aria-describedby="modal-modal-description"
+                        // aria-labelledby="modal-modal-title"
+                        // aria-describedby="modal-modal-description"
                         >
-                            <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes1} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box  className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes1} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -164,7 +165,7 @@ function Recipes() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={oneOpen} src={ourRecipes2} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -173,9 +174,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                          <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes2} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102" >
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes2} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -186,7 +187,7 @@ function Recipes() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={twoOpen} src={ourRecipes3} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -195,9 +196,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                           <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes3} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes3} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -208,7 +209,7 @@ function Recipes() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={fourOpen} src={ourRecipes4} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -217,9 +218,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                          <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes4} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes4} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -231,7 +232,7 @@ function Recipes() {
                     </div>
                 </Grid>
 
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={fiveOpen} src={ourRecipes5} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -240,9 +241,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                          <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes5} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes5} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -253,7 +254,7 @@ function Recipes() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={sixOpen} src={ourRecipes6} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -262,9 +263,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                           <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes6} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes6} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -275,7 +276,7 @@ function Recipes() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={sevenOpen} src={ourRecipes7} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -284,9 +285,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                        <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes7} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes7} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -297,7 +298,7 @@ function Recipes() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={eightOpen} src={ourRecipes8} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -306,9 +307,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                       <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes8} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes8} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -320,7 +321,7 @@ function Recipes() {
                     </div>
                 </Grid>
 
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={nineOpen} src={ourRecipes9} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -329,9 +330,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                       <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes9} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes9} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -342,7 +343,7 @@ function Recipes() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={tenOpen} src={ourRecipes10} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -351,9 +352,9 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                          <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes10} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes10} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
@@ -364,7 +365,7 @@ function Recipes() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={tensOpen} src={ourRecipes11} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -373,20 +374,18 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                          <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes11} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes11} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
-
-                        {/* <img src={ourRecipes11} alt="Nature" style={{ width: "100%" }} /> */}
                         <div class="text-block_Recipes">
                             <p>Chicken Donuts</p>
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={therteenOpen} src={ourRecipes12} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -395,21 +394,19 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                         <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes12} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes12} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
-
-                        {/* <img src={ourRecipes12} alt="Nature" style={{ width: "100%" }} /> */}
                         <div class="text-block_Recipes">
                             <p>Chicken Lasanga</p>
                         </div>
                     </div>
                 </Grid>
 
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={fourteenOpen} src={ourRecipes13} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -418,20 +415,18 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                          <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes13} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes13} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
-
-                        {/* <img src={ourRecipes13} alt="Nature" style={{ width: "100%" }} /> */}
                         <div class="text-block_Recipes">
                             <p>Chicken Jalfrezi</p>
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={fiveteenOpen} src={ourRecipes14} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -440,20 +435,18 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                     <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes14} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes14} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
-
-                        {/* <img src={ourRecipes14} alt="Nature" style={{ width: "100%" }} /> */}
                         <div class="text-block_Recipes">
                             <p>Beef Manchurian</p>
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={sixteenOpen} src={ourRecipes15} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -462,21 +455,18 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                       <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes15} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes15} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
-
-
-                        {/* <img src={ourRecipes15} alt="Nature" style={{ width: "100%" }} /> */}
                         <div class="text-block_Recipes">
                             <p>Beef Stake</p>
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={3.5} sm={5} xs={12}>
                     <div class="container_Recipes">
                         <img onClick={seventeenOpen} src={ourRecipes16} alt="" style={{ width: "100%", cursor: "pointer" }} />
                         <Modal
@@ -485,15 +475,12 @@ function Recipes() {
                             aria-labelledby="modal-modal-title"
                             aria-describedby="modal-modal-description"
                         >
-                         <Box style={style1}>
-                                <Typography   style={{className:"fatima_modals_img"}}>
-                                <img src={FatimeMeatRecipes16} alt="" style={{width:"100%",height:"auto",paddingTop:"-20px",marginBottom:"30px"}} />
+                            <Box className="our_recipes_102">
+                                <Typography style={{ className: "fatima_modals_img" }}>
+                                    <img src={FatimeMeatRecipes16} alt="" style={{ width: "100%", height: "auto", paddingTop: "-20px", marginBottom: "30px" }} />
                                 </Typography>
                             </Box>
                         </Modal>
-
-
-                        {/* <img src={ourRecipes16} alt="Nature" style={{ width: "100%" }} /> */}
                         <div class="text-block_Recipes">
                             <p>Beef Pasanday</p>
                         </div>
