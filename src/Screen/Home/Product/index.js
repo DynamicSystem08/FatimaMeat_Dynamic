@@ -40,14 +40,14 @@ function Product() {
         {/* Meat Product */}
         <Container style={{ paddingTop: "130px", paddingBottom: "50px" }}>
             <Grid container>
-                <Grid item lg={12} style={{ textAlign: "center" }}>
+                <Grid item lg={12} md={12} sm={12} xs={12} style={{ textAlign: "center" }}>
                     <h1>FATIMA MEAT PRODUCT</h1>
                 </Grid>
             </Grid>
 
             <Grid
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
-                <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
+                <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={Mutton} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
@@ -58,7 +58,7 @@ function Product() {
             <Grid container className='Conatainer_Recipes'
                 onClick={() => navigate(`/product/mutton-meat`)}
             >
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg1} alt="Nature" style={{ width: "100%", cursor: "pointer" }}
                         // onClick={() => navigate("/productdetail")} 
@@ -68,7 +68,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -76,7 +76,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -84,7 +84,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -97,7 +97,7 @@ function Product() {
 
             <Grid
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
-                <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
+                <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={chicken} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
@@ -108,7 +108,7 @@ function Product() {
             <Grid container className='Conatainer_Recipes'
                 onClick={() => navigate(`/product/chicken-meat`)}
             >
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={chickenimg1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -116,7 +116,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={chickenimg2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -124,7 +124,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={chickenimg3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -132,7 +132,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={chickenimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -144,7 +144,7 @@ function Product() {
             {/* Beaf */}
             <Grid
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
-                <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
+                <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={Beaf} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
@@ -155,7 +155,7 @@ function Product() {
             <Grid container className='Conatainer_Recipes'
                 onClick={() => navigate(`/product/beef-meat`)}
             >
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={beefimg2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -163,7 +163,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={beefimg1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -171,7 +171,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={beefimg3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -179,7 +179,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={beefimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -192,7 +192,7 @@ function Product() {
             {/* Rabit */}
             <Grid
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
-                <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
+                <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={rabbitIcom} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
@@ -203,7 +203,7 @@ function Product() {
             <Grid container className='Conatainer_Recipes'
                 onClick={() => navigate(`/product/rabbit-meat`)}
             >
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={rabbitimg1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -211,7 +211,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={rabbitimg2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -219,7 +219,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={rabbitimg3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -227,7 +227,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={rabbitimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -240,7 +240,7 @@ function Product() {
             {/* camel*/}
             <Grid
                 container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
-                <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
+                <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={cameIcon} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
@@ -251,7 +251,7 @@ function Product() {
             <Grid container className='Conatainer_Recipes'
                 onClick={() => navigate(`/product/camel-meat`)}
             >
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={camelimg1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -259,7 +259,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={camelimg2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -267,7 +267,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={camelimg3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
@@ -275,7 +275,7 @@ function Product() {
                         </div>
                     </div>
                 </Grid>
-                <Grid item lg={2.7}>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={camelimg4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes">
