@@ -45,7 +45,7 @@ function Login(props) {
             setLoading(false)
             return
         }
-        if (data.password.length <= 6) {
+        if (data.password.length < 6) {
             swal("Error!", "Password must be at least 6 characters long", "error");
             setLoading(false)
             return

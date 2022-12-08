@@ -4,22 +4,6 @@ const initialState = {
     cart: []
 }
 
-export const fetchOrders = createAsyncThunk(
-    'fetchOrders',
-    // async () => {
-    //     const response = await axios.get('http://localhost:5000/get-all-orders')
-    //     return response.data
-    // }
-)
-
-export const createOrder = createAsyncThunk(
-    'createOrder',
-    // async (data) => {
-    //     const response = await axios.post('http://localhost:5000/create-order', { data })
-    //     console.log(response)
-    //     return response
-    // }
-)
 
 export const cartSlice = createSlice({
     name: 'cartSlice',
@@ -36,15 +20,7 @@ export const cartSlice = createSlice({
         removeCartItems: (state) => {
             state.cart = []
         }
-    },
-    extraReducers: (builder) => {
-        builder.addCase(fetchOrders.fulfilled, (state, action) => {
-            state.allOrders = action.payload
-        })
-        builder.addCase(createOrder.fulfilled, (state, action) => {
-            state.createOrderResponse = action.payload
-        })
-    },
+    }
 })
 
 // Action creators are generated for each case reducer function

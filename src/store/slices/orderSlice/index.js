@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
+import { createOrderFirebase, getAllOrders } from '../../../config/firebase'
 // import axios from "axios"
 
 const initialState = {
@@ -13,12 +14,21 @@ const initialState = {
 
 export const fetchOrders = createAsyncThunk(
     'fetchOrders',
+    async () => {
+        const result = await getAllOrders()
 
+        if (!result.error) {
+            return result.data
+        }
+    }
 )
 
 export const createOrder = createAsyncThunk(
     'createOrder',
-
+    async (data) => {
+        const res = await createOrderFirebase(data)
+        return res
+    }
 )
 
 export const orderSlice = createSlice({

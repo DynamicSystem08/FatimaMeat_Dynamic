@@ -1,12 +1,28 @@
+import { useEffect } from 'react';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 
-import { signOutUser } from '../../config/firebase'
+import { signOutUser, getAllOrders } from '../../config/firebase'
+import { fetchOrders } from '../../store/slices/orderSlice';
 import "./index.css"
+import { useDispatch, useSelector } from 'react-redux';
 
 function Dashboard() {
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    const reduxAllOrders = useSelector(state => state.orderReducer.allOrders)
+    console.log(reduxAllOrders)
+
+    const callData = async () => {
+        const result = await dispatch(fetchOrders())
+    }
+
+    useEffect(() => {
+        getAllOrders()
+        callData()
+    }, [])
 
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>

@@ -73,10 +73,12 @@ function Payment() {
 
     const totalOrderAmount = useSelector(state => state.orderReducer.totalOrderAmount)
     const shippingDetails = useSelector(state => state.orderReducer.shippingDetails)
-    const buyerDetails = useSelector(state => state.userReducer.user)
-    const cartItems = useSelector(state => state.productReducer.cart)
+    // const buyerDetails = useSelector(state => state.userReducer.user)
+    const cartItems = useSelector(state => state.cartReducer.cart)
+    const cartTotal = useSelector(state => state.orderReducer.cartTotal)
 
-    const [formData, setFormData] = useState({  
+    const [formData, setFormData] = useState({
+        paymentMethod: "cash",
         bankName: "COD",
         cardHolderName: "Nabeel",
         cardNo: "12345678912",
@@ -86,45 +88,66 @@ function Payment() {
     const handelChange = (key, value) => {
         setFormData({ ...formData, [key]: value })
     }
-    console.log(formData)
 
-    const handleClick = () => {
-        if (!formData.bankName) {
-            swal("Error!", "Please enter a bank name", "error");
-            return
-        }
-        if (formData.cardNo.length != 11) {
-            swal("Error!", "Please enter your card number", "error");
-            return
-        }
-        if (formData.cvsNo.length != 3) {
-            swal("Error!", "Please enter your card's cvs number", "error");
-            return
-        }
-        if (!formData.cardHolderName) {
-            swal("Error!", "Please enter card holder's name", "error");
-            return
-        }
+    const handleClick = async () => {
+        // if (!formData.bankName) {
+        //     swal("Error!", "Please enter a bank name", "error");
+        //     return
+        // }
+        // if (formData.cardNo.length != 11) {
+        //     swal("Error!", "Please enter your card number", "error");
+        //     return
+        // }
+        // if (formData.cvsNo.length != 3) {
+        //     swal("Error!", "Please enter your card's cvs number", "error");
+        //     return
+        // }
+        // if (!formData.cardHolderName) {
+        //     swal("Error!", "Please enter card holder's name", "error");
+        //     return
+        // }
 
         let data = {}
 
-        data.totalOrderAmount = totalOrderAmount
         data.shippingDetails = shippingDetails
-        data.buyerDetails = buyerDetails
+        data.buyerDetails = {}
         data.cartItems = cartItems
         data.paymentInfo = formData
 
-        dispatch(createOrder(data))
-        dispatch(deleteOrderState())
+        data.cartInfo = {}
+        data.cartInfo.totalOrderAmount = totalOrderAmount
+        data.cartInfo.cartTotal = cartTotal
+
+        const { payload } = await dispatch(createOrder(data))
+        console.log("paymnet", payload)
+
+        if (payload.error) {
+            swal({
+                title: "Error!",
+                icon: "error",
+                text: payload.message,
+                button: "Ok!",
+            });
+        }
+        else {
+            swal({
+                title: "Success!",
+                icon: "success",
+                text: payload.message,
+                button: "Ok!",
+            });
+        }
+
+        // dispatch(deleteOrderState())
         // dispatch(clearEntireCart())
 
-        swal({
-            title: "Success!",
-            text: "Your order has been placed!",
-            icon: "success",
-            button: "Ok!",
-        });
-        navigate("/home")
+        // swal({
+        //     title: "Success!",
+        //     text: "Your order has been placed!",
+        //     icon: "success",
+        //     button: "Ok!",
+        // });
+        // navigate("/home")
     }
 
     return <div style={{ backgroundColor: "white" }}>
@@ -161,7 +184,7 @@ function Payment() {
 
         <Grid container>
             <Grid item lg={12} md={12} sm={12} xs={12} style={{ marginTop: "40px" }}>
-                <p style={{ fontSize: "25px", textAlign: "center" }}>CARD INFO</p>
+                <p style={{ fontSize: "25px", textAlign: "center" }}>PAYMENT METHOD</p>
                 <Grid container style={{ justifyContent: "center" }}>
                     <Grid item lg={2}>
                         <hr style={{ width: "250px" }}></hr>
@@ -221,7 +244,7 @@ function Payment() {
                         </AccordionDetails>
                     </Accordion>
                     <div style={{ textAlign: "center", marginTop: "30px", width: "400px", marginBottom: "50px" }}>
-                        <Button onClick={() => navigate("/dashboard")}
+                        <Button onClick={handleClick}
                             style={{ backgroundColor: "rgb(58,26,15)", color: "white", width: "200px" }}>Pay
                             {/* {totalOrderAmount} */}
                         </Button>
