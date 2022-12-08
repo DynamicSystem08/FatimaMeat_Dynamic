@@ -14,19 +14,19 @@ function HeaderTop(props) {
             <Grid container style={{ paddingTop: "5px" }}>
                 <Grid item lg={2}>
                     <Grid container>
-                        <Grid item lg={2}>
-                            <CallIcon style={{ color: "rgba(213,188,157,0.9)", paddingTop: "3px", backgroundColor: "white", borderRadius: "50%" }} />
-                        </Grid>
-                        <Grid item lg={10} style={{ paddingTop: "3px", paddingBottom: "5px", color: "white" }}>
-                            <text>Call Us:0313-763590</text>
-                        </Grid>
+                        {/* <Grid item lg={2} md={2} xs={2} style={{paddingRight:"30px"}}>
+                            <CallIcon style={{ color: "rgba(213,188,157,0.9)",paddingTop: "3px", backgroundColor: "white", borderRadius: "50%" }} />
+                        </Grid> */}
+                        <Grid item lg={10} md={12} sm={12} xs={12}style={{ paddingTop: "3px", paddingBottom: "5px", color: "white" }}>
+                            <text>Call Us : 0313-763590</text>
+                        </Grid> 
                     </Grid>
                 </Grid>
-                <Grid item lg={6.5}></Grid>
-                <Grid item lg={1.5}>
+                <Grid item lg={6.5} md={6} sm={5} xs={10}></Grid>
+                <Grid item lg={1.5} md={1.5} sm={2}>
                     <text style={{ color: "white" }}>CONTACT US</text>
                 </Grid>
-                <Grid item lg={2}>
+                <Grid item lg={2} md={2} sm={1.5} xs={10}>
                     <Grid container>
                         {/* <p style={{color:"white",paddingTop:"2px",cursor:"pointer"}}>Login/Register</p> */}
                         {

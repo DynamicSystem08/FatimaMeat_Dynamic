@@ -14,7 +14,7 @@ function HomeRecipe() {
         <Container>
             <Grid className='Recipes_Home_Main'>
                 <Grid container className='Recipes_Home_Container'>
-                    <Grid item lg={3.7}>
+                    <Grid item lg={3.7} md={3.5} sm={5} xs={12}>
                         <div class="container">
                             <img src={Recipe1} alt="Nature" style={{ width: "100%" }} />
                             <div class="text-block">
@@ -22,7 +22,7 @@ function HomeRecipe() {
                             </div>
                         </div>
                     </Grid>
-                    <Grid item lg={3.7}>
+                    <Grid item lg={3.7} md={3.5} sm={5} xs={12}>
                         <div class="container">
                             <img src={Recipe2} alt="Nature" style={{ width: "100%" }} />
                             <div class="text-block">
@@ -30,7 +30,7 @@ function HomeRecipe() {
                             </div>
                         </div>
                     </Grid>
-                    <Grid item lg={3.7}>
+                    <Grid item lg={3.7} md={3.5} sm={5} xs={12}>
                         <div class="container">
                             <img src={Recipe3} alt="Nature" style={{ width: "100%" }} />
                             <div class="text-block">

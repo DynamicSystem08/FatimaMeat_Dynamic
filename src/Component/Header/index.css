@@ -10,3 +10,16 @@
     padding-top: 29px;
     color: white;
 }
+
+
+@media (max-width:414px){
+    #header{
+        height:auto;
+        margin-top: -20px;
+        background-color: gray;
+    }
+   /* .text_Header{
+    margin      -left: 40px;
+   } */
+  }
+  

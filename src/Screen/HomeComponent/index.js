@@ -15,8 +15,8 @@ function HomeComponent() {
         <MetaData title="Fatima Meat | Home" />
         <Slider />
         <Product />
-        <Location />
         <HomeRecipes />
+        <Location />
     </div>
 }
 export default HomeComponent
