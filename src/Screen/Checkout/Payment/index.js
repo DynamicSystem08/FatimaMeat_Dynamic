@@ -76,7 +76,7 @@ function Payment() {
     const buyerDetails = useSelector(state => state.userReducer.user)
     const cartItems = useSelector(state => state.productReducer.cart)
 
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({  
         bankName: "COD",
         cardHolderName: "Nabeel",
         cardNo: "12345678912",

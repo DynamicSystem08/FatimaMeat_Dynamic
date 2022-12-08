@@ -33,7 +33,7 @@ function SignUp(props) {
             return
         }
 
-        if (data.password.length <= 6) {
+        if (data.password.length < 6) {
             console.log(data.password.length)
             swal("Error!", "Password must be at least 6 characters long", "error");
             setLoading(false)
