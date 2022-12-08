@@ -101,7 +101,7 @@ function ProductDetail() {
       <h1 style={{ textAlign: "center" }}><b>{data.name}</b></h1>
 
       <Grid container className="product_detail_main">
-        <Grid item lg={5.5} className="product_detail_slider">
+        <Grid item lg={5.5} md={5.5} sm={5.5} xs={12} className="product_detail_slider">
           {/* <img src={mutonimg1} alt="" /> */}
           <>
             <Swiper
@@ -151,13 +151,13 @@ function ProductDetail() {
           </>
 
         </Grid>
-        <Grid item lg={5.5} className="product_detail_text">
+        <Grid item lg={5.5} md={5.5} sm={5.5} xs={10} className="product_detail_text">
           <p>{data.minPrice} - {data.maxPrice}</p>
           <Grid container>
-            <Grid item lg={4}>
+            <Grid item lg={4} md={4} sm={4} xs={5}>
               <p style={{ fontSize: "20px", marginTop: "5px", cursor: "pointer" }}><b>Meat Type</b></p>
             </Grid>
-            <Grid item lg={8}>
+            <Grid item lg={8} md={8} sm={8} xs={7}>
               <FormControl fullWidth>
                 <Select
                   style={{ width: "100%", height: "50px", border: "1px solid lightgray", paddingLeft: "20px" }}
@@ -181,7 +181,7 @@ function ProductDetail() {
             selectedMeatType.price && <p>Rs {selectedMeatType.price}</p>
           }
           <Grid container style={{ marginBottom: "25px" }}>
-            <Grid item lg={2} className="detail_product_input">
+            <Grid item lg={2} md={2} sm={3} xs={4} className="detail_product_input">
               <button onClick={() => updateQuantity(true)}
                 style={{ height: "30px", backgroundColor: "rgb(52, 52, 52)", color: "white", cursor: "pointer" }}>-</button>
               <text style={{ marginLeft: "10px", marginRight: "10px" }}>{quantity}</text>
@@ -193,8 +193,8 @@ function ProductDetail() {
               placeholder='0' 
               style={{ width: "100%", height: "40px", paddingLeft: "35px" }} /> */}
             </Grid>
-            <Grid item lg={2}></Grid>
-            <Grid item lg={8}>
+            <Grid item lg={2} md={2} sm={1} xs={1}></Grid>
+            <Grid item lg={8} md={8} sm={8} xs={7}>
               <Button
                 // disabled={!selectedMeatType.price}
                 style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px" }}
@@ -208,21 +208,21 @@ function ProductDetail() {
     </Container>
     <Container>
       <Grid container className='product_descripton_btn'>
-        <Grid item lg={3.7}>
+        <Grid item lg={3.7} md={3.7} sm={3} xs={11}>
           <Button
             style={{ width: "100%", backgroundColor: "rgb(213,188,157)", color: "white", fontSize: "20px", height: "50px" }}
             onClick={() => setScreen('description')}
           >Description</Button>
 
         </Grid>
-        <Grid item lg={3.7}>
+        <Grid item lg={3.7} md={3.7} sm={5} xs={11}>
           <Button
             style={{ width: "100%", backgroundColor: "rgb(213,188,157)", color: "white", fontSize: "20px", height: "50px" }}
             onClick={() => setScreen('additionalInformation')}
           >Additional Information</Button>
 
         </Grid>
-        <Grid item lg={3.7}>
+        <Grid item lg={3.7} md={3.7} sm={3} xs={11}>
           <Button
             style={{ width: "100%", backgroundColor: "rgb(213,188,157)", color: "white", fontSize: "20px", height: "50px" }}
             onClick={() => setScreen('review')}
@@ -232,7 +232,7 @@ function ProductDetail() {
       </Grid>
       {
         screen == 'description' && <Grid container style={{ backgroundColor: "white", paddingBottom: "0px" }} >
-          <Grid item lg={10} className="Rabbit_meat_ul" npn>
+          <Grid item lg={10} md={10} sm={10} xs={10} className="Rabbit_meat_ul" npn>
             <p>{data.name}</p>
             <ul>
               {data.description.map((item, index) => {
@@ -244,14 +244,14 @@ function ProductDetail() {
       }
       {
         screen == 'additionalInformation' && <Grid container style={{ backgroundColor: "white", paddingBottom: "0px" }} >
-          <Grid item lg={10} className="Rabbit_meat_ul" npn>
+          <Grid item lg={10} md={10} sm={10} xs={10}  className="Rabbit_meat_ul" npn>
             <p>KG</p>
           </Grid>
         </Grid>
       }
       {
         screen == 'review' && <Grid container style={{ backgroundColor: "white", paddingBottom: "0px" }} >
-          <Grid item lg={10} className="Rabbit_meat_ul" npn>
+          <Grid item lg={10} md={10} sm={10} xs={10} className="Rabbit_meat_ul" npn>
             <p>No reviews yet</p>
           </Grid>
         </Grid>

@@ -84,8 +84,8 @@ function Login(props) {
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <Grid container>
-                            <Grid item lg={2} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={7.5} md={6.5} sm={6.5} xs={8}>
+                            <Grid item lg={2} md={2} sm={2} xs={1} ></Grid>
+                            <Grid item lg={7.5} md={8.5} sm={8.5} xs={10}>
                                 <div style={{ marginTop: "35px" }}>
                                     <ThemeProvider theme={theme}>
                                         <TextField
@@ -111,8 +111,8 @@ function Login(props) {
                         </Grid>
 
                         <Grid container>
-                            <Grid item lg={2} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={7.5} md={6.5} sm={6.5} xs={8}>
+                            <Grid item lg={2} md={2} sm={2} xs={1} ></Grid>
+                            <Grid item lg={7.5} md={8.5} sm={8.5} xs={10}>
                                 <div style={{ marginTop: "35px" }}>
                                     <ThemeProvider theme={theme}>
 
@@ -142,8 +142,8 @@ function Login(props) {
                         </Grid>
 
                         <Grid container>
-                            <Grid item lg={2.3}></Grid>
-                            <Grid item lg={7}>
+                            <Grid item lg={2.3} md={2.7} sm={3.2} xs={2.5}></Grid>
+                            <Grid item lg={7} md={7}>
                                 <Button
                                     disabled={loading}
                                     type="submit"
@@ -154,12 +154,12 @@ function Login(props) {
 
 
                         <Grid container>
-                            <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
+                            <Grid item lg={2.5} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
                                 <div style={{marginTop:"-10px",paddingBottom:"20px"}} className="sign_Up_Input">
                                     <text
                                         onClick={() => props.setScreen(false)}
-                                        style={{ color: "", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Click here to Register</text>
+                                        style={{ color: "", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}><b>Click here to Register</b></text>
                                 </div>
                             </Grid>
                         </Grid>
