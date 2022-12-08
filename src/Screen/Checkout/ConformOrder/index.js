@@ -6,38 +6,59 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import Button from '@mui/material/Button';
 import img14 from "../../../Image/ourRecipes1.jpg"
 import { useNavigate } from "react-router-dom";
-// import { useSelector, useDispatch } from 'react-redux'
-// import { setBillAmount } from '../../../store/slices/orderSlice'
+import { useSelector, useDispatch } from 'react-redux'
+import { setBillAmount } from '../../../store/slices/orderSlice'
+
 import "./index.css"
 
 function ConfirmOrder() {
     const navigate = useNavigate()
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
-    // const cartTotal = useSelector(state => state.orderReducer.cartTotal)
-    // const details = useSelector(state => state.orderReducer.shippingDetails)
-    // const cartItems = useSelector(state => state.productReducer.cart)
-
-    // const shippingCharges = 100
-    // const gst = 300
-    // const totalAmmount = cartTotal + shippingCharges + gst
+    const details = useSelector(state => state.orderReducer.shippingDetails)
+    console.log(details)
+    const cartItems = useSelector(state => state.cartReducer.cart)
+    console.log(cartItems)
+    const cartTotal = useSelector(state => state.orderReducer.cartTotal)
+    console.log(cartTotal)
 
     const handleClick = () => {
-        // dispatch(setBillAmount(totalAmmount))
-        // navigate('/checkout/payment')
+        dispatch(setBillAmount(totalAmmount))
+        navigate('/checkout/payment')
     }
 
-    // if (!cartItems) {
+    // if (!details) {
+    //     navigate('/checkout/shippingDetails')
     //     return <div>loading</div>
     // }
 
-    return <div style={{paddingBottom:"50px",backgroundColor:"white"}}>
+    // if (!cartTotal) {
+    //     navigate('/cart')
+    //     return <div>loading</div>
+    // }
+
+    // if (!cartItems) {
+    //     navigate('/cart')
+    //     return <div>loading</div>
+    // }
+
+    // if (!details) {
+    //     navigate('/cart')
+    //     return <div>loading</div>
+    // }
+
+    const shippingCharges = 100
+    const gst = 300
+    const totalAmmount = cartTotal + shippingCharges + gst
+
+
+    return <div style={{ paddingBottom: "50px", backgroundColor: "white" }}>
         <Container style={{ textAlign: "center", paddingTop: "140px" }} maxWidth="md">
             <Grid container>
                 <Grid item lg={5.5} md={5.5} sm={5.5} xs={5.5} >
                     <Grid container>
                         <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5}>
-                            <LocalShippingIcon sx={{ fontSize: "35px", marginTop: "-10px",color:"rgb(58,26,15)" }} />
+                            <LocalShippingIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(58,26,15)" }} />
                             <p>Shipping Details</p>
                         </Grid>
                         <Grid item lg={8.5} md={8.5} sm={8.5} xs={8.5}>
@@ -48,7 +69,7 @@ function ConfirmOrder() {
                 <Grid item lg={5.5} md={5.5} sm={5.5} xs={5.5} >
                     <Grid container>
                         <Grid item lg={3} md={3} sm={3} xs={3}>
-                            <CheckBoxIcon sx={{ fontSize: "35px", marginTop: "-10px",color:"rgb(58,26,15)" }} />
+                            <CheckBoxIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(58,26,15)" }} />
                             <p>Confirm Order</p>
                         </Grid>
                         <Grid item lg={9} md={9} sm={9} xs={9}>
@@ -69,40 +90,40 @@ function ConfirmOrder() {
                 <Grid item lg={8} md={8} sm={6} xs={12} style={{ marginTop: "30px" }}>
                     <h3 style={{ fontSize: "25px" }}>Shipping Info</h3>
                     <p style={{ marginLeft: "20px" }}><b>Name:</b>Bilal
-                     {/* {details.name} */}
-                     </p>
+                        {/* {details.name} */}
+                    </p>
                     <p style={{ marginLeft: "20px" }}><b>Phone:</b> 0314-5838753
-                    {/* {details.phoneNumber} */}
-                    
+                        {/* {details.phoneNumber} */}
+
                     </p>
                     <p style={{ marginLeft: "20px" }}><b>City:</b>Karachi
-                     {/* {details.city} */}
-                     </p>
+                        {/* {details.city} */}
+                    </p>
                     <p style={{ marginLeft: "20px" }}><b>Adress:</b> Surjani Town Karachi
-                    {/* {details.address} */}
+                        {/* {details.address} */}
                     </p>
 
                     {/* yahn map cahala hai */}
                     <h3 style={{ fontSize: "25px", marginTop: "50px" }}>Your Cart Items:</h3>
                     {/* {cartItems.map((item, index) => { */}
 
-                        {/* return <div key={index}> */}
-                            <Grid container style={{ marginTop: "50px", marginLeft: "30px" }}>
-                                <Grid item lg={2} className="confirm_order_img" >
-                                    <img src={img14} />
-                                </Grid>
-                                <Grid item lg={2} md={7} sm={5} xs={5} className="confirm_Order_text" >
-                                    {/* <p>{item.title}{" ("}x{item.quantity}{")"}</p> */}
-                                    <p>Bilal Hussain</p>
-                                </Grid>
-                                {/* <Grid item lg={2} md={5} sm={5} xs={5} >
+                    {/* return <div key={index}> */}
+                    <Grid container style={{ marginTop: "50px", marginLeft: "30px" }}>
+                        <Grid item lg={2} className="confirm_order_img" >
+                            <img src={img14} />
+                        </Grid>
+                        <Grid item lg={2} md={7} sm={5} xs={5} className="confirm_Order_text" >
+                            {/* <p>{item.title}{" ("}x{item.quantity}{")"}</p> */}
+                            <p>Bilal Hussain</p>
+                        </Grid>
+                        {/* <Grid item lg={2} md={5} sm={5} xs={5} >
                                     <p>X{item.quantity}</p>
                                 </Grid> */}
-                                <Grid item lg={6} style={{ textAlign: "end" }}>
-                                    {/* <p>Rs. {item.price} </p> */}
-                                </Grid>
-                            </Grid>
-                        {/* </div> */}
+                        <Grid item lg={6} style={{ textAlign: "end" }}>
+                            {/* <p>Rs. {item.price} </p> */}
+                        </Grid>
+                    </Grid>
+                    {/* </div> */}
                     {/* })} */}
 
                 </Grid>
@@ -136,7 +157,7 @@ function ConfirmOrder() {
                         </Grid>
                     </Grid>
                     <div style={{ textAlign: "center", marginTop: "30px" }}>
-                        <Button onClick={() => navigate("/payment")} style={{ backgroundColor: "rgb(58,26,15)", color: "white", width: "200px" }}>Proceed To Payment</Button>
+                        <Button onClick={handleClick} style={{ backgroundColor: "rgb(58,26,15)", color: "white", width: "200px" }}>Proceed To Payment</Button>
                     </div>
                 </Grid>
             </Grid>

@@ -21,7 +21,7 @@ function SignUp(props) {
     const onSubmit = (data) => submit(data)
 
     const submit = async (data) => {
-        console.log("submit")
+        // console.log("submit")
         setLoading(true)
         if (!data.email || !data.password || !data.username) {
             setLoading(false)
@@ -32,7 +32,9 @@ function SignUp(props) {
             setLoading(false)
             return
         }
-        if (data.password.length !== 6) {
+
+        if (data.password.length <= 6) {
+            console.log(data.password.length)
             swal("Error!", "Password must be at least 6 characters long", "error");
             setLoading(false)
             return
@@ -86,7 +88,7 @@ function SignUp(props) {
                                         label="Username"
                                         variant="outlined"
                                         fullWidth
-                                        name="email"
+                                        name="username"
                                         {...register("username", { required: "Username is required." })}
                                         error={Boolean(errors.username)}
                                         helperText={errors.username?.message}

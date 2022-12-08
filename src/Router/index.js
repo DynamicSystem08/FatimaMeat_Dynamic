@@ -1,4 +1,6 @@
+import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import HomeComponent from '../Screen/HomeComponent';
 import HeaderTop from '../Component/HeaderTop';
 import Header from '../Component/Header';
@@ -18,12 +20,52 @@ import Auth from '../Screen/Auth'
 import Order from '../Screen/Dashboard/Order';
 import MyAccount from '../Screen/Dashboard/MyAccount';
 
-function Routering() {
+import { auth, onAuthStateChanged } from '../config/firebase'
+import { useDispatch, useSelector } from 'react-redux';
+
+function Router() {
+
+    const dispatch = useDispatch()
+    const reduxCart = useSelector(state => state.cartReducer.cart)
+    const [user, setUser] = useState()
+
+    const protectedRoute = (component) => {
+        if (!user || !reduxCart[0]) {
+            return <Auth />
+        }
+        else {
+            return component
+        }
+    }
+
+    const protectedRouteAuth = (component) => {
+        if (!user) {
+            return <Auth />
+        }
+        else {
+            return <Dashboard />
+        }
+    }
+
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUser(user)
+                dispatch(setUser(user))
+            } else {
+                setUser()
+                dispatch(setUser())
+            }
+        });
+    }, [])
+
     return <BrowserRouter>
+
         <div style={{ backgroundColor: "rgb(58,26,15)" }}>
-            <HeaderTop />
+            <HeaderTop user={user} />
             <Header />
         </div>
+
         <Routes>
             <Route path="/" element={<HomeComponent />} />
 
@@ -32,21 +74,24 @@ function Routering() {
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/product" element={<Product />} />
             <Route path="/fatimaFood" element={<FatimaFood />} />
-            <Route path="/auth" element={<Auth />} />
+            <Route path="/auth" element={protectedRouteAuth(<Auth />)} />
 
             <Route path="/product/:id" element={<ProductDetail />} />
 
             <Route path="/cart" element={<Cart />} />
 
-            <Route path="/shipingDeatils" element={<ShipingDeatil />} />
-            <Route path="/conformOrder" element={<ConformOrder />} />
-            <Route path="/payment" element={<Payment />} />
+            <Route path="/checkout/shippingDetails" element={protectedRoute(<ShipingDeatil />)} />
+            <Route path="/checkout/confirmOrder" element={<ConformOrder />} />
+            <Route path="/checkout/payment" element={<Payment />} />
 
-            <Route path="/dashboard" element={<Dashboard />} />
-            <Route path='/order' element={<Order/>}/>
-            <Route path='/myAccount' element={<MyAccount/>}/>
+            <Route path="/dashboard" element={protectedRouteAuth(<Dashboard />)} />
+            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
+            <Route path='/order' element={<Order />} />
+            <Route path='/myAccount' element={<MyAccount />} />
         </Routes>
+
         <Footer />
+
     </BrowserRouter>
 }
-export default Routering
+export default Router

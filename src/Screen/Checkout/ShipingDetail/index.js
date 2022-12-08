@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from "react-router-dom";
-// import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import swal from 'sweetalert';
 
 import Grid from '@mui/material/Grid';
@@ -16,12 +16,13 @@ import CallIcon from '@mui/icons-material/Call';
 import PublicIcon from '@mui/icons-material/Public';
 
 
-// import { setShippingDetails } from '../../../store/slices/orderSlice'
+import { setShippingDetails } from '../../../store/slices/orderSlice'
 import "./index.css"
 
 function Shippingdetails() {
     const navigate = useNavigate()
-    // const dispatch = useDispatch()
+    const dispatch = useDispatch()
+    const cartItems = useSelector(state => state.cartReducer.cart)
 
     const [details, setDetails] = useState({
         name: "nabeel",
@@ -58,9 +59,14 @@ function Shippingdetails() {
             return
         }
 
-        // dispatch(setShippingDetails(details))
+        dispatch(setShippingDetails(details))
 
-        // navigate('/checkout/confirmOrder')
+        navigate('/checkout/confirmOrder')
+    }
+
+    if (!cartItems) {
+        navigate('/cart')
+        return <div>loading</div>
     }
 
     return <div style={{ backgroundColor: "white" }}>
@@ -148,7 +154,7 @@ function Shippingdetails() {
                 </Grid>
                 <Grid container className='shiping_detail_btn'>
                     <Grid item lg={7}>
-                        <Button onClick={() => navigate("/conformOrder")} style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "30px", width: "100%", marginTop: "20px" }}>Continue</Button>
+                        <Button onClick={handleClick} style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "30px", width: "100%", marginTop: "20px" }}>Continue</Button>
                     </Grid>
                 </Grid>
             </Container>
