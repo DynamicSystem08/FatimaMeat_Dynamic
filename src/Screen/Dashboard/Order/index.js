@@ -3,6 +3,8 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 
+import swal from 'sweetalert';
+
 import { signOutUser } from '../../../config/firebase'
 import { fetchOrders } from '../../../store/slices/orderSlice';
 import "./index.css"
@@ -42,14 +44,24 @@ function Dashboard() {
                     <p >Orders</p><br></br>
                     <p onClick={() => navigate("/myAccount")}>Account Details</p><br></br>
                     <p
-                        onClick={async () => {
-                            const res = await signOutUser()
-                            if (!res.error) {
-                                dispatch(logoutUser())
-                            }
-                            else {
-                                console.log(res.message)
-                            }
+                        onClick={() => {
+                            swal({
+                                title: "Are you sure?",
+                                text: "You will be logged out!",
+                                icon: "warning",
+                                buttons: true,
+                                dangerMode: true,
+                            })
+                                .then((willDelete) => {
+                                    if (willDelete) {
+                                        signOutUser().then(
+                                            dispatch(logoutUser())
+                                        ).catch(e => console.log(e))
+                                        swal("Logout Successful!", {
+                                            icon: "success",
+                                        });
+                                    }
+                                });
                         }}
                     >Logout</p><br></br>
                 </Grid>

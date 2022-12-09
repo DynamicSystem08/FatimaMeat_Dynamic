@@ -8,6 +8,7 @@ import { fetchOrders } from '../../store/slices/orderSlice';
 import "./index.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../store/slices/userSlice';
+import swal from 'sweetalert';
 
 function Dashboard() {
 
@@ -24,14 +25,24 @@ function Dashboard() {
                     <p onClick={() => navigate("/order")}>Orders</p><br></br>
                     <p onClick={() => navigate("/myAccount")}>Account Details</p><br></br>
                     <p
-                        onClick={async () => {
-                            const res = await signOutUser()
-                            if (!res.error) {
-                                dispatch(logoutUser())
-                            }
-                            else {
-                                console.log(res.message)
-                            }
+                        onClick={() => {
+                            swal({
+                                title: "Are you sure?",
+                                text: "You will be logged out!",
+                                icon: "warning",
+                                buttons: true,
+                                dangerMode: true,
+                            })
+                                .then((willDelete) => {
+                                    if (willDelete) {
+                                        signOutUser().then(
+                                            dispatch(logoutUser())
+                                        ).catch(e => console.log(e))
+                                        swal("Logout Successful!", {
+                                            icon: "success",
+                                        });
+                                    }
+                                });
                         }}
                     >Logout</p><br></br>
                 </Grid>
