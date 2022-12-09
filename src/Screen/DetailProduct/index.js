@@ -96,13 +96,20 @@ function ProductDetail() {
     return <div>Loading...</div>
   }
 
+
+  const objImage = [{
+    img1: "https://swiperjs.com/demos/images/nature-1.jpg",
+    img2: "https://swiperjs.com/demos/images/nature-2.jpg",
+    img3: "https://swiperjs.com/demos/images/nature-5.jpg",
+    img4: "https://swiperjs.com/demos/images/nature-1.jpg",
+  }]
+
   return <div style={{ backgroundColor: "rgb(58,26,15)", paddingTop: "120px", paddingBottom: "50px" }}>
     <Container style={{ backgroundColor: "white", paddingTop: "50px", paddingBottom: "50px" }}>
       <h1 style={{ textAlign: "center" }}><b>{data.name}</b></h1>
 
       <Grid container className="product_detail_main">
         <Grid item lg={5.5} md={5.5} sm={5.5} xs={12} className="product_detail_slider">
-          {/* <img src={mutonimg1} alt="" /> */}
           <>
             <Swiper
               effect={"coverflow"}
@@ -120,33 +127,23 @@ function ProductDetail() {
               modules={[EffectCoverflow, Pagination]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-              </SwiperSlide>
-              <SwiperSlide>
-                <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-              </SwiperSlide>
+
+              {objImage.map((item) => {
+                return <div>
+                  <SwiperSlide>
+                    <img src={item.img1} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={item.img2} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={item.img3} alt="" />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img src={item.img4} alt="" />
+                  </SwiperSlide>
+                </div>
+              })}
             </Swiper>
           </>
 

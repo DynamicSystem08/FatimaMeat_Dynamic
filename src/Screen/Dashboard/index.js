@@ -13,7 +13,7 @@ function Dashboard() {
     const dispatch = useDispatch()
 
     const reduxAllOrders = useSelector(state => state.orderReducer.allOrders)
-    console.log(reduxAllOrders)
+    console.log("add", reduxAllOrders)
 
     const callData = async () => {
         const result = await dispatch(fetchOrders())
@@ -23,6 +23,7 @@ function Dashboard() {
         getAllOrders()
         callData()
     }, [])
+
 
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
@@ -40,11 +41,55 @@ function Dashboard() {
                     >Logout</p><br></br>
                 </Grid>
                 <Grid item lg={1}></Grid>
+           
+                      
                 <Grid item lg={8} style={{ paddingTop: "100px" }}>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum, tenetur. Quas incidunt, illo numquam maiores eos assumenda quisquam, mollitia dicta ipsam asperiores magnam modi a tenetur hic minima, sunt laboriosam.
-                    </p>
-                    <p>Lorem ipsueriam tenetur illum id, optio eaque qui nobis dolore exercitationem sapiente aut numquam sunt unde. A asperiores ducimus nihil reprehenderit.</p>
+                <Grid container style={{ justifyContent: "center",marginBottom:"20px" }}>
+                        <Grid item lg={2} >
+                            <h5>Order Id</h5>
+                        </Grid>
+                        <Grid item lg={3}>
+                            <h5>Customer Name</h5>
+                        </Grid>
+                        <Grid item lg={3}>
+                            <h5>Dilevery Address</h5>
+                        </Grid>
+                        <Grid item lg={2}>
+                            <h5>Order Item</h5>
+                        </Grid>
+                        <Grid item lg={2}>
+                            <h5>Order Date</h5>
+                        </Grid>
+                    </Grid>
+
+                {reduxAllOrders.map((item) => {
+                    return <div>
+                    <Grid container style={{ justifyContent: "center" }}>
+                        <Grid item lg={2} >
+                            <p> {item.orderId} </p>
+                        </Grid>
+                        <Grid item lg={3}>
+                        <p> {item.CustomerName} </p>
+
+                        </Grid>
+                        <Grid item lg={3}>
+                        <p> {item.orderId} </p>
+
+                        </Grid>
+                        <Grid item lg={2}>
+                        <p> {item.orderNumber} </p>
+
+                        </Grid>
+                        <Grid item lg={2}>
+                        <p> {item.orderDate} </p>
+
+                        </Grid>
+                    </Grid>
+                    </div>
+                    })}
                 </Grid>
+
+          
             </Grid>
         </Container>
     </div>
