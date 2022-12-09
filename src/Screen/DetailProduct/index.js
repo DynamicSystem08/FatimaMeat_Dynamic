@@ -26,6 +26,7 @@ function ProductDetail() {
   const params = useParams()
   const { id } = params
   const [data, setData] = useState()
+  console.log("productdetails data", data)
   const [quantity, setQuantity] = useState(0)
   const [screen, setScreen] = useState('description')
   const [meatType, setMeatType] = useState()
@@ -33,7 +34,6 @@ function ProductDetail() {
     type: 'select an option', price: false
   })
   const [orderDetails, setOrderDetails] = useState()
-  console.log(orderDetails)
 
   const dispatch = useDispatch()
 
@@ -244,7 +244,7 @@ function ProductDetail() {
       }
       {
         screen == 'additionalInformation' && <Grid container style={{ backgroundColor: "white", paddingBottom: "0px" }} >
-          <Grid item lg={10} md={10} sm={10} xs={10}  className="Rabbit_meat_ul" npn>
+          <Grid item lg={10} md={10} sm={10} xs={10} className="Rabbit_meat_ul" npn>
             <p>KG</p>
           </Grid>
         </Grid>

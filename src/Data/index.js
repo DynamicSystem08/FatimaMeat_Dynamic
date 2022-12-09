@@ -1,8 +1,13 @@
+import rabbit1 from '../Image/rabbitimg1.jpg'
+import rabbit2 from '../Image/rabbitimg2.jpg'
+import rabbit3 from '../Image/rabbitimg3.jpg'
+import rabbit4 from '../Image/rabbitimg4.jpg'
+
 const allProducts = [
     {
         id: "desi-aseel-meat",
         name: "Desi Aseel Meat",
-        image: [""],
+        images: [""],
         meatType: [
             {
                 type: "Live",
@@ -35,7 +40,7 @@ const allProducts = [
     {
         id: "chicken-meat",
         name: "Chicken Meat",
-        image: [""],
+        images: [""],
         meatType: [
             {
                 type: "Live",
@@ -61,7 +66,7 @@ const allProducts = [
     {
         id: "duck-Meat",
         name: "Duck Meat",
-        image: [""],
+        images: [""],
         meatType: [
             // {
             //     type: "Live",
@@ -92,7 +97,7 @@ const allProducts = [
     {
         id: "rabbit-meat",
         name: "Rabbit Meat",
-        image: [""],
+        images: [rabbit1, rabbit2, rabbit3, rabbit4],
         meatType: [
             {
                 type: "Live",
@@ -122,7 +127,7 @@ const allProducts = [
     {
         id: "camel-meat",
         name: "Camel Meat",
-        image: [""],
+        images: [""],
         meatType: [
             {
                 type: "Prime Boneless (Cube zero fat)",
@@ -176,7 +181,7 @@ const allProducts = [
     {
         id: "mutton-meat",
         name: "Mutton",
-        image: [""],
+        images: [""],
         meatType: [
             {
                 type: "Mutton Chops",
@@ -230,7 +235,7 @@ const allProducts = [
     {
         id: "sheep-lamb",
         name: "Sheep/Lamb",
-        image: [""],
+        images: [""],
         meatType: [
             {
                 type: "Sheep Chops",
@@ -277,7 +282,7 @@ const allProducts = [
     {
         id: "beef-meat",
         name: "Beef",
-        image: [""],
+        images: [""],
         meatType: [
             {
                 type: "Undercut",
