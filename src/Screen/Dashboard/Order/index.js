@@ -1,16 +1,37 @@
+import { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
-import "./index.css"
 
-function Order() {
+import { signOutUser } from '../../../config/firebase'
+import { fetchOrders } from '../../../store/slices/orderSlice';
+import "./index.css"
+import { useDispatch, useSelector } from 'react-redux';
+import { logoutUser } from '../../../store/slices/userSlice';
+
+function Dashboard() {
+
     const navigate = useNavigate()
-    const obj = [
-        { heading: "order 1", items: "car" },
-        { heading1:"order 2", item1: "car1" },
-        { heading2:"order 3", item2: "car2" },
-        { heading3:"order 4", item3: "car3" },
-    ]
+    const dispatch = useDispatch()
+
+    const [screen, setScreen] = useState()
+
+    const reduxAllOrders = useSelector(state => state.orderReducer.allOrders)
+    console.log("Dashboard reduxAllOrders", reduxAllOrders)
+    const reduxUser = useSelector(state => state.userReducer.user)
+    console.log(reduxUser)
+
+    const callData = async () => {
+        const result = await dispatch(fetchOrders())
+    }
+
+    useEffect(() => {
+        if (reduxUser.email == "admin@fatimameat.com") {
+            console.log("admin")
+            callData()
+        }
+    }, [])
+
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
@@ -18,40 +39,75 @@ function Order() {
                     <h2><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
-                    <p onClick={() => navigate("/order")}>Orders</p><br></br>
-                    <p>DownLoads</p><br></br>
-                    <p>Addresses</p><br></br>
-                    <p>Accounts details</p><br></br>
-                    <p>Logout</p><br></br>
+                    <p >Orders</p><br></br>
+                    <p onClick={() => navigate("/myAccount")}>Account Details</p><br></br>
+                    <p
+                        onClick={async () => {
+                            const res = await signOutUser()
+                            if (!res.error) {
+                                dispatch(logoutUser())
+                            }
+                            else {
+                                console.log(res.message)
+                            }
+                        }}
+                    >Logout</p><br></br>
                 </Grid>
                 <Grid item lg={1}></Grid>
 
+
                 <Grid item lg={8} style={{ paddingTop: "100px" }}>
-                    {obj.map((item) => {
+                    <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
+                        <Grid item lg={2} >
+                            <h5>Order Id</h5>
+                        </Grid>
+                        <Grid item lg={3}>
+                            <h5>Customer Name</h5>
+                        </Grid>
+                        <Grid item lg={3}>
+                            <h5>Dilevery Address</h5>
+                        </Grid>
+                        <Grid item lg={2}>
+                            <h5>Order Item</h5>
+                        </Grid>
+                        <Grid item lg={2}>
+                            <h5>Order Date</h5>
+                        </Grid>
+                    </Grid>
+
+                    {reduxAllOrders ? reduxAllOrders.map((item) => {
                         return <div>
-                            <Grid container className='dashboard_order'>
-                                <Grid item lg={2.5} className="dashboard_order_text">
-                                    <h1>{item.heading}</h1>
-                                    <p>{item.items}</p>
+                            <Grid container style={{ justifyContent: "center" }}>
+                                <Grid item lg={2} >
+                                    <p> {item.orderId} </p>
                                 </Grid>
-                                <Grid item lg={2.5} className="dashboard_order_text">
-                                    <h1>{item.heading}</h1>
-                                    <p>{item.items}</p>
+                                <Grid item lg={3}>
+                                    <p> {item.CustomerName} </p>
+
                                 </Grid>
-                                <Grid item lg={2.5} className="dashboard_order_text">
-                                    <h1>{item.heading}</h1>
-                                    <p>{item.items}</p>
+                                <Grid item lg={3}>
+                                    <p> {item.orderId} </p>
+
                                 </Grid>
-                                <Grid item lg={2.5} className="dashboard_order_text">
-                                    <h1>{item.heading}</h1>
-                                    <p>{item.items}</p>
+                                <Grid item lg={2}>
+                                    <p> {item.orderNumber} </p>
+
+                                </Grid>
+                                <Grid item lg={2}>
+                                    <p> {item.orderDate} </p>
+
                                 </Grid>
                             </Grid>
                         </div>
-                    })}
+                    })
+                        :
+                        <div>No Data Found</div>
+                    }
                 </Grid>
+
+
             </Grid>
         </Container>
     </div>
 }
-export default Order
+export default Dashboard

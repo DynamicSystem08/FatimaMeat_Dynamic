@@ -11,7 +11,7 @@ import PersonIcon from '@mui/icons-material/Person';
 import TextField from '@mui/material/TextField';
 import { ThemeProvider } from '@mui/material/styles';
 
-import { loginUser } from '../../../store/slices/userSlice'
+import { setReduxUser, loginUser } from '../../../store/slices/userSlice'
 import "./index.css"
 
 import { createTheme } from '@mui/material/styles';
@@ -62,6 +62,7 @@ function Login(props) {
             });
         }
         else {
+            setReduxUser(payload.data)
             swal({
                 title: "Success!",
                 icon: "success",
@@ -156,7 +157,7 @@ function Login(props) {
                         <Grid container>
                             <Grid item lg={2.5} md={3} sm={3} xs={2} ></Grid>
                             <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
-                                <div style={{marginTop:"-10px",paddingBottom:"20px"}} className="sign_Up_Input">
+                                <div style={{ marginTop: "-10px", paddingBottom: "20px" }} className="sign_Up_Input">
                                     <text
                                         onClick={() => props.setScreen(false)}
                                         style={{ color: "", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}><b>Click here to Register</b></text>

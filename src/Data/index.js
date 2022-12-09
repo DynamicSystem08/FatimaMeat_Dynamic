@@ -1,13 +1,40 @@
+//Rabbit
 import rabbit1 from '../Image/rabbitimg1.jpg'
 import rabbit2 from '../Image/rabbitimg2.jpg'
 import rabbit3 from '../Image/rabbitimg3.jpg'
 import rabbit4 from '../Image/rabbitimg4.jpg'
 
+//Chicken
+import chicken1 from '../Image/chickenimg1.jpg'
+import chicken2 from '../Image/chickenimg2.jpg'
+import chicken3 from '../Image/chickenimg3.jpg'
+import chicken4 from '../Image/chickenimg4.jpg'
+
+//Beef
+import beef1 from '../Image/beefimg1.jpeg'
+import beef2 from '../Image/beefimg2.jpg'
+import beef3 from '../Image/beefimg3.jpg'
+import beef4 from '../Image/beefimg4.jpg'
+
+//camel
+import camel1 from '../Image/camelimg1.jpg'
+import camel2 from '../Image/camelimg2.png'
+import camel3 from '../Image/camelimg3.jpg'
+import camel4 from '../Image/camelimg4.jpg'
+
+//mutton
+import mutton1 from '../Image/muttonimg1.jpg'
+import mutton2 from '../Image/muttonimg2.jpg'
+import mutton3 from '../Image/muttonimg3.jpg'
+import mutton4 from '../Image/muttonimg4.jpg'
+
+
+
 const allProducts = [
     {
         id: "desi-aseel-meat",
         name: "Desi Aseel Meat",
-        images: [""],
+        images: [chicken1, chicken2, chicken3, chicken4],
         meatType: [
             {
                 type: "Live",
@@ -40,7 +67,7 @@ const allProducts = [
     {
         id: "chicken-meat",
         name: "Chicken Meat",
-        images: [""],
+        images: [chicken1, chicken2, chicken3, chicken4],
         meatType: [
             {
                 type: "Live",
@@ -127,7 +154,7 @@ const allProducts = [
     {
         id: "camel-meat",
         name: "Camel Meat",
-        images: [""],
+        images: [camel4, camel1, camel2, camel3],
         meatType: [
             {
                 type: "Prime Boneless (Cube zero fat)",
@@ -181,7 +208,7 @@ const allProducts = [
     {
         id: "mutton-meat",
         name: "Mutton",
-        images: [""],
+        images: [mutton1, mutton2, mutton3, mutton4],
         meatType: [
             {
                 type: "Mutton Chops",
@@ -282,7 +309,7 @@ const allProducts = [
     {
         id: "beef-meat",
         name: "Beef",
-        images: [""],
+        images: [beef1, beef2, beef3, beef4],
         meatType: [
             {
                 type: "Undercut",

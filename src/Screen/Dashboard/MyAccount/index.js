@@ -1,16 +1,19 @@
+import { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
-import "./index.css"
 
-function MyAccount() {
+import { signOutUser } from '../../../config/firebase'
+import { fetchOrders } from '../../../store/slices/orderSlice';
+import "./index.css"
+import { useDispatch, useSelector } from 'react-redux';
+import { logoutUser } from '../../../store/slices/userSlice';
+
+function Dashboard() {
+
     const navigate = useNavigate()
-    const obj = [
-        { heading: "Acconut", items: "WATCH" },
-        { heading1:"order 2", item1: "car1" },
-        { heading2:"order 3", item2: "car2" },
-        { heading3:"order 4", item3: "car3" },
-    ]
+    const dispatch = useDispatch()
+
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
@@ -19,39 +22,32 @@ function MyAccount() {
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
                     <p onClick={() => navigate("/order")}>Orders</p><br></br>
-                    <p onClick={()=>navigate("/myAccount")}>My Accounts</p><br></br>
-                    <p>Addresses</p><br></br>
-                    <p>Accounts details</p><br></br>
-                    <p>Logout</p><br></br>
+                    <p >Account Details</p><br></br>
+                    <p
+                        onClick={async () => {
+                            const res = await signOutUser()
+                            if (!res.error) {
+                                dispatch(logoutUser())
+                            }
+                            else {
+                                console.log(res.message)
+                            }
+                        }}
+                    >Logout</p><br></br>
                 </Grid>
                 <Grid item lg={1}></Grid>
 
+
                 <Grid item lg={8} style={{ paddingTop: "100px" }}>
-                    {obj.map((item) => {
-                        return <div>
-                            <Grid container className='dashboard_order'>
-                                <Grid item lg={3} className="dashboard_order_text">
-                                    <h1>{item.heading}</h1>
-                                    <p>{item.items}</p>
-                                </Grid>
-                                <Grid item lg={3} className="dashboard_order_text">
-                                    <h1>{item.heading}</h1>
-                                    <p>{item.items}</p>
-                                </Grid>
-                                <Grid item lg={3} className="dashboard_order_text">
-                                    <h1>{item.heading}</h1>
-                                    <p>{item.items}</p>
-                                </Grid>
-                                <Grid item lg={3} className="dashboard_order_text">
-                                    <h1>{item.heading}</h1>
-                                    <p>{item.items}</p>
-                                </Grid>
-                            </Grid>
-                        </div>
-                    })}
+                    <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
+                        <h1>
+                            Account Details
+                        </h1>
+                    </Grid>
+
                 </Grid>
             </Grid>
         </Container>
     </div>
 }
-export default MyAccount
+export default Dashboard

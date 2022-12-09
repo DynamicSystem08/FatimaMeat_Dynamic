@@ -10,12 +10,12 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyARJpv58bJ9bjpv0wnYkOPTbNrX6VFGUWM",
-    authDomain: "hu-fyp-erp-43bc0.firebaseapp.com",
-    projectId: "hu-fyp-erp-43bc0",
-    storageBucket: "hu-fyp-erp-43bc0.appspot.com",
-    messagingSenderId: "894076141393",
-    appId: "1:894076141393:web:f71a3d83e7f4602e80dd70"
+    apiKey: "AIzaSyChopD35ZVwOSV9Hks1hoNEiCB2QeQ8xV4",
+    authDomain: "fatimameat-124a8.firebaseapp.com",
+    projectId: "fatimameat-124a8",
+    storageBucket: "fatimameat-124a8.appspot.com",
+    messagingSenderId: "270004706470",
+    appId: "1:270004706470:web:15bca07f5582b0e12ae867"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -54,17 +54,23 @@ async function signinUser(data) {
 
     try {
         const res = await signInWithEmailAndPassword(auth, email, password)
-        return { error: false, message: "Login Successful" }
+        return { error: false, message: "Login Successful", data: res.user }
     }
     catch (error) {
         // console.log(error)
-        return { error: true, message: error.message }
+        return { error: true, message: error.message, data: null }
     }
 }
 
 async function signOutUser() {
-    const result = await signOut(auth)
-    return result
+    try {
+        await signOut(auth)
+        return { error: false, message: "signedOut" }
+    }
+    catch (error) {
+        return { error: true, message: error.message }
+    }
+
 }
 
 async function emailSupport() {
@@ -133,7 +139,7 @@ async function createOrderFirebase(data) {
 
 async function getAllOrders() {
     try {
-        const q = query(collection(db, "orders"));
+        const q = query(collection(db, "orders"), orderBy("orderId"));
 
         const querySnapshot = await getDocs(q);
         let copyData = []

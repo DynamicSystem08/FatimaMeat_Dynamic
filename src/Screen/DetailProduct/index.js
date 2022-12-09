@@ -97,12 +97,12 @@ function ProductDetail() {
   }
 
 
-  const objImage = [{
-    img1: "https://swiperjs.com/demos/images/nature-1.jpg",
-    img2: "https://swiperjs.com/demos/images/nature-2.jpg",
-    img3: "https://swiperjs.com/demos/images/nature-5.jpg",
-    img4: "https://swiperjs.com/demos/images/nature-1.jpg",
-  }]
+  const objImage = [
+    "https://swiperjs.com/demos/images/nature-1.jpg",
+    "https://swiperjs.com/demos/images/nature-2.jpg",
+    "https://swiperjs.com/demos/images/nature-5.jpg",
+    "https://swiperjs.com/demos/images/nature-1.jpg",
+  ]
 
   return <div style={{ backgroundColor: "rgb(58,26,15)", paddingTop: "120px", paddingBottom: "50px" }}>
     <Container style={{ backgroundColor: "white", paddingTop: "50px", paddingBottom: "50px" }}>
@@ -128,19 +128,10 @@ function ProductDetail() {
               className="mySwiper"
             >
 
-              {objImage.map((item) => {
-                return <div>
+              {data.images.map((item, index) => {
+                return <div key={index}>
                   <SwiperSlide>
-                    <img src={item.img1} alt="" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={item.img2} alt="" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={item.img3} alt="" />
-                  </SwiperSlide>
-                  <SwiperSlide>
-                    <img src={item.img4} alt="" />
+                    <img src={item} alt="" />
                   </SwiperSlide>
                 </div>
               })}
