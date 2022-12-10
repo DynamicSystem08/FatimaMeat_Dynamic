@@ -79,7 +79,7 @@ function ConfirmOrder() {
                 </Grid>
                 <Grid item lg={1} md={1} sm={1} xs={1}>
                     <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(213,188,157)" }} />
-                    <p >Payment</p>
+                    <p >Pay</p>
                 </Grid>
             </Grid>
 
@@ -108,16 +108,16 @@ function ConfirmOrder() {
                         console.log(item)
                         return <div key={index}>
                             <Grid container style={{ marginTop: "50px", marginLeft: "30px" }}>
-                                <Grid item lg={2} className="confirm_order_img" >
+                                <Grid item lg={2}  md={2} sm={2.5} xs={2.5} className="confirm_order_img" >
                                     <img src={img14} />
                                 </Grid>
-                                <Grid item lg={2} md={7} sm={5} xs={5} className="confirm_Order_text" >
+                                <Grid item lg={2} md={2.3} sm={3.5} xs={3} className="confirm_Order_text" >
                                     <p>{item.name}{" ("}x{item.quantity}{")"}</p>
                                 </Grid>
-                                <Grid item lg={2} md={5} sm={5} xs={5} >
+                                <Grid item lg={1} md={5} sm={3} xs={3} style={{marginTop:"20px"}}>
                                     <p>X{item.quantity}</p>
                                 </Grid>
-                                <Grid item lg={6} style={{ textAlign: "end" }}>
+                                <Grid item lg={6} sm={1.5} style={{ textAlign: "end",marginTop:"20px" }} >
                                     <p>Rs. {item.meatType.price} </p>
                                 </Grid>
                             </Grid>

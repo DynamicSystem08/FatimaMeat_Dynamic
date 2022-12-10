@@ -19,3 +19,9 @@
     justify-content: center;
     gap: 20px;
 }
+
+@media (max-width:414px){
+    .input12 input{
+        margin-left: -20px;
+    }
+}

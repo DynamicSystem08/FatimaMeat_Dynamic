@@ -6,3 +6,21 @@
 .side_bar_dashboadr{
     box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
+
+
+
+.side_bar_dashboadr p { color: #666;display:inline-block; margin-top:15px;text-transform:uppercase; }
+.side_bar_dashboadr p:after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #019fb6;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+}
+.side_bar_dashboadr p:hover:after { transform: scaleX(1); }
+.side_bar_dashboadr p.fromRight:after{ transform-origin:100% 50%; }
+.side_bar_dashboadr p.fromLeft:after{  transform-origin:  0% 50%; }
+
+.side_bar_dashboadr p:hover{
+   color: #019fb6;
+}

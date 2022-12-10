@@ -99,13 +99,12 @@ function Shippingdetails() {
                     </Grid>
                     <Grid item lg={1} md={1} sm={1} xs={1}>
                         <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(213,188,157)" }} />
-                        <p >Payment</p>
+                        <p >Pay</p>
                     </Grid>
                 </Grid>
                 <Grid container>
                     <Grid item lg={12} md={12} sm={12} xs={12}>
                         <p style={{ fontSize: "25px", marginTop: "50px" }}><b>Shipping Details</b></p>
-                        {/* <hr style={{ width: "250px" }}></hr> */}
                     </Grid>
                     <Grid container style={{ justifyContent: "center" }}>
                         <Grid item lg={3.5}>
@@ -116,9 +115,9 @@ function Shippingdetails() {
             </Container>
 
             <Container maxWidth="xs" className='shiping_info_main' style={{ marginBottom: "30px" }}>
-                <Grid container style={{ marginTop: "50px" }} >
+                <Grid container style={{ marginTop: "50px",justifyContent:"center" }} >
 
-                    <Grid item lg={12} md={12} sm={12} xs={12} id="create1" style={{ marginBottom: "20px", marginTop: "-1px" }} className="input12">
+                    <Grid item lg={12} md={12} sm={12} xs={13} id="create1" style={{ marginBottom: "20px", marginTop: "-1px" }} className="input12">
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }} className="shping_detail_input">< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
                             <input type="text" placeholder='Enter Name ' onChange={(e) => handelChange("name", e.target.value)} value={details.name}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", paddingLeft: "20px", border: "none", fontSize: "15px" }} />

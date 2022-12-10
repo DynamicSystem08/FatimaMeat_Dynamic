@@ -12,6 +12,20 @@ import TextField from '@mui/material/TextField';
 
 import { createUser } from '../../../store/slices/userSlice'
 import "./index.css"
+import { createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: 'rgb(58,26,15)',
+        },
+        text: {
+            primary: 'rgb(58,26,15)'
+        }
+    }
+})
 
 function SignUp(props) {
     const dispatch = useDispatch()
@@ -80,97 +94,138 @@ function SignUp(props) {
                     <form onSubmit={handleSubmit(onSubmit)}>
 
                         <Grid container>
-                            <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <Grid item lg={2} md={2} sm={2} xs={1.5} ></Grid>
+                            <Grid item lg={8.5} md={8.5} sm={8.5} xs={9}>
                                 <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
-                                    <TextField
-                                        // id="outlined-basic"
-                                        label="Username"
-                                        variant="outlined"
-                                        fullWidth
-                                        name="username"
-                                        {...register("username", { required: "Username is required." })}
-                                        error={Boolean(errors.username)}
-                                        helperText={errors.username?.message}
-                                    />
+                                    <ThemeProvider theme={theme}>
+                                        <TextField
+                                            // id="outlined-basic"
+                                            label="Username"
+                                            variant="outlined"
+                                            fullWidth required
+                                            name="username"
+                                            {...register("username", { required: "Username is required." })}
+                                            error={Boolean(errors.username)}
+                                            helperText={errors.username?.message}
+                                            size="small"
+                                            sx={{
+                                                "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                                "& .MuiOutlinedInput-root": {
+                                                    "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                                },
+                                            }}
+                                        />
+                                    </ThemeProvider>
                                 </div>
                             </Grid>
                         </Grid>
 
                         <Grid container>
-                            <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <Grid item lg={2} md={2} sm={2} xs={1.5} ></Grid>
+                            <Grid item lg={8.5} md={8.5} sm={9} xs={9}>
                                 <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
-                                    <TextField
-                                        id="outlined-basic"
-                                        label="E-mail"
-                                        variant="outlined"
-                                        fullWidth
-                                        name="email"
-                                        text
-                                        // hidden={true}
-                                        {...register("email", { required: "E-maid address is required." })}
-                                        error={Boolean(errors.email)}
-                                        helperText={errors.email?.message}
-                                    />
+                                    <ThemeProvider theme={theme}>
+                                        <TextField
+                                            id="outlined-basic"
+                                            label="E-mail"
+                                            variant="outlined"
+                                            fullWidth
+                                            name="email"
+                                            text
+                                            // hidden={true}
+                                            {...register("email", { required: "E-maid address is required." })}
+                                            error={Boolean(errors.email)}
+                                            helperText={errors.email?.message}
+                                            size="small"
+                                            sx={{
+                                                "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                                "& .MuiOutlinedInput-root": {
+                                                    "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                                },
+                                            }}
+                                        />
+                                    </ThemeProvider>
                                 </div>
                             </Grid>
                         </Grid>
 
                         <Grid container>
-                            <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <Grid item lg={2} md={2} sm={2} xs={1.5} ></Grid>
+                            <Grid item lg={8.5} md={8.5} sm={8.5} xs={9}>
                                 <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
-                                    <TextField
-                                        id="outlined-basic"
-                                        label="New Password"
-                                        variant="outlined"
-                                        fullWidth
-                                        name="password"
-                                        type="password"
-                                        text
-                                        // hidden={true}
-                                        {...register("password", { required: "Password is required." })}
-                                        error={Boolean(errors.password)}
-                                        helperText={errors.password?.message}
-                                    />
+                                    <ThemeProvider theme={theme}>
+                                        <TextField
+                                            id="outlined-basic"
+                                            label="New Password"
+                                            variant="outlined"
+                                            fullWidth
+                                            name="password"
+                                            type="password"
+                                            text
+                                            // hidden={true}
+                                            {...register("password", { required: "Password is required." })}
+                                            error={Boolean(errors.password)}
+                                            helperText={errors.password?.message}
+                                            size="small"
+                                            sx={{
+                                                "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                                "& .MuiOutlinedInput-root": {
+                                                    "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                                },
+                                            }}
+                                        />
+                                    </ThemeProvider>
                                 </div>
                             </Grid>
                         </Grid>
 
                         <Grid container>
-                            <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
+                            <Grid item lg={2} md={2} sm={2} xs={1.5} ></Grid>
+                            <Grid item lg={8.5} md={8.5} sm={8.5} xs={9}>
                                 <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
-                                    <TextField
-                                        id="outlined-basic"
-                                        label="Re-type New Password"
-                                        variant="outlined"
-                                        fullWidth
-                                        name="repassword"
-                                        type="password"
-                                        text
-                                        // hidden={true}
-                                        {...register("repassword", { required: "Please retype your new password" })}
-                                        error={Boolean(errors.repassword)}
-                                        helperText={errors.repassword?.message}
-                                    />
+                                    <ThemeProvider theme={theme}>
+                                        <TextField
+                                            id="outlined-basic"
+                                            label="Re-type New Password"
+                                            variant="outlined"
+                                            fullWidth
+                                            name="repassword"
+                                            type="password"
+                                            text
+                                            // hidden={true}
+                                            {...register("repassword", { required: "Please retype your new password" })}
+                                            error={Boolean(errors.repassword)}
+                                            helperText={errors.repassword?.message}
+                                            size="small"
+                                            sx={{
+                                                "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                                "& .MuiOutlinedInput-root": {
+                                                    "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                                },
+                                            }}
+                                        />
+                                    </ThemeProvider>
                                 </div>
                             </Grid>
                         </Grid>
 
-                        <Button
-                            type='submit'
-                            disabled={loading}
-                            style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Submit</Button>
+                        <Grid container>
+                            <Grid item lg={2.3} md={2.7} sm={3.2} xs={2.5}></Grid>
+                            <Grid item lg={7} md={7}>
+                                <Button
+                                    type='submit'
+                                    disabled={loading}
+                                    style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Submit</Button>
+                            </Grid>
+                        </Grid>
 
                         <Grid container>
-                            <Grid item lg={3} md={3} sm={3} xs={2} ></Grid>
-                            <Grid item lg={6.5} md={6.5} sm={6.5} xs={8}>
-                                <div style={{ marginTop: "35px", borderBottom: "1px solid lightgray" }} className="sign_Up_Input">
+                            <Grid item lg={3} md={2} sm={3} xs={2} ></Grid>
+                            <Grid item lg={6.5} md={8.5} sm={6.5} xs={8}>
+                                <div style={{ marginTop: "35px",paddingBottom:"40px" }} className="sign_Up_Input">
                                     <text
                                         onClick={() => props.setScreen(true)}
-                                        style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Already Have an account?{'\n'}Click here to Login!</text>
+                                        style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}><b>Already Have an account?{'\n'}Click here to Login!</b></text>
                                     <text
                                         style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}>    </text>
                                 </div>

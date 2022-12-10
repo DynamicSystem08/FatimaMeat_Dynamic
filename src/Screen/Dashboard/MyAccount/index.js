@@ -11,6 +11,22 @@ import "./index.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../../store/slices/userSlice';
 
+import TextField from '@mui/material/TextField';
+import { ThemeProvider } from '@mui/material/styles';
+
+import { createTheme } from '@mui/material/styles';
+
+const theme = createTheme({
+    palette: {
+        primary: {
+            main: 'rgb(58,26,15)',
+        },
+        text: {
+            primary: 'rgb(58,26,15)'
+        }
+    }
+})
+
 function Dashboard() {
 
     const navigate = useNavigate()
@@ -24,7 +40,7 @@ function Dashboard() {
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
                     <p onClick={() => navigate("/order")}>Orders</p><br></br>
-                    <p >Account Details</p><br></br>
+                    <p >My Account</p><br></br>
                     <p
                         onClick={() => {
                             swal({
@@ -48,15 +64,82 @@ function Dashboard() {
                     >Logout</p><br></br>
                 </Grid>
                 <Grid item lg={1}></Grid>
+                <Grid item lg={8} style={{ paddingTop: "10px" }}>
+                    <h2>My Account</h2>
+                    <Grid container style={{ marginBottom: "20px" }}>
+                        <Grid item lg={4}>
+                            <div style={{ marginTop: "35px" }}>
+                                <ThemeProvider theme={theme}>
+                                    <TextField
+                                        label="First Name"
+                                        variant="outlined"
+                                        fullWidth
+                                        name="email"
+                                        // {...register("email", { required: "E-mail Address is required." })}
+                                        // error={Boolean(errors.email)}
+                                        // helperText={errors.email?.message}
+                                        // fullWidth required
+                                        size="small"
+                                        sx={{
+                                            "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                            "& .MuiOutlinedInput-root": {
+                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                            },
+                                        }}
+                                    />
+                                </ThemeProvider>
+                            </div>
+                        </Grid>
+                        <Grid item lg={1}></Grid>
+                        <Grid item lg={4}>
+                            <div style={{ marginTop: "35px" }}>
+                                <ThemeProvider theme={theme}>
+                                    <TextField
+                                        label="Last Name"
+                                        variant="outlined"
+                                        fullWidth
+                                        name="email"
+                                        // {...register("email", { required: "E-mail Address is required." })}
+                                        // error={Boolean(errors.email)}
+                                        // helperText={errors.email?.message}
+                                        // fullWidth required
+                                        size="small"
+                                        sx={{
+                                            "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                            "& .MuiOutlinedInput-root": {
+                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                            },
+                                        }}
+                                    />
+                                </ThemeProvider>
+                            </div>
+                        </Grid>
 
-
-                <Grid item lg={8} style={{ paddingTop: "100px" }}>
-                    <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
-                        <h1>
-                            Account Details
-                        </h1>
+                        <Grid item lg={9}>
+                            <div style={{ marginTop: "35px" }}>
+                                <ThemeProvider theme={theme}>
+                                    <TextField
+                                        label="Company Name (Optional)"
+                                        variant="outlined"
+                                        fullWidth
+                                        name="email"
+                                        // {...register("email", { required: "E-mail Address is required." })}
+                                        // error={Boolean(errors.email)}
+                                        // helperText={errors.email?.message}
+                                        // fullWidth required
+                                        size="small"
+                                        sx={{
+                                            "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                            "& .MuiOutlinedInput-root": {
+                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                            },
+                                        }}
+                                    />
+                                </ThemeProvider>
+                            </div>
+                        </Grid>
                     </Grid>
-
+                    <p>Country/Region</p>
                 </Grid>
             </Grid>
         </Container>

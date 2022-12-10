@@ -21,9 +21,10 @@ function Dashboard() {
                 <Grid item lg={3} style={{ padding: "20px" }} className="side_bar_dashboadr">
                     <h2><b>My Account</b></h2>
                     <hr></hr><br></br>
-                    <p>Dashboard</p><br></br>
+                    <p>My Account</p><br></br>
+                    <p> Dashboard</p><br></br>
                     <p onClick={() => navigate("/order")}>Orders</p><br></br>
-                    <p onClick={() => navigate("/myAccount")}>Account Details</p><br></br>
+                    <p onClick={() => navigate("/myAccount")}>My Account</p><br></br>
                     <p
                         onClick={() => {
                             swal({
