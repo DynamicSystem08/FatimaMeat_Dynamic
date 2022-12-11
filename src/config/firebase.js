@@ -154,7 +154,7 @@ async function getAllOrders() {
     }
 }
 
-async function getCurrentUsersOrders(uid) {
+async function getCurrentUserOrders(uid) {
     try {
         const q = query(collection(db, "orders"), where("uid", "==", uid));
         const array = []
@@ -180,5 +180,5 @@ export {
     emailSupport,
     createOrderFirebase,
     getAllOrders,
-    getCurrentUsersOrders
+    getCurrentUserOrders
 }
