@@ -1,5 +1,5 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
-import { createOrderFirebase, getAllOrders } from '../../../config/firebase'
+import { createOrderFirebase, getAllOrders, getCurrentUserOrders } from '../../../config/firebase'
 // import axios from "axios"
 
 const initialState = {
@@ -9,6 +9,7 @@ const initialState = {
     totalOrderAmount: "",
     cartTotal: "",
     allOrders: [],
+    currentUserOrders: [],
     createOrderResponse: ""
 }
 
@@ -19,6 +20,23 @@ export const fetchOrders = createAsyncThunk(
 
         if (!result.error) {
             return result.data
+        }
+        else {
+            console.log(result.message)
+        }
+    }
+)
+
+export const fetchCurrentUserOrders = createAsyncThunk(
+    'fetchCurrentUserOrders',
+    async () => {
+        const result = await getCurrentUserOrders()
+
+        if (!result.error) {
+            return result.data
+        }
+        else {
+            console.log(result.message)
         }
     }
 )
@@ -65,6 +83,9 @@ export const orderSlice = createSlice({
         })
         builder.addCase(createOrder.fulfilled, (state, action) => {
             state.createOrderResponse = action.payload
+        })
+        builder.addCase(fetchCurrentUserOrders.fulfilled, (state, action) => {
+            state.currentUserOrders = action.payload
         })
     },
 })

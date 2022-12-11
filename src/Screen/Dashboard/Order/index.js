@@ -49,11 +49,18 @@ function Dashboard() {
     const callData = async () => {
         const result = await dispatch(fetchOrders())
     }
-
+    
+    const callCurentUserOrders = async () => {
+        const result = await dispatch(fetchOrders())
+    }
+    
     useEffect(() => {
         if (reduxUser.email == "admin@fatimameat.com") {
             console.log("admin")
             callData()
+        }
+        else{
+            callCurentUserOrders()
         }
     }, [])
 
