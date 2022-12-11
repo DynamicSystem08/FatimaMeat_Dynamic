@@ -154,6 +154,23 @@ async function getAllOrders() {
     }
 }
 
+async function getCurrentUsersOrders(uid) {
+    try {
+        const q = query(collection(db, "orders"), where("uid", "==", uid));
+        const array = []
+
+        const querySnapshot = await getDocs(q);
+        querySnapshot.forEach((doc) => {
+            array.push(doc.data())
+        });
+
+        return { error: false, message: "Success", data: array }
+    }
+    catch (error) {
+        return { error: true, message: error.message, data: [] }
+    }
+}
+
 export {
     auth,
     onAuthStateChanged,
@@ -162,5 +179,6 @@ export {
     signOutUser,
     emailSupport,
     createOrderFirebase,
-    getAllOrders
+    getAllOrders,
+    getCurrentUsersOrders
 }
