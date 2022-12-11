@@ -20,9 +20,9 @@ import MetaData from "../../Component/MetaData"
 import { useEffect } from 'react';
 import "./index.css"
 function OurMeat() {
-  useEffect(() => {
-    window.scroll(0, 0)
-  })
+  // useEffect(() => {
+  //   window.scroll(0, 0)
+  // })
   return <div style={{ marginTop: "-10px" ,backgroundColor:"white"}} >
     <MetaData title="Fatima Meat | Our Meat" />
     <Grid container>
@@ -30,12 +30,12 @@ function OurMeat() {
         <h1 className='our_meat_text' style={{padding:"100px"}}>Our Meat</h1>
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
-        <p className="our_Meat_main1">‘Meat’ Fatima</p>
+        <p className="our_Meat_main1" style={{fontWeight:"600",color:"black"}} >‘Meat’ Fatima</p>
         <img src={dividerDark} alt="" style={{ width: "10%" }} />
       </Grid>
     </Grid>
     <Container>
-      <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "30px" }}>
+      <Grid container style={{ borderBottom: "3px solid rgb(208,13,30)", marginTop: "30px" }}>
         <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
           <img src={imgFatima} alt="" />
         </Grid>
@@ -43,7 +43,7 @@ function OurMeat() {
           <h1>Beef</h1>
         </Grid>
       </Grid>
-      <div style={{ borderBottom: "3px solid rgb(225,195,157)", paddingTop: "2px" }} ></div>
+      <div style={{ borderBottom: "3px solid rgb(208,13,30)", paddingTop: "2px" }} ></div>
       <Grid container className='Beef_main_imgs'>
         <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
           <img src={BeefBoneless} alt="" />
@@ -85,7 +85,7 @@ function OurMeat() {
         </Grid>
       </Grid>
 
-      <Grid container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "50px" }}>
+      <Grid container style={{ borderBottom: "3px solid rgb(208,13,30)", marginTop: "50px" }}>
         <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
           <img src={imgFatimaM} alt="" />
         </Grid>
@@ -93,7 +93,7 @@ function OurMeat() {
           <h1>Mutton</h1>
         </Grid>
       </Grid>
-      <div style={{ borderBottom: "3px solid rgb(225,195,157)", paddingTop: "2px" }} ></div>
+      <div style={{ borderBottom: "3px solid rgb(208,13,30)", paddingTop: "2px" }} ></div>
       <Grid container className='mutton_main'>
         <Grid item lg={5.7} md={5.3} sm={5} xs={11.5} className="mutton_main_imgs">
           <img src={MuttonChops} alt="" />
@@ -108,7 +108,7 @@ function OurMeat() {
           <img src={MuttonMice} alt="" />
           <p>Mutton Mince</p>
         </Grid>
-        <Grid item lg={5.7} md={5.3} sm={5} xs={11.5} className="mutton_main_imgs">
+        <Grid item lg={5.7} md={5.3} sm={5} xs={11.5} className="mutton_main_imgs" style={{marginBottom:"50px"}}>
           <img src={MuttonMince} alt="" />
           <p>Mutton Mix Boti</p>
         </Grid>

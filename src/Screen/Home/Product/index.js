@@ -38,9 +38,9 @@ function Product() {
 
 
         {/* Meat Product */}
-        <Container style={{ paddingTop: "130px", paddingBottom: "50px" }}>
+        <Container style={{ paddingTop: "130px", paddingBottom: "10px" }}>
             <Grid container>
-                <Grid item lg={12} md={12} sm={12} xs={12} style={{ textAlign: "center" }}>
+                <Grid item lg={12} md={12} sm={12} xs={12} style={{ textAlign: "center" }} className="about_text">
                     <h1>FATIMA MEAT PRODUCT</h1>
                 </Grid>
             </Grid>
@@ -63,7 +63,7 @@ function Product() {
                         <img src={muttonimg1} alt="Nature" style={{ width: "100%", cursor: "pointer" }}
                         // onClick={() => navigate("/productdetail")} 
                         />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Mutton Whole Carcass </p>
                         </div>
                     </div>
@@ -71,7 +71,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg2} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Mutton Leg</p>
                         </div>
                     </div>
@@ -79,7 +79,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg3} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Mutton Mince</p>
                         </div>
                     </div>
@@ -87,7 +87,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg4} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Mutton Shoulder</p>
                         </div>
                     </div>
@@ -111,7 +111,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={chickenimg1} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Chicken Whole Neck</p>
                         </div>
                     </div>
@@ -119,7 +119,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={chickenimg2} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Chicken DrumStick</p>
                         </div>
                     </div>
@@ -127,7 +127,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={chickenimg3} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Chicken Wings</p>
                         </div>
                     </div>
@@ -135,7 +135,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={chickenimg4} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Chicken Breast BoneLess</p>
                         </div>
                     </div>
@@ -158,7 +158,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={beefimg2} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Beef Bone-in</p>
                         </div>
                     </div>
@@ -166,7 +166,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={beefimg1} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Beef Bone-Less</p>
                         </div>
                     </div>
@@ -174,7 +174,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={beefimg3} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Beef Mince</p>
                         </div>
                     </div>
@@ -182,7 +182,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={beefimg4} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Beef Trotters</p>
                         </div>
                     </div>
@@ -206,7 +206,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={rabbitimg1} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Rabbit Whole Carcass</p>
                         </div>
                     </div>
@@ -214,7 +214,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={rabbitimg2} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Rabbit Breast Boneless</p>
                         </div>
                     </div>
@@ -222,7 +222,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={rabbitimg3} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Rabbit Wings</p>
                         </div>
                     </div>
@@ -230,7 +230,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={rabbitimg4} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Rabbit Bone-Less</p>
                         </div>
                     </div>
@@ -254,7 +254,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={camelimg1} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Camel Whole Carcass</p>
                         </div>
                     </div>
@@ -262,7 +262,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={camelimg2} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Camel Breast Boneless</p>
                         </div>
                     </div>
@@ -270,7 +270,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={camelimg3} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Camel Wings</p>
                         </div>
                     </div>
@@ -278,7 +278,7 @@ function Product() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={camelimg4} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes">
+                        <div class="text-block_Recipes1">
                             <p>Camel Bone-Less</p>
                         </div>
                     </div>

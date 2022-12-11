@@ -104,13 +104,13 @@ function Footer() {
                             id="w3review" name="w3review" rows="4" cols="50" placeholder='*Message' style={{ backgroundColor: "transparent", outline: "none", border: "none", borderBottom: "1px solid white", color: "white", width: "100%" }}></textarea><br></br><br></br>
                         <Button
                             onClick={handleClick}
-                            style={{ backgroundColor: "rgba(213, 188,157)", color: "white" }}>submit</Button>
+                            style={{ backgroundColor: "rgba(208,13,30)", color: "white" }}>submit</Button>
                     </Grid>
                     <Grid item lg={4} className="head_office">
                         <p>HEAD OFFICE</p>
                         <Grid container>
                             <Grid item lg={1.5} md={2}  sm={5} xs={12}>
-                                <LocationOnIcon style={{ fontSize: "40px", color: "rgba(213, 188,157" }} />
+                                <LocationOnIcon style={{ fontSize: "40px", color: "rgba(208,13,30)" }} />
                             </Grid>
                             <Grid item lg={10}>
                                 <text style={{ color: "white" }}>Suite G/5/5, 3rd Floor Mansoor Tower, Clifton Block 9, Karachi, Pakistan</text>
@@ -118,7 +118,7 @@ function Footer() {
                         </Grid>
                         <Grid container style={{ marginTop: "30px" }}>
                             <Grid item lg={1.5}>
-                                <CallIcon style={{ fontSize: "40px", color: "rgba(213, 188,157", marginTop: "-10px" }} />
+                                <CallIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
                             <Grid item lg={10}>
                                 <text style={{ color: "white" }}>PH:(021):111-145-563</text>
@@ -126,7 +126,7 @@ function Footer() {
                         </Grid>
                         <Grid container style={{ marginTop: "30px" }}>
                             <Grid item lg={1.5} >
-                                <MarkunreadIcon style={{ fontSize: "40px", color: "rgba(213, 188,157", marginTop: "-10px" }} />
+                                <MarkunreadIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
                             <Grid item lg={10} >
                                 <text style={{ color: "white" }}> Email: customercare@FatimamMeat.net</text>
@@ -137,7 +137,7 @@ function Footer() {
             </Container>
 
         </div>
-        <div style={{ backgroundColor: " rgb(58,26,15)" }}>
+        <div style={{ backgroundColor: "black" }}>
             <Container>
                 <Grid container>
                     <Grid item lg={10} md={10} sm={10} xs={10.5}>
@@ -145,7 +145,7 @@ function Footer() {
                         </p>
                     </Grid>
                     <Grid item lg={1} md={1} sm={1} xs={1}>
-                        <FacebookIcon style={{ fontSize: "40px", color: "white", paddingTop: "5px" }} />
+                        <FacebookIcon style={{ fontSize: "40px", color: "rgb(208,13,30)", paddingTop: "5px" }} />
 
                     </Grid>
                 </Grid>

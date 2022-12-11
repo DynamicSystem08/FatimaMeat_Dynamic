@@ -10,11 +10,12 @@
 
 .our_meat_text1 {
 
-    text-shadow: 4px 3px black;
+    text-shadow: 4px 2px black;
     font-size: 35px;
     padding: 15px;
     color: white;
-    font-weight: 900;
+    font-family: Garamond, serif;
+
 }
 .our_Meat_main1 {
     text-align: center;

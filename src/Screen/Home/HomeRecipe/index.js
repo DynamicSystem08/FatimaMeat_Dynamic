@@ -12,6 +12,11 @@ function HomeRecipe() {
     const navigate = useNavigate()
     return <div style={{ paddingTop: "50px", backgroundColor: "white" }}>
         <Container>
+        <Grid container>
+                <Grid item lg={12} md={12} sm={12} xs={12} style={{ textAlign: "center",marginBottom:"50px",marginTop:"-20px" }} className="about_text">
+                    <h1>OUR RECIPES</h1>
+                </Grid>
+            </Grid>
             <Grid className='Recipes_Home_Main'>
                 <Grid container className='Recipes_Home_Container'>
                     <Grid item lg={3.7} md={3.5} sm={5} xs={12}>
@@ -42,7 +47,7 @@ function HomeRecipe() {
                         <Grid item lg={3.5} md={3} sm={5.6} xs={11}>
                             <Button className='our_home_recipe_botton'
                                 onClick={() => navigate("/recipes")}
-                                style={{ backgroundColor: "rgba(213, 188,157)", width: "100%", padding: "10px", color: "white", marginTop: "20px", marginBottom: "60px", height: "50px" }}>View More Recipes</Button>
+                                style={{ backgroundColor: "rgba(208,13,30)", width: "100%", padding: "10px", color: "white", marginTop: "20px", marginBottom: "60px", height: "50px" }}>View More Recipes</Button>
                         </Grid>
                     </Grid>
 

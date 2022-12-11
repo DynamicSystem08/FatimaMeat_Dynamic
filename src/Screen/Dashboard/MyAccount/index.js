@@ -139,10 +139,71 @@ function Dashboard() {
                             </div>
                         </Grid>
                     </Grid>
-                    <p>Country/Region</p>
-                </Grid>
-            </Grid>
-        </Container>
-    </div>
+                    <p style={{ marginTop: "50px" }}><b>Country/Region</b></p>
+
+                    <Grid container style={{ marginBottom: "20px" }}>
+                        <Grid item lg={4}>
+                            <div style={{ marginTop: "35px" }}>
+                                <ThemeProvider theme={theme}>
+                                    <TextField
+                                        label="Town/Karachi"
+                                        variant="outlined"
+                                        fullWidth
+                                        name="email"
+                                        // {...register("email", { required: "E-mail Address is required." })}
+                                        // error={Boolean(errors.email)}
+                                        // helperText={errors.email?.message}
+                                        // fullWidth required
+                                        size="small"
+                                        sx={{
+                                            "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                            "& .MuiOutlinedInput-root": {
+                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                            },
+                                        }}
+                                    />
+                                </ThemeProvider>
+                            </div>
+                        </Grid>
+                        <Grid item lg={1}></Grid>
+                        <Grid item lg={4}>
+                            <div style={{ marginTop: "35px" }}>
+                                <ThemeProvider theme={theme}>
+                                    <TextField
+                                        label="Town/Country"
+                                        variant="outlined"
+                                        fullWidth
+                                        name="email"
+                                        // {...register("email", { required: "E-mail Address is required." })}
+                                        // error={Boolean(errors.email)}
+                                        // helperText={errors.email?.message}
+                                        // fullWidth required
+                                        size="small"
+                                        sx={{
+                                            "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                            "& .MuiOutlinedInput-root": {
+                                                "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                            },
+                                        }}
+                                    />
+                                </ThemeProvider>
+                            </div>
+                        </Grid>
+
+                        <Grid item lg={9} style={{marginTop:"30px"}}>
+                                <label for="cars" style={{marginRight:"20px"}}>Choose a State Country:</label>
+                                <select name="cars" id="cars" style={{width:"50%",outline:"none"}}>
+                                    <option value="volvo">Volvo</option>
+                                    <option value="saab">Saab</option>
+                                    <option value="opel">Opel</option>
+                                    <option value="audi">Audi</option>
+                                </select>
+                                </Grid>
+                                </Grid>
+
+                        </Grid>
+                    </Grid>
+                </Container>
+            </div>
 }
-export default Dashboard
+            export default Dashboard

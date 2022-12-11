@@ -1,16 +1,17 @@
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
-import CallIcon from '@mui/icons-material/Call';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import Button from '@mui/material/Button';
+// import CallIcon from '@mui/icons-material/Call';
+// import FacebookIcon from '@mui/icons-material/Facebook';
+// import Button from '@mui/material/Button';
 import { useNavigate } from 'react-router-dom';
+import { styles } from '../Colors';
 
 
 function HeaderTop(props) {
     const navigate = useNavigate()
 
-    return <div style={{ backgroundColor: "black", marginBottom: "50px" }}>
-        <Container>
+    return <div style={styles}>
+        <Container style={{marginBottom:"50px"}}>
             <Grid container style={{ paddingTop: "5px" }}>
                 <Grid item lg={2} md={2} sm={2} xs={4.5}>
                     <Grid container>

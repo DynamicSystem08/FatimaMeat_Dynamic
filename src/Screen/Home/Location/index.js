@@ -25,7 +25,7 @@ function Location() {
 
 
     return <div style={{backgroundColor:"white"}}>
-        <div style={{ backgroundColor: "rgb(58,26,15)", paddingTop: "20px", marginBottom: "50px" }}>
+        <div style={{ paddingTop: "20px", marginBottom: "50px" }} className="background_location">
 
             <h1 className="location_heading">FATIMA MEAT LOCATION</h1>
             <Container>
@@ -38,7 +38,7 @@ function Location() {
                     <Grid item lg={2.7} md={4} sm={5.5} xs={12} className="our_location_text">
                         <Grid container>
                             <Grid item lg={2.5} >
-                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(213,188,157)" }} />
+                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                             <Grid item lg={3} xs={7.5} className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={handleShows}>
@@ -64,14 +64,14 @@ function Location() {
                             </Grid>
                             <Grid item lg={3}></Grid>
                             <Grid item lg={2}>
-                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(213,188,157)" }} />
+                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                         </Grid>
                     </Grid>
                     <Grid item lg={2.7}  md={4} sm={5.5} xs={12} className="our_location_text">
                         <Grid container>
                             <Grid item lg={2.5}>
-                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(213,188,157)" }} />
+                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                             <Grid item lg={3} xs={7.5} className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={lahoreLocation}>
@@ -94,14 +94,14 @@ function Location() {
                             </Grid>
                             <Grid item lg={3}></Grid>
                             <Grid item lg={2}>
-                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(213,188,157)" }} />
+                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                         </Grid>
                     </Grid>
                     <Grid item lg={2.7}  sm={5.5} md={4} xs={12} className="our_location_text">
                         <Grid container>
                             <Grid item lg={2.5}>
-                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(213,188,157)" }} />
+                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                             <Grid item lg={3} xs={7.5}  className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={RwalpindiLocation}>
@@ -134,14 +134,14 @@ function Location() {
                             </Grid>
                             <Grid item lg={3}></Grid>
                             <Grid item lg={2}>
-                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(213,188,157)" }} />
+                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                         </Grid>
                     </Grid>
                     <Grid item lg={2.7} md={4} sm={5.5} xs={12} className="our_location_text">
                         <Grid container>
                             <Grid item lg={2.5} >
-                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(213,188,157)" }} />
+                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                             <Grid item lg={3} xs={7.5}  className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={gurJawala}>
@@ -174,7 +174,7 @@ function Location() {
                             </Grid>
                             <Grid item lg={3}></Grid>
                             <Grid item lg={2}>
-                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(213,188,157)" }} />
+                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                         </Grid>
                     </Grid>

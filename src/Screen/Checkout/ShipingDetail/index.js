@@ -78,7 +78,7 @@ function Shippingdetails() {
                     <Grid item lg={5.5} md={5.5} sm={5.5} xs={5.5} >
                         <Grid container>
                             <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5}>
-                                <LocalShippingIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(58,26,15)" }} />
+                                <LocalShippingIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(25,25,25)" }} />
                                 <p>Shipping Details</p>
                             </Grid>
                             <Grid item lg={8.5} md={8.5} sm={8.5} xs={8.5}>
@@ -89,7 +89,7 @@ function Shippingdetails() {
                     <Grid item lg={5.5} md={5.5} sm={5.5} xs={5.5} >
                         <Grid container>
                             <Grid item lg={3} md={3} sm={3} xs={3}>
-                                <CheckBoxIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(213,188,157)" }} />
+                                <CheckBoxIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(208,13,30)" }} />
                                 <p>Confirm Order</p>
                             </Grid>
                             <Grid item lg={9} md={9} sm={9} xs={9}>
@@ -98,13 +98,13 @@ function Shippingdetails() {
                         </Grid>
                     </Grid>
                     <Grid item lg={1} md={1} sm={1} xs={1}>
-                        <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(213,188,157)" }} />
+                        <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(208,13,30)" }} />
                         <p >Pay</p>
                     </Grid>
                 </Grid>
                 <Grid container>
                     <Grid item lg={12} md={12} sm={12} xs={12}>
-                        <p style={{ fontSize: "25px", marginTop: "50px" }}><b>Shipping Details</b></p>
+                        <p style={{ fontSize: "25px", marginTop: "50px" ,fontFamily:"Garamond,serif",marginBottom:"-10px"}}><b><b>SHIPHING DETAILS</b></b></p>
                     </Grid>
                     <Grid container style={{ justifyContent: "center" }}>
                         <Grid item lg={3.5}>
@@ -118,24 +118,24 @@ function Shippingdetails() {
                 <Grid container style={{ marginTop: "50px",justifyContent:"center" }} >
 
                     <Grid item lg={12} md={12} sm={12} xs={13} id="create1" style={{ marginBottom: "20px", marginTop: "-1px" }} className="input12">
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }} className="shping_detail_input">< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }} className="shping_detail_input">< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
                             <input type="text" placeholder='Enter Name ' onChange={(e) => handelChange("name", e.target.value)} value={details.name}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", paddingLeft: "20px", border: "none", fontSize: "15px" }} />
                         </div>
                         {/* <input type="text" placeholder="Enter Nme" /> */}
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}>< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}>< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
                             <input type="text" placeholder=' Address ' onChange={(e) => handelChange("address", e.target.value)} value={details.address}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", paddingLeft: "20px", border: "none", fontSize: "15px" }} />
                         </div>
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><  LocationCityIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><  LocationCityIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
                             <input type="text" placeholder=' City ' onChange={(e) => handelChange("city", e.target.value)} value={details.city}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><PersonPinCircleIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><PersonPinCircleIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
                             <input type="text" placeholder=' Pin Code ' onChange={(e) => handelChange("zipCode", e.target.value)} value={details.zipCode}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><CallIcon style={{ paddingLeft: "20px", fontSize: "40px" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><CallIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
                             <input type="text" placeholder=' Phone Number ' onChange={(e) => handelChange("phoneNumber", e.target.value)} value={details.phoneNumber}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
@@ -153,7 +153,7 @@ function Shippingdetails() {
                 </Grid>
                 <Grid container className='shiping_detail_btn'>
                     <Grid item lg={7}>
-                        <Button onClick={handleClick} style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "30px", width: "100%", marginTop: "20px" }}>Continue</Button>
+                        <Button onClick={handleClick} style={{ backgroundColor: "rgb(208,13,30)", color: "white", marginBottom: "30px", width: "100%", marginTop: "20px" }}>Continue</Button>
                     </Grid>
                 </Grid>
             </Container>

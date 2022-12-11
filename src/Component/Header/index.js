@@ -15,14 +15,14 @@ import Grid from '@mui/material/Grid';
 function NavScrollExample() {
   const navigate = useNavigate()
   return <div >
-    <Navbar style={{backgroundColor:"rgb(58,26,15)"}} expand="lg" className="sticky-top" >
-      <Container fluid id="header" style={{ position: "fixed", marginTop: "50px",width:"100%", backgroundColor: "rgb(213,188,157)" }} >
+    <Navbar style={{backgroundColor:"black"}} expand="lg" className="sticky-top" >
+      <Container fluid id="header" style={{ position: "fixed", marginTop: "50px",width:"100%", backgroundColor: "rgb(25,25,25)" }} >
         {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
             className="me-auto my-2 my-lg-0"
-            style={{ height: '87px', width: "100%", fontSize: "20px", backgroundColor: "rgb(213,188,157)"}}
+            style={{ height: '87px', width: "100%", fontSize: "20px", backgroundColor: "rgb(25,25,25)"}}
             navbarScroll
           >
             {/* <Nav.Link href="#action1">Home</Nav.Link> */}

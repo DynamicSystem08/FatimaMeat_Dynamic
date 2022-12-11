@@ -19,10 +19,10 @@ import { createTheme } from '@mui/material/styles';
 const theme = createTheme({
     palette: {
         primary: {
-            main: 'rgb(58,26,15)',
+            main: 'rgb(25,25,25)',
         },
         text: {
-            primary: 'rgb(58,26,15)'
+            primary: 'rgb(25,25,25)'
         }
     }
 })
@@ -79,8 +79,8 @@ function Login(props) {
             <Grid container>
                 <Grid item lg={12} md={12} sm={12} xs={12} id="login1" style={{ marginTop: "50px", marginBottom: "50px" }}>
 
-                    <h1 style={{ marginTop: "40px", color: "rgb(58,26,15)" }}><strong>User Login</strong></h1>
-                    <PersonIcon sx={{ fontSize: 100, color: "rgb(58,26,15)" }} />
+                    <h1 style={{ marginTop: "40px", color: "rgb(58,26,15)",fontFamily:"Garamond, serif" }}><strong>User Login</strong></h1>
+                    <PersonIcon sx={{ fontSize: 100, color: "rgb(208,13,30)" }} />
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -100,9 +100,9 @@ function Login(props) {
                                             // fullWidth required
                                             size="small"
                                             sx={{
-                                                "& .MuiInputLabel-root": { color: 'rgb(58,26,15)' },//styles the label
+                                                "& .MuiInputLabel-root": { color: 'rgb(25,25,25)' },//styles the label
                                                 "& .MuiOutlinedInput-root": {
-                                                    "& > fieldset": { borderColor: "rgb(58,26,15)" },
+                                                    "& > fieldset": { borderColor: "rgb(25,25,25)" },
                                                 },
                                             }}
                                         />
@@ -148,7 +148,7 @@ function Login(props) {
                                 <Button
                                     disabled={loading}
                                     type="submit"
-                                    style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "50px", width: "200px", marginTop: "40px" }}>Login</Button>
+                                    style={{ backgroundColor: "rgb(208,13,30)", color: "white", marginBottom: "50px", width: "200px", marginTop: "40px" }}>Login</Button>
                             </Grid>
                         </Grid>
 
@@ -160,7 +160,7 @@ function Login(props) {
                                 <div style={{ marginTop: "-10px", paddingBottom: "20px" }} className="sign_Up_Input">
                                     <text
                                         onClick={() => props.setScreen(false)}
-                                        style={{ color: "", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}><b>Click here to Register</b></text>
+                                        style={{ color: "", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px",fontFamily:"Garamond, serif",fontSize:"17px" }}><b>Click here to Register</b></text>
                                 </div>
                             </Grid>
                         </Grid>

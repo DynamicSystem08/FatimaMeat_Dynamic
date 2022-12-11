@@ -93,15 +93,15 @@ function Cart() {
                             <Grid item lg={2} md={2} sm={2} xs={2.8} className="card_detail_input">
                                 {/* <input type="number" placeholder='1' style={{ width: "50%", height: "40px", paddingLeft: "35px" }} /> */}
                                 <button onClick={() => updateQuantity("dec", item, index)} 
-                                    style={{ height: "30px", backgroundColor: "rgb(52, 52, 52)", color: "white", cursor: "pointer" }}>-</button>
+                                    style={{ height: "30px", backgroundColor: "rgb(208,16,30)", color: "white", cursor: "pointer" }}>-</button>
                                 <text style={{ marginLeft: "10px", marginRight: "10px" }}>{item.quantity}</text>
                                 <button onClick={() => updateQuantity("inc", item, index)}
-                                    style={{ height: "30px", backgroundColor: "rgb(52, 52, 52)", color: "white", cursor: "pointer" }}>+</button>
+                                    style={{ height: "30px", backgroundColor: "rgb(208,16,30)", color: "white", cursor: "pointer" }}>+</button>
                             </Grid>
                             <Grid item lg={2} md={2} sm={2} xs={1} className="card_text103">
                                 <p >Rs. {item.meatType.price * item.quantity} </p>
                             </Grid>
-                            <p style={{cursor:"pointer"}}
+                            <p style={{cursor:"pointer",color:"rgb(208,16,15)"}}
                             className="card_text104"
                                 onClick={() => {
                                     swal({
@@ -150,7 +150,7 @@ function Cart() {
                                         }
                                     })
                             }}
-                            style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "30px", marginBottom: "30px" }}
+                            style={{ width: "100%", backgroundColor: "rgb(208,16,30)", color: "white", fontSize: "20px", marginTop: "30px", marginBottom: "30px" }}
                         >CLEAR CART</Button>
                     </Grid>
                 </Grid>
@@ -174,7 +174,7 @@ function Cart() {
                     reduxCartItems[0] && <Grid container>
                         <Grid item lg={4} md={4} sm={5} xs={10}>
                             <Button
-                                style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "40px", marginBottom: "30px" }}
+                                style={{ width: "100%", backgroundColor: "rgb(208,16,30)", color: "white", fontSize: "20px", marginTop: "40px", marginBottom: "30px" }}
                                 onClick={handleClick}>PROCEED TO CHECKOUT</Button>
                         </Grid>
                     </Grid>
@@ -184,7 +184,7 @@ function Cart() {
                     <Grid item lg={3} md={3} sm={3} xs={8}>
                         <Button
                             onClick={() => navigate('/product')}
-                            style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px", marginTop: "20px", marginBottom: "30px" }}>
+                            style={{ width: "100%", backgroundColor: "rgb(208,16,30)", color: "white", fontSize: "20px", marginTop: "20px", marginBottom: "30px" }}>
                             Return To Shop</Button>
                     </Grid>
                 </Grid>

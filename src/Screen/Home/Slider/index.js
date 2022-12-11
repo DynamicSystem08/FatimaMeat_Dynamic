@@ -3,11 +3,11 @@ import Container from '@mui/material/Container';
 
 import Carousel from 'react-bootstrap/Carousel';
 import "./index.css"
-import slideimg1 from "../../../Image/slideimg1.jpg"
-import slideimg2 from "../../../Image/slideimg2.jpg"
-import slideimg3 from "../../../Image/slideimg3.jpeg"
+import slideimg1 from "../../../Image/beefImageSlider101.jpg"
+import slideimg2 from "../../../Image/beefimageslider102.jpg"
+import slideimg3 from "../../../Image/muttonSlide1mg101.jpg"
 import chicken1 from "../../../Image/chickenimg1.jpg"
-import chicken2 from "../../../Image/chickenimg2.jpg"
+import chicken2 from "../../../Image/rabbitImageSlider101.jpg"
 
 
 function Slider() {

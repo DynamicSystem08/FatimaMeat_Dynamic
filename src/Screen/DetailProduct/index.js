@@ -104,9 +104,9 @@ function ProductDetail() {
     "https://swiperjs.com/demos/images/nature-1.jpg",
   ]
 
-  return <div style={{ backgroundColor: "rgb(58,26,15)", paddingTop: "120px", paddingBottom: "50px" }}>
+  return <div style={{ backgroundColor: "rgb(25,25,25)", paddingTop: "120px", paddingBottom: "50px" }}>
     <Container style={{ backgroundColor: "white", paddingTop: "50px", paddingBottom: "50px" }}>
-      <h1 style={{ textAlign: "center" }}><b>{data.name}</b></h1>
+      <h1 style={{ textAlign: "center",fontStyle:"Garamond,serif" }}><b>{data.name}</b></h1>
 
       <Grid container className="product_detail_main">
         <Grid item lg={5.5} md={5.5} sm={5.5} xs={12} className="product_detail_slider">
@@ -171,10 +171,10 @@ function ProductDetail() {
           <Grid container style={{ marginBottom: "25px" }}>
             <Grid item lg={2} md={2} sm={3} xs={4} className="detail_product_input">
               <button onClick={() => updateQuantity(true)}
-                style={{ height: "30px", backgroundColor: "rgb(52, 52, 52)", color: "white", cursor: "pointer" }}>-</button>
+                style={{ height: "25px",width:"25px", backgroundColor: "rgb(208,16,15)",border:"none", color: "white", cursor: "pointer" }}>-</button>
               <text style={{ marginLeft: "10px", marginRight: "10px" }}>{quantity}</text>
               <button onClick={() => updateQuantity(false)}
-                style={{ height: "30px", backgroundColor: "rgb(52, 52, 52)", color: "white", cursor: "pointer" }}>+</button>
+                style={{ height: "25px",width:"25px", backgroundColor: "rgb(208,16,15)",border:"none", color: "white", cursor: "pointer" }}>+</button>
               {/*               
               <input 
               type="number" 
@@ -185,7 +185,7 @@ function ProductDetail() {
             <Grid item lg={8} md={8} sm={8} xs={7}>
               <Button
                 // disabled={!selectedMeatType.price}
-                style={{ width: "100%", backgroundColor: "rgb(58,26,15)", color: "white", fontSize: "20px" }}
+                style={{ width: "100%", backgroundColor: "rgb(208,16,15)", color: "white", fontSize: "20px" }}
                 onClick={handleClick}>Add To Cart</Button>
             </Grid>
           </Grid>
@@ -198,21 +198,21 @@ function ProductDetail() {
       <Grid container className='product_descripton_btn'>
         <Grid item lg={3.7} md={3.7} sm={3} xs={11}>
           <Button
-            style={{ width: "100%", backgroundColor: "rgb(213,188,157)", color: "white", fontSize: "20px", height: "50px" }}
+            style={{ width: "100%", backgroundColor: "rgb(208,16,15)", color: "white", fontSize: "20px", height: "50px" }}
             onClick={() => setScreen('description')}
           >Description</Button>
 
         </Grid>
         <Grid item lg={3.7} md={3.7} sm={5} xs={11}>
           <Button
-            style={{ width: "100%", backgroundColor: "rgb(213,188,157)", color: "white", fontSize: "20px", height: "50px" }}
+            style={{ width: "100%", backgroundColor: "rgb(208,16,15)", color: "white", fontSize: "20px", height: "50px" }}
             onClick={() => setScreen('additionalInformation')}
           >Additional Information</Button>
 
         </Grid>
         <Grid item lg={3.7} md={3.7} sm={3} xs={11}>
           <Button
-            style={{ width: "100%", backgroundColor: "rgb(213,188,157)", color: "white", fontSize: "20px", height: "50px" }}
+            style={{ width: "100%", backgroundColor: "rgb(208,16,15)", color: "white", fontSize: "20px", height: "50px" }}
             onClick={() => setScreen('review')}
           >Review(0)</Button>
 

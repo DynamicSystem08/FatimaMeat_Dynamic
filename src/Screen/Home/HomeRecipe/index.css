@@ -8,7 +8,7 @@
   bottom: 0.1px;
   /* bottom: 28.5%; */
   /* right: 20px; */
-  background-color: rgba(213, 188, 157, 0.9);
+  background-color: rgba(25, 25,25,0.9);
   color: white;
   /* padding-left: 10px; */
   /* padding-right: 20px; */
@@ -33,7 +33,7 @@
 }
 
 .button_Recipes {
-  background-color: rgb(213, 188, 157);
+  background-color: rgb(25, 25, 25);
 }
 
 

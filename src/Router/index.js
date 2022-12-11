@@ -65,7 +65,7 @@ function Router() {
 
     return <BrowserRouter>
 
-        <div style={{ backgroundColor: "rgb(58,26,15)" }}>
+        <div style={{ backgroundColor: "black" }}>
             <HeaderTop user={user} />
             <Header />
         </div>

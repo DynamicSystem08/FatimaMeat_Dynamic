@@ -4,6 +4,12 @@
     padding-top: 100px;
     margin-bottom: 30px;
     color: white;
+    font-family: Garamond, serif;
+    font-weight: 900;
+}
+.background_location{
+    background: linear-gradient(rgb(0, 0, 0),
+      rgb(25,25,35));
 }
 .location_img iframe
 {
