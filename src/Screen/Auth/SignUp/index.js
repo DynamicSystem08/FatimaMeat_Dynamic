@@ -88,8 +88,8 @@ function SignUp(props) {
             <Grid container>
                 <Grid item lg={12} md={12} sm={12} xs={12} id="login1" style={{ marginTop: "50px", marginBottom: "50px" }}>
 
-                    <h1 style={{ marginTop: "40px", color: "rgb(58,26,15)" }}>User <strong>Sign Up</strong></h1>
-                    <PersonIcon sx={{ fontSize: 100, color: "rgb(58,26,15)" }} />
+                    <h1 style={{ marginTop: "40px", color: "rgb(58,26,15)",fontFamily:"Garamond, serif" }}><strong>User Sign Up</strong></h1>
+                    <PersonIcon sx={{ fontSize: 100, color: "rgb(208,13,30)" }} />
 
                     <form onSubmit={handleSubmit(onSubmit)}>
 
@@ -210,19 +210,19 @@ function SignUp(props) {
                         </Grid>
 
                         <Grid container>
-                            <Grid item lg={2.3} md={2.7} sm={3.2} xs={2.5}></Grid>
+                            <Grid item lg={2.5} md={2.7} sm={3.2} xs={2.5}></Grid>
                             <Grid item lg={7} md={7}>
                                 <Button
                                     type='submit'
                                     disabled={loading}
-                                    style={{ backgroundColor: "rgb(58,26,15)", color: "white", marginBottom: "50px", width: "200px", marginTop: "35px" }}>Submit</Button>
+                                    style={{ backgroundColor: "rgb(208,13,30)", color: "white", marginBottom: "30px", width: "200px", marginTop: "35px" }}>Submit</Button>
                             </Grid>
                         </Grid>
 
                         <Grid container>
                             <Grid item lg={3} md={2} sm={3} xs={2} ></Grid>
                             <Grid item lg={6.5} md={8.5} sm={6.5} xs={8}>
-                                <div style={{ marginTop: "35px",paddingBottom:"40px" }} className="sign_Up_Input">
+                                <div style={{ marginTop: "15px",paddingBottom:"40px" }} className="sign_Up_Input">
                                     <text
                                         onClick={() => props.setScreen(true)}
                                         style={{ color: "rgb(58,26,15)", cursor: "pointer", width: "90%", marginBottom: "50px", width: "200px", marginTop: "35px" }}><b>Already Have an account?{'\n'}Click here to Login!</b></text>

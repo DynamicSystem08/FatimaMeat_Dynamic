@@ -36,11 +36,11 @@ function Dashboard() {
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
                 <Grid item lg={3} style={{ padding: "20px" }} className="side_bar_dashboadr">
-                    <h2><b>My Account</b></h2>
+                    <h2 style={{fontFamily:"Garamond, serif"}}><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
                     <p onClick={() => navigate("/order")}>Orders</p><br></br>
-                    <p >My Account</p><br></br>
+                    <p >Account Detail</p><br></br>
                     <p
                         onClick={() => {
                             swal({
@@ -65,7 +65,7 @@ function Dashboard() {
                 </Grid>
                 <Grid item lg={1}></Grid>
                 <Grid item lg={8} style={{ paddingTop: "10px" }}>
-                    <h2>My Account</h2>
+                    <h2 style={{fontFamily:"Garamond, serif"}}>Account Detail</h2>
                     <Grid container style={{ marginBottom: "20px" }}>
                         <Grid item lg={4}>
                             <div style={{ marginTop: "35px" }}>

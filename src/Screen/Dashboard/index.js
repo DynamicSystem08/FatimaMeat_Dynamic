@@ -23,7 +23,7 @@ function Dashboard() {
                     <hr></hr><br></br>
                     <p> Dashboard</p><br></br>
                     <p onClick={() => navigate("/order")}>Orders</p><br></br>
-                    <p onClick={() => navigate("/myAccount")}>My Account</p><br></br>
+                    <p onClick={() => navigate("/myAccount")}>Account Detail</p><br></br>
                     <p
                         onClick={() => {
                             swal({
