@@ -46,8 +46,10 @@
 
 .slider_text h1 {
   margin-top: 25%;
-  color: rgba(213, 188, 157);
+  color: rgba(25, 25, 25);
   font-weight: 600;
+  font-style: italic;
+  font-weight: 700;
 }
 
 .sifer_main1 {

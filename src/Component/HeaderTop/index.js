@@ -19,7 +19,7 @@ function HeaderTop(props) {
                             <CallIcon style={{ color: "rgba(213,188,157,0.9)",paddingTop: "3px", backgroundColor: "white", borderRadius: "50%" }} />
                         </Grid> */}
                         <Grid item lg={10} md={12} sm={12}style={{ paddingTop: "3px", paddingBottom: "5px", color: "white" }}>
-                            <text>Call : 0313-763590</text>
+                            <text>Call : 042-111-FATIMA</text>
                         </Grid> 
                     </Grid>
                 </Grid>

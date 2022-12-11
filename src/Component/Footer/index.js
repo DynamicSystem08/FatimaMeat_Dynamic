@@ -121,7 +121,7 @@ function Footer() {
                                 <CallIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
                             <Grid item lg={10}>
-                                <text style={{ color: "white" }}>PH:(021):111-145-563</text>
+                                <text style={{ color: "white" }}>PH: 042-111-FATIMA</text>
                             </Grid>
                         </Grid>
                         <Grid container style={{ marginTop: "30px" }}>
@@ -129,7 +129,7 @@ function Footer() {
                                 <MarkunreadIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
                             <Grid item lg={10} >
-                                <text style={{ color: "white" }}> Email: customercare@FatimamMeat.net</text>
+                                <text style={{ color: "white" }}> Email: support@FatimamMeat.com</text>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -141,7 +141,7 @@ function Footer() {
             <Container>
                 <Grid container>
                     <Grid item lg={10} md={10} sm={10} xs={10.5}>
-                        <p style={{ color: "white", paddingTop: "5px" }}>Copyright 2000 © www.FatimaMeat.net
+                        <p style={{ color: "white", paddingTop: "5px" }}>Copyright 2000 © www.FatimaMeat.com
                         </p>
                     </Grid>
                     <Grid item lg={1} md={1} sm={1} xs={1}>

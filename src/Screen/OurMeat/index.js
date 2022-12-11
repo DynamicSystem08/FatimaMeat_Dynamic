@@ -30,7 +30,7 @@ function OurMeat() {
         <h1 className='our_meat_text' style={{padding:"100px"}}>Our Meat</h1>
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
-        <p className="our_Meat_main1" style={{fontWeight:"600",color:"black"}} >‘Meat’ Fatima</p>
+        <p className="our_Meat_main1" style={{fontWeight:"600",color:"black"}} >Fatima Meat</p>
         <img src={dividerDark} alt="" style={{ width: "10%" }} />
       </Grid>
     </Grid>
