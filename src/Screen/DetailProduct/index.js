@@ -104,9 +104,9 @@ function ProductDetail() {
     "https://swiperjs.com/demos/images/nature-1.jpg",
   ]
 
-  return <div style={{ backgroundColor: "rgb(25,25,25)", paddingTop: "120px", paddingBottom: "50px" }}>
+  return <div style={{ backgroundColor: "white", paddingTop: "120px", paddingBottom: "50px" }}>
     <Container style={{ backgroundColor: "white", paddingTop: "50px", paddingBottom: "50px" }}>
-      <h1 style={{ textAlign: "center",fontStyle:"Garamond,serif" }}><b>{data.name}</b></h1>
+      <h1 style={{ textAlign: "center",fontStyle:"Garamond,serif",marginBottom:"30px" }}><b>{data.name}</b></h1>
 
       <Grid container className="product_detail_main">
         <Grid item lg={5.5} md={5.5} sm={5.5} xs={12} className="product_detail_slider">
@@ -219,7 +219,7 @@ function ProductDetail() {
         </Grid>
       </Grid>
       {
-        screen == 'description' && <Grid container style={{ backgroundColor: "white", paddingBottom: "0px" }} >
+        screen == 'description' && <Grid container style={{ backgroundColor: "white", paddingBottom: "0px" }} className="b">
           <Grid item lg={10} md={10} sm={10} xs={10} className="Rabbit_meat_ul" npn>
             <p>{data.name}</p>
             <ul>

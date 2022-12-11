@@ -1,52 +1,65 @@
-.product_detail_slider img{
-    width: 100%;
-    height: auto;
+.product_detail_slider img {
+  width: 100%;
+  height: auto;
 }
-.product_detail_slider{
-    padding-top: 80px;
+
+.product_detail_slider {
+  padding-top: 80px;
 }
-.product_detail_main
-{
-    justify-content: center;
-    gap:50px
+
+.product_detail_main {
+  justify-content: center;
+  gap: 50px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+
 }
-.product_detail_text h1{
-    font-weight: 700;
+
+.b {
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
-.product_detail_text p{
-    margin-top: 40px;
-    font-size: 50px;
+
+.product_detail_text h1 {
+  font-weight: 700;
+}
+
+.product_detail_text p {
+  margin-top: 40px;
+  font-size: 50px;
 }
 
 select {
-    /* margin: 40px; */
-    /* background: rgba(0, 0, 0, 0.3); */
-    color:rgb(58,26,15);
-    /* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); */
-  }
-.detail_product_input ::-webkit-input-placeholder
-{
-    color: black;
-    /* padding-left: 30px; */
-}
-.product_descripton_btn
-{
-    justify-content: center;
-    gap: 30px;
-    margin-top: 50px;
-    padding-bottom: 50px;
-}
-.Rabbit_meat_ul{
-    padding: 30px;
-    font-size: 20px;
-    font-weight: 500;
+  /* margin: 40px; */
+  /* background: rgba(0, 0, 0, 0.3); */
+  color: rgb(58, 26, 15);
+  /* text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4); */
 }
 
+.detail_product_input ::-webkit-input-placeholder {
+  color: black;
+  /* padding-left: 30px; */
+}
+
+.product_descripton_btn {
+  justify-content: center;
+  gap: 30px;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.Rabbit_meat_ul {
+  padding: 30px;
+  font-size: 20px;
+  font-weight: 500;
+}
 
 
 
 
-#app { height: 100% }
+
+#app {
+  height: 100%
+}
+
 html,
 body {
   position: relative;
@@ -80,11 +93,12 @@ body {
   width: 100%;
 }
 
-@media (max-width:414px){
-  .swiper-slide img{
-    margin-top:-100px;
+@media (max-width:414px) {
+  .swiper-slide img {
+    margin-top: -100px;
   }
-  .product_detail_text p{
+
+  .product_detail_text p {
     margin-top: -30px;
   }
 }
