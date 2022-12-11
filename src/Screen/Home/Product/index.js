@@ -46,7 +46,7 @@ function Product() {
             </Grid>
 
             <Grid
-                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+                container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={Mutton} alt="" />
                 </Grid>
@@ -96,7 +96,7 @@ function Product() {
             {/* chicken */}
 
             <Grid
-                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+                container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={chicken} alt="" />
                 </Grid>
@@ -143,7 +143,7 @@ function Product() {
             </Grid>
             {/* Beaf */}
             <Grid
-                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+                container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={Beaf} alt="" />
                 </Grid>
@@ -191,7 +191,7 @@ function Product() {
 
             {/* Rabit */}
             <Grid
-                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+                container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={rabbitIcom} alt="" />
                 </Grid>
@@ -239,7 +239,7 @@ function Product() {
 
             {/* camel*/}
             <Grid
-                container style={{ borderBottom: "3px solid rgb(225,195,157)", marginTop: "10px" }}>
+                container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={cameIcon} alt="" />
                 </Grid>
