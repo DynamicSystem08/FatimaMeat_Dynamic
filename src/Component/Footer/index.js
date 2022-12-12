@@ -106,29 +106,29 @@ function Footer() {
                             onClick={handleClick}
                             style={{ backgroundColor: "rgba(208,13,30)", color: "white" }}>submit</Button>
                     </Grid>
-                    <Grid item lg={4} className="head_office">
+                    <Grid item lg={4}  className="head_office">
                         <p>HEAD OFFICE</p>
                         <Grid container>
-                            <Grid item lg={1.5} md={2}  sm={5} xs={12}>
+                            <Grid item lg={1.5} md={2}  sm={5} xs={1.5}>
                                 <LocationOnIcon style={{ fontSize: "40px", color: "rgba(208,13,30)" }} />
                             </Grid>
-                            <Grid item lg={10}>
+                            <Grid item lg={10} xs={10}>
                                 <text style={{ color: "white" }}>Suite G/5/5, 3rd Floor Mansoor Tower, Clifton Block 9, Karachi, Pakistan</text>
                             </Grid>
                         </Grid>
                         <Grid container style={{ marginTop: "30px" }}>
-                            <Grid item lg={1.5}>
+                            <Grid item lg={1.5} xs={1.5}>
                                 <CallIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
-                            <Grid item lg={10}>
+                            <Grid item lg={10} xs={10}>
                                 <text style={{ color: "white" }}>PH: 042-111-FATIMA</text>
                             </Grid>
                         </Grid>
                         <Grid container style={{ marginTop: "30px" }}>
-                            <Grid item lg={1.5} >
+                            <Grid item lg={1.5} xs={1.5} >
                                 <MarkunreadIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
-                            <Grid item lg={10} >
+                            <Grid item lg={10}  xs={10}>
                                 <text style={{ color: "white" }}> Email: support@FatimamMeat.com</text>
                             </Grid>
                         </Grid>

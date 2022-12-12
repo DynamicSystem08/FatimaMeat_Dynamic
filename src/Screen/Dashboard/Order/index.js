@@ -67,7 +67,7 @@ function Dashboard() {
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
-                <Grid item lg={3} style={{ padding: "20px" }} className="side_bar_dashboadr">
+                <Grid item lg={3} md={3.5} sm={4} xs={12} style={{ padding: "20px" }} className="side_bar_dashboadr">
                     <h2><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
@@ -95,10 +95,10 @@ function Dashboard() {
                         }}
                     >Logout</p><br></br>
                 </Grid>
-                <Grid item lg={1}></Grid>
+                <Grid item lg={1} md={1} sm={1}></Grid>
 
 
-                <Grid item lg={8}  xs={12} style={{ paddingTop: "50px" }}>
+                <Grid item lg={8} md={7} sm={7} xs={12} style={{ paddingTop: "50px" }}>
                     {/* <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
                         <Grid item lg={2} >
                             <h5>Order Id</h5>

@@ -18,11 +18,12 @@ function Dashboard() {
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
-                <Grid item lg={3} style={{ padding: "20px" }} className="side_bar_dashboadr">
+                <Grid item lg={3} md={3.5} sm={4} xs={12} style={{ padding: "20px" }} className="side_bar_dashboadr">
                     <h2 style={{fontFamily:"Garamond,serif"}}><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p> Dashboard</p><br></br>
                     <p onClick={() => navigate("/order")}>Orders</p><br></br>
+                    <p onClick={() => navigate("/myAccount1")}>My Account</p><br></br>
                     <p onClick={() => navigate("/myAccount")}>Account Detail</p><br></br>
                     <p
                         onClick={() => {
@@ -46,10 +47,10 @@ function Dashboard() {
                         }}
                     >Logout</p><br></br>
                 </Grid>
-                <Grid item lg={1}></Grid>
+                <Grid item lg={1} md={1} sm={1}></Grid>
 
 
-                <Grid item lg={8} style={{ paddingTop: "100px" }}>
+                <Grid item lg={8} md={7} sm={7} xs={12} style={{ paddingTop: "100px" }}>
                     <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
                         <p>
                             Hello nabeel (not nabeel? Log out)
