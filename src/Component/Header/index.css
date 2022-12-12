@@ -39,7 +39,7 @@
 
 @media (max-width:414px) {
     .responsive_header {
-        margin-left: 40%;
+        margin-left:40%;
     }
 
     .responsive_header1 {
@@ -58,6 +58,13 @@
         width: 80%;
         height: 20%;
 
+    }
+    .responsive_top_header
+    {
+        margin-top:-18px;
+    }
+    #b{
+        height: 500px;
     }
 }
 
@@ -95,4 +102,5 @@
     --bs-navbar-toggler-focus-width: 0.25rem;
     --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
     position: relative;
+    margin-top: 40px;
 }
