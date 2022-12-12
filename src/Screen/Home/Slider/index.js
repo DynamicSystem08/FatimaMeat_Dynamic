@@ -11,7 +11,7 @@ import chicken2 from "../../../Image/sliderrabbit102.jpg"
 
 
 function Slider() {
-    return <div style={{ backgroundColor: "white" }}>
+    return <div style={{ backgroundColor: "white" }} >
         <div className='slider_main1'></div>
         <div style={{ marginTop: "-90px" }} >
             <Container >

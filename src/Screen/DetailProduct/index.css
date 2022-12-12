@@ -53,6 +53,16 @@ select {
 }
 
 
+.swiper-pagination-bullet {
+  width: var(--swiper-pagination-bullet-width,var(--swiper-pagination-bullet-size,8px));
+  height: var(--swiper-pagination-bullet-height,var(--swiper-pagination-bullet-size,8px));
+  display: inline-block;
+  border-radius: 50%;
+  background: var(--swiper-pagination-bullet-inactive-color,rgb(208,13,30));
+  /* opacity: var(--swiper-pagination-bullet-inactive-opacity, .2); */
+}
+
+
 
 
 

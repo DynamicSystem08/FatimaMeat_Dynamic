@@ -1,6 +1,6 @@
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
-import dividerDark from "../../Image/divider_dark.png"
+import dividerDark from "../../Image/divider.png"
 import { useEffect } from 'react';
 import MetaData from '../../Component/MetaData';
 import logo from "../../Image/logo5.png"
@@ -18,7 +18,7 @@ function ZabeehaShop() {
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
         <p className="our_Meat_main1" style={{fontWeight:"600",color:"rgb(25,25,25)"}}>Locate Fatima Foods Shops</p>
-        <img src={dividerDark} alt="" style={{ width: "10%" }} />
+        <img src={dividerDark} alt="" style={{ width: "15%",marginTop:"-60px",marginBottom:"-100px" }} />
       </Grid>
     </Grid>
     <Container>
