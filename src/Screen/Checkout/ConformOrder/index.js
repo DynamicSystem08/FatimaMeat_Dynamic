@@ -79,6 +79,7 @@ function ConfirmOrder() {
                 </Grid>
                 <Grid item lg={1} md={1} sm={1} xs={1}>
                     <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(208,13,30)" }} />
+                    
                     <p >Pay</p>
                 </Grid>
             </Grid>
@@ -88,7 +89,7 @@ function ConfirmOrder() {
         <Container maxWidth="lg">
             <Grid container>
                 <Grid item lg={8} md={8} sm={6} xs={12} style={{ marginTop: "30px" }}>
-                    <h3 style={{ fontSize: "25px",fontFamily:"Garamond,serif",marginBottom:"20px" }}><b>Shipping Info</b></h3>
+                    <h3 style={{ fontSize: "25px", fontFamily: "Garamond,serif", marginBottom: "20px" }}><b>Shipping Info</b></h3>
                     <p style={{ marginLeft: "20px" }}><b>Name: </b>
                         {details.name}
                     </p>
@@ -102,22 +103,21 @@ function ConfirmOrder() {
                         {details.address}
                     </p>
 
-                    {/* yahn map cahala hai */}
-                    <h3 style={{ fontSize: "25px", marginTop: "50px",fontFamily:"Garamond,serif" }}><b>Your Cart Items:</b></h3>
+                    <h3 style={{ fontSize: "25px", marginTop: "50px", fontFamily: "Garamond,serif" }}><b>Your Cart Items:</b></h3>
                     {cartItems.map((item, index) => {
                         console.log(item)
                         return <div key={index}>
                             <Grid container style={{ marginTop: "50px", marginLeft: "30px" }}>
-                                <Grid item lg={2}  md={2} sm={2.5} xs={2.5} className="confirm_order_img" >
+                                <Grid item lg={2} md={2} sm={2.5} xs={2.5} className="confirm_order_img" >
                                     <img src={img14} />
                                 </Grid>
                                 <Grid item lg={2} md={2.3} sm={3.5} xs={3} className="confirm_Order_text" >
                                     <p>{item.name}{" ("}x{item.quantity}{")"}</p>
                                 </Grid>
-                                <Grid item lg={1} md={5} sm={3} xs={3} style={{marginTop:"20px"}}>
+                                <Grid item lg={1} md={5} sm={3} xs={3} style={{ marginTop: "20px" }}>
                                     <p>X{item.quantity}</p>
                                 </Grid>
-                                <Grid item lg={6} sm={1.5} style={{ textAlign: "end",marginTop:"20px" }} >
+                                <Grid item lg={6} sm={1.5} style={{ textAlign: "end", marginTop: "20px" }} >
                                     <p>Rs. {item.meatType.price} </p>
                                 </Grid>
                             </Grid>
@@ -126,7 +126,7 @@ function ConfirmOrder() {
 
                 </Grid>
                 <Grid item lg={4} md={4} sm={4} xs={12} style={{ borderLeft: "1px solid black" }}>
-                    <h3 style={{ fontSize: "25px",marginLeft:"10px", marginTop: "50px",fontFamily:"Garamond,serif" }}><b>Order Summery</b></h3>
+                    <h3 style={{ fontSize: "25px", marginLeft: "10px", marginTop: "50px", fontFamily: "Garamond,serif" }}><b>Order Summery</b></h3>
                     <hr style={{ width: "300px" }}></hr>
                     <Grid container>
                         <Grid item lg={6} md={5} sm={3} xs={7} style={{ marginLeft: "50px" }}>
@@ -135,9 +135,6 @@ function ConfirmOrder() {
                             <p>GST:</p>
                         </Grid>
                         <Grid item lg={2}>
-                            {/* <p>Rs:1000</p>
-                            <p>Rs:400</p>
-                            <p>Rs:5000</p> */}
                             <p>Rs. {cartTotal}</p>
                             <p>Rs. {shippingCharges}</p>
                             <p>Rs. {gst}</p>
@@ -150,7 +147,6 @@ function ConfirmOrder() {
                             <b>Total:</b>
                         </Grid>
                         <Grid item lg={2}>
-                            {/* <b>Rs:6000</b> */}
                             <b>Rs. {totalAmmount}</b>
                         </Grid>
                     </Grid>

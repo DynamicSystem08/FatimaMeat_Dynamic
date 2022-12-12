@@ -16,10 +16,10 @@ function Footer() {
 
     const [loading, setLoading] = useState(false)
     const [formData, setFormData] = useState({
-        email: "test@",
-        message: "test",
-        phoneNumber: "12345678912",
-        name: "test"
+        // email: "test@",
+        // message: "test",
+        // phoneNumber: "12345678912",
+        // name: "test"
     })
     // console.log(formData)
 
@@ -103,13 +103,14 @@ function Footer() {
                             value={formData.message}
                             id="w3review" name="w3review" rows="4" cols="50" placeholder='*Message' style={{ backgroundColor: "transparent", outline: "none", border: "none", borderBottom: "1px solid white", color: "white", width: "100%" }}></textarea><br></br><br></br>
                         <Button
+                            disabled={loading}
                             onClick={handleClick}
                             style={{ backgroundColor: "rgba(208,13,30)", color: "white" }}>submit</Button>
                     </Grid>
-                    <Grid item lg={4}  className="head_office">
+                    <Grid item lg={4} className="head_office">
                         <p>HEAD OFFICE</p>
                         <Grid container>
-                            <Grid item lg={1.5} md={2}  sm={5} xs={1.5}>
+                            <Grid item lg={1.5} md={2} sm={5} xs={1.5}>
                                 <LocationOnIcon style={{ fontSize: "40px", color: "rgba(208,13,30)" }} />
                             </Grid>
                             <Grid item lg={10} xs={10}>
@@ -128,8 +129,8 @@ function Footer() {
                             <Grid item lg={1.5} xs={1.5} >
                                 <MarkunreadIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
-                            <Grid item lg={10}  xs={10}>
-                                <text style={{ color: "white" }}> Email: support@FatimamMeat.com</text>
+                            <Grid item lg={10} xs={10}>
+                                <text style={{ color: "white" }}> Email: support@fatimameat.com</text>
                             </Grid>
                         </Grid>
                     </Grid>
@@ -141,7 +142,7 @@ function Footer() {
             <Container>
                 <Grid container>
                     <Grid item lg={10} md={10} sm={10} xs={10.5}>
-                        <p style={{ color: "white", paddingTop: "5px" }}>Copyright 2000 © www.FatimaMeat.com
+                        <p style={{ color: "white", paddingTop: "5px" }}>Copyright 2022 © www.FatimaMeat.com
                         </p>
                     </Grid>
                     <Grid item lg={1} md={1} sm={1} xs={1}>

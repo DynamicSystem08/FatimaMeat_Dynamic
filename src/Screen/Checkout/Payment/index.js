@@ -63,6 +63,8 @@ const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
 function Payment() {
     const [expanded, setExpanded] = useState('panel1')
 
+    const [loading, setLoading] = useState(false)
+
     const handleChange =
         (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
             setExpanded(newExpanded ? panel : false);
@@ -90,6 +92,7 @@ function Payment() {
     }
 
     const handleClick = async () => {
+        setLoading(true)
         // if (!formData.bankName) {
         //     swal("Error!", "Please enter a bank name", "error");
         //     return
@@ -128,6 +131,7 @@ function Payment() {
                 text: payload.message,
                 button: "Ok!",
             });
+            setLoading(false)
         }
         else {
             swal({
@@ -136,18 +140,14 @@ function Payment() {
                 text: payload.message,
                 button: "Ok!",
             });
+            // dispatch(deleteOrderState())
+            // dispatch(clearEntireCart())
+            // navigate("/home")
+
         }
 
-        // dispatch(deleteOrderState())
-        // dispatch(clearEntireCart())
 
-        // swal({
-        //     title: "Success!",
-        //     text: "Your order has been placed!",
-        //     icon: "success",
-        //     button: "Ok!",
-        // });
-        // navigate("/home")
+
     }
 
     return <div style={{ backgroundColor: "white" }}>
@@ -184,7 +184,7 @@ function Payment() {
 
         <Grid container>
             <Grid item lg={12} md={12} sm={12} xs={12} style={{ marginTop: "40px" }}>
-                <p style={{ fontSize: "25px", textAlign: "center",fontFamily:"Garamond,serif",marginBottom:"-10px" }}><b>PAYMENT METHOD</b></p>
+                <p style={{ fontSize: "25px", textAlign: "center", fontFamily: "Garamond,serif", marginBottom: "-10px" }}><b>PAYMENT METHOD</b></p>
                 <Grid container style={{ justifyContent: "center" }}>
                     <Grid item lg={2}>
                         <hr style={{ width: "250px" }}></hr>
@@ -244,7 +244,9 @@ function Payment() {
                         </AccordionDetails>
                     </Accordion>
                     <div style={{ textAlign: "center", marginTop: "30px", width: "400px", marginBottom: "50px" }}>
-                        <Button onClick={handleClick}
+                        <Button
+                            disabled={loading}
+                            onClick={handleClick}
                             style={{ backgroundColor: "rgb(208,13,30)", color: "white", width: "200px" }}>Pay
                             {/* {totalOrderAmount} */}
                         </Button>
