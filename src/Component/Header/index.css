@@ -31,7 +31,10 @@
         margin-left: 55%;
 
     }
-
+    .responsive_top_header
+    {
+        margin-top:-18px;
+    }
     .me-auto my-2 my-lg-0 {
         height: 500px;
     }

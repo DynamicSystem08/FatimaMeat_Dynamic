@@ -1,7 +1,7 @@
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
 
-import Mutton from "../../../Image/cardimg4.png"
+import Mutton from "../../../Image/cardimg3.png"
 import chicken from "../../../Image/cardimg2.png"
 import Beaf from "../../../Image/cardImg1.png"
 
@@ -17,7 +17,7 @@ import beefimg1 from "../../../Image/beefimg1.jpeg"
 import beefimg2 from "../../../Image/beefimg2.jpg"
 import beefimg3 from "../../../Image/beefimg3.jpg"
 import beefimg4 from "../../../Image/beefimg4.jpg"
-import rabbitIcom from "../../../Image/rabbiticon.png"
+import rabbitIcom from "../../../Image/cardimg5.png"
 import rabbitimg1 from "../../../Image/rabbitimg1.jpg"
 import rabbitimg2 from "../../../Image/rabbitimg2.jpg"
 import rabbitimg3 from "../../../Image/rabbitimg3.jpg"
@@ -26,7 +26,7 @@ import camelimg1 from "../../../Image/camelimg1.jpg"
 import camelimg2 from "../../../Image/camelimg2.png"
 import camelimg3 from "../../../Image/camelimg3.jpg"
 import camelimg4 from "../../../Image/camelimg4.jpg"
-import cameIcon from "../../../Image/camelimg.png"
+import cameIcon from "../../../Image/cardimg6.png"
 
 import { useNavigate } from 'react-router-dom';
 
