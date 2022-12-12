@@ -75,7 +75,7 @@ function Dashboard() {
                     <h2 style={{ fontFamily: "Garamond, serif" }}><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
-                    <p onClick={() => navigate("/order")}>Orders</p><br></br>
+                    <p onClick={() => navigate("/dashboard/orders")}>Orders</p><br></br>
                     <p >Account Detail</p><br></br>
                     <p
                         onClick={() => {
@@ -296,47 +296,47 @@ function Dashboard() {
                         </Grid>
 
                         <Grid item lg={11} md={11} sm={11} xs={12} style={{ marginTop: "30px" }}>
-                        <ThemeProvider theme={theme}>
+                            <ThemeProvider theme={theme}>
 
-<FormControl
-   sx={{
-    m: 1, width: '100%',
-    "& .MuiInputLabel-root": { color: 'rgb(25,25,25)' },//styles the label
-    "& .MuiOutlinedInput-root": {
-        "& > fieldset": { borderColor: "rgb(25,25,25)" },
-    },
-}}
-   
-size="small" fullWidth required variant="outlined">
-    <InputLabel htmlFor="outlined-adornment-password"
-    
-    >Current  New Password</InputLabel >
-    <OutlinedInput
-    
+                                <FormControl
+                                    sx={{
+                                        m: 1, width: '100%',
+                                        "& .MuiInputLabel-root": { color: 'rgb(25,25,25)' },//styles the label
+                                        "& .MuiOutlinedInput-root": {
+                                            "& > fieldset": { borderColor: "rgb(25,25,25)" },
+                                        },
+                                    }}
 
-  id="outlined-adornment-password"
-        type={values.showPassword ? 'text' : 'password'}
-        value={values.password}
-        onChange={handleChange('password')}
-        endAdornment={
-            <InputAdornment position="end"
-      
-            >
-                <IconButton
-                    aria-label="toggle password visibility"
-                    onClick={handleClickShowPassword}
-                    onMouseDown={handleMouseDownPassword}
-                    edge="end"
-                   sx={{color:"black"}} 
-                >
-                    {values.showPassword ? <VisibilityOff /> : <Visibility />}
-                </IconButton>
-            </InputAdornment>
-        }
-        label="Password"
-    />
-</FormControl>
-</ThemeProvider>
+                                    size="small" fullWidth required variant="outlined">
+                                    <InputLabel htmlFor="outlined-adornment-password"
+
+                                    >Current  New Password</InputLabel >
+                                    <OutlinedInput
+
+
+                                        id="outlined-adornment-password"
+                                        type={values.showPassword ? 'text' : 'password'}
+                                        value={values.password}
+                                        onChange={handleChange('password')}
+                                        endAdornment={
+                                            <InputAdornment position="end"
+
+                                            >
+                                                <IconButton
+                                                    aria-label="toggle password visibility"
+                                                    onClick={handleClickShowPassword}
+                                                    onMouseDown={handleMouseDownPassword}
+                                                    edge="end"
+                                                    sx={{ color: "black" }}
+                                                >
+                                                    {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                                </IconButton>
+                                            </InputAdornment>
+                                        }
+                                        label="Password"
+                                    />
+                                </FormControl>
+                            </ThemeProvider>
                         </Grid>
                     </Grid>
                 </Grid>

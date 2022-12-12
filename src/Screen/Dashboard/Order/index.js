@@ -19,6 +19,7 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import Button from '@mui/material/Button';
 
 function Dashboard() {
 
@@ -49,17 +50,17 @@ function Dashboard() {
     const callData = async () => {
         const result = await dispatch(fetchOrders())
     }
-    
+
     const callCurentUserOrders = async () => {
         const result = await dispatch(fetchOrders())
     }
-    
+
     useEffect(() => {
         if (reduxUser.email == "admin@fatimameat.com") {
             console.log("admin")
             callData()
         }
-        else{
+        else {
             callCurentUserOrders()
         }
     }, [])
@@ -72,7 +73,7 @@ function Dashboard() {
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
                     <p >Orders</p><br></br>
-                    <p onClick={() => navigate("/myAccount")}>Account Details</p><br></br>
+                    <p onClick={() => navigate("/dashboard/account-details")}>Account Details</p><br></br>
                     <p
                         onClick={() => {
                             swal({
@@ -118,7 +119,7 @@ function Dashboard() {
                     </Grid> */}
 
 
-                    <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270 ,maxWidth:700,minWidth:300}}>
+                    <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
                         <Table sx={{ minWidth: 650 }} aria-label="simple table" stickyHeader >
                             <TableHead>
                                 <TableRow>
@@ -127,21 +128,25 @@ function Dashboard() {
                                     <TableCell align="right"><b>Delivery Address</b></TableCell>
                                     <TableCell align="right"><b>Order Item</b></TableCell>
                                     <TableCell align="right"><b>Order Date</b></TableCell>
+                                    <TableCell align="right"><b>Order Actions</b></TableCell>
                                 </TableRow>
                             </TableHead>
                             <TableBody>
-                                {rows.map((row) => (
+                                {reduxAllOrders.map((row) => (
                                     <TableRow
-                                        key={row.name}
+                                        key={row.orderId}
                                         sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                                     >
                                         <TableCell component="th" scope="row">
-                                            {row.name}
+                                            {row.orderId}
                                         </TableCell>
-                                        <TableCell align="center">{row.calories}</TableCell>
-                                        <TableCell align="center">{row.fat}</TableCell>
+                                        <TableCell align="center">{row.buyerDetails.displayName}</TableCell>
+                                        <TableCell align="center">{row.shippingDetails.city}</TableCell>
                                         <TableCell align="center">{row.carbs}</TableCell>
                                         <TableCell align="center">{row.protein}</TableCell>
+                                        <TableCell align="center">
+                                            <Button>Mark Completed</Button>
+                                        </TableCell>
                                     </TableRow>
                                 ))}
                             </TableBody>

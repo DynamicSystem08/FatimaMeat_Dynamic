@@ -72,12 +72,12 @@ const allProducts = [
             {
                 type: "Live",
                 price: 2000,
-                img: ""
+                img: chicken1
             },
             {
                 type: "Meat",
                 price: 1000,
-                img: ""
+                img: chicken1
             }
         ],
         minPrice: 100,
@@ -128,11 +128,13 @@ const allProducts = [
         meatType: [
             {
                 type: "Live",
-                price: 2000
+                price: 2000,
+                img: rabbit1
             },
             {
                 type: "Meat",
-                price: 1000
+                price: 1000,
+                img: rabbit1
             }
         ],
         minPrice: 100,
@@ -158,35 +160,50 @@ const allProducts = [
         meatType: [
             {
                 type: "Prime Boneless (Cube zero fat)",
-                price: 2000
+                price: 2000,
+                img: camel1
             },
             {
                 type: "Prime Boneless",
-                price: 1000
+                price: 1000,
+                img: camel1
+
             },
             {
                 type: "BoneLess (Mix Boti)",
-                price: 2000
+                price: 2000,
+                img: camel1
+
             },
             {
                 type: "Mince (Keema)",
-                price: 1000
+                price: 1000,
+                img: camel1
+
             },
             {
                 type: "Pasanday",
-                price: 2000
+                price: 2000,
+                img: camel1
+
             },
             {
                 type: "Nehari Cut Boneless",
-                price: 1000
+                price: 1000,
+                img: camel1
+
             },
             {
                 type: "Nehar Cut With Boneless",
-                price: 2000
+                price: 2000,
+                img: camel1
+
             },
             {
                 type: "Camel Paya",
-                price: 1000
+                price: 1000,
+                img: camel1
+
             }
         ],
         minPrice: 100,
@@ -212,35 +229,50 @@ const allProducts = [
         meatType: [
             {
                 type: "Mutton Chops",
-                price: 2000
+                price: 2000,
+                img: mutton1
             },
             {
                 type: "Mutton Mince (Keema)",
-                price: 1000
+                price: 1000,
+                img: mutton1
+
             },
             {
                 type: "Mutton Raan",
-                price: 1000
+                price: 1000,
+                img: mutton1
+
             },
             {
                 type: "Mutton Dasti",
-                price: 1000
+                price: 1000,
+                img: mutton1
+
             },
             {
                 type: "Mutton Mix Boti",
-                price: 1000
+                price: 1000,
+                img: mutton1
+
             },
             {
                 type: "Mutton Back Chop",
-                price: 1000
+                price: 1000,
+                img: mutton1
+
             },
             {
                 type: "Mutton Boneless",
-                price: 1000
+                price: 1000,
+                img: mutton1
+
             },
             {
                 type: "Mutton Paya",
-                price: 1000
+                price: 1000,
+                img: mutton1
+
             }
         ],
         minPrice: 100,
@@ -313,43 +345,53 @@ const allProducts = [
         meatType: [
             {
                 type: "Undercut",
-                price: 2000
+                price: 2000,
+                img: beef1
             },
             {
                 type: "Prime Boneless (Cube zero fat)",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
             {
                 type: "Prime Boneless",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
             {
                 type: "Prime With Bone (Mix Boti)",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
             {
                 type: "Mince (Keema)",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
             {
                 type: "Pasanday",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
             {
                 type: "Nehari Cut Boneless",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
             {
                 type: "Beef Nalli",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
             {
                 type: "Beef Soup bones",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
             {
                 type: "Cow Paya",
-                price: 1000
+                price: 1000,
+                img: beef1
             },
         ],
         minPrice: 100,
