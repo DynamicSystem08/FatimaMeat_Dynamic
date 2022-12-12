@@ -14,7 +14,7 @@ import Grid from '@mui/material/Grid';
 
 function NavScrollExample() {
   const navigate = useNavigate()
-  return <div >
+  return <div  className='responsive_top_header'>
     <Navbar style={{backgroundColor:"black"}} expand="lg" className="sticky-top " >
       <Container fluid id="header" style={{ position: "fixed", marginTop: "50px",width:"100%", backgroundColor: "rgb(25,25,25)" }} >
         {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}

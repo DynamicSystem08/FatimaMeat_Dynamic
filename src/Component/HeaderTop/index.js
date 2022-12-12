@@ -13,7 +13,7 @@ function HeaderTop(props) {
     return <div style={styles}>
         <Container style={{marginBottom:"50px"}}>
             <Grid container style={{ paddingTop: "5px" }}>
-                <Grid item lg={2} md={2} sm={2} xs={4.5}>
+                <Grid item lg={2} md={2} sm={2} xs={8.5}>
                     <Grid container>
                         {/* <Grid item lg={2} md={2} xs={2} style={{paddingRight:"30px"}}>
                             <CallIcon style={{ color: "rgba(213,188,157,0.9)",paddingTop: "3px", backgroundColor: "white", borderRadius: "50%" }} />
