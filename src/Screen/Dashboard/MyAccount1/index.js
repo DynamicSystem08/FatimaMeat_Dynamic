@@ -42,8 +42,7 @@ function Dashboard() {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
-
-
+    const reduxUser = useSelector(state => state.userReducer.user)
 
     const [values, setValues] = React.useState({
         amount: '',
@@ -67,6 +66,10 @@ function Dashboard() {
     const handleMouseDownPassword = (event) => {
         event.preventDefault();
     };
+
+    if (!reduxUser) {
+        return
+    }
 
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>

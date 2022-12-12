@@ -25,13 +25,12 @@ function Shippingdetails() {
     const cartItems = useSelector(state => state.cartReducer.cart)
 
     const [details, setDetails] = useState({
-        name: "nabeel",
-        address: "sector 8",
-        city: "karachi",
-        pinCode: "12345",
+        name: "Test Name",
+        address: "Test Address",
+        city: "Test City",
+        pinCode: "012345",
         phoneNumber: "03362319053"
     })
-    // console.log(details)
 
     const handelChange = (key, value) => {
         setDetails({ ...details, [key]: value })
@@ -104,7 +103,7 @@ function Shippingdetails() {
                 </Grid>
                 <Grid container>
                     <Grid item lg={12} md={12} sm={12} xs={12}>
-                        <p style={{ fontSize: "25px", marginTop: "50px" ,fontFamily:"Garamond,serif",marginBottom:"-10px"}}><b><b>SHIPHING DETAILS</b></b></p>
+                        <p style={{ fontSize: "25px", marginTop: "50px", fontFamily: "Garamond,serif", marginBottom: "-10px" }}><b><b>SHIPHING DETAILS</b></b></p>
                     </Grid>
                     <Grid container style={{ justifyContent: "center" }}>
                         <Grid item lg={3.5}>
@@ -115,27 +114,27 @@ function Shippingdetails() {
             </Container>
 
             <Container maxWidth="xs" className='shiping_info_main' style={{ marginBottom: "30px" }}>
-                <Grid container style={{ marginTop: "50px",justifyContent:"center" }} >
+                <Grid container style={{ marginTop: "50px", justifyContent: "center" }} >
 
                     <Grid item lg={12} md={12} sm={12} xs={13} id="create1" style={{ marginBottom: "20px", marginTop: "-1px" }} className="input12">
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }} className="shping_detail_input">< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }} className="shping_detail_input">< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px", color: "rgb(208,13,30)" }} />
                             <input type="text" placeholder='Enter Name ' onChange={(e) => handelChange("name", e.target.value)} value={details.name}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", paddingLeft: "20px", border: "none", fontSize: "15px" }} />
                         </div>
                         {/* <input type="text" placeholder="Enter Nme" /> */}
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}>< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}>< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px", color: "rgb(208,13,30)" }} />
                             <input type="text" placeholder=' Address ' onChange={(e) => handelChange("address", e.target.value)} value={details.address}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", paddingLeft: "20px", border: "none", fontSize: "15px" }} />
                         </div>
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><  LocationCityIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><  LocationCityIcon style={{ paddingLeft: "20px", fontSize: "40px", color: "rgb(208,13,30)" }} />
                             <input type="text" placeholder=' City ' onChange={(e) => handelChange("city", e.target.value)} value={details.city}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><PersonPinCircleIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
-                            <input type="text" placeholder=' Pin Code ' onChange={(e) => handelChange("zipCode", e.target.value)} value={details.zipCode}
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><PersonPinCircleIcon style={{ paddingLeft: "20px", fontSize: "40px", color: "rgb(208,13,30)" }} />
+                            <input type="text" placeholder=' Pin Code ' onChange={(e) => handelChange("zipCode", e.target.value)} value={details.pinCode}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
-                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><CallIcon style={{ paddingLeft: "20px", fontSize: "40px",color:"rgb(208,13,30)" }} />
+                        <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><CallIcon style={{ paddingLeft: "20px", fontSize: "40px", color: "rgb(208,13,30)" }} />
                             <input type="text" placeholder=' Phone Number ' onChange={(e) => handelChange("phoneNumber", e.target.value)} value={details.phoneNumber}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>

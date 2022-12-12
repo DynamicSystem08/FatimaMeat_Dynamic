@@ -20,7 +20,7 @@ import Typography from '@mui/material/Typography';
 
 import { createOrder, deleteOrderState } from '../../../store/slices/orderSlice'
 
-// import { clearEntireCart } from '../../../store/slices/productSlice'
+import { removeCartItems } from '../../../store/slices/cartSlice'
 
 
 const Accordion = styled((props: AccordionProps) => (
@@ -111,13 +111,14 @@ function Payment() {
         // }
 
         let data = {}
+        data.buyerDetails = {}
+        data.cartInfo = {}
+        data.orderDetails = {}
 
         data.shippingDetails = shippingDetails
-        data.buyerDetails = {}
         data.cartItems = cartItems
         data.paymentInfo = formData
 
-        data.cartInfo = {}
         data.cartInfo.totalOrderAmount = totalOrderAmount
         data.cartInfo.cartTotal = cartTotal
 
@@ -140,14 +141,20 @@ function Payment() {
                 text: payload.message,
                 button: "Ok!",
             });
-            // dispatch(deleteOrderState())
-            // dispatch(clearEntireCart())
-            // navigate("/home")
-
+            dispatch(deleteOrderState())
+            dispatch(removeCartItems())
+            navigate("/dashboard/orders")
         }
+    }
 
+    if (!cartItems[0]) {
+        navigate('/cart')
+        return <div>loading</div>
+    }
 
-
+    if (!totalOrderAmount) {
+        navigate('/checkout/confirmOrder')
+        return <div>loading</div>
     }
 
     return <div style={{ backgroundColor: "white" }}>

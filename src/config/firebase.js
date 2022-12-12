@@ -6,7 +6,7 @@ import {
 import {
     getFirestore, collection, addDoc,
     query, where, getDocs, orderBy,
-    setDoc, doc
+    setDoc, doc, updateDoc
 } from "firebase/firestore";
 
 const firebaseConfig = {
@@ -41,11 +41,11 @@ async function registerUser(data) {
             username,
             uid: user.uid
         });
-        return { error: false, message: "User Created" }
+        return { error: false, message: "User Created", data: user }
     }
     catch (error) {
         console.log(error)
-        return { error: true, message: error.message }
+        return { error: true, message: error.message, data: null }
     }
 }
 
@@ -86,7 +86,6 @@ async function createOrderFirebase(data) {
     try {
         const q = query(collection(db, "orders"),
             orderBy("orderId", "desc")
-            // , where("capital", "==", true)
         );
         const querySnapshot = await getDocs(q);
 
@@ -113,20 +112,27 @@ async function createOrderFirebase(data) {
             }
         }
 
-        data.orderId = id
         data.userId = auth.currentUser.uid
 
         data.buyerDetails.userId = auth.currentUser.uid
         data.buyerDetails.displayName = auth.currentUser.displayName
-        data.orderStatus = "pending"
-        data.orderNumber = Math.floor(Math.random() * 1000000000);
+
+        data.orderDetails.orderStatus = "pending"
+        data.orderDetails.orderNumber = Math.floor(Math.random() * 1000000000);
+        data.orderDetails.orderId = id
 
         const date = new Date();
-        data.orderDateTime = date
-
+        data.orderDetails.orderDateTime = date
+        console.log(date)
 
         const docRef = await addDoc(collection(db, "orders"), data)
 
+        console.log(docRef.id)
+        const updateDocRef = doc(db, "orders", docRef.id);
+
+        await updateDoc(updateDocRef, {
+            docId: docRef.id
+        });
 
         return { error: false, message: "Your order has been placed!" }
 
@@ -139,7 +145,7 @@ async function createOrderFirebase(data) {
 
 async function getAllOrders() {
     try {
-        const q = query(collection(db, "orders"), orderBy("orderId"));
+        const q = query(collection(db, "orders"), orderBy("orderDetails.orderId"));
 
         const querySnapshot = await getDocs(q);
         let copyData = []
@@ -156,14 +162,14 @@ async function getAllOrders() {
 
 async function getCurrentUserOrders(uid) {
     try {
-        const q = query(collection(db, "orders"), where("uid", "==", uid));
+        const q = query(collection(db, "orders"), where("userId", "==", uid));
         const array = []
 
         const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
             array.push(doc.data())
         });
-
+        console.log("array", array)
         return { error: false, message: "Success", data: array }
     }
     catch (error) {

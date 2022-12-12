@@ -16,11 +16,8 @@ function ConfirmOrder() {
     const dispatch = useDispatch()
 
     const details = useSelector(state => state.orderReducer.shippingDetails)
-    console.log(details)
     const cartItems = useSelector(state => state.cartReducer.cart)
-    console.log(cartItems)
     const cartTotal = useSelector(state => state.orderReducer.cartTotal)
-    console.log(cartTotal)
 
     const handleClick = () => {
         dispatch(setBillAmount(totalAmmount))
@@ -37,10 +34,10 @@ function ConfirmOrder() {
     //     return <div>loading</div>
     // }
 
-    // if (!cartItems) {
-    //     navigate('/cart')
-    //     return <div>loading</div>
-    // }
+    if (!cartItems[0]) {
+        navigate('/cart')
+        return <div>loading</div>
+    }
 
     // if (!details) {
     //     navigate('/cart')
@@ -105,7 +102,6 @@ function ConfirmOrder() {
 
                     <h3 style={{ fontSize: "25px", marginTop: "50px", fontFamily: "Garamond,serif" }}><b>Your Cart Items:</b></h3>
                     {cartItems.map((item, index) => {
-                        console.log(item)
                         return <div key={index}>
                             <Grid container style={{ marginTop: "50px", marginLeft: "30px" }}>
                                 <Grid item lg={2} md={2} sm={2.5} xs={2.5} className="confirm_order_img" >

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 
 import { signOutUser } from '../../../config/firebase'
-import { fetchOrders } from '../../../store/slices/orderSlice';
+import { fetchOrders, fetchCurrentUserOrders } from '../../../store/slices/orderSlice';
 import "./index.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../../store/slices/userSlice';
@@ -43,16 +43,14 @@ function Dashboard() {
     const [screen, setScreen] = useState()
 
     const reduxAllOrders = useSelector(state => state.orderReducer.allOrders)
-    console.log("Dashboard reduxAllOrders", reduxAllOrders)
     const reduxUser = useSelector(state => state.userReducer.user)
-    console.log(reduxUser)
 
     const callData = async () => {
-        const result = await dispatch(fetchOrders())
+        await dispatch(fetchOrders())
     }
 
     const callCurentUserOrders = async () => {
-        const result = await dispatch(fetchOrders())
+        await dispatch(fetchCurrentUserOrders(reduxUser.uid))
     }
 
     useEffect(() => {
@@ -61,9 +59,14 @@ function Dashboard() {
             callData()
         }
         else {
+            console.log("user")
             callCurentUserOrders()
         }
     }, [])
+
+    if (!reduxUser) {
+        return
+    }
 
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
@@ -119,39 +122,68 @@ function Dashboard() {
                     </Grid> */}
 
 
-                    <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
-                        <Table sx={{ minWidth: 650 }} aria-label="simple table" stickyHeader >
-                            <TableHead>
-                                <TableRow>
-                                    <TableCell><b>Order Id</b></TableCell>
-                                    <TableCell align="right"><b>Customer Name</b></TableCell>
-                                    <TableCell align="right"><b>Delivery Address</b></TableCell>
-                                    <TableCell align="right"><b>Order Item</b></TableCell>
-                                    <TableCell align="right"><b>Order Date</b></TableCell>
-                                    <TableCell align="right"><b>Order Actions</b></TableCell>
-                                </TableRow>
-                            </TableHead>
-                            <TableBody>
-                                {reduxAllOrders.map((row) => (
-                                    <TableRow
-                                        key={row.orderId}
-                                        sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-                                    >
-                                        <TableCell component="th" scope="row">
-                                            {row.orderId}
-                                        </TableCell>
-                                        <TableCell align="center">{row.buyerDetails.displayName}</TableCell>
-                                        <TableCell align="center">{row.shippingDetails.city}</TableCell>
-                                        <TableCell align="center">{row.carbs}</TableCell>
-                                        <TableCell align="center">{row.protein}</TableCell>
-                                        <TableCell align="center">
-                                            <Button>Mark Completed</Button>
-                                        </TableCell>
+                    {
+                        reduxAllOrders ? <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
+                            <Table sx={{ minWidth: 650 }} aria-label="simple table" stickyHeader >
+                                <TableHead>
+                                    <TableRow>
+                                        <TableCell><b>Order Id</b></TableCell>
+                                        <TableCell align="right"><b>Customer Name</b></TableCell>
+                                        <TableCell align="right"><b>Delivery Address</b></TableCell>
+                                        <TableCell align="right"><b>Ordered Items</b></TableCell>
+                                        <TableCell align="right"><b>Order Date</b></TableCell>
+                                        <TableCell align="right"><b>Order Status</b></TableCell>
+                                        <TableCell align="right"><b>Order Actions</b></TableCell>
                                     </TableRow>
-                                ))}
-                            </TableBody>
-                        </Table>
-                    </TableContainer>
+                                </TableHead>
+                                <TableBody>
+                                    {reduxAllOrders[0] && reduxAllOrders.map((row) => (
+                                        <TableRow
+                                            key={row.orderDetails.orderId}
+                                            sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                                        >
+                                            <TableCell component="th" scope="row">
+                                                {row.orderDetails.orderId}
+                                            </TableCell>
+                                            <TableCell align="center">{row.buyerDetails.displayName}</TableCell>
+                                            <TableCell align="center">{row.shippingDetails.city}</TableCell>
+                                            {
+                                                // row.cartItems.map((item, index) => {
+                                                //     return <div key={index}>
+                                                //         {item.name}
+                                                //     </div>
+                                                // })
+                                            }
+                                            <TableCell align="center">{row.carbs}</TableCell>
+
+                                            <TableCell align="center">{row.orderDetails.orderDateTime.seconds}</TableCell>
+                                            <TableCell align="center">{row.orderDetails.orderStatus}</TableCell>
+                                            {
+                                                reduxUser === "admin@fatimameat.com" ?
+                                                    <TableCell align="center">
+                                                        <Button>Mark Completed</Button>
+                                                    </TableCell>
+                                                    :
+                                                    <TableCell align="center">
+                                                        <Button>Cancel</Button>
+                                                    </TableCell>
+                                            }
+
+                                        </TableRow>
+                                    ))}
+                                </TableBody>
+                            </Table>
+                        </TableContainer>
+                            :
+                            <div>
+                                <div>You Currently have no orders</div>
+                                <div
+                                    style={{ cursor: 'pointer' }}
+                                    onClick={() => navigate('/product')}
+                                >Click here to browse our products</div>
+                            </div>
+                    }
+
 
                     {/* {reduxAllOrders ? reduxAllOrders.map((item) => {
                         return <div>

@@ -16,17 +16,13 @@ import { useEffect } from 'react';
 function Cart() {
     const dispatch = useDispatch()
     const reduxCartItems = useSelector(state => state.cartReducer.cart)
-    console.log('cart', reduxCartItems)
     let cartTotal = 0
-    console.log(cartTotal)
 
     const navigate = useNavigate()
 
     const updateQuantity = (key, item, index) => {
         let copyCartItems = [...reduxCartItems]
         let copyData = { ...item }
-
-        console.log(copyData.quantity)
 
         if (key === "inc") {
             copyData.quantity = copyData.quantity + 1
@@ -69,6 +65,7 @@ function Cart() {
                     <Grid item lg={2} md={2} sm={2} xs={2.3} className="card_text101">
                         <p><b>Subtotal</b></p>
                     </Grid>
+                    
                 </Grid>
                 {
                     reduxCartItems[0] ? reduxCartItems.map((item, index) => {

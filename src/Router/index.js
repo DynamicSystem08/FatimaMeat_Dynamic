@@ -28,9 +28,7 @@ function Router() {
     const dispatch = useDispatch()
     const reduxCart = useSelector(state => state.cartReducer.cart)
     const reduxUser = useSelector(state => state.userReducer.user)
-    console.log("Router reduxUser", reduxUser)
     const [user, setUser] = useState()
-    console.log("Router user", user)
 
     const protectedRoute = (component) => {
         if (!user || !reduxCart[0]) {
@@ -46,14 +44,13 @@ function Router() {
             return <Auth />
         }
         else {
-            return <Dashboard />
+            return component
         }
     }
 
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
-                console.log("Router UseEffect", user)
                 setUser(user)
                 dispatch(setUser(user))
             } else {
@@ -89,8 +86,8 @@ function Router() {
             <Route path="/checkout/payment" element={<Payment />} />
 
             <Route path="/dashboard" element={protectedRouteAuth(<Dashboard />)} />
-            <Route path='/dashboard/orders' element={<Order />} />
-            <Route path='/dashboard/account-details' element={<AccountDetails />} />
+            <Route path='/dashboard/orders' element={protectedRouteAuth(<Order />)} />
+            <Route path='/dashboard/account-details' element={protectedRouteAuth(<AccountDetails />)} />
 
         </Routes>
 

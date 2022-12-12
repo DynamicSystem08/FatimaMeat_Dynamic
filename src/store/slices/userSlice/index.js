@@ -78,24 +78,16 @@ export const userSlice = createSlice({
   extraReducers: (builder) => {
 
     builder.addCase(createUser.fulfilled, (state, action) => {
-      state.user = action.payload
+      state.user = action.payload.data
     })
 
     builder.addCase(loginUser.fulfilled, (state, action) => {
       state.user = action.payload.data
     })
 
-    // builder.addCase(setReduxUser.fulfilled, (state, action) => {
-    //   state.user = action.payload
-    // })
-
     builder.addCase(fetchUsers.fulfilled, (state, action) => {
       state.allUsers = action.payload
     })
-
-    // builder.addCase(emailSupportTeam.fulfilled, (state, action) => {
-    //   state.emails = action.payload
-    // })
 
   }
 })

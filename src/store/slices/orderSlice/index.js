@@ -29,9 +29,8 @@ export const fetchOrders = createAsyncThunk(
 
 export const fetchCurrentUserOrders = createAsyncThunk(
     'fetchCurrentUserOrders',
-    async () => {
-        const result = await getCurrentUserOrders()
-
+    async (data) => {
+        const result = await getCurrentUserOrders(data)
         if (!result.error) {
             return result.data
         }
@@ -85,7 +84,7 @@ export const orderSlice = createSlice({
             state.createOrderResponse = action.payload
         })
         builder.addCase(fetchCurrentUserOrders.fulfilled, (state, action) => {
-            state.currentUserOrders = action.payload
+            state.allOrders = action.payload
         })
     },
 })

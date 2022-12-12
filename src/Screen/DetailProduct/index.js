@@ -26,7 +26,6 @@ function ProductDetail() {
   const params = useParams()
   const { id } = params
   const [data, setData] = useState()
-  console.log("productdetails data", data)
   const [quantity, setQuantity] = useState(0)
   const [screen, setScreen] = useState('description')
   const [meatType, setMeatType] = useState()
@@ -57,7 +56,6 @@ function ProductDetail() {
   }
 
   const handleSelectChange = (event) => {
-    console.log(event.target.value)
     setSelectedMeatType(event.target.value)
     setMeatType(event.target.value.type)
   }
@@ -165,7 +163,6 @@ function ProductDetail() {
                   <MenuItem value={{ type: "Choose An Option", price: false }}>Choose An Option</MenuItem>
                   {
                     data.meatType.map((item, index) => {
-                      // console.log(item.type)
                       return <MenuItem key={index} value={item}>{item.type}</MenuItem>
                     })
                   }

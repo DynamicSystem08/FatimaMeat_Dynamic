@@ -4,7 +4,7 @@ import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 
 import { signOutUser } from '../../config/firebase'
-import { fetchOrders } from '../../store/slices/orderSlice';
+
 import "./index.css"
 import { useDispatch, useSelector } from 'react-redux';
 import { logoutUser } from '../../store/slices/userSlice';
@@ -15,6 +15,16 @@ function Dashboard() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const user = useSelector(state => state.userReducer.user)
+    console.log(user)
+
+    // if (!user) {
+    //     navigate('/auth')
+    //     return <div>loading</div>
+    // }
+
+    if (!user) {
+        return
+    }
 
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
@@ -53,16 +63,19 @@ function Dashboard() {
 
                 <Grid item lg={8} md={7} sm={7} xs={12} style={{ paddingTop: "100px" }}>
                     <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
-                        <p>
-                            Hello {user.displayName}! not {user.displayName}? Click Here To Logout
-                            From this account's dashboard. You can view your recent orders,
-                            and edit your password and account details.
-                        </p>
+                        {
+                            user && <p>
+                                Hello {user.displayName}! not {user.displayName}? Click Here To Logout
+                                From this account's dashboard. You can view your recent orders,
+                                and edit your password and account details.
+                            </p>
+                        }
+
                     </Grid>
 
                 </Grid>
             </Grid>
         </Container>
-    </div>
+    </div >
 }
 export default Dashboard
