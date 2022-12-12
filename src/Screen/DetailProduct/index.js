@@ -92,6 +92,15 @@ function ProductDetail() {
     }
   }, [selectedMeatType, quantity])
 
+  // useEffect(() => {
+  //   if (selectedMeatType.price) {
+  //     setOrderDetails({ ...orderDetails, meatType: selectedMeatType })
+  //   }
+  //   else {
+  //     setOrderDetails({ ...orderDetails, name: id })
+  //   }
+  // }, [selectedMeatType, quantity])
+
   if (!data) {
     return <div>Loading...</div>
   }

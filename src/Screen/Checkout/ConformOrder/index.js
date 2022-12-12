@@ -48,7 +48,7 @@ function ConfirmOrder() {
     // }
 
     const shippingCharges = 100
-    const gst = 300
+    const gst = cartTotal * 0.17
     const totalAmmount = cartTotal + shippingCharges + gst
 
 
@@ -109,10 +109,12 @@ function ConfirmOrder() {
                         return <div key={index}>
                             <Grid container style={{ marginTop: "50px", marginLeft: "30px" }}>
                                 <Grid item lg={2} md={2} sm={2.5} xs={2.5} className="confirm_order_img" >
-                                    <img src={img14} />
+                                    <img src={item.meatType.img} />
                                 </Grid>
                                 <Grid item lg={2} md={2.3} sm={3.5} xs={3} className="confirm_Order_text" >
-                                    <p>{item.name}{" ("}x{item.quantity}{")"}</p>
+                                    <p>{item.name}
+                                    {/* {" ("}x{item.quantity}{")"} */}
+                                    </p>
                                 </Grid>
                                 <Grid item lg={1} md={5} sm={3} xs={3} style={{ marginTop: "20px" }}>
                                     <p>X{item.quantity}</p>
@@ -132,7 +134,7 @@ function ConfirmOrder() {
                         <Grid item lg={6} md={5} sm={3} xs={7} style={{ marginLeft: "50px" }}>
                             <p>Subtotal:</p>
                             <p>Shipping Charges:</p>
-                            <p>GST:</p>
+                            <p>17% GST:</p>
                         </Grid>
                         <Grid item lg={2}>
                             <p>Rs. {cartTotal}</p>

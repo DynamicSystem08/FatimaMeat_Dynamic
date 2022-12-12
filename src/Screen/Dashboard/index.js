@@ -14,17 +14,18 @@ function Dashboard() {
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
+    const user = useSelector(state => state.userReducer.user)
 
     return <div style={{ backgroundColor: "white" }}>
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
                 <Grid item lg={3} md={3.5} sm={4} xs={12} style={{ padding: "20px" }} className="side_bar_dashboadr">
-                    <h2 style={{fontFamily:"Garamond,serif"}}><b>My Account</b></h2>
+                    <h2 style={{ fontFamily: "Garamond,serif" }}><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p> Dashboard</p><br></br>
-                    <p onClick={() => navigate("/order")}>Orders</p><br></br>
-                    <p onClick={() => navigate("/myAccount1")}>My Account</p><br></br>
-                    <p onClick={() => navigate("/myAccount")}>Account Detail</p><br></br>
+                    <p onClick={() => navigate("/dashboard/orders")}>Orders</p><br></br>
+                    {/* <p onClick={() => navigate("/myAccount1")}>My Account</p><br></br> */}
+                    <p onClick={() => navigate("/dashboard/account-details")}>Account Detail</p><br></br>
                     <p
                         onClick={() => {
                             swal({
@@ -53,9 +54,9 @@ function Dashboard() {
                 <Grid item lg={8} md={7} sm={7} xs={12} style={{ paddingTop: "100px" }}>
                     <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
                         <p>
-                            Hello nabeel (not nabeel? Log out)
-                            From your account dashboard you can view your recent orders,
-                            manage your shipping and billing addresses, and edit your password and account details.
+                            Hello {user.displayName}! not {user.displayName}? Click Here To Logout
+                            From this account's dashboard. You can view your recent orders,
+                            and edit your password and account details.
                         </p>
                     </Grid>
 

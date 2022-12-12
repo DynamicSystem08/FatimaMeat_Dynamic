@@ -18,8 +18,7 @@ import Payment from "../Screen/Checkout/Payment"
 import Dashboard from '../Screen/Dashboard';
 import Auth from '../Screen/Auth'
 import Order from '../Screen/Dashboard/Order';
-import MyAccount from '../Screen/Dashboard/MyAccount';
-import MyAccount1 from '../Screen/Dashboard/MyAccount1';
+import AccountDetails from '../Screen/Dashboard/MyAccount1';
 
 import { auth, onAuthStateChanged } from '../config/firebase'
 import { useDispatch, useSelector } from 'react-redux';
@@ -90,10 +89,8 @@ function Router() {
             <Route path="/checkout/payment" element={<Payment />} />
 
             <Route path="/dashboard" element={protectedRouteAuth(<Dashboard />)} />
-            {/* <Route path="/dashboard" element={<Dashboard />} /> */}
-            <Route path='/order' element={<Order />} />
-            <Route path='/myAccount' element={<MyAccount />} />
-            <Route path='/myAccount1' element={<MyAccount1 />} />
+            <Route path='/dashboard/orders' element={<Order />} />
+            <Route path='/dashboard/account-details' element={<AccountDetails />} />
 
         </Routes>
 
