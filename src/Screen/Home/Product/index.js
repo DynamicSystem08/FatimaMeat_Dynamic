@@ -34,7 +34,7 @@ import { useNavigate } from 'react-router-dom';
 import "./index.css"
 function Product() {
     const navigate = useNavigate()
-    return <div style={{ backgroundColor: "white" }}>
+    return <div style={{ backgroundColor: "white" }} className="product_background_image">
 
 
         {/* Meat Product */}

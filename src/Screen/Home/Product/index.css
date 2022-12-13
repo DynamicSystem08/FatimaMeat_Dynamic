@@ -1,3 +1,7 @@
+.product_background_image{
+  background-image: url(../../../Image/backgroundIconImage.jpg);
+}
+
 .about_text p {
   line-height: 1.6;
   font-size: 20px;
