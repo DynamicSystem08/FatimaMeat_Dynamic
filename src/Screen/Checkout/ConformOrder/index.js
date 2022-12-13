@@ -52,10 +52,10 @@ function ConfirmOrder() {
     return <div style={{ paddingBottom: "50px", backgroundColor: "white" }}>
         <Container style={{ textAlign: "center", paddingTop: "140px" }} maxWidth="md">
             <Grid container>
-                <Grid item lg={5.5} md={5.5} sm={5.5} xs={5.5} >
+                <Grid item lg={5.5} md={5.5} sm={5.5} xs={5}>
                     <Grid container>
                         <Grid item lg={3.5} md={3.5} sm={3.5} xs={3.5}>
-                            <LocalShippingIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(25,25,25)" }} />
+                            <LocalShippingIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(208,13,30)" }} />
                             <p>Shipping Details</p>
                         </Grid>
                         <Grid item lg={8.5} md={8.5} sm={8.5} xs={8.5}>
@@ -66,7 +66,7 @@ function ConfirmOrder() {
                 <Grid item lg={5.5} md={5.5} sm={5.5} xs={5.5} >
                     <Grid container>
                         <Grid item lg={3} md={3} sm={3} xs={3}>
-                            <CheckBoxIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(25,25,25)" }} />
+                            <CheckBoxIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(208,13,30)" }} />
                             <p>Confirm Order</p>
                         </Grid>
                         <Grid item lg={9} md={9} sm={9} xs={9}>
@@ -75,8 +75,7 @@ function ConfirmOrder() {
                     </Grid>
                 </Grid>
                 <Grid item lg={1} md={1} sm={1} xs={1}>
-                    <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(208,13,30)" }} />
-                    
+                    <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "-10px", color: "rgb(25,25,25)" }} />
                     <p >Pay</p>
                 </Grid>
             </Grid>
@@ -85,7 +84,7 @@ function ConfirmOrder() {
 
         <Container maxWidth="lg">
             <Grid container>
-                <Grid item lg={8} md={8} sm={6} xs={12} style={{ marginTop: "30px" }}>
+                <Grid item lg={8} md={8} sm={6} xs={10} style={{ marginTop: "30px" }}>
                     <h3 style={{ fontSize: "25px", fontFamily: "Garamond,serif", marginBottom: "20px" }}><b>Shipping Info</b></h3>
                     <p style={{ marginLeft: "20px" }}><b>Name: </b>
                         {details.name}

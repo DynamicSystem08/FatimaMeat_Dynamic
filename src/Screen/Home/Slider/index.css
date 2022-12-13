@@ -17,6 +17,7 @@
 .slider_img img {
   width: 100%;
   height: 50vh;
+  margin-bottom:15px;
 }
 
 @media (max-width:500px) {
@@ -66,4 +67,25 @@
 
   font-family: Garamond, serif;
   font-weight: 900;
+}
+
+
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 30px;
+    height: 3px;
+    padding: 10;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color:rgb(208,13,30);
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    /* opacity: .5; */
+    transition: opacity .6s ease;
 }

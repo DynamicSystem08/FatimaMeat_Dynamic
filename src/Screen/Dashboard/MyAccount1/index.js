@@ -67,6 +67,58 @@ function Dashboard() {
         event.preventDefault();
     };
 
+
+    const [values1, setValues1] = React.useState({
+        amount: '',
+        password: '',
+        weight: '',
+        weightRange: '',
+        showPassword: false,
+    });
+
+    const handleChange1 = (prop) => (event) => {
+        setValues1({ ...values1, [prop]: event.target.value });
+    };
+
+    const handleClickShowPassword1= () => {
+        setValues1({
+            ...values1,
+            showPassword: !values1.showPassword,
+        });
+    };
+
+    const handleMouseDownPassword1 = (event) => {
+        event.preventDefault();
+    };
+
+
+    const [values2, setValues2] = React.useState({
+        amount: '',
+        password: '',
+        weight: '',
+        weightRange: '',
+        showPassword: false,
+    });
+
+    const handleChange2 = (prop) => (event) => {
+        setValues2({ ...values2, [prop]: event.target.value });
+    };
+
+    const handleClickShowPassword2= () => {
+        setValues2({
+            ...values2,
+            showPassword: !values2.showPassword,
+        });
+    };
+
+    const handleMouseDownPassword2 = (event) => {
+        event.preventDefault();
+    };
+
+
+
+    
+
     if (!reduxUser) {
         return
     }
@@ -273,21 +325,21 @@ function Dashboard() {
 
 
                                             id="outlined-adornment-password"
-                                            type={values.showPassword ? 'text' : 'password'}
-                                            value={values.password}
-                                            onChange={handleChange('password')}
+                                            type={values1.showPassword ? 'text' : 'password'}
+                                            value={values1.password}
+                                            onChange={handleChange1('password')}
                                             endAdornment={
                                                 <InputAdornment position="end"
 
                                                 >
                                                     <IconButton
                                                         aria-label="toggle password visibility"
-                                                        onClick={handleClickShowPassword}
-                                                        onMouseDown={handleMouseDownPassword}
+                                                        onClick={handleClickShowPassword1}
+                                                        onMouseDown={handleMouseDownPassword1}
                                                         edge="end"
                                                         sx={{ color: "black" }}
                                                     >
-                                                        {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                                        {values1.showPassword ? <VisibilityOff /> : <Visibility />}
                                                     </IconButton>
                                                 </InputAdornment>
                                             }
@@ -318,21 +370,21 @@ function Dashboard() {
 
 
                                         id="outlined-adornment-password"
-                                        type={values.showPassword ? 'text' : 'password'}
-                                        value={values.password}
-                                        onChange={handleChange('password')}
+                                        type={values2.showPassword ? 'text' : 'password'}
+                                        value={values2.password}
+                                        onChange={handleChange2('password')}
                                         endAdornment={
                                             <InputAdornment position="end"
 
                                             >
                                                 <IconButton
                                                     aria-label="toggle password visibility"
-                                                    onClick={handleClickShowPassword}
-                                                    onMouseDown={handleMouseDownPassword}
+                                                    onClick={handleClickShowPassword2}
+                                                    onMouseDown={handleMouseDownPassword2}
                                                     edge="end"
                                                     sx={{ color: "black" }}
                                                 >
-                                                    {values.showPassword ? <VisibilityOff /> : <Visibility />}
+                                                    {values2.showPassword ? <VisibilityOff /> : <Visibility />}
                                                 </IconButton>
                                             </InputAdornment>
                                         }
