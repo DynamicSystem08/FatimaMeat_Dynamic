@@ -111,7 +111,7 @@ function ProductDetail() {
     "https://swiperjs.com/demos/images/nature-1.jpg",
   ]
 
-  return <div style={{ backgroundColor: "white", paddingTop: "120px", paddingBottom: "50px" }}>
+  return <div style={{ backgroundColor: "white", paddingTop: "120px", paddingBottom: "50px" }} className="bg_card">
     <Container style={{ backgroundColor: "white", paddingTop: "50px", paddingBottom: "50px" }}>
       <h1 style={{ textAlign: "center",fontStyle:"Garamond,serif",marginBottom:"30px" }}><b>{data.name}</b></h1>
 

@@ -156,7 +156,7 @@ function Dashboard() {
                 </Grid>
                 <Grid item lg={1} md={1} sm={1}></Grid>
                 <Grid item lg={8} md={7} sm={7} xs={12} style={{ paddingTop: "10px" }} className="my_Account_Shadow">
-                    <h2 style={{ fontFamily: "Garamond, serif" }}>My Account</h2>
+                    <h2 style={{ fontFamily: "Garamond, serif" }}>Account Details</h2>
                     <Grid container style={{ marginBottom: "20px" }}>
                         <Grid item lg={5} md={5} sm={5} xs={12}>
                             <div style={{ marginTop: "35px" }}>

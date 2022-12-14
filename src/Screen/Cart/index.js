@@ -49,7 +49,7 @@ function Cart() {
         dispatch(setCartTotal(cartTotal))
     }
 
-    return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }}>
+    return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }} className="">
         <Container>
             <div className='Scroll_card'>
                 <Grid container className='card_detail_main'>

@@ -1,3 +1,6 @@
+.bg_card{
+  background-image: url(../../Image/backgroundIconImage.jpg);
+}
 .product_detail_slider img {
   width: 100%;
   height: auto;

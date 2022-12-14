@@ -2,7 +2,8 @@ import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
 
 import Mutton from "../../../Image/cardimg3.png"
-import chicken from "../../../Image/cardimg2.png"
+import beef from "../../../Image/cardimg2.png"
+import chicken from "../../../Image/cardimg4.png"
 import Beaf from "../../../Image/cardImg1.png"
 
 import muttonimg1 from "../../../Image/muttonimg1.jpg"
@@ -145,7 +146,7 @@ function Product() {
             <Grid
                 container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
-                    <img src={Beaf} alt="" />
+                    <img src={beef} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
                     <h1>Beef</h1>
