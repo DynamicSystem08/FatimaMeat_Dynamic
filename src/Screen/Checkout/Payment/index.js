@@ -81,10 +81,10 @@ function Payment() {
 
     const [formData, setFormData] = useState({
         paymentMethod: "cash",
-        bankName: "COD",
-        cardHolderName: "Nabeel",
-        cardNo: "12345678912",
-        cvsNo: "123"
+        // bankName: "COD",
+        // cardHolderName: "Nabeel",
+        // cardNo: "12345678912",
+        // cvsNo: "123"
     })
 
     const handelChange = (key, value) => {
@@ -254,7 +254,7 @@ function Payment() {
                         <Button
                             disabled={loading}
                             onClick={handleClick}
-                            style={{ backgroundColor: "rgb(208,13,30)", color: "white", width: "200px" }}>Pay
+                            style={{ backgroundColor: "rgb(208,13,30)", color: "white", width: "200px" }}>Place Order
                         </Button>
                     </div>
                 </Grid>
