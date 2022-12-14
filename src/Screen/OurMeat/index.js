@@ -1,8 +1,10 @@
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
-import dividerDark from "../../Image/divider_dark.png"
+import dividerDark from "../../Image/divider.png"
 import imgFatima from "../../Image/cardImg1.png"
-import imgFatimaM from "../../Image/cardimg4.png"
+import beef from "../../Image/cardimg2.png"
+import imgFatimaM from "../../Image/cardimg3.png"
+
 import BeefBoneless from "../../Image/BeefBoneless.jpg"
 import BeefChops from "../../Image/BeefChops.jpg"
 import BeefMince from "../../Image/BeefMince.jpg"
@@ -31,13 +33,13 @@ function OurMeat() {
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
         <p className="our_Meat_main1" style={{fontWeight:"600",color:"black"}} >Fatima Meat</p>
-        <img src={dividerDark} alt="" style={{ width: "10%" }} />
+        <img src={dividerDark} alt="" style={{ width: "15%",marginBottom:"-110px",marginTop:"-40px" }} />
       </Grid>
     </Grid>
     <Container>
       <Grid container style={{ borderBottom: "3px solid rgb(208,13,30)", marginTop: "30px" }}>
         <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
-          <img src={imgFatima} alt="" />
+          <img src={beef} alt="" />
         </Grid>
         <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text5">
           <h1>Beef</h1>

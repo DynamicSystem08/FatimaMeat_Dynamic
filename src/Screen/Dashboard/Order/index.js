@@ -124,15 +124,15 @@ function Dashboard() {
 
                     {
                         reduxAllOrders ? <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
-                            <Table sx={{ minWidth: 860 }} aria-label="simple table" stickyHeader >
+                            <Table sx={{ minWidth: 1400 }} aria-label="simple table" stickyHeader >
                                 <TableHead>
                                     <TableRow>
                                         <TableCell><b>Order Id</b></TableCell>
                                         <TableCell align="right"><b>Customer Name</b></TableCell>
                                         <TableCell align="right"><b>Delivery City</b></TableCell>
-                                        <TableCell align="right"><b>Delivery Address</b></TableCell>
+                                        <TableCell align="center"><b>Delivery Address</b></TableCell>
                                         <TableCell align="right"><b>Ordered Items</b></TableCell>
-                                        <TableCell align="right"><b>Order Date</b></TableCell>
+                                        <TableCell align="center"><b>Order Date</b></TableCell>
                                         <TableCell align="right"><b>Order Status</b></TableCell>
                                         <TableCell align="right"><b>Order Actions</b></TableCell>
                                     </TableRow>
