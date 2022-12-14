@@ -28,7 +28,7 @@ function Shippingdetails() {
         name: "Test Name",
         address: "Test Address",
         city: "Test City",
-        pinCode: "012345",
+        zipCode: "012345",
         phoneNumber: "03362319053"
     })
 
@@ -49,8 +49,8 @@ function Shippingdetails() {
             swal("Error!", "Please enter city", "error");
             return
         }
-        if (!details.pinCode) {
-            swal("Error!", "Please enter pin code", "error");
+        if (!details.zipCode) {
+            swal("Error!", "Please enter zip code", "error");
             return
         }
         if (details.phoneNumber.length !== 11) {
@@ -131,7 +131,7 @@ function Shippingdetails() {
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><PersonPinCircleIcon style={{ paddingLeft: "20px", fontSize: "40px", color: "rgb(208,13,30)" }} />
-                            <input type="text" placeholder=' Pin Code ' onChange={(e) => handelChange("zipCode", e.target.value)} value={details.pinCode}
+                            <input type="text" placeholder=' Pin Code ' onChange={(e) => handelChange("zipCode", e.target.value)} value={details.zipCode}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", border: "none", paddingLeft: "20px", fontSize: "15px" }} />
                         </div>
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }}><CallIcon style={{ paddingLeft: "20px", fontSize: "40px", color: "rgb(208,13,30)" }} />

@@ -129,6 +129,7 @@ function Dashboard() {
                                     <TableRow>
                                         <TableCell><b>Order Id</b></TableCell>
                                         <TableCell align="right"><b>Customer Name</b></TableCell>
+                                        <TableCell align="right"><b>Delivery City</b></TableCell>
                                         <TableCell align="right"><b>Delivery Address</b></TableCell>
                                         <TableCell align="right"><b>Ordered Items</b></TableCell>
                                         <TableCell align="right"><b>Order Date</b></TableCell>
@@ -147,16 +148,18 @@ function Dashboard() {
                                             </TableCell>
                                             <TableCell align="center">{row.buyerDetails.displayName}</TableCell>
                                             <TableCell align="center">{row.shippingDetails.city}</TableCell>
-                                            {
-                                                // row.cartItems.map((item, index) => {
-                                                //     return <div key={index}>
-                                                //         {item.name}
-                                                //     </div>
-                                                // })
-                                            }
+                                            <TableCell align="center">{row.shippingDetails.address}</TableCell>
+                                            {/* {
+                                                row.cartItems.map((item, index) => {
+                                                    return <div key={index}>
+                                                        {item.name} {item.quantity} {}
+                                                    </div>
+                                                })
+                                            } */}
+
                                             <TableCell align="center">{row.carbs}</TableCell>
 
-                                            <TableCell align="center">{row.orderDetails.orderDateTime.seconds}</TableCell>
+                                            <TableCell align="center">{row.orderDetails.orderDateTime}</TableCell>
                                             <TableCell align="center">{row.orderDetails.orderStatus}</TableCell>
                                             {
                                                 reduxUser === "admin@fatimameat.com" ?

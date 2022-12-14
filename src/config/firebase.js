@@ -85,7 +85,7 @@ async function createOrderFirebase(data) {
 
     try {
         const q = query(collection(db, "orders"),
-            orderBy("orderId", "desc")
+            orderBy("orderDetails.orderId", "desc")
         );
         const querySnapshot = await getDocs(q);
 
@@ -102,15 +102,18 @@ async function createOrderFirebase(data) {
         }
 
         if (copyData[0]) {
-            const orderId = parseInt(copyData[0].orderId)
-
+            const orderId = parseInt(copyData[0].orderDetails.orderId)
+            console.log("orderId", orderId)
             id = orderId + 1
             id = String(id)
+
+            console.log("id", id)
 
             for (let i = id.length; i < 10; i++) {
                 id = "0" + id
             }
         }
+        console.log("id", id)
 
         data.userId = auth.currentUser.uid
 
@@ -122,7 +125,7 @@ async function createOrderFirebase(data) {
         data.orderDetails.orderId = id
 
         const date = new Date();
-        data.orderDetails.orderDateTime = date
+        data.orderDetails.orderDateTime = String(date)
         console.log(date)
 
         const docRef = await addDoc(collection(db, "orders"), data)
