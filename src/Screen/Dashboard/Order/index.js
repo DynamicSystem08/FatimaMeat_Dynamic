@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import swal from 'sweetalert';
 
-import { signOutUser } from '../../../config/firebase'
+import { signOutUser, cancelOrder, markCompletedOrder } from '../../../config/firebase'
 import { fetchOrders, fetchCurrentUserOrders } from '../../../store/slices/orderSlice';
 import "./index.css"
 import { useDispatch, useSelector } from 'react-redux';
@@ -162,14 +162,59 @@ function Dashboard() {
                                             <TableCell align="center">{row.orderDetails.orderDateTime}</TableCell>
                                             <TableCell align="center">{row.orderDetails.orderStatus}</TableCell>
                                             {
-                                                reduxUser === "admin@fatimameat.com" ?
+                                                reduxUser.email === "admin@fatimameat.com" ?
                                                     <TableCell align="center">
-                                                        <Button>Mark Completed</Button>
+                                                        <Button
+                                                            onClick={() => {
+                                                                swal({
+                                                                    title: "Are you sure you want to mark as completed?",
+                                                                    text: "This action is irreversable!",
+                                                                    icon: "warning",
+                                                                    buttons: true,
+                                                                    dangerMode: true,
+                                                                })
+                                                                    .then((willDelete) => {
+                                                                        if (willDelete) {
+                                                                            markCompletedOrder(row.docId, row.orderDetails)
+                                                                                .then((data) => console.log(data))
+                                                                                .catch(e => console.log(e))
+                                                                            swal("Logout Successful!", {
+                                                                                icon: "success",
+                                                                            });
+                                                                        }
+                                                                    });
+                                                            }
+                                                            }
+                                                        >Mark Completed</Button>
                                                     </TableCell>
                                                     :
-                                                    <TableCell align="center">
-                                                        <Button>Cancel</Button>
-                                                    </TableCell>
+                                                    <div>
+                                                        {
+                                                            row.docUpdate && <TableCell align="center">
+                                                                <Button
+                                                                    onClick={() => {
+                                                                        swal({
+                                                                            title: "Are you sure you want to cancel your order?",
+                                                                            text: "This action is irreversable!",
+                                                                            icon: "warning",
+                                                                            buttons: true,
+                                                                            dangerMode: true,
+                                                                        })
+                                                                            .then((willDelete) => {
+                                                                                if (willDelete) {
+                                                                                    cancelOrder(row.docId)
+                                                                                    swal("Successful!", {
+                                                                                        icon: "success",
+                                                                                    });
+                                                                                }
+                                                                            });
+                                                                    }
+                                                                    }
+                                                                >Cancel</Button>
+                                                            </TableCell>
+                                                        }
+                                                    </div>
+
                                             }
 
                                         </TableRow>
@@ -221,6 +266,6 @@ function Dashboard() {
 
             </Grid>
         </Container>
-    </div>
+    </div >
 }
 export default Dashboard
