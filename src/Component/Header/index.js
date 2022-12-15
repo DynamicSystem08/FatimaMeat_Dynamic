@@ -61,7 +61,7 @@ function NavScrollExample() {
               <p className='responsive_header2'> CONTACT US</p>
               </Grid>
 
-              <Grid item lg={1.3} md={1.3} sm={10} xs={10} onClick={() => navigate("/product")} style={{ cursor: "pointer" }} className="text_Header">
+              <Grid item lg={1.3} md={1.3} sm={10} xs={10} onClick={() => navigate("/allproduct")} style={{ cursor: "pointer" }} className="text_Header">
               <p className='responsive_header'>Our Meat</p>
               </Grid>
               <Grid item lg={1} md={1} xs={10} onClick={() => navigate("/cart")} style={{ cursor: "pointer" }} className="text_Header">

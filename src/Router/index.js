@@ -75,7 +75,7 @@ function Router() {
             <Route path="/ourMeat" element={<OurMeat />} />
             <Route path="/recipes" element={<Recipes />} />
             <Route path="/allproduct" element={<AllProduct/>} />
-            <Route path="/product" element={<Product />} />
+            {/* <Route path="/product" element={<Product />} /> */}
             <Route path="/fatimaFood" element={<FatimaFood />} />
             <Route path="/auth" element={protectedRouteAuth(<Auth />)} />
 
