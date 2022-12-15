@@ -75,12 +75,12 @@ function Router() {
             {/* <Route path="/ourMeat" element={<OurMeat />} /> */}
             <Route path="/ourMeat" element={<AllOurMeat />} />
             <Route path="/recipes" element={<Recipes />} />
-            <Route path="/allproduct" element={<Product />} />
+            <Route path="/products" element={<Product />} />
             {/* <Route path="/product" element={<Product />} /> */}
             <Route path="/fatimaFood" element={<FatimaFood />} />
             <Route path="/auth" element={protectedRouteAuth(<Auth />)} />
 
-            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
 
             <Route path="/cart" element={<Cart />} />
 

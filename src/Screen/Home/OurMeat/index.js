@@ -54,7 +54,6 @@ export default function OurMeat() {
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg1} alt="Nature" style={{ width: "100%", cursor: "pointer" }}
-                        // onClick={() => navigate("/productdetail")} 
                         />
                         <div class="text-block_Recipes1">
                             <p>Mutton Whole Carcass </p>

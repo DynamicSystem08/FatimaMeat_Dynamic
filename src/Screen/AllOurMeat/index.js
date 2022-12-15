@@ -58,7 +58,7 @@ export default function AllOurMeat() {
         <Container style={{ paddingTop: "130px", paddingBottom: "10px" }}>
             <Grid container>
                 <Grid item lg={12} md={12} sm={12} xs={12} style={{ textAlign: "center" }} className="about_text">
-                    <h1>FATIMA MEAT PRODUCT</h1>
+                    <h1>OUR FRESH MEAT COLLECTION</h1>
                 </Grid>
             </Grid>
 
@@ -73,12 +73,10 @@ export default function AllOurMeat() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/mutton-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg1} alt="Nature" style={{ width: "100%", cursor: "pointer" }}
-                        // onClick={() => navigate("/productdetail")} 
                         />
                         <div class="text-block_Recipes1">
                             <p>Mutton Whole Carcass </p>
@@ -123,7 +121,6 @@ export default function AllOurMeat() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/chicken-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
@@ -170,7 +167,6 @@ export default function AllOurMeat() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/beef-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
@@ -218,7 +214,6 @@ export default function AllOurMeat() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/rabbit-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
@@ -266,7 +261,6 @@ export default function AllOurMeat() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/camel-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
@@ -316,7 +310,6 @@ export default function AllOurMeat() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/camel-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
@@ -365,7 +358,6 @@ export default function AllOurMeat() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/camel-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
@@ -416,7 +408,6 @@ export default function AllOurMeat() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/camel-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">

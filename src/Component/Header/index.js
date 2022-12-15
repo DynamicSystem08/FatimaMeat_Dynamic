@@ -45,7 +45,7 @@ function NavScrollExample() {
               <Grid item lg={0.9} md={1} sm={10} xs={12} onClick={() => navigate("/home")} className="text_Header">
                 <p className='responsive_header'>HOME</p>
               </Grid>
-              <Grid item lg={1.4} md={1.4} sm={10} xs={10} onClick={() => navigate("/allProduct")} style={{ cursor: "pointer" }} className="text_Header">
+              <Grid item lg={1.4} md={1.4} sm={10} xs={10} onClick={() => navigate("/products")} style={{ cursor: "pointer" }} className="text_Header">
                 <p className='responsive_header'>PRODUCTS</p>
               </Grid>
 
