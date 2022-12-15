@@ -14,15 +14,15 @@ import Grid from '@mui/material/Grid';
 
 function NavScrollExample() {
   const navigate = useNavigate()
-  return <div  className='responsive_top_header'>
-    <Navbar style={{backgroundColor:"black"}} expand="lg" className="sticky-top " >
-      <Container fluid id="header" style={{ position: "fixed", marginTop: "50px",width:"100%", backgroundColor: "rgb(25,25,25)" }} >
+  return <div className='responsive_top_header'>
+    <Navbar style={{ backgroundColor: "black" }} expand="lg" className="sticky-top " >
+      <Container fluid id="header" style={{ position: "fixed", marginTop: "50px", width: "100%", backgroundColor: "rgb(25,25,25)" }} >
         {/* <Navbar.Brand href="#">Navbar scroll</Navbar.Brand> */}
-        <Navbar.Toggle aria-controls="navbarScroll" className='navbar-light' style={{color:"white"}} />
+        <Navbar.Toggle aria-controls="navbarScroll" className='navbar-light' style={{ color: "white" }} />
         <Navbar.Collapse id="navbarScroll" >
           <Nav
             className="me-auto my-2 my-lg-0 " id="b"
-            style={{ height: '87px', width: "100%", fontSize: "20px", backgroundColor: "rgb(25,25,25)"}}
+            style={{ height: '87px', width: "100%", fontSize: "20px", backgroundColor: "rgb(25,25,25)" }}
             navbarScroll
           >
             {/* <Nav.Link href="#action1">Home</Nav.Link> */}
@@ -45,27 +45,27 @@ function NavScrollExample() {
               <Grid item lg={0.9} md={1} sm={10} xs={12} onClick={() => navigate("/home")} className="text_Header">
                 <p className='responsive_header'>HOME</p>
               </Grid>
-              <Grid item lg={1.4} md={1.4} sm={10}  xs={10} onClick={() => navigate("/ourMeat")} style={{ cursor: "pointer" }} className="text_Header">
-              <p className='responsive_header'>PRODUCT</p>
+              <Grid item lg={1.4} md={1.4} sm={10} xs={10} onClick={() => navigate("/allProduct")} style={{ cursor: "pointer" }} className="text_Header">
+                <p className='responsive_header'>PRODUCTS</p>
               </Grid>
 
               <Grid item lg={2} md={2} sm={10} xs={10} onClick={() => navigate("/recipes")} style={{ cursor: "pointer" }} className="text_Header">
-              <p className='responsive_header1'>RECIPES</p>
+                <p className='responsive_header1'>RECIPES</p>
               </Grid>
               {/* <Grid item lg={0.5}></Grid> */}
-              <Grid item lg={2} md={2}  sm={5} xs={12} className="logo_img">
-                <img src={logo} alt="" id="img1"  />
+              <Grid item lg={2} md={2} sm={5} xs={12} className="logo_img">
+                <img src={logo} alt="" id="img1" />
               </Grid>
               <Grid item lg={0.6} md={0.6}></Grid>
               <Grid item lg={1.6} md={1.8} sm={10} xs={10} onClick={() => navigate("/fatimaFood")} style={{ cursor: "pointer" }} className="text_Header" >
-              <p className='responsive_header2'> CONTACT US</p>
+                <p className='responsive_header2'> CONTACT US</p>
               </Grid>
 
-              <Grid item lg={1.3} md={1.3} sm={10} xs={10} onClick={() => navigate("/allproduct")} style={{ cursor: "pointer" }} className="text_Header">
-              <p className='responsive_header'>Our Meat</p>
+              <Grid item lg={1.3} md={1.3} sm={10} xs={10} onClick={() => navigate("/ourMeat")} style={{ cursor: "pointer" }} className="text_Header">
+                <p className='responsive_header'>OUR MEAT</p>
               </Grid>
               <Grid item lg={1} md={1} xs={10} onClick={() => navigate("/cart")} style={{ cursor: "pointer" }} className="text_Header">
-              <p className='responsive_header'> CART</p>
+                <p className='responsive_header'> CART</p>
               </Grid>
 
             </Grid>

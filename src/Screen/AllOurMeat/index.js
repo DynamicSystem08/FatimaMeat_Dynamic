@@ -2,6 +2,7 @@ import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 
+import { useEffect } from 'react'
 
 import Mutton from "../../Image/cardimg3.png"
 import beef from "../../Image/cardimg2.png"
@@ -40,16 +41,18 @@ import duck2 from "../../Image/duckimg2.jpg"
 import duck3 from "../../Image/duckimg3.jpg"
 import duck4 from "../../Image/duckimg4.jpg"
 
-
-
 import { useNavigate } from 'react-router-dom';
 
-
 import "./index.css"
-function Product() {
-    const navigate = useNavigate()
-    return <div style={{ backgroundColor: "white" }} className="product_background_image">
+export default function AllOurMeat() {
 
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+    return <div style={{ backgroundColor: "white" }} className="product_background_image">
 
         {/* Meat Product */}
         <Container style={{ paddingTop: "130px", paddingBottom: "10px" }}>
@@ -301,8 +304,8 @@ function Product() {
 
 
 
-             {/*FISH*/}
-             <Grid
+            {/*FISH*/}
+            <Grid
                 container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={fish} alt="" />
@@ -350,8 +353,8 @@ function Product() {
             </Grid>
 
 
-  {/*DUCk*/}
-  <Grid
+            {/*DUCk*/}
+            <Grid
                 container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={fish} alt="" />
@@ -401,8 +404,8 @@ function Product() {
 
 
 
-  {/* {Aseel Chicken} */}
-  {/* <Grid
+            {/* {Aseel Chicken} */}
+            {/* <Grid
                 container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
                     <img src={fish} alt="" />
@@ -455,4 +458,3 @@ function Product() {
         </Container>
     </div>
 }
-export default Product

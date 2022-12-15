@@ -1,5 +1,5 @@
-.product_background_image{
-  background-image: url(../../../Image/backgroundIconImage.jpg);
+.product_background_image {
+  background-image: url(../../Image/backgroundIconImage.jpg);
 }
 
 .about_text p {
@@ -17,15 +17,15 @@
   margin-top: 20px;
 }
 
-@media (max-width:500px){
-  .our_meat_text2 h1{
-      margin-top: 23px;
+@media (max-width:500px) {
+  .our_meat_text2 h1 {
+    margin-top: 23px;
   }
 }
 
-@media ((max-width:600px) and (min-width:501px)){
-  .our_meat_text2 h1{
-      margin-top:25px;
+@media ((max-width:600px) and (min-width:501px)) {
+  .our_meat_text2 h1 {
+    margin-top: 25px;
   }
 }
 

@@ -74,8 +74,6 @@ const style1 = {
 
 }
 
-
-
 function Recipes() {
 
     const [open, setOpen] = useState(false);
@@ -127,9 +125,10 @@ function Recipes() {
     const sixteenOpen = () => setSixteen(true)
     const sixteenClose = () => setSixteen(false)
 
-    // useEffect(() => {
-    //     window.scroll(0, 0)
-    // })
+    useEffect(() => {
+        window.scroll(0, 0)
+    })
+
     return <div style={{ marginTop: "-10px", backgroundColor: "white", paddingBottom: "30px" }} className="Recipes_bg">
         <MetaData title="Fatima Meat | Recipes" />
         <Grid container>

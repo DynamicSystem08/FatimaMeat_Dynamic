@@ -6,19 +6,21 @@ import MetaData from '../../Component/MetaData';
 import logo from "../../Image/logo5.png"
 import "./index.css"
 
-function ZabeehaShop() {
-  // useEffect(() => {
-  //   window.scroll(0, 0)
-  // })
-  return <div style={{ marginTop: "10px",backgroundColor:"white",paddingBottom:"20px" }}>
+export default function ZabeehaShop() {
+
+  useEffect(() => {
+    window.scroll(0, 0)
+  })
+
+  return <div style={{ marginTop: "10px", backgroundColor: "white", paddingBottom: "20px" }}>
     <MetaData title="Fatima Meat | Fatima Foods" />
     <Grid container>
       <Grid item lg={12} className="our_shop_bg">
-        <h1 className='our_meat_text1' style={{padding:"100px",color:"white",fontWeight:"900"}}>Our Shop</h1>
+        <h1 className='our_meat_text1' style={{ padding: "100px", color: "white", fontWeight: "900" }}>Our Shop</h1>
       </Grid>
       <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
-        <p className="our_Meat_main1" style={{fontWeight:"600",color:"rgb(25,25,25)"}}>Locate Fatima Foods Shops</p>
-        <img src={dividerDark} alt="" style={{ width: "15%",marginTop:"-60px",marginBottom:"-100px" }} />
+        <p className="our_Meat_main1" style={{ fontWeight: "600", color: "rgb(25,25,25)" }}>Locate Fatima Foods Shops</p>
+        <img src={dividerDark} alt="" style={{ width: "15%", marginTop: "-60px", marginBottom: "-100px" }} />
       </Grid>
     </Grid>
     <Container>
@@ -30,7 +32,7 @@ function ZabeehaShop() {
           <h1 style={{ marginTop: "60px" }}>Rawalpindi</h1>
         </Grid>
       </Grid>
-      <div style={{ borderBottom: "3px solid rgb(208,13,30)", paddingTop: "2px",marginBottom:"20px" }} ></div>
+      <div style={{ borderBottom: "3px solid rgb(208,13,30)", paddingTop: "2px", marginBottom: "20px" }} ></div>
       <Grid item lg={12} md={12} sm={12} xs={12} className="comimg_soon">
         <p><i>COMING SOON</i></p>
       </Grid>
@@ -63,9 +65,8 @@ function ZabeehaShop() {
       </Grid>
       <div style={{ borderBottom: "3px solid rgb(208,13,30)", paddingTop: "2px" }} ></div>
       <Grid item lg={12} md={12} sm={12} xs={12} className="comimg_soon">
-        <p style={{paddingBottom:"50px"}}><i>COMING SOON</i></p>
+        <p style={{ paddingBottom: "50px" }}><i>COMING SOON</i></p>
       </Grid>
     </Container>
   </div>
 }
-export default ZabeehaShop
