@@ -20,101 +20,105 @@ import MuttonMince from "../../Image/MuttonMix.jpg"
 import MuttonMice from "../../Image/MuttonMince.jpg"
 import MetaData from "../../Component/MetaData"
 import { useEffect } from 'react';
+
+
+import RemoveRedEyeIcon from '@mui/icons-material/RemoveRedEye';
+import ClosedCaptionDisabledIcon from '@mui/icons-material/ClosedCaptionDisabled';
+
 import "./index.css"
 function OurMeat() {
   // useEffect(() => {
   //   window.scroll(0, 0)
   // })
-  return <div style={{ marginTop: "-10px" ,backgroundColor:"white"}} >
+  return <div style={{ marginTop: "-10px", backgroundColor: "white" }} >
     <MetaData title="Fatima Meat | Our Meat" />
-    <Grid container>
-      <Grid item lg={12} className="our_meat_bg">
-        <h1 className='our_meat_text' style={{padding:"100px"}}>Our Meat</h1>
-      </Grid>
-      <Grid item lg={12} md={12} sm={12} xs={12} className="our_meat_img">
-        <p className="our_Meat_main1" style={{fontWeight:"600",color:"black"}} >Fatima Meat</p>
-        <img src={dividerDark} alt="" style={{ width: "15%",marginBottom:"-110px",marginTop:"-40px" }} />
-      </Grid>
-    </Grid>
     <Container>
-      <Grid container style={{ borderBottom: "3px solid rgb(208,13,30)", marginTop: "30px" }}>
-        <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
-          <img src={beef} alt="" />
-        </Grid>
-        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text5">
-          <h1>Beef</h1>
-        </Grid>
-      </Grid>
-      <div style={{ borderBottom: "3px solid rgb(208,13,30)", paddingTop: "2px" }} ></div>
-      <Grid container className='Beef_main_imgs'>
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
+      <h1 style={{ paddingTop: "100px", fontFamily: " Garamond, serif", fontWeight: "900" }}>SHOP</h1>
+
+      <Grid container>
+        {/* <Grid item lg={3} md={3.6} sm={5.5} xs={12} id="imgportfolio" style={{ border: "1px solid gray", padding: "20px" }}>
+          <div>
+            <img src={BeefMince} alt="" />
+            <div id="content121">
+              <h1>Bussiness Solution</h1>
+              <p style={{ marginTop: "-10px" }}>All features available</p>
+              <RemoveRedEyeIcon sx={{ fontSize: "40px", cursor: "pointer", marginRight: "15px" }} />
+              <ClosedCaptionDisabledIcon sx={{ fontSize: "40px", cursor: "pointer" }} />
+            </div>
+          </div>
+        </Grid> */}
+        <Grid item lg={3} className="Beef_imgs">
           <img src={BeefBoneless} alt="" />
-          <p>Beef Boneless Cubes</p>
+          <p><b>100% Organic Veal Meat (cow)</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
         </Grid>
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
-          <img src={BeefChops} alt="" />
-          <p>Beef Chops</p>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Camel Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
         </Grid>
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
-          <img src={BeefMince} alt="" />
-          <p>Beef Mince</p>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Desi Aseel Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
         </Grid>
-
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
-          <img src={BeefMixBoti} alt="" />
-          <p>Beef Mix Boti</p>
-        </Grid>
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
-          <img src={BeefNihari} alt="" />
-          <p>Beef Nihari Cut Boneless</p>
-        </Grid>
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
-          <img src={BeefNully} alt="" />
-          <p>Beef Nully</p>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Desi Misri Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
         </Grid>
 
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
-          <img src={BeefRip} alt="" />
-          <p>Beef Rib Steak</p>
+
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Duck Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
         </Grid>
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
-          <img src={BeepRibs} alt="" />
-          <p>Beef Ribs Eye Steak</p>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Mutton</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
         </Grid>
-        <Grid item lg={3.7} md={3.5} sm={3.3} xs={10} className="Beef_imgs">
-          <img src={BeefT} alt="" />
-          <p>Beef T Bone Steak</p>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Ostrich Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
         </Grid>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Quail Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
+        </Grid>
+
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Rabbit Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
+        </Grid>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Sheep/Lamb</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
+        </Grid>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Turkey Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
+        </Grid>
+        <Grid item lg={3} className="Beef_imgs">
+          <img src={BeefBoneless} alt="" />
+          <p><b>Veal Camel Meat</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
+        </Grid>
+
+        <Grid item lg={3} className="Beef_imgs" style={{ marginBottom: "50px" }}>
+          <img src={BeefBoneless} alt="" />
+          <p><b>Veal Meat (cow)</b></p>
+          <p style={{ textAlign: "center", fontSize: "17px", marginTop: "-20px", color: "gray", marginBottom: "-10px" }}>₨375.00 – ₨2,400.00</p>
+        </Grid>
+
       </Grid>
 
-      <Grid container style={{ borderBottom: "3px solid rgb(208,13,30)", marginTop: "50px" }}>
-        <Grid item lg={0.9} md={1} sm={2} xs={2.5} className="our_meat_img1">
-          <img src={imgFatimaM} alt="" />
-        </Grid>
-        <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text5">
-          <h1>Mutton</h1>
-        </Grid>
-      </Grid>
-      <div style={{ borderBottom: "3px solid rgb(208,13,30)", paddingTop: "2px" }} ></div>
-      <Grid container className='mutton_main'>
-        <Grid item lg={5.7} md={5.3} sm={5} xs={11.5} className="mutton_main_imgs">
-          <img src={MuttonChops} alt="" />
-          <p>Mutton Chops</p>
-        </Grid>
-        <Grid item lg={5.7} md={5.3} sm={5} xs={11.5} className="mutton_main_imgs">
-          <img src={MuttonLeg} alt="" />
-          <p>Mutton Leg</p>
-        </Grid>
-
-        <Grid item lg={5.7} md={5.3} sm={5} xs={11.5} className="mutton_main_imgs">
-          <img src={MuttonMice} alt="" />
-          <p>Mutton Mince</p>
-        </Grid>
-        <Grid item lg={5.7} md={5.3} sm={5} xs={11.5} className="mutton_main_imgs" style={{marginBottom:"50px"}}>
-          <img src={MuttonMince} alt="" />
-          <p>Mutton Mix Boti</p>
-        </Grid>
-      </Grid>
     </Container>
   </div>
 }

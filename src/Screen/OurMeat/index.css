@@ -74,23 +74,28 @@
 
 .Beef_imgs p {
     text-align: center;
-    font-size: 25px;
-    color: rgb(109, 128, 109);
+    font-size: 22px;
+    color:black;
     font-weight: 450;
     padding-top: 20px;
     font-style: italic;
 
 }
-
+.Beef_imgs{
+    border: 1px solid gray;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+}
 .Beef_imgs img {
     width: 100%;
-    height: auto;
+    height: 30vh;
     transition: 1s;
     cursor: pointer;
 
 }
 .Beef_imgs img:hover{
-    transform: scale(0.9);
+    transform: scale(1.04);
 }
 
 .mutton_main {
@@ -109,7 +114,6 @@
     transform: scale(0.9);
 
 }
-
 .mutton_main_imgs p {
     text-align: center;
     font-size: 25px;
@@ -128,3 +132,39 @@
         margin-top: 35px;
     }
 }
+
+
+
+#imgportfolio {
+    width: 400px;
+    margin-right: 20px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+#imgportfolio img {
+    width: 100%;
+    height: 30vh;
+}
+
+
+#content121 {
+
+    background-color: rgba(45, 85, 255,0.4);
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    color: white;
+    height:30vh;
+    padding: 20px;
+    box-sizing: border-box;
+    transition: all 2s;
+}
+
+#imgportfolio:hover #content121 {
+    left: 0;
+}
+
+

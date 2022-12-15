@@ -1,5 +1,7 @@
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
+import PhonelinkLockIcon from '@mui/icons-material/PhonelinkLock';
 
 import Carousel from 'react-bootstrap/Carousel';
 import "./index.css"
@@ -8,6 +10,9 @@ import slideimg2 from "../../../Image/beefimageslider102.jpg"
 import slideimg3 from "../../../Image/muttonSlide1mg101.jpg"
 import chicken1 from "../../../Image/chickenimg1.jpg"
 import chicken2 from "../../../Image/sliderrabbit102.jpg"
+import aboutUs from "../../../Image/aboutusImg.jpg"
+import beefimg3 from "../../../Image/beefimg3.jpg"
+
 
 
 function Slider() {
@@ -85,11 +90,66 @@ function Slider() {
                 </Carousel>
             </Container>
         </div>
+<Container>
+    <Grid container style={{marginTop:"50px",justifyContent:"center"}}>
+    <Grid item lg={3}>
+        <Grid container>
+            <Grid item lg={2.5}>
+                <LocalShippingIcon sx={{fontSize:"43px",marginTop:"10px",color:"rgb(208,13,30)"}}/>
+            </Grid>
+            <Grid item lg={8} >
+                <p className='text_delivery'><b>Delivery Service</b></p>
+                <p className='free_Shiping'>Free shiping over 5k order</p>
+            </Grid>
+        </Grid>
+    </Grid>
+    <Grid item lg={3}>
+    <Grid container>
+            <Grid item lg={2.5}>
+                <LocalShippingIcon sx={{fontSize:"43px",marginTop:"10px",color:"rgb(208,13,30)"}}/>
+            </Grid>
+            <Grid item lg={8} >
+                <p className='text_delivery'><b>Online Butcher</b></p>
+                <p className='free_Shiping'>Expertly butcher request</p>
+            </Grid>
+        </Grid>
+    </Grid>
+    <Grid item lg={3}>
+    <Grid container>
+            <Grid item lg={2.7}>
+                {/* <LocalShippingIcon sx={{fontSize:"43px",marginTop:"10px",color:"rgb(208,13,30)"}}/> */}
+                <img src={beefimg3} alt="" className='choose_cut_img'/>
+            </Grid>
+            <Grid item lg={8} >
+                <p className='text_delivery'><b>Choose Your Cuts</b></p>
+                <p className='free_Shiping'>From distinct range</p>
+            </Grid>
+        </Grid>
+    </Grid>
+    <Grid item lg={3}>
+    <Grid container>
+            <Grid item lg={2.6}>
+                <PhonelinkLockIcon sx={{fontSize:"43px",marginTop:"10px",color:"rgb(208,13,30)"}}/>
+            </Grid>
+            <Grid item lg={9} >
+                <p className='text_delivery'><b>Hygienically Packed</b></p>
+                <p className='free_Shiping'>Fresh Meat</p>
+            </Grid>
+        </Grid>
+    </Grid>
+    </Grid>
+</Container>
+
+
         <Container>
             <Grid container style={{ textAlign: "center", marginTop: "50px",justifyContent:"center" }}>
-                <Grid item lg={12} md={12} sm={12} xs={11} className="about_text" >
-                    <h1>About Fatima Meat</h1>
+                <Grid item lg={5.5} md={6} sm={6} xs={11} className="about_text" >
+                    <h1 style={{textAlign:"start"}}>About Us</h1>
                     <p>Launched in February 2014, Fatima Meat is a special chain of retail stores which provides its customers with fresh, healthy and quality meat in the most affordable rates. Our primary objective is to provide customers with premium quality meat processed in a hygienic environment. Also, we offer customers with a wide range of products to choose from which includes beef, mutton and chicken. With Fatima Meat, you name it and we have it!</p>
+                </Grid>
+                <Grid item lg={1}></Grid>
+                <Grid item lg={5.5} className="about_us">
+                    <img src={aboutUs}/>
                 </Grid>
             </Grid>
         </Container>

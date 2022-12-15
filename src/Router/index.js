@@ -11,6 +11,7 @@ import FatimaFood from '../Screen/FatimaFood';
 import ProductDetail from '../Screen/DetailProduct';
 import Cart from '../Screen/Cart';
 import Product from '../Screen/Home/Product';
+import AllProduct from '../Screen/AllProduct';
 import Footer from '../Component/Footer';
 import ShipingDeatil from '../Screen/Checkout/ShipingDetail';
 import ConformOrder from '../Screen/Checkout/ConformOrder';
@@ -73,6 +74,7 @@ function Router() {
             <Route path="/home" element={<HomeComponent />} />
             <Route path="/ourMeat" element={<OurMeat />} />
             <Route path="/recipes" element={<Recipes />} />
+            <Route path="/allproduct" element={<AllProduct/>} />
             <Route path="/product" element={<Product />} />
             <Route path="/fatimaFood" element={<FatimaFood />} />
             <Route path="/auth" element={protectedRouteAuth(<Auth />)} />

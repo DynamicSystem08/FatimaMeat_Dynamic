@@ -46,7 +46,7 @@ function NavScrollExample() {
                 <p className='responsive_header'>HOME</p>
               </Grid>
               <Grid item lg={1.4} md={1.4} sm={10}  xs={10} onClick={() => navigate("/ourMeat")} style={{ cursor: "pointer" }} className="text_Header">
-              <p className='responsive_header'>OUR MEAT</p>
+              <p className='responsive_header'>PRODUCT</p>
               </Grid>
 
               <Grid item lg={2} md={2} sm={10} xs={10} onClick={() => navigate("/recipes")} style={{ cursor: "pointer" }} className="text_Header">
@@ -58,11 +58,11 @@ function NavScrollExample() {
               </Grid>
               <Grid item lg={0.6} md={0.6}></Grid>
               <Grid item lg={1.6} md={1.8} sm={10} xs={10} onClick={() => navigate("/fatimaFood")} style={{ cursor: "pointer" }} className="text_Header" >
-              <p className='responsive_header2'> FATIMA FOOD</p>
+              <p className='responsive_header2'> CONTACT US</p>
               </Grid>
 
               <Grid item lg={1.3} md={1.3} sm={10} xs={10} onClick={() => navigate("/product")} style={{ cursor: "pointer" }} className="text_Header">
-              <p className='responsive_header'>PRODUCT</p>
+              <p className='responsive_header'>Our Meat</p>
               </Grid>
               <Grid item lg={1} md={1} xs={10} onClick={() => navigate("/cart")} style={{ cursor: "pointer" }} className="text_Header">
               <p className='responsive_header'> CART</p>

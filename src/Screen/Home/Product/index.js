@@ -1,5 +1,7 @@
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
+import Button from '@mui/material/Button';
+
 
 import Mutton from "../../../Image/cardimg3.png"
 import beef from "../../../Image/cardimg2.png"
@@ -18,16 +20,6 @@ import beefimg1 from "../../../Image/beefimg1.jpeg"
 import beefimg2 from "../../../Image/beefimg2.jpg"
 import beefimg3 from "../../../Image/beefimg3.jpg"
 import beefimg4 from "../../../Image/beefimg4.jpg"
-import rabbitIcom from "../../../Image/cardimg5.png"
-import rabbitimg1 from "../../../Image/rabbitimg1.jpg"
-import rabbitimg2 from "../../../Image/rabbitimg2.jpg"
-import rabbitimg3 from "../../../Image/rabbitimg3.jpg"
-import rabbitimg4 from "../../../Image/rabbitimg4.jpg"
-import camelimg1 from "../../../Image/camelimg1.jpg"
-import camelimg2 from "../../../Image/camelimg2.png"
-import camelimg3 from "../../../Image/camelimg3.jpg"
-import camelimg4 from "../../../Image/camelimg4.jpg"
-import cameIcon from "../../../Image/cardimg6.png"
 
 import { useNavigate } from 'react-router-dom';
 
@@ -190,99 +182,12 @@ function Product() {
                 </Grid>
             </Grid>
 
-            {/* Rabit */}
-            <Grid
-                container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
-                <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
-                    <img src={rabbitIcom} alt="" />
-                </Grid>
-                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
-                    <h1>Rabbit</h1>
-                </Grid>
-            </Grid>
 
-            <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/rabbit-meat`)}
-            >
-                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
-                    <div class="container_Recipes">
-                        <img src={rabbitimg1} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes1">
-                            <p>Rabbit Whole Carcass</p>
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
-                    <div class="container_Recipes">
-                        <img src={rabbitimg2} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes1">
-                            <p>Rabbit Breast Boneless</p>
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
-                    <div class="container_Recipes">
-                        <img src={rabbitimg3} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes1">
-                            <p>Rabbit Wings</p>
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
-                    <div class="container_Recipes">
-                        <img src={rabbitimg4} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes1">
-                            <p>Rabbit Bone-Less</p>
-                        </div>
-                    </div>
-                </Grid>
-            </Grid>
-
-            {/* camel*/}
-            <Grid
-                container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
-                <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
-                    <img src={cameIcon} alt="" />
-                </Grid>
-                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
-                    <h1>Camel</h1>
-                </Grid>
-            </Grid>
-
-            <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/camel-meat`)}
-            >
-                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
-                    <div class="container_Recipes">
-                        <img src={camelimg1} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes1">
-                            <p>Camel Whole Carcass</p>
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
-                    <div class="container_Recipes">
-                        <img src={camelimg2} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes1">
-                            <p>Camel Breast Boneless</p>
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
-                    <div class="container_Recipes">
-                        <img src={camelimg3} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes1">
-                            <p>Camel Wings</p>
-                        </div>
-                    </div>
-                </Grid>
-                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
-                    <div class="container_Recipes">
-                        <img src={camelimg4} alt="Nature" style={{ width: "100%" }} />
-                        <div class="text-block_Recipes1">
-                            <p>Camel Bone-Less</p>
-                        </div>
-                    </div>
+            <Grid container style={{ justifyContent: "center" }}>
+                <Grid item lg={3.5} md={3} sm={5.6} xs={11}>
+                    <Button className='our_home_recipe_botton'
+                        onClick={() => navigate("/allproduct")}
+                        style={{ backgroundColor: "rgba(208,13,30)", width: "100%", padding: "10px", color: "white", marginTop: "20px", marginBottom: "60px", height: "50px" }}>View More Meat</Button>
                 </Grid>
             </Grid>
 
