@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 import swal from 'sweetalert';
 
-import { signOutUser, cancelOrder, markCompletedOrder } from '../../../config/firebase'
+import { signOutUser, cancelOrder, markCompletedOrder, markPendingOrder } from '../../../config/firebase'
 import { fetchOrders, fetchCurrentUserOrders } from '../../../store/slices/orderSlice';
 import "./index.css"
 import { useDispatch, useSelector } from 'react-redux';
@@ -168,7 +168,7 @@ function Dashboard() {
                                                             onClick={() => {
                                                                 swal({
                                                                     title: "Are you sure you want to mark as completed?",
-                                                                    text: "This action is irreversable!",
+                                                                    text: "This action is reversable!",
                                                                     icon: "warning",
                                                                     buttons: true,
                                                                     dangerMode: true,
@@ -178,14 +178,38 @@ function Dashboard() {
                                                                             markCompletedOrder(row.docId, row.orderDetails)
                                                                                 .then((data) => console.log(data))
                                                                                 .catch(e => console.log(e))
-                                                                            swal("Logout Successful!", {
+                                                                            swal("Order marked as completed", {
                                                                                 icon: "success",
                                                                             });
+                                                                            window.location.reload()
                                                                         }
                                                                     });
                                                             }
                                                             }
                                                         >Mark Completed</Button>
+                                                        <Button
+                                                            onClick={() => {
+                                                                swal({
+                                                                    title: "Are you sure you want to mark as pending?",
+                                                                    text: "This action is reversable!",
+                                                                    icon: "warning",
+                                                                    buttons: true,
+                                                                    dangerMode: true,
+                                                                })
+                                                                    .then((willDelete) => {
+                                                                        if (willDelete) {
+                                                                            markPendingOrder(row.docId, row.orderDetails)
+                                                                                .then((data) => console.log(data))
+                                                                                .catch(e => console.log(e))
+                                                                            swal("Order marked as pending", {
+                                                                                icon: "success",
+                                                                            });
+                                                                            window.location.reload()
+                                                                        }
+                                                                    });
+                                                            }
+                                                            }
+                                                        >Mark Pending</Button>
                                                     </TableCell>
                                                     :
                                                     <div>
@@ -203,9 +227,10 @@ function Dashboard() {
                                                                             .then((willDelete) => {
                                                                                 if (willDelete) {
                                                                                     cancelOrder(row.docId)
-                                                                                    swal("Successful!", {
+                                                                                    swal("Order cancelled", {
                                                                                         icon: "success",
                                                                                     });
+                                                                                    window.location.reload()
                                                                                 }
                                                                             });
                                                                     }
