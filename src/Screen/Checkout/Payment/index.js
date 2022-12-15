@@ -8,56 +8,16 @@ import Container from '@mui/material/Container';
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import CheckBoxIcon from '@mui/icons-material/CheckBox';
 import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-import ArrowForwardIosSharpIcon from '@mui/icons-material/ArrowForwardIosSharp';
-import MuiAccordion, { AccordionProps } from '@mui/material/Accordion';
-import MuiAccordionSummary, {
-    AccordionSummaryProps,
-} from '@mui/material/AccordionSummary';
-import MuiAccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
-
 import { createOrder, deleteOrderState } from '../../../store/slices/orderSlice'
-
 import { removeCartItems } from '../../../store/slices/cartSlice'
 
-
-const Accordion = styled((props: AccordionProps) => (
-    <MuiAccordion disableGutters elevation={0} square {...props} />
-))(({ theme }) => ({
-    border: `1px solid ${theme.palette.divider}`,
-    '&:not(:last-child)': {
-        borderBottom: 0,
-    },
-    '&:before': {
-        display: 'none',
-    },
-}));
-
-const AccordionSummary = styled((props: AccordionSummaryProps) => (
-    <MuiAccordionSummary
-        expandIcon={<ArrowForwardIosSharpIcon sx={{ fontSize: '0.9rem' }} />}
-        {...props}
-    />
-))(({ theme }) => ({
-    backgroundColor:
-        theme.palette.mode === 'dark'
-            ? 'rgba(255, 255, 255, .05)'
-            : 'rgba(0, 0, 0, .03)',
-    flexDirection: 'row-reverse',
-    '& .MuiAccordionSummary-expandIconWrapper.Mui-expanded': {
-        transform: 'rotate(90deg)',
-    },
-    '& .MuiAccordionSummary-content': {
-        marginLeft: theme.spacing(1),
-    },
-}));
-
-const AccordionDetails = styled(MuiAccordionDetails)(({ theme }) => ({
-    padding: theme.spacing(2),
-    borderTop: '1px solid rgba(0, 0, 0, .125)',
-}));
+import * as React from 'react';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import "./index.css"
 
 
 function Payment() {
@@ -65,10 +25,7 @@ function Payment() {
 
     const [loading, setLoading] = useState(false)
 
-    const handleChange =
-        (panel: string) => (event: React.SyntheticEvent, newExpanded: boolean) => {
-            setExpanded(newExpanded ? panel : false);
-        };
+
 
     const dispatch = useDispatch()
     const navigate = useNavigate()
@@ -201,55 +158,96 @@ function Payment() {
         </Grid>
         <Container maxWidth="xs">
             <Grid container>
-                <Grid item lg={12} md={12} sm={12} xs={12} style={{ marginTop: "30px" }}>
+                <Grid item lg={12} md={12} sm={12} xs={12} style={{ marginTop: "30px" }} >
+                    <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" }} >
+                        <Grid item lg={1}>
+                            <FormControl>
+                                <RadioGroup
+                                    aria-labelledby="demo-radio-buttons-group-label"
+                                    defaultValue="female"
+                                    name="radio-buttons-group"
+                                >
+                                    <FormControlLabel value="female" control={<Radio />}  style={{color:"red"}} />
+                                    {/* <FormControlLabel value="male" control={<Radio />} label="Male" />
+                                    <FormControlLabel value="other" control={<Radio />} label="Other" /> */}
+                                </RadioGroup>
+                            </FormControl>
 
-                    <Accordion expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-                        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" onClick={() => handelChange('bankName', 'easypaisa')} >
-                            <Typography >Easy Paisa</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                <input type="text" onChange={e => handelChange('cardNo', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="Card Num" /><br></br><br></br>
-                                <input type="text" onChange={e => handelChange('cvsNo', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="CVS No" /><br></br><br></br>
-                                <input type="text" onChange={e => handelChange('cardHolderName', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="Card Holder Name" /><br></br>
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Accordion expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-                        <AccordionSummary aria-controls="panel2d-content" id="panel2d-header" onClick={() => handelChange('bankName', 'jazzcash')}>
-                            <Typography>Jazz Cash</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                <input type="text" onChange={e => handelChange('cardNo', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="Card Num" /><br></br><br></br>
-                                <input type="text" onChange={e => handelChange('cvsNo', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="CVS No" /><br></br><br></br>
-                                <input type="text" onChange={e => handelChange('cardHolderName', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="Card Holder Name" /><br></br>
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
-                    <Accordion expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-                        <AccordionSummary aria-controls="panel3d-content" id="panel3d-header" onClick={() => handelChange('bankName', '')}>
-                            <Typography>Bank Account</Typography>
-                        </AccordionSummary>
-                        <AccordionDetails>
-                            <Typography>
-                                <input type="text" onChange={e => handelChange('bankName', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="Bank Name" /><br></br><br></br>
-                                <input type="text" onChange={e => handelChange('cardNo', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="Card Num" /><br></br><br></br>
-                                <input type="text" onChange={e => handelChange('cvsNo', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="CVS No" /><br></br><br></br>
-                                <input type="text" onChange={e => handelChange('cardHolderName', e.target.value)}
-                                    style={{ border: "none", outline: "none", borderBottom: "1px solid gray" }} placeholder="Card Holder Name" /><br></br>
-                            </Typography>
-                        </AccordionDetails>
-                    </Accordion>
+                        </Grid>
+                        <Grid item lg={2}>
+                            <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
+                        </Grid>
+                        <Grid item lg={5}>
+                            <p className='pay_text'><b>JAZZ CASH</b></p>
+                        </Grid>
+                    </Grid>
+
+
+
+                    <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
+                        <Grid item lg={1}>
+                            <FormControl>
+                                <RadioGroup
+                                    aria-labelledby="demo-radio-buttons-group-label"
+                                    defaultValue="females"
+                                    name="radio-buttons-groups"
+                                >
+                                     <FormControlLabel value="jazcash" name="jaz" control={<Radio />}  />
+                                </RadioGroup>
+                            </FormControl>
+
+                        </Grid>
+                        <Grid item lg={2}>
+                            <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
+                        </Grid>
+                        <Grid item lg={5}>
+                            <p className='pay_text'><b>EASY PAISA</b></p>
+                        </Grid>
+                    </Grid>
+
+
+                    <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
+                        <Grid item lg={1}>
+                            <FormControl>
+                                <RadioGroup
+                                    aria-labelledby="demo-radio-buttons-group-label"
+                                    defaultValue="females"
+                                    name="radio-buttons-groups"
+                                >
+                                     <FormControlLabel value="jazcash" name="jaz" control={<Radio />}  />
+                                </RadioGroup>
+                            </FormControl>
+
+                        </Grid>
+                        <Grid item lg={2}>
+                            <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
+                        </Grid>
+                        <Grid item lg={5}>
+                            <p className='pay_text'><b>BANK ACCOUNT</b></p>
+                        </Grid>
+                    </Grid>
+
+                    <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
+                        <Grid item lg={1}>
+                            <FormControl>
+                                <RadioGroup
+                                    aria-labelledby="demo-radio-buttons-group-label"
+                                    defaultValue="females"
+                                    name="radio-buttons-groups"
+                                >
+                                     <FormControlLabel value="jazcash" name="jaz" control={<Radio />}  />
+                                </RadioGroup>
+                            </FormControl>
+
+                        </Grid>
+                        <Grid item lg={2}>
+                            <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
+                        </Grid>
+                        <Grid item lg={5}>
+                            <p className='pay_text'><b>CASH ON DELIVERY</b></p>
+                        </Grid>
+                    </Grid>
+
                     <div style={{ textAlign: "center", marginTop: "30px", marginBottom: "50px" }}>
                         <Button
                             disabled={loading}
