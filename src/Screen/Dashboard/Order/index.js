@@ -149,16 +149,7 @@ function Dashboard() {
                                             <TableCell align="center">{row.buyerDetails.displayName}</TableCell>
                                             <TableCell align="center">{row.shippingDetails.city}</TableCell>
                                             <TableCell align="center">{row.shippingDetails.address}</TableCell>
-                                            {/* {
-                                                row.cartItems.map((item, index) => {
-                                                    return <div key={index}>
-                                                        {item.name} {item.quantity} {}
-                                                    </div>
-                                                })
-                                            } */}
-
                                             <TableCell align="center">{row.carbs}</TableCell>
-
                                             <TableCell align="center">{row.orderDetails.orderDateTime}</TableCell>
                                             <TableCell align="center">{row.orderDetails.orderStatus}</TableCell>
                                             {

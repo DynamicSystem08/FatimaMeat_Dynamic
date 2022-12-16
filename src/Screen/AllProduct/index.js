@@ -39,6 +39,7 @@ import duck1 from "../../Image/duckimg1.jpg"
 import duck2 from "../../Image/duckimg2.jpg"
 import duck3 from "../../Image/duckimg3.jpg"
 import duck4 from "../../Image/duckimg4.jpg"
+import duckicon from "../../Image/duckimg.png"
 
 
 
@@ -354,7 +355,7 @@ function Product() {
   <Grid
                 container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
-                    <img src={fish} alt="" />
+                    <img src={duckicon} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
                     <h1>Duck</h1>

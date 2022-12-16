@@ -5,10 +5,10 @@ import PhonelinkLockIcon from '@mui/icons-material/PhonelinkLock';
 
 import Carousel from 'react-bootstrap/Carousel';
 import "./index.css"
-import slideimg1 from "../../../Image/beefImageSlider101.jpg"
-import slideimg2 from "../../../Image/beefimageslider102.jpg"
-import slideimg3 from "../../../Image/muttonSlide1mg101.jpg"
-import chicken1 from "../../../Image/chickenimg1.jpg"
+import slideimg1 from "../../../Image/silderimg101.png"
+import slideimg2 from "../../../Image/sliderimg102.png"
+import slideimg3 from "../../../Image/sliderimg2.png"
+import chicken1 from "../../../Image/sliderimg103.png"
 import chicken2 from "../../../Image/sliderrabbit102.jpg"
 import aboutUs from "../../../Image/aboutusImg.jpg"
 import beefimg3 from "../../../Image/beefimg3.jpg"
@@ -16,10 +16,10 @@ import beefimg3 from "../../../Image/beefimg3.jpg"
 
 
 function Slider() {
-    return <div style={{ backgroundColor: "white" }} >
+    return <div style={{ backgroundColor: "white"}} >
         <div className='slider_main1'></div>
-        <div style={{ marginTop: "-90px" }} >
-            <Container >
+        <div style={{ marginTop: "-90px"}} >
+            <Container>
                 <Carousel className="sifer_main1" >
                     <Carousel.Item>
                         <Container>
@@ -27,8 +27,8 @@ function Slider() {
                                 <Grid item lg={5} md={5} sm={3.5} xs={5} className="slider_text">
                                     <h1 class="animate__animated animate__fadeIn animate__delay-1s">Hight quality meat And afordable price</h1>
                                 </Grid>
-                                <Grid item lg={6.6} md={6} sm={5} xs={5} className="slider_img" data-aos="fade-left" style={{ transition: "0.5s" }}>
-                                    <img src={slideimg1} alt="" />
+                                <Grid item lg={6.5} md={6} sm={5} xs={5}  className="slider_img" data-aos="fade-left" style={{ transition: "0.5s" }}>
+                                    <img src={slideimg1} alt=""   />
                                 </Grid>
                             </Grid>
                         </Container>

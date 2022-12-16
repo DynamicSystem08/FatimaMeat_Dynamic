@@ -13,11 +13,13 @@
   padding-top: 40px;
   padding-bottom: 40px;
 }
-
+.slider_img{
+  /* height: 370px; */
+}
 .slider_img img {
   width: 100%;
-  height: 38vh;
-  margin-bottom:15px;
+  height:42vh;
+  /* margin-bottom:100px; */
 }
 
 @media (max-width:500px) {
@@ -37,6 +39,7 @@
   .slider_img img {
     height: 20vh;
     width: 100%;
+    /* padding-top: 190px; */
   }
 
   .slider_text h1 {
