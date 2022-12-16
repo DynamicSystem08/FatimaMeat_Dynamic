@@ -28,8 +28,6 @@ import mutton2 from '../Image/muttonimg2.jpg'
 import mutton3 from '../Image/muttonimg3.jpg'
 import mutton4 from '../Image/muttonimg4.jpg'
 
-
-
 const allProducts = [
     {
         id: "desi-aseel-meat",
@@ -37,18 +35,23 @@ const allProducts = [
         images: [chicken1, chicken2, chicken3, chicken4],
         meatType: [
             {
-                type: "Live",
-                price: 2000,
+                type: "Desi Murghi 1.25KG",
+                price: 1150,
                 img: ""
             },
             {
-                type: "Meat",
-                price: 1000,
+                type: "Desi Murghi Breast / PC",
+                price: 850,
+                img: ""
+            },
+            {
+                type: "Desi Murghi Qeema / Per serving",
+                price: 999,
                 img: ""
             }
         ],
-        minPrice: 100,
-        maxPrice: 500,
+        minPrice: 850,
+        maxPrice: 1150,
         description: [
             'Asil or Aseel Chicken is an ancient breed which is arrived from India.',
             'Used for cockfighting.',
@@ -70,18 +73,58 @@ const allProducts = [
         images: [chicken1, chicken2, chicken3, chicken4],
         meatType: [
             {
-                type: "Live",
-                price: 2000,
+                type: "Chicken Breast (Boneless) 250 gm",
+                price: 203,
                 img: chicken1
             },
             {
-                type: "Meat",
-                price: 1000,
+                type: "Whole Chicken with neck & offels",
+                price: 492,
                 img: chicken1
-            }
+            },
+            {
+                type: "Chicken Karahi cut / 250 gm",
+                price: 127,
+                img: chicken1
+            },
+            {
+                type: "Chicken Leg Tikka / 250 gm",
+                price: 125,
+                img: chicken1
+            },
+            {
+                type: "Chicken Qorma cut / 250 gm",
+                price: 127,
+                img: chicken1
+            },
+            {
+                type: "Chicken Breast Tikka / 250 gm",
+                price: 127,
+                img: chicken1
+            },
+            {
+                type: "Chicken Biryani cut/ 250 gm",
+                price: 203,
+                img: chicken1
+            },
+            {
+                type: "Chicken minced / 250 gm",
+                price: 203,
+                img: chicken1
+            },
+            {
+                type: "Chicken boneless handi Cut cube / 250 gm",
+                price: 203,
+                img: chicken1
+            },
+            {
+                type: "Chicken Drum sticks / 500 gm",
+                price: 253,
+                img: chicken1
+            },
         ],
-        minPrice: 100,
-        maxPrice: 500,
+        minPrice: 125,
+        maxPrice: 1150,
         description: [
             'The delicious and intense taste of Meat, rich in nutrients and has low fat.'
         ],
@@ -127,18 +170,18 @@ const allProducts = [
         images: [rabbit1, rabbit2, rabbit3, rabbit4],
         meatType: [
             {
-                type: "Live",
-                price: 2000,
+                type: "Rabbit / Kg",
+                price: 1500,
                 img: rabbit1
             },
             {
-                type: "Meat",
+                type: "Rabbit / PC",
                 price: 1000,
                 img: rabbit1
             }
         ],
-        minPrice: 100,
-        maxPrice: 500,
+        minPrice: 1000,
+        maxPrice: 1500,
         description: [
             'One of the best white Meats available on the market today.',
             'Has a high percentage of easily digestible protein.',
@@ -229,54 +272,72 @@ const allProducts = [
         meatType: [
             {
                 type: "Mutton Chops",
-                price: 2000,
+                price: 1850,
                 img: mutton1
             },
             {
                 type: "Mutton Mince (Keema)",
-                price: 1000,
+                price: 1900,
                 img: mutton1
 
             },
             {
                 type: "Mutton Raan",
-                price: 1000,
+                price: 1950,
                 img: mutton1
 
             },
             {
                 type: "Mutton Dasti",
-                price: 1000,
+                price: 1950,
                 img: mutton1
 
             },
             {
                 type: "Mutton Mix Boti",
-                price: 1000,
+                price: 1750,
                 img: mutton1
 
             },
             {
                 type: "Mutton Back Chop",
-                price: 1000,
+                price: 1500,
                 img: mutton1
 
             },
             {
                 type: "Mutton Boneless",
-                price: 1000,
+                price: 2100,
                 img: mutton1
 
             },
             {
-                type: "Mutton Paya",
-                price: 1000,
+                type: "Mutton Paya / PC",
+                price: 250,
+                img: mutton1
+
+            },
+            {
+                type: "Mutton Gurda / PC",
+                price: 200,
+                img: mutton1
+
+            },
+            {
+                type: "Mutton Liver",
+                price: 400,
+                img: mutton1
+
+            },
+            {
+                type: "Mutton Green Offel",
+                price: 850,
                 img: mutton1
 
             }
         ],
-        minPrice: 100,
-        maxPrice: 500,
+        minPrice: 200,
+        maxPrice: 2100,
         description: [
             'Mutton recommended by a dietitian, as the best choice for red Meat lovers.',
             'Improves brain function.',
@@ -298,35 +359,51 @@ const allProducts = [
         meatType: [
             {
                 type: "Sheep Chops",
-                price: 2000
+                price: 1600
             },
             {
                 type: "Sheep Mice (Keema)",
-                price: 1000
+                price: 1850
             },
             {
                 type: "Sheep Raan",
-                price: 1000
+                price: 1800
             },
             {
                 type: "Sheep Dasti",
-                price: 1000
+                price: 1750
             },
             {
                 type: "Sheep Mix Boti",
-                price: 1000
+                price: 1500
             },
             {
                 type: "Sheep Back Chop",
-                price: 1000
+                price: 1470
             },
             {
                 type: "Sheep Chakki (Tail Fat)",
-                price: 1000
+                price: 2100
+            },
+            {
+                type: "Sheep Paya/PC",
+                price: 250
+            },
+            {
+                type: "Sheep Gurda/PC",
+                price: 200
+            },
+            {
+                type: "Sheep Liver",
+                price: 400
+            },
+            {
+                type: "Sheep Green Offel",
+                price: 850
             },
         ],
-        minPrice: 100,
-        maxPrice: 500,
+        minPrice: 200,
+        maxPrice: 2100,
         description: [
             'Lamb may have saturated fat, but choosing a lean cut means you get less of it. Look for tenderloin, loin chops, or legs.',
             'Lamb is a delicious and versatile red Meat. It’s common in Mediterranean. If you’re trying to watch your cholesterol levels, lamb can be safe to eat in moderation. That is, as long as you choose the right cut and prepare it in a healthy way.',
@@ -345,59 +422,145 @@ const allProducts = [
         meatType: [
             {
                 type: "Undercut",
-                price: 2000,
+                price: 2400,
                 img: beef1
             },
             {
                 type: "Prime Boneless (Cube zero fat)",
-                price: 1000,
+                price: 2000,
                 img: beef1
             },
             {
                 type: "Prime Boneless",
-                price: 1000,
+                price: 1300,
                 img: beef1
             },
             {
                 type: "Prime With Bone (Mix Boti)",
-                price: 1000,
+                price: 1100,
                 img: beef1
             },
             {
                 type: "Mince (Keema)",
-                price: 1000,
+                price: 1350,
                 img: beef1
             },
             {
                 type: "Pasanday",
-                price: 1000,
+                price: 1500,
                 img: beef1
             },
             {
                 type: "Nehari Cut Boneless",
-                price: 1000,
+                price: 1400,
+                img: beef1
+            },
+            {
+                type: "Nehari Cut With Bone",
+                price: 1100,
                 img: beef1
             },
             {
                 type: "Beef Nalli",
-                price: 1000,
+                price: 650,
                 img: beef1
             },
             {
                 type: "Beef Soup bones",
+                price: 370,
+                img: beef1
+            },
+            {
+                type: "Beef Liver",
+                price: 400,
+                img: beef1
+            },
+            {
+                type: "Paya / Pc",
+                price: 350,
+                img: beef1
+            },
+        ],
+        minPrice: 350,
+        maxPrice: 2400,
+        description: [
+            'Fresh and hygienic Cow Meat',
+        ],
+        additionalInformation: {
+            weight: "1kg",
+            MeatType: "Undercut, Prime Boneless (Cube zero fat), Prime Boneless, Boneless (Mix Boti), Prime With Bone (Mix Boti), Mince (Keema), Pasanday, Nehari Cut Boneless, Nehar Cut With Bone (Nalli), Beef Nalli, Beef Soup Bones, Cow Paya"
+        }
+    },
+    {
+        id: "veel-meat",
+        name: "Veel",
+        images: [beef1, beef2, beef3, beef4],
+        meatType: [
+            {
+                type: "Undercut",
+                price: 1850,
+                img: beef1
+            },
+            {
+                type: "Prime Boneless (Cube zero fat)",
+                price: 1450,
+                img: beef1
+            },
+            {
+                type: "Prime Boneless",
+                price: 1200,
+                img: beef1
+            },
+            {
+                type: "Prime With Bone (Mix Boti)",
+                price: 1050,
+                img: beef1
+            },
+            {
+                type: "Mince (Keema)",
+                price: 1030,
+                img: beef1
+            },
+            {
+                type: "Pasanday",
+                price: 1450,
+                img: beef1
+            },
+            {
+                type: "Nehari Cut Boneless",
+                price: 1150,
+                img: beef1
+            },
+            {
+                type: "Nehari Cut With Bone",
                 price: 1000,
                 img: beef1
             },
             {
-                type: "Cow Paya",
-                price: 1000,
+                type: "Veel Nalli",
+                price: 520,
+                img: beef1
+            },
+            {
+                type: "Veel Soup bones",
+                price: 420,
+                img: beef1
+            },
+            {
+                type: "Veel Liver",
+                price: 400,
+                img: beef1
+            },
+            {
+                type: "Paya / Pc",
+                price: 650,
                 img: beef1
             },
         ],
-        minPrice: 100,
-        maxPrice: 500,
+        minPrice: 400,
+        maxPrice: 1850,
         description: [
-            'Fresh and hygienic Cow Meat',
+            'Fresh and hygienic Veel Meat',
         ],
         additionalInformation: {
             weight: "1kg",

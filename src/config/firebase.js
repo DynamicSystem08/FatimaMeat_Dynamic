@@ -180,6 +180,63 @@ async function getCurrentUserOrders(uid) {
     }
 }
 
+async function cancelOrder(docId, orderDetails) {
+    console.log(docId)
+    try {
+        const docRef = doc(db, "orders", docId);
+
+        // Set the "capital" field of the city 'DC'
+        await updateDoc(docRef, {
+            orderDetails: { ...orderDetails, orderStatus: 'cancelled' },
+            docUpdate: false
+        });
+
+        return { error: false, message: "success" }
+    }
+    catch (error) {
+        console.log(error.message)
+        return { error: true, message: error.message }
+    }
+}
+
+async function markCompletedOrder(docId, orderDetails) {
+    console.log(docId)
+    try {
+        const docRef = doc(db, "orders", docId);
+
+        // Set the "capital" field of the city 'DC'
+        await updateDoc(docRef, {
+            orderDetails: { ...orderDetails, orderStatus: 'completed' },
+            docUpdate: false
+        });
+
+        return { error: false, message: "success" }
+    }
+    catch (error) {
+        console.log(error.message)
+        return { error: true, message: error.message }
+    }
+}
+
+async function markPendingOrder(docId, orderDetails) {
+    console.log(docId)
+    try {
+        const docRef = doc(db, "orders", docId);
+
+        // Set the "capital" field of the city 'DC'
+        await updateDoc(docRef, {
+            orderDetails: { ...orderDetails, orderStatus: 'pending' },
+            docUpdate: true
+        });
+
+        return { error: false, message: "success" }
+    }
+    catch (error) {
+        // console.log(error.message)
+        return { error: true, message: error.message }
+    }
+}
+
 export {
     auth,
     onAuthStateChanged,
@@ -189,5 +246,8 @@ export {
     emailSupport,
     createOrderFirebase,
     getAllOrders,
-    getCurrentUserOrders
+    getCurrentUserOrders,
+    cancelOrder,
+    markCompletedOrder,
+    markPendingOrder
 }

@@ -1,20 +1,16 @@
-import Slider from "../../Screen/Home/Slider"
-import Product from "../../Screen/Home/Product"
-import Location from "../../Screen/Home/Location"
-import HomeRecipes from "../../Screen/Home/HomeRecipe"
+import Slider from "../Home/Slider"
+import Location from "../Home/Location"
+import HomeRecipes from "../Home/HomeRecipe"
+import OurMeat from "../Home/OurMeat"
+
 import MetaData from "../../Component/MetaData"
 
-import { useDispatch } from 'react-redux'
-import { removeCartItems } from '../../store/slices/cartSlice'
-
 function HomeComponent() {
-
-    const dispatch = useDispatch()
 
     return <div>
         <MetaData title="Fatima Meat | Home" />
         <Slider />
-        <Product />
+        <OurMeat />
         <HomeRecipes />
         <Location />
     </div>

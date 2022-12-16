@@ -5,13 +5,13 @@ import HomeComponent from '../Screen/HomeComponent';
 import HeaderTop from '../Component/HeaderTop';
 import Header from '../Component/Header';
 import Recipes from '../Screen/Recipes';
-import OurMeat from "../Screen/OurMeat"
+// import OurMeat from "../Screen/home/OurMeat"
 // import Location from '../Screen/Home/Location';
 import FatimaFood from '../Screen/FatimaFood';
 import ProductDetail from '../Screen/DetailProduct';
 import Cart from '../Screen/Cart';
-import Product from '../Screen/Home/Product';
-import AllProduct from '../Screen/AllProduct';
+import Product from '../Screen/Product';
+import AllOurMeat from '../Screen/AllOurMeat';
 import Footer from '../Component/Footer';
 import ShipingDeatil from '../Screen/Checkout/ShipingDetail';
 import ConformOrder from '../Screen/Checkout/ConformOrder';
@@ -72,14 +72,15 @@ function Router() {
             <Route path="/" element={<HomeComponent />} />
 
             <Route path="/home" element={<HomeComponent />} />
-            <Route path="/ourMeat" element={<OurMeat />} />
+            {/* <Route path="/ourMeat" element={<OurMeat />} /> */}
+            <Route path="/ourMeat" element={<AllOurMeat />} />
             <Route path="/recipes" element={<Recipes />} />
-            <Route path="/allproduct" element={<AllProduct/>} />
+            <Route path="/products" element={<Product />} />
             {/* <Route path="/product" element={<Product />} /> */}
             <Route path="/fatimaFood" element={<FatimaFood />} />
             <Route path="/auth" element={protectedRouteAuth(<Auth />)} />
 
-            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
 
             <Route path="/cart" element={<Cart />} />
 

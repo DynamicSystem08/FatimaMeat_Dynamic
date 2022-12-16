@@ -1,5 +1,5 @@
 .our_meat_bg {
-    background-image: url("../../Image/ourMeat1.jpg");
+    background-image: url("../../../Image/ourMeat1.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -13,8 +13,8 @@
     font-size: 40px;
     padding: 15px;
     color: white;
-    margin-top:60px;
-    padding-top:50px;
+    margin-top: 60px;
+    padding-top: 50px;
     font-size: 900;
     font-family: Garamond, serif;
 }
@@ -46,25 +46,25 @@
     font-weight: 900;
 }
 
-.our_meat_text5 h1{
-    font-size:26px;
-    color:black;
+.our_meat_text5 h1 {
+    font-size: 26px;
+    color: black;
     margin-top: 50px;
     font-family: Garamond, serif;
 }
 
-@media (max-width:500px){
-    .our_meat_text5 h1{
+@media (max-width:500px) {
+    .our_meat_text5 h1 {
         margin-top: 60px;
     }
-  }
-  
-  @media ((max-width:900px) and (min-width:501px)){
-    .our_meat_text5 h1{
-        margin-top:60px;
+}
+
+@media ((max-width:900px) and (min-width:501px)) {
+    .our_meat_text5 h1 {
+        margin-top: 60px;
     }
-  }
-  
+}
+
 
 .Beef_main_imgs {
     gap: 43px;
@@ -75,18 +75,20 @@
 .Beef_imgs p {
     text-align: center;
     font-size: 22px;
-    color:black;
+    color: black;
     font-weight: 450;
     padding-top: 20px;
     font-style: italic;
 
 }
-.Beef_imgs{
+
+.Beef_imgs {
     border: 1px solid gray;
     padding: 30px;
     position: relative;
     overflow: hidden;
 }
+
 .Beef_imgs img {
     width: 100%;
     height: 30vh;
@@ -94,7 +96,8 @@
     cursor: pointer;
 
 }
-.Beef_imgs img:hover{
+
+.Beef_imgs img:hover {
     transform: scale(1.04);
 }
 
@@ -110,10 +113,12 @@
     transition: 1s;
     cursor: pointer;
 }
-.mutton_main img:hover{
+
+.mutton_main img:hover {
     transform: scale(0.9);
 
 }
+
 .mutton_main_imgs p {
     text-align: center;
     font-size: 25px;
@@ -122,13 +127,13 @@
     padding-top: 20px;
     font-style: italic;
 }
-@media (max-width:450px)
-{
-    .our_Meat_main1{
+
+@media (max-width:450px) {
+    .our_Meat_main1 {
         font-size: 35px;
     }
 
-    .our_meat_text1 h1{
+    .our_meat_text1 h1 {
         margin-top: 35px;
     }
 }
@@ -151,13 +156,13 @@
 
 #content121 {
 
-    background-color: rgba(45, 85, 255,0.4);
+    background-color: rgba(45, 85, 255, 0.4);
     position: absolute;
     top: 0;
     left: -100%;
     width: 100%;
     color: white;
-    height:30vh;
+    height: 30vh;
     padding: 20px;
     box-sizing: border-box;
     transition: all 2s;
@@ -166,5 +171,3 @@
 #imgportfolio:hover #content121 {
     left: 0;
 }
-
-

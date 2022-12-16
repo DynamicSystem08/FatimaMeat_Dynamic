@@ -22,11 +22,12 @@ import beefimg3 from "../../../Image/beefimg3.jpg"
 import beefimg4 from "../../../Image/beefimg4.jpg"
 
 import { useNavigate } from 'react-router-dom';
-
-
 import "./index.css"
-function Product() {
+import { useEffect } from 'react';
+
+export default function OurMeat() {
     const navigate = useNavigate()
+
     return <div style={{ backgroundColor: "white" }} className="product_background_image">
 
 
@@ -34,7 +35,7 @@ function Product() {
         <Container style={{ paddingTop: "130px", paddingBottom: "10px" }}>
             <Grid container>
                 <Grid item lg={12} md={12} sm={12} xs={12} style={{ textAlign: "center" }} className="about_text">
-                    <h1>FATIMA MEAT PRODUCT</h1>
+                    <h1>OUR FRESH MEAT COLLECTION</h1>
                 </Grid>
             </Grid>
 
@@ -49,12 +50,10 @@ function Product() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/mutton-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
                         <img src={muttonimg1} alt="Nature" style={{ width: "100%", cursor: "pointer" }}
-                        // onClick={() => navigate("/productdetail")} 
                         />
                         <div class="text-block_Recipes1">
                             <p>Mutton Whole Carcass </p>
@@ -99,7 +98,6 @@ function Product() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/chicken-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
@@ -146,7 +144,6 @@ function Product() {
             </Grid>
 
             <Grid container className='Conatainer_Recipes'
-                onClick={() => navigate(`/product/beef-meat`)}
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
@@ -185,8 +182,9 @@ function Product() {
 
             <Grid container style={{ justifyContent: "center" }}>
                 <Grid item lg={3.5} md={3} sm={5.6} xs={11}>
-                    <Button className='our_home_recipe_botton'
-                        onClick={() => navigate("/allproduct")}
+                    <Button
+                        onClick={() => navigate('/ourMeat')}
+                        className='our_home_recipe_botton'
                         style={{ backgroundColor: "rgba(208,13,30)", width: "100%", padding: "10px", color: "white", marginTop: "20px", marginBottom: "60px", height: "50px" }}>View More Meat</Button>
                 </Grid>
             </Grid>
@@ -194,4 +192,3 @@ function Product() {
         </Container>
     </div>
 }
-export default Product

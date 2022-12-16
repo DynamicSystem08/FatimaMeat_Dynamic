@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Grid from '@mui/material/Grid'
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
@@ -11,7 +11,6 @@ import swal from 'sweetalert';
 import img1 from "../../Image/footerimg.jpg"
 import "./index.css"
 import { setCartTotal } from '../../store/slices/orderSlice';
-import { useEffect } from 'react';
 
 function Cart() {
     const dispatch = useDispatch()
@@ -49,6 +48,10 @@ function Cart() {
         dispatch(setCartTotal(cartTotal))
     }
 
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
     return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }} className="">
         <Container>
             <div className='Scroll_card'>
@@ -65,7 +68,7 @@ function Cart() {
                     <Grid item lg={2} md={2} sm={2} xs={2.3} className="card_text101">
                         <p><b>Subtotal</b></p>
                     </Grid>
-                    
+
                 </Grid>
                 {
                     reduxCartItems[0] ? reduxCartItems.map((item, index) => {
