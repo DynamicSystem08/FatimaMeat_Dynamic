@@ -1,53 +1,64 @@
 //Rabbit
+import rabbitLogo from '../Image/Products/rabbit.jpg'
 import rabbit1 from '../Image/rabbitimg1.jpg'
 import rabbit2 from '../Image/rabbitimg2.jpg'
 import rabbit3 from '../Image/rabbitimg3.jpg'
 import rabbit4 from '../Image/rabbitimg4.jpg'
 
 //Chicken
+import chickenLogo from '../Image/Products/chicken.jpg'
 import chicken1 from '../Image/chickenimg1.jpg'
 import chicken2 from '../Image/chickenimg2.jpg'
 import chicken3 from '../Image/chickenimg3.jpg'
 import chicken4 from '../Image/chickenimg4.jpg'
 
 //Beef
+import beefLogo from '../Image/Products/beef.jpg'
 import beef1 from '../Image/beefimg1.jpeg'
 import beef2 from '../Image/beefimg2.jpg'
 import beef3 from '../Image/beefimg3.jpg'
 import beef4 from '../Image/beefimg4.jpg'
 
 //camel
+import camelLogo from '../Image/Products/camel.jpg'
 import camel1 from '../Image/camelimg1.jpg'
 import camel2 from '../Image/camelimg2.png'
 import camel3 from '../Image/camelimg3.jpg'
 import camel4 from '../Image/camelimg4.jpg'
 
 //mutton
+import muttonLogo from '../Image/Products/mutton.jpg'
 import mutton1 from '../Image/muttonimg1.jpg'
 import mutton2 from '../Image/muttonimg2.jpg'
 import mutton3 from '../Image/muttonimg3.jpg'
 import mutton4 from '../Image/muttonimg4.jpg'
 
+import aseelLogo from '../Image/Products/aseel.jpg'
+import vealLogo from '../Image/Products/veal.jpg'
+import duckLogo from '../Image/Products/duck.jpg'
+import fishLogo from '../Image/Products/fish.jpg'
+
 const allProducts = [
     {
         id: "desi-aseel-meat",
         name: "Desi Aseel Meat",
-        images: [chicken1, chicken2, chicken3, chicken4],
+        images: [aseelLogo, chicken2, chicken3, chicken4],
         meatType: [
             {
                 type: "Desi Murghi 1.25KG",
                 price: 1150,
-                img: ""
+                img: aseelLogo
+
             },
             {
                 type: "Desi Murghi Breast / PC",
                 price: 850,
-                img: ""
+                img: aseelLogo
             },
             {
                 type: "Desi Murghi Qeema / Per serving",
                 price: 999,
-                img: ""
+                img: aseelLogo
             }
         ],
         minPrice: 850,
@@ -68,59 +79,81 @@ const allProducts = [
         }
     },
     {
+        id: "fish-meat",
+        name: "Fish Meat",
+        images: [fishLogo],
+        meatType: [
+            {
+                type: "Fish 1KG",
+                price: 1000,
+                img: fishLogo
+
+            }
+        ],
+        minPrice: 10,
+        maxPrice: 100,
+        description: [
+            '100% fresh product.'
+        ],
+        additionalInformation: {
+            weight: "1kg",
+            meatType: "Meat"
+        }
+    },
+    {
         id: "chicken-meat",
         name: "Chicken Meat",
-        images: [chicken1, chicken2, chicken3, chicken4],
+        images: [chickenLogo, chicken1, chicken2, chicken3, chicken4],
         meatType: [
             {
                 type: "Chicken Breast (Boneless) 250 gm",
                 price: 203,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Whole Chicken with neck & offels",
                 price: 492,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Chicken Karahi cut / 250 gm",
                 price: 127,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Chicken Leg Tikka / 250 gm",
                 price: 125,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Chicken Qorma cut / 250 gm",
                 price: 127,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Chicken Breast Tikka / 250 gm",
                 price: 127,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Chicken Biryani cut/ 250 gm",
                 price: 203,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Chicken minced / 250 gm",
                 price: 203,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Chicken boneless handi Cut cube / 250 gm",
                 price: 203,
-                img: chicken1
+                img: chickenLogo
             },
             {
                 type: "Chicken Drum sticks / 500 gm",
                 price: 253,
-                img: chicken1
+                img: chickenLogo
             },
         ],
         minPrice: 125,
@@ -136,7 +169,7 @@ const allProducts = [
     {
         id: "duck-Meat",
         name: "Duck Meat",
-        images: [""],
+        images: [duckLogo],
         meatType: [
             // {
             //     type: "Live",
@@ -144,9 +177,9 @@ const allProducts = [
             //     img: ""
             // },
             {
-                type: "Meat",
+                type: "Duck Meat",
                 price: 1000,
-                img: ""
+                img: duckLogo
             }
         ],
         minPrice: 100,
@@ -167,17 +200,17 @@ const allProducts = [
     {
         id: "rabbit-meat",
         name: "Rabbit Meat",
-        images: [rabbit1, rabbit2, rabbit3, rabbit4],
+        images: [rabbitLogo, rabbit1, rabbit2, rabbit3, rabbit4],
         meatType: [
             {
                 type: "Rabbit / Kg",
                 price: 1500,
-                img: rabbit1
+                img: rabbitLogo
             },
             {
                 type: "Rabbit / PC",
                 price: 1000,
-                img: rabbit1
+                img: rabbitLogo
             }
         ],
         minPrice: 1000,
@@ -199,53 +232,53 @@ const allProducts = [
     {
         id: "camel-meat",
         name: "Camel Meat",
-        images: [camel4, camel1, camel2, camel3],
+        images: [camelLogo, camel4, camel1, camel2, camel3],
         meatType: [
             {
                 type: "Prime Boneless (Cube zero fat)",
                 price: 2000,
-                img: camel1
+                img: camelLogo
             },
             {
                 type: "Prime Boneless",
                 price: 1000,
-                img: camel1
+                img: camelLogo
 
             },
             {
                 type: "BoneLess (Mix Boti)",
                 price: 2000,
-                img: camel1
+                img: camelLogo
 
             },
             {
                 type: "Mince (Keema)",
                 price: 1000,
-                img: camel1
+                img: camelLogo
 
             },
             {
                 type: "Pasanday",
                 price: 2000,
-                img: camel1
+                img: camelLogo
 
             },
             {
                 type: "Nehari Cut Boneless",
                 price: 1000,
-                img: camel1
+                img: camelLogo
 
             },
             {
                 type: "Nehar Cut With Boneless",
                 price: 2000,
-                img: camel1
+                img: camelLogo
 
             },
             {
                 type: "Camel Paya",
                 price: 1000,
-                img: camel1
+                img: camelLogo
 
             }
         ],
@@ -268,71 +301,71 @@ const allProducts = [
     {
         id: "mutton-meat",
         name: "Mutton",
-        images: [mutton1, mutton2, mutton3, mutton4],
+        images: [muttonLogo, mutton1, mutton2, mutton3, mutton4],
         meatType: [
             {
                 type: "Mutton Chops",
                 price: 1850,
-                img: mutton1
+                img: muttonLogo
             },
             {
                 type: "Mutton Mince (Keema)",
                 price: 1900,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Raan",
                 price: 1950,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Dasti",
                 price: 1950,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Mix Boti",
                 price: 1750,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Back Chop",
                 price: 1500,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Boneless",
                 price: 2100,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Paya / PC",
                 price: 250,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Gurda / PC",
                 price: 200,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Liver",
                 price: 400,
-                img: mutton1
+                img: muttonLogo
 
             },
             {
                 type: "Mutton Green Offel",
                 price: 850,
-                img: mutton1
+                img: muttonLogo
 
             }
         ],
@@ -355,51 +388,62 @@ const allProducts = [
     {
         id: "sheep-lamb",
         name: "Sheep/Lamb",
-        images: [""],
+        images: [muttonLogo],
         meatType: [
             {
                 type: "Sheep Chops",
-                price: 1600
+                price: 1600,
+                img: muttonLogo
             },
             {
                 type: "Sheep Mice (Keema)",
-                price: 1850
+                price: 1850,
+                img: muttonLogo
             },
             {
                 type: "Sheep Raan",
-                price: 1800
+                price: 1800,
+                img: muttonLogo
             },
             {
                 type: "Sheep Dasti",
-                price: 1750
+                price: 1750,
+                img: muttonLogo
             },
             {
                 type: "Sheep Mix Boti",
-                price: 1500
+                price: 1500,
+                img: muttonLogo
             },
             {
                 type: "Sheep Back Chop",
-                price: 1470
+                price: 1470,
+                img: muttonLogo
             },
             {
                 type: "Sheep Chakki (Tail Fat)",
-                price: 2100
+                price: 2100,
+                img: muttonLogo
             },
             {
                 type: "Sheep Paya/PC",
-                price: 250
+                price: 250,
+                img: muttonLogo
             },
             {
                 type: "Sheep Gurda/PC",
-                price: 200
+                price: 200,
+                img: muttonLogo
             },
             {
                 type: "Sheep Liver",
-                price: 400
+                price: 400,
+                img: muttonLogo
             },
             {
                 type: "Sheep Green Offel",
-                price: 850
+                price: 850,
+                img: muttonLogo
             },
         ],
         minPrice: 200,
@@ -418,67 +462,67 @@ const allProducts = [
     {
         id: "beef-meat",
         name: "Beef",
-        images: [beef1, beef2, beef3, beef4],
+        images: [beefLogo, beef1, beef2, beef3, beef4],
         meatType: [
             {
                 type: "Undercut",
                 price: 2400,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Prime Boneless (Cube zero fat)",
                 price: 2000,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Prime Boneless",
                 price: 1300,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Prime With Bone (Mix Boti)",
                 price: 1100,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Mince (Keema)",
                 price: 1350,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Pasanday",
                 price: 1500,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Nehari Cut Boneless",
                 price: 1400,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Nehari Cut With Bone",
                 price: 1100,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Beef Nalli",
                 price: 650,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Beef Soup bones",
                 price: 370,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Beef Liver",
                 price: 400,
-                img: beef1
+                img: beefLogo
             },
             {
                 type: "Paya / Pc",
                 price: 350,
-                img: beef1
+                img: beefLogo
             },
         ],
         minPrice: 350,
@@ -494,67 +538,67 @@ const allProducts = [
     {
         id: "veel-meat",
         name: "Veel",
-        images: [beef1, beef2, beef3, beef4],
+        images: [vealLogo, beef2, beef3, beef4],
         meatType: [
             {
                 type: "Undercut",
                 price: 1850,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Prime Boneless (Cube zero fat)",
                 price: 1450,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Prime Boneless",
                 price: 1200,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Prime With Bone (Mix Boti)",
                 price: 1050,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Mince (Keema)",
                 price: 1030,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Pasanday",
                 price: 1450,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Nehari Cut Boneless",
                 price: 1150,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Nehari Cut With Bone",
                 price: 1000,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Veel Nalli",
                 price: 520,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Veel Soup bones",
                 price: 420,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Veel Liver",
                 price: 400,
-                img: beef1
+                img: vealLogo
             },
             {
                 type: "Paya / Pc",
                 price: 650,
-                img: beef1
+                img: vealLogo
             },
         ],
         minPrice: 400,
