@@ -11,6 +11,11 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import Button from '@mui/material/Button';
 import { createOrder, deleteOrderState } from '../../../store/slices/orderSlice'
 import { removeCartItems } from '../../../store/slices/cartSlice'
+import payicon2 from "../../../Image/payicon3.png"
+import payicon3 from "../../../Image/payicon2.png"
+import payicon4 from "../../../Image/payicon4.png"
+
+
 
 import * as React from 'react';
 import Radio from '@mui/material/Radio';
@@ -160,7 +165,7 @@ function Payment() {
             <Grid container>
                 <Grid item lg={12} md={12} sm={12} xs={12} style={{ marginTop: "30px" }} >
                     <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" }} >
-                        <Grid item lg={1}>
+                        <Grid item lg={1} md={1} sm={1} xs={1.5}>
                             <FormControl>
                                 <RadioGroup
                                     aria-labelledby="demo-radio-buttons-group-label"
@@ -174,10 +179,10 @@ function Payment() {
                             </FormControl>
 
                         </Grid>
-                        <Grid item lg={2}>
+                        <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5}>
                             <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
                         </Grid>
-                        <Grid item lg={5}>
+                        <Grid item lg={5} md={5} sm={5} xs={5}>
                             <p className='pay_text'><b>JAZZ CASH</b></p>
                         </Grid>
                     </Grid>
@@ -185,7 +190,7 @@ function Payment() {
 
 
                     <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
-                        <Grid item lg={1}>
+                        <Grid item lg={1} md={1} sm={1} xs={1.5}>
                             <FormControl>
                                 <RadioGroup
                                     aria-labelledby="demo-radio-buttons-group-label"
@@ -197,17 +202,17 @@ function Payment() {
                             </FormControl>
 
                         </Grid>
-                        <Grid item lg={2}>
-                            <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
+                        <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
+                            <img src={payicon2} alt=""/>
                         </Grid>
-                        <Grid item lg={5}>
+                        <Grid item lg={5} md={5} sm={5} xs={5}>
                             <p className='pay_text'><b>EASY PAISA</b></p>
                         </Grid>
                     </Grid>
 
 
                     <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
-                        <Grid item lg={1}>
+                        <Grid item lg={1} md={1} sm={1} xs={1.5}>
                             <FormControl>
                                 <RadioGroup
                                     aria-labelledby="demo-radio-buttons-group-label"
@@ -219,16 +224,17 @@ function Payment() {
                             </FormControl>
 
                         </Grid>
-                        <Grid item lg={2}>
-                            <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
+                        <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
+                        <img src={payicon3} alt=""/>
+                          
                         </Grid>
-                        <Grid item lg={5}>
+                        <Grid item lg={5} md={5} sm={5} xs={5}>
                             <p className='pay_text'><b>BANK ACCOUNT</b></p>
                         </Grid>
                     </Grid>
 
                     <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
-                        <Grid item lg={1}>
+                        <Grid item lg={1} md={1} sm={1} xs={1.5}>
                             <FormControl>
                                 <RadioGroup
                                     aria-labelledby="demo-radio-buttons-group-label"
@@ -240,10 +246,11 @@ function Payment() {
                             </FormControl>
 
                         </Grid>
-                        <Grid item lg={2}>
-                            <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
+                        <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
+                        <img src={payicon4} alt=""/>
+                       
                         </Grid>
-                        <Grid item lg={5}>
+                        <Grid item lg={5} md={5} sm={5} xs={5}>
                             <p className='pay_text'><b>CASH ON DELIVERY</b></p>
                         </Grid>
                     </Grid>
