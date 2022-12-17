@@ -24,7 +24,7 @@ function Location() {
     const gurJawalaClose = () => setGurjawal(false)
 
 
-    return <div style={{backgroundColor:"white"}}>
+    return <div style={{ backgroundColor: "white" }}>
         <div style={{ paddingTop: "20px", marginBottom: "50px" }} className="background_location">
 
             <h1 className="location_heading">FATIMA MEAT LOCATION</h1>
@@ -50,16 +50,13 @@ function Location() {
                                     backdrop="static"
                                     keyboard={false}
                                 >
-                                    <Modal.Header closeButton style={{ backgroundColor: "rgb(58,26,15)", color: "white" }}>
+                                    <Modal.Header closeButton >
                                         <Modal.Title >KARACHI LOCATION</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
-                                        I will not close if you click outside me. Don't even try to
+                                        Building no 68,Shop no 1, bukhari commerical.dha,Karachi.
                                     </Modal.Body>
-                                    <hr></hr>
-                                    <Modal.Body>
-                                        I will not close if you click outside me. Don't even try to press
-                                    </Modal.Body>
+                                    {/* <hr></hr> */}
                                 </Modal>
                             </Grid>
                             <Grid item lg={3}></Grid>
@@ -68,7 +65,7 @@ function Location() {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item lg={2.7}  md={4} sm={5.5} xs={12} className="our_location_text">
+                    <Grid item lg={2.7} md={4} sm={5.5} xs={12} className="our_location_text">
                         <Grid container>
                             <Grid item lg={2.5}>
                                 <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
@@ -87,8 +84,7 @@ function Location() {
                                         <Modal.Title>LAHORE LOCATION</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
-                                        I will not close if you click outside me. Don't even try to press
-                                        escape key.
+                                        Plaza no 3, Phase 6 commercial, dha, lahore.
                                     </Modal.Body>
                                 </Modal>
                             </Grid>
@@ -98,12 +94,12 @@ function Location() {
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item lg={2.7}  sm={5.5} md={4} xs={12} className="our_location_text">
+                    <Grid item lg={2.7} sm={5.5} md={4} xs={12} className="our_location_text">
                         <Grid container>
                             <Grid item lg={2.5}>
                                 <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
-                            <Grid item lg={3} xs={7.5}  className="location_text">
+                            <Grid item lg={3} xs={7.5} className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={RwalpindiLocation}>
                                     RAWALPINDI
                                 </Button>
@@ -117,13 +113,9 @@ function Location() {
                                         <Modal.Title>RAWAL PINDI LOCATION</Modal.Title>
                                     </Modal.Header>
                                     <Modal.Body>
-                                        I will not close if you click outside me. Don't even try to press
-                                        escape key.
+                                               Csd, lal kurti, Rawalpindi
                                     </Modal.Body>
-                                    <Modal.Body>
-                                        I will not close if you click outside me. Don't even try to press
-                                        escape key.
-                                    </Modal.Body>
+                               
                                     {/* <Modal.Footer>
                                     <Button variant="secondary" onClick={handleClose}>
                                         Close
@@ -143,7 +135,7 @@ function Location() {
                             <Grid item lg={2.5} >
                                 <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
-                            <Grid item lg={3} xs={7.5}  className="location_text">
+                            <Grid item lg={3} xs={7.5} className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={gurJawala}>
                                     GURJANAWALA
                                 </Button>

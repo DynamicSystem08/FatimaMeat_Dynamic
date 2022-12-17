@@ -24,7 +24,7 @@ export default function Product() {
 
                 {
                     allProducts.map((item) => {
-                        return <Grid item lg={3} className="Beef_imgs"
+                        return <Grid item lg={3} md={3} sm={4} xs={12} className="Beef_imgs"
                             onClick={() => navigate(item.id)}
                         >
                             <img src={item.images[0]} alt="" />
