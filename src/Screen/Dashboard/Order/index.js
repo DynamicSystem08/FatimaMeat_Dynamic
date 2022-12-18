@@ -23,7 +23,6 @@ import Button from '@mui/material/Button';
 
 function Dashboard() {
 
-
     function createData(name, calories, fat, carbs, protein) {
         return { name, calories, fat, carbs, protein };
     }
@@ -41,7 +40,7 @@ function Dashboard() {
 
     const [data, setData] = useState()
 
-    const reduxAllOrders = useSelector(state => state.orderReducer.allOrders)
+    const reduxOrders = useSelector(state => state.orderReducer.allOrders)
     const reduxUser = useSelector(state => state.userReducer.user)
 
     const callData = async () => {
@@ -63,6 +62,10 @@ function Dashboard() {
 
     if (!reduxUser) {
         return
+    }
+
+    if (reduxOrders == "undefined") {
+        return <div>loading</div>
     }
 
     return <div style={{ backgroundColor: "white" }}>
@@ -100,27 +103,9 @@ function Dashboard() {
 
 
                 <Grid item lg={8} md={7} sm={7} xs={12} style={{ paddingTop: "50px" }}>
-                    {/* <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
-                        <Grid item lg={2} >
-                            <h5>Order Id</h5>
-                        </Grid>
-                        <Grid item lg={3}>
-                            <h5>Customer Name</h5>
-                        </Grid>
-                        <Grid item lg={3}>
-                            <h5>Dilevery Address</h5>
-                        </Grid>
-                        <Grid item lg={2}>
-                            <h5>Order Item</h5>
-                        </Grid>
-                        <Grid item lg={2}>
-                            <h5>Order Date</h5>
-                        </Grid>
-                    </Grid> */}
-
 
                     {
-                        reduxAllOrders ? <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
+                        reduxOrders ? <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
                             <Table sx={{ minWidth: 1400 }} aria-label="simple table" stickyHeader >
                                 <TableHead>
                                     <TableRow>
@@ -135,7 +120,7 @@ function Dashboard() {
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    {reduxAllOrders[0] && reduxAllOrders.map((row) => (
+                                    {reduxOrders[0] && reduxOrders.map((row) => (
                                         <TableRow
                                             key={row.orderDetails.orderId}
                                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -246,34 +231,6 @@ function Dashboard() {
                             </div>
                     }
 
-                    {/* {reduxAllOrders ? reduxAllOrders.map((item) => {
-                        return <div>
-                            <Grid container style={{ justifyContent: "center" }}>
-                                <Grid item lg={2} >
-                                    <p> {item.orderId} </p>
-                                </Grid>
-                                <Grid item lg={3}>
-                                    <p> {item.CustomerName} </p>
-
-                                </Grid>
-                                <Grid item lg={3}>
-                                    <p> {item.orderId} </p>
-
-                                </Grid>
-                                <Grid item lg={2}>
-                                    <p> {item.orderNumber} </p>
-
-                                </Grid>
-                                <Grid item lg={2}>
-                                    <p> {item.orderDate} </p>
-
-                                </Grid>
-                            </Grid>
-                        </div>
-                    })
-                        :
-                        <div>No Data Found</div>
-                    } */}
                 </Grid>
 
             </Grid>
