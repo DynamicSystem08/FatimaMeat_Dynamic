@@ -39,7 +39,7 @@
 
     }
 
-    #img101 {
+    .img101 {
         margin-left:52%;
 
     }
@@ -69,15 +69,11 @@
         margin-top: -6%;
     }
 
-    #img101 {
+    .logo_img img {
         margin-left:30%;
         height: 120px;
         width: 120px;
         margin-top:-14%;
-        /* width: 100%; */
-        /* height: 20%; */
-        /* margin-left: 30%; */
-
     }
 
     .responsive_top_header {
@@ -112,10 +108,6 @@
         margin-top: -20px;
         background-color: gray;
     }
-
-    /* .text_Header{
-    margin      -left: 40px;
-   } */
 }
 
 #b {

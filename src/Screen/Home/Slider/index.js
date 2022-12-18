@@ -30,7 +30,7 @@ function Slider() {
                                     <h1 class="animate__animated animate__fadeIn animate__delay-1s">Hight quality meat And afordable price</h1>
                                 </Grid>
                                 <Grid item lg={6.5} md={6} sm={5} xs={5} className="slider_img" data-aos="fade-left" style={{ transition: "0.5s" }}>
-                                    <img src={slideimg1} alt="" />
+                                    <img src="http://www.khaasmeat.net/public/images/4443b-latest.png" alt="" />
                                 </Grid>
                             </Grid>
                         </Container>
@@ -79,18 +79,18 @@ function Slider() {
                             </Grid>
                         </Container>
                     </Carousel.Item>
-                    {/* <Carousel.Item>
+                    <Carousel.Item>
                         <Container>
                             <Grid container className='silder_main'>
                                 <Grid item lg={5} md={5} sm={3.5} xs={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
-                                    <h1 class="animate__animated animate__fadeIn animate__delay-1s">Fatima quality rabbit  And Afordable Price</h1>
+                                    <h1 class="animate__animated animate__fadeIn animate__delay-1s">Fatima quality Chicken  And Afordable Price</h1>
                                 </Grid>
                                 <Grid item lg={6.6} md={6} sm={6.6} xs={5.5} className="slider_img">
-                                    <img class="animate__animated animate__slideInRight animate__delay-1s" src={chicken2} alt="" />
+                                    <img class="animate__animated animate__slideInRight animate__delay-1s" src="http://khaasmeat.net/public/images/df343-chicken.png" alt="" />
                                 </Grid>
                             </Grid>
                         </Container>
-                    </Carousel.Item> */}
+                    </Carousel.Item>
                 </Carousel>
             </Container>
         </div>
