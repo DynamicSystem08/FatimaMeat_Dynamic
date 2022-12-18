@@ -31,7 +31,8 @@ function Location() {
             <Container>
                 <Grid container>
                     <Grid item lg={12} md={12} sm={12} xs={12} className="location_img">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28922.729504401806!2d67.1145400498032!3d25.02249281236537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb346f4ee2f512f%3A0x75bf3f7abcacdafc!2sGulshan-e-Maymar%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1669604660733!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28922.729504401806!2d67.1145400498032!3d25.02249281236537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb346f4ee2f512f%3A0x75bf3f7abcacdafc!2sGulshan-e-Maymar%2C%20Karachi%2C%20Karachi%20City%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1669604660733!5m2!1sen!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7539.068415314783!2d74.45713239887897!3d31.471629739902188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190920e59fccd3%3A0x56cae6ee2c7a479b!2sDHA%20Phase%206%2C%20Lahore%2C%20Punjab!5e0!3m2!1sen!2s!4v1671353338036!5m2!1sen!2s"   allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </Grid>
                 </Grid>
                 <Grid container className='our_location'>
