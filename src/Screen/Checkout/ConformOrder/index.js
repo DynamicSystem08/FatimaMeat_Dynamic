@@ -49,7 +49,7 @@ function ConfirmOrder() {
     const totalAmmount = cartTotal + shippingCharges + gst
 
 
-    return <div style={{ paddingBottom: "50px", backgroundColor: "white" }}>
+    return <div style={{ paddingBottom: "50px" }} className="slider_bg_icon">
         <Container style={{ textAlign: "center", paddingTop: "140px" }} maxWidth="md">
             <Grid container>
                 <Grid item lg={5.5} md={5.5} sm={5.5} xs={5}>

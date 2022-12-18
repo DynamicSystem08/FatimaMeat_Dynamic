@@ -3,6 +3,9 @@
       rgb(25,25,35));
   height: 300px;
 }
+.slider_bg_icon{
+  background-image:url(../../../Image/backgroundIconImage.jpg) ;
+}
 
 .silder_main {
   justify-content: center;
@@ -61,7 +64,7 @@
   /* background-color: gray; */
   margin-top: -15%;
   /* background-image: url(../../../Image/backgroundIconImage.jpg); */
-  background-color: rgb(254,248,236);
+  background-color: rgb(253,210,193);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

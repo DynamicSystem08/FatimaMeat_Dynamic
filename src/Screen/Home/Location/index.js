@@ -24,8 +24,8 @@ function Location() {
     const gurJawalaClose = () => setGurjawal(false)
 
 
-    return <div style={{ backgroundColor: "white" }}>
-        <div style={{ paddingTop: "20px", marginBottom: "50px" }} className="background_location">
+    return <div style={{ backgroundColor: "white",marginTop:"52px" }}>
+        <div  className="background_location">
 
             <h1 className="location_heading">FATIMA MEAT LOCATION</h1>
             <Container>

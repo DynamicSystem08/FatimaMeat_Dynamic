@@ -15,7 +15,7 @@ export default function Product() {
         window.scrollTo(0, 0)
     }, [])
 
-    return <div style={{ marginTop: "-10px", backgroundColor: "white" }} >
+    return <div style={{ marginTop: "-10px" }} className="slider_bg_icon" >
         <MetaData title="Fatima Meat | Products" />
         <Container>
             <h1 style={{ paddingTop: "100px", fontFamily: " Garamond, serif", fontWeight: "900" }}>SHOP</h1>
@@ -24,7 +24,7 @@ export default function Product() {
 
                 {
                     allProducts.map((item) => {
-                        return <Grid item lg={3} md={3} sm={4} xs={12} className="Beef_imgs"
+                        return <Grid item lg={3} md={3} sm={4} xs={12}  className="Beef_imgs"
                             onClick={() => navigate(item.id)}
                         >
                             <img src={item.images[0]} alt="" />

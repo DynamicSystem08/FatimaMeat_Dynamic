@@ -81,7 +81,7 @@ function SignUp(props) {
         setLoading(false)
     }
 
-    return <div style={{ backgroundColor: "white", paddingTop: "100px" }}>
+    return <div style={{ paddingTop: "100px" }} className="slider_bg_icon">
 
 
         <Container maxWidth="xs">

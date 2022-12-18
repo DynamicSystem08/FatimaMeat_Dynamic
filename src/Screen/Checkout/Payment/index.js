@@ -109,7 +109,7 @@ function Payment() {
         return <div>loading</div>
     }
 
-    return <div style={{ backgroundColor: "white" }}>
+    return <div className="slider_bg_icon">
         <Container style={{ textAlign: "center", paddingTop: "140px" }} maxWidth="md">
             <Grid container>
                 <Grid item lg={5.5} md={5.5} sm={5.5} xs={5} >

@@ -10,7 +10,7 @@ import Recipe3 from "../../../Image/Recipe3.jpg"
 import "./index.css"
 function HomeRecipe() {
     const navigate = useNavigate()
-    return <div style={{ paddingTop: "50px", backgroundColor: "white" }}>
+    return <div style={{ paddingTop: "50px" }} className="slider_bg_icon">
         <Container>
         <Grid container>
                 <Grid item lg={12} md={12} sm={12} xs={12} style={{ textAlign: "center",marginBottom:"50px",marginTop:"-20px" }} className="about_text">
@@ -44,7 +44,7 @@ function HomeRecipe() {
                         </div>
                     </Grid>
                     <Grid container style={{justifyContent:"center"}}>
-                        <Grid item lg={3.5} md={3} sm={5.6} xs={11}>
+                        <Grid item lg={3.5} md={3} sm={5.6} xs={11} style={{marginBottom:"-50px"}}>
                             <Button className='our_home_recipe_botton'
                                 onClick={() => navigate("/recipes")}
                                 style={{ backgroundColor: "rgba(208,13,30)", width: "100%", padding: "10px", color: "white", marginTop: "20px", marginBottom: "60px", height: "50px" }}>View More Recipes</Button>

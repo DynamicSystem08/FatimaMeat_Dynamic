@@ -54,7 +54,7 @@ function Cart() {
         window.scrollTo(0, 0)
     }, [])
 
-    return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }} className="">
+    return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }} className="slider_bg_icon">
         <MetaData title="Fatima Meat | Cart" />
         
         <Container>

@@ -20,7 +20,7 @@ import Dashboard from '../Screen/Dashboard';
 import Auth from '../Screen/Auth'
 import Order from '../Screen/Dashboard/Order';
 import AccountDetails from '../Screen/Dashboard/MyAccount1';
-
+import Location from '../Screen/Home/Location';
 import { auth, onAuthStateChanged } from '../config/firebase'
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -81,6 +81,7 @@ function Router() {
             <Route path="/auth" element={protectedRouteAuth(<Auth />)} />
 
             <Route path="/products/:id" element={<ProductDetail />} />
+            <Route path="/location" element={<Location />} />
 
             <Route path="/cart" element={<Cart />} />
 

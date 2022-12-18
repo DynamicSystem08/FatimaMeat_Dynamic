@@ -68,9 +68,9 @@ function Shippingdetails() {
         return <div>loading</div>
     }
 
-    return <div style={{ backgroundColor: "white" }}>
+    return <div className="slider_bg_icon">
 
-        <div style={{ backgroundColor: "white", paddingTop: "140px" }}>
+        <div style={{ paddingTop: "140px" }}>
 
             <Container style={{ textAlign: "center", marginTop: "30px" }} maxWidth="md">
                 <Grid container>
@@ -113,7 +113,7 @@ function Shippingdetails() {
                 </Grid>
             </Container>
 
-            <Container maxWidth="xs" className='shiping_info_main' style={{ marginBottom: "30px" }}>
+            <Container maxWidth="xs" className='shiping_info_main' style={{ marginBottom: "30px" ,backgroundColor:"white"}}>
                 <Grid container style={{ marginTop: "50px", justifyContent: "center" }} >
 
                     <Grid item lg={12} md={12} sm={12} xs={13} id="create1" style={{ marginBottom: "20px", marginTop: "-1px" }} className="input12">

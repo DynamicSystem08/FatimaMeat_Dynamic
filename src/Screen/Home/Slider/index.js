@@ -18,7 +18,7 @@ import sliderchicken from "../../../Image/sliderchickenimg102.png"
 
 
 function Slider() {
-    return <div style={{ backgroundColor: "white" }} >
+    return <div  className="slider_bg_icon">
         <div className='slider_main1'></div>
         <div style={{ marginTop: "-90px" }} >
             <Container>

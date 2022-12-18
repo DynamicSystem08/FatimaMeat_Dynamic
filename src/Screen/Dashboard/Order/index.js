@@ -68,10 +68,10 @@ function Dashboard() {
         return
     }
 
-    return <div style={{ backgroundColor: "white" }}>
+    return <div className="slider_bg_icon">
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
-                <Grid item lg={3} md={3.5} sm={4} xs={12} style={{ padding: "20px" }} className="side_bar_dashboadr">
+                <Grid item lg={3} md={3.5} sm={4} xs={12} style={{ padding: "20px",backgroundColor:"white" }} className="side_bar_dashboadr">
                     <h2><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
