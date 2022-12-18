@@ -75,7 +75,6 @@ function Payment() {
         data.cartInfo.cartTotal = cartTotal
 
         const { payload } = await dispatch(createOrder(data))
-        console.log("paymnet", payload)
 
         if (payload.error) {
             swal({

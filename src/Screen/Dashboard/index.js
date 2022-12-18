@@ -15,7 +15,6 @@ function Dashboard() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const user = useSelector(state => state.userReducer.user)
-    console.log(user)
 
     // if (!user) {
     //     navigate('/auth')

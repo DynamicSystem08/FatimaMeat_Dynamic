@@ -44,7 +44,6 @@ async function registerUser(data) {
         return { error: false, message: "User Created", data: user }
     }
     catch (error) {
-        console.log(error)
         return { error: true, message: error.message, data: null }
     }
 }
@@ -57,7 +56,6 @@ async function signinUser(data) {
         return { error: false, message: "Login Successful", data: res.user }
     }
     catch (error) {
-        // console.log(error)
         return { error: true, message: error.message, data: null }
     }
 }
@@ -81,8 +79,6 @@ async function emailSupport() {
 }
 
 async function createOrderFirebase(data) {
-    // console.log("firebase auth", auth.currentUser.uid)
-
     try {
         const q = query(collection(db, "orders"),
             orderBy("orderDetails.orderId", "desc")
@@ -91,7 +87,6 @@ async function createOrderFirebase(data) {
 
         let copyData = []
         querySnapshot.forEach((doc) => {
-            // doc.data() is never undefined for query doc snapshots
             copyData.push(doc.data())
         });
 
@@ -103,17 +98,13 @@ async function createOrderFirebase(data) {
 
         if (copyData[0]) {
             const orderId = parseInt(copyData[0].orderDetails.orderId)
-            console.log("orderId", orderId)
             id = orderId + 1
             id = String(id)
-
-            console.log("id", id)
 
             for (let i = id.length; i < 10; i++) {
                 id = "0" + id
             }
         }
-        console.log("id", id)
 
         data.userId = auth.currentUser.uid
 
@@ -126,11 +117,12 @@ async function createOrderFirebase(data) {
 
         const date = new Date();
         data.orderDetails.orderDateTime = String(date)
-        console.log(date)
+
+        //new
+        data.docUpdate = true
 
         const docRef = await addDoc(collection(db, "orders"), data)
 
-        console.log(docRef.id)
         const updateDocRef = doc(db, "orders", docRef.id);
 
         await updateDoc(updateDocRef, {
@@ -141,7 +133,6 @@ async function createOrderFirebase(data) {
 
     }
     catch (error) {
-        console.log(error)
         return { error: true, message: error.message }
     }
 }
@@ -172,7 +163,6 @@ async function getCurrentUserOrders(uid) {
         querySnapshot.forEach((doc) => {
             array.push(doc.data())
         });
-        console.log("array", array)
         return { error: false, message: "Success", data: array }
     }
     catch (error) {
@@ -181,7 +171,6 @@ async function getCurrentUserOrders(uid) {
 }
 
 async function cancelOrder(docId, orderDetails) {
-    console.log(docId)
     try {
         const docRef = doc(db, "orders", docId);
 
@@ -200,11 +189,9 @@ async function cancelOrder(docId, orderDetails) {
 }
 
 async function markCompletedOrder(docId, orderDetails) {
-    console.log(docId)
     try {
         const docRef = doc(db, "orders", docId);
 
-        // Set the "capital" field of the city 'DC'
         await updateDoc(docRef, {
             orderDetails: { ...orderDetails, orderStatus: 'completed' },
             docUpdate: false
@@ -219,11 +206,9 @@ async function markCompletedOrder(docId, orderDetails) {
 }
 
 async function markPendingOrder(docId, orderDetails) {
-    console.log(docId)
     try {
         const docRef = doc(db, "orders", docId);
 
-        // Set the "capital" field of the city 'DC'
         await updateDoc(docRef, {
             orderDetails: { ...orderDetails, orderStatus: 'pending' },
             docUpdate: true
@@ -232,7 +217,7 @@ async function markPendingOrder(docId, orderDetails) {
         return { error: false, message: "success" }
     }
     catch (error) {
-        // console.log(error.message)
+        console.log(error.message)
         return { error: true, message: error.message }
     }
 }

@@ -36,11 +36,10 @@ function Dashboard() {
         createData('Order Date', 356, 16.0, 49, 3.9),
     ];
 
-
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
-    const [screen, setScreen] = useState()
+    const [data, setData] = useState()
 
     const reduxAllOrders = useSelector(state => state.orderReducer.allOrders)
     const reduxUser = useSelector(state => state.userReducer.user)
@@ -55,14 +54,12 @@ function Dashboard() {
 
     useEffect(() => {
         if (reduxUser.email == "admin@fatimameat.com") {
-            console.log("admin")
             callData()
         }
         else {
-            console.log("user")
             callCurentUserOrders()
         }
-    }, [])
+    }, [data])
 
     if (!reduxUser) {
         return
@@ -167,12 +164,13 @@ function Dashboard() {
                                                                     .then((willDelete) => {
                                                                         if (willDelete) {
                                                                             markCompletedOrder(row.docId, row.orderDetails)
-                                                                                .then((data) => console.log(data))
+                                                                                .then((data) => {
+                                                                                    swal("Order marked as completed", {
+                                                                                        icon: "success",
+                                                                                    });
+                                                                                    setData(data)
+                                                                                })
                                                                                 .catch(e => console.log(e))
-                                                                            swal("Order marked as completed", {
-                                                                                icon: "success",
-                                                                            });
-                                                                            window.location.reload()
                                                                         }
                                                                     });
                                                             }
@@ -190,12 +188,13 @@ function Dashboard() {
                                                                     .then((willDelete) => {
                                                                         if (willDelete) {
                                                                             markPendingOrder(row.docId, row.orderDetails)
-                                                                                .then((data) => console.log(data))
+                                                                                .then((data) => {
+                                                                                    swal("Order marked as pending", {
+                                                                                        icon: "success",
+                                                                                    });
+                                                                                    setData(data)
+                                                                                })
                                                                                 .catch(e => console.log(e))
-                                                                            swal("Order marked as pending", {
-                                                                                icon: "success",
-                                                                            });
-                                                                            window.location.reload()
                                                                         }
                                                                     });
                                                             }
@@ -230,7 +229,6 @@ function Dashboard() {
                                                             </TableCell>
                                                         }
                                                     </div>
-
                                             }
 
                                         </TableRow>
@@ -247,7 +245,6 @@ function Dashboard() {
                                 >Click here to browse our products</div>
                             </div>
                     }
-
 
                     {/* {reduxAllOrders ? reduxAllOrders.map((item) => {
                         return <div>
@@ -278,7 +275,6 @@ function Dashboard() {
                         <div>No Data Found</div>
                     } */}
                 </Grid>
-
 
             </Grid>
         </Container>
