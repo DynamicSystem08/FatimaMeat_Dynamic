@@ -38,6 +38,7 @@ import aseelLogo from '../Image/Products/aseel.jpg'
 import vealLogo from '../Image/Products/veal.jpg'
 import duckLogo from '../Image/Products/duck.jpg'
 import fishLogo from '../Image/Products/fish.jpg'
+import sheepLogo from '../Image/Products/sheepLogo.jpg'
 
 const allProducts = [
     {
@@ -389,62 +390,62 @@ const allProducts = [
     {
         id: "sheep-lamb-meat",
         name: "Sheep/Lamb meat",
-        images: [muttonLogo],
+        images: [sheepLogo],
         meatType: [
             {
                 type: "Sheep Chops",
                 price: 1600,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Mice (Keema)",
                 price: 1850,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Raan",
                 price: 1800,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Dasti",
                 price: 1750,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Mix Boti",
                 price: 1500,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Back Chop",
                 price: 1470,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Chakki (Tail Fat)",
                 price: 2100,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Paya/PC",
                 price: 250,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Gurda/PC",
                 price: 200,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Liver",
                 price: 400,
-                img: muttonLogo
+                img: sheepLogo
             },
             {
                 type: "Sheep Green Offel",
                 price: 850,
-                img: muttonLogo
+                img: sheepLogo
             },
         ],
         minPrice: 200,
