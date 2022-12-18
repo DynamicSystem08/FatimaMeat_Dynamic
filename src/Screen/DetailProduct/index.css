@@ -1,4 +1,4 @@
-/* #app { height: 100% }
+#app { height: 100% }
 html,
 body {
   position: relative;
@@ -89,7 +89,7 @@ body {
   height: 100%;
   object-fit: cover;
 }
- */
+
 
 .bg_card{
   background-image: url(../../Image/backgroundIconImage.jpg);

@@ -11,12 +11,12 @@ import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
 import Button from '@mui/material/Button';
 import { createOrder, deleteOrderState } from '../../../store/slices/orderSlice'
 import { removeCartItems } from '../../../store/slices/cartSlice'
-import payicon2 from "../../../Image/payicon3.png"
-import payicon3 from "../../../Image/payicon2.png"
-import payicon4 from "../../../Image/payicon4.png"
 
+import codIcon from "../../../Image/payicon2.png"
+import easypaisaIcon from "../../../Image/payicon3.png"
+import jazzcashIcon from "../../../Image/payicon4.png"
 
-
+import FormHelperText from '@mui/material/FormHelperText';
 import * as React from 'react';
 import Radio from '@mui/material/Radio';
 import RadioGroup from '@mui/material/RadioGroup';
@@ -24,14 +24,9 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import "./index.css"
 
-
 function Payment() {
-    const [expanded, setExpanded] = useState('panel1')
-
+    // const [expanded, setExpanded] = useState('panel1')
     const [loading, setLoading] = useState(false)
-
-
-
     const dispatch = useDispatch()
     const navigate = useNavigate()
 
@@ -41,36 +36,31 @@ function Payment() {
     const cartItems = useSelector(state => state.cartReducer.cart)
     const cartTotal = useSelector(state => state.orderReducer.cartTotal)
 
-    const [formData, setFormData] = useState({
-        paymentMethod: "cash",
-        // bankName: "COD",
-        // cardHolderName: "Nabeel",
-        // cardNo: "12345678912",
-        // cvsNo: "123"
-    })
+    const [value, setValue] = React.useState('');
+    const [error, setError] = React.useState(false);
+    const [helperText, setHelperText] = React.useState();
 
-    const handelChange = (key, value) => {
-        setFormData({ ...formData, [key]: value })
-    }
+    const handleRadioChange = (event) => {
+        setValue(event.target.value);
+        setHelperText(' ');
+        setError(false);
+    };
 
     const handleClick = async () => {
         setLoading(true)
-        // if (!formData.bankName) {
-        //     swal("Error!", "Please enter a bank name", "error");
-        //     return
-        // }
-        // if (formData.cardNo.length != 11) {
-        //     swal("Error!", "Please enter your card number", "error");
-        //     return
-        // }
-        // if (formData.cvsNo.length != 3) {
-        //     swal("Error!", "Please enter your card's cvs number", "error");
-        //     return
-        // }
-        // if (!formData.cardHolderName) {
-        //     swal("Error!", "Please enter card holder's name", "error");
-        //     return
-        // }
+
+        if (value === 'jazzcash' || value === 'easypaisa' || value === 'bank') {
+            setHelperText('Sorry, only cash on delivery is available right now!');
+            setError(true);
+            setLoading(false)
+            return
+        }
+        else if (!value) {
+            setHelperText('Please select an option.');
+            setError(true);
+            setLoading(false)
+            return
+        }
 
         let data = {}
         data.buyerDetails = {}
@@ -79,7 +69,7 @@ function Payment() {
 
         data.shippingDetails = shippingDetails
         data.cartItems = cartItems
-        data.paymentInfo = formData
+        data.paymentInfo = { paymentMethod: value }
 
         data.cartInfo.totalOrderAmount = totalOrderAmount
         data.cartInfo.cartTotal = cartTotal
@@ -161,107 +151,80 @@ function Payment() {
                 </Grid>
             </Grid>
         </Grid>
+
         <Container maxWidth="xs">
             <Grid container>
+
                 <Grid item lg={12} md={12} sm={12} xs={12} style={{ marginTop: "30px" }} >
-                    <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" }} >
-                        <Grid item lg={1} md={1} sm={1} xs={1.5}>
-                            <FormControl>
-                                <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="female"
-                                    name="radio-buttons-group"
-                                >
-                                    <FormControlLabel value="female" control={<Radio />}  style={{color:"red"}} />
-                                    {/* <FormControlLabel value="male" control={<Radio />} label="Male" />
-                                    <FormControlLabel value="other" control={<Radio />} label="Other" /> */}
-                                </RadioGroup>
-                            </FormControl>
+                    <FormControl>
+                        <RadioGroup
+                            aria-labelledby="demo-radio-buttons-group-label"
+                            defaultValue="cod"
+                            name="radio-buttons-group"
+                            value={value}
+                            onChange={handleRadioChange}
+                        >
 
-                        </Grid>
-                        <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5}>
-                            <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
-                        </Grid>
-                        <Grid item lg={5} md={5} sm={5} xs={5}>
-                            <p className='pay_text'><b>JAZZ CASH</b></p>
-                        </Grid>
-                    </Grid>
+                            <Grid container style={{ justifyContent: "center", border: "1px solid lightgray", marginTop: "10px" }} >
+                                <Grid item lg={1} md={1} sm={1} xs={1.5}>
+                                    <FormControlLabel value="jazzcash" name="jazzcash" control={<Radio />} />
+                                </Grid>
+                                <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
+                                    <img src={jazzcashIcon} alt="" />
+                                </Grid>
+                                <Grid item lg={5} md={5} sm={5} xs={5}>
+                                    <p className='pay_text'><b>JAZZ CASH</b></p>
+                                </Grid>
+                            </Grid>
+
+                            <Grid container style={{ justifyContent: "center", border: "1px solid lightgray", marginTop: "10px" }} >
+                                <Grid item lg={1} md={1} sm={1} xs={1.5}>
+                                    <FormControlLabel value="easypaisa" name="easypaisa" control={<Radio />} />
+                                </Grid>
+                                <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
+                                    <img src={easypaisaIcon} alt="" />
+                                </Grid>
+                                <Grid item lg={5} md={5} sm={5} xs={5}>
+                                    <p className='pay_text'><b>EASY PAISA</b></p>
+                                </Grid>
+                            </Grid>
+
+                            <Grid container style={{ justifyContent: "center", border: "1px solid lightgray", marginTop: "10px" }} >
+                                <Grid item lg={1} md={1} sm={1} xs={1.5}>
+                                    <FormControlLabel value="bank" name="bank" control={<Radio />} />
+                                </Grid>
+                                <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
+                                    <AccountBalanceIcon sx={{ fontSize: "35px", marginTop: "4px", color: "rgb(208,13,30)" }} />
+                                </Grid>
+                                <Grid item lg={5} md={5} sm={5} xs={5}>
+                                    <p className='pay_text'><b>BANK ACCOUNT</b></p>
+                                </Grid>
+                            </Grid>
+
+                            <Grid container style={{ justifyContent: "center", border: "1px solid lightgray", marginTop: "10px" }} >
+                                <Grid item lg={1} md={1} sm={1} xs={1.5}>
+                                    <FormControlLabel value="cod" name="cod" control={<Radio />} />
+                                </Grid>
+                                <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
+                                    <img src={codIcon} alt="" />
+                                </Grid>
+                                <Grid item lg={5} md={5} sm={5} xs={5}>
+                                    <p className='pay_text'><b>CASH ON DELIVERY</b></p>
+                                </Grid>
+                            </Grid>
+                            <FormHelperText>{helperText}</FormHelperText>
+                            <div style={{ textAlign: "center", marginTop: "30px", marginBottom: "50px" }}>
+                                <Button
+                                    type="submit"
+                                    disabled={loading}
+                                    onClick={handleClick}
+                                    style={{ backgroundColor: "rgb(208,13,30)", color: "white", width: "200px" }}>Place Order
+                                </Button>
+                            </div>
+                        </RadioGroup>
+                    </FormControl>
 
 
-
-                    <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
-                        <Grid item lg={1} md={1} sm={1} xs={1.5}>
-                            <FormControl>
-                                <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="females"
-                                    name="radio-buttons-groups"
-                                >
-                                     <FormControlLabel value="jazcash" name="jaz" control={<Radio />}  />
-                                </RadioGroup>
-                            </FormControl>
-
-                        </Grid>
-                        <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
-                            <img src={payicon2} alt=""/>
-                        </Grid>
-                        <Grid item lg={5} md={5} sm={5} xs={5}>
-                            <p className='pay_text'><b>EASY PAISA</b></p>
-                        </Grid>
-                    </Grid>
-
-
-                    <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
-                        <Grid item lg={1} md={1} sm={1} xs={1.5}>
-                            <FormControl>
-                                <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="females"
-                                    name="radio-buttons-groups"
-                                >
-                                     <FormControlLabel value="jazcash" name="jaz" control={<Radio />}  />
-                                </RadioGroup>
-                            </FormControl>
-
-                        </Grid>
-                        <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
-                        <img src={payicon3} alt=""/>
-                          
-                        </Grid>
-                        <Grid item lg={5} md={5} sm={5} xs={5}>
-                            <p className='pay_text'><b>BANK ACCOUNT</b></p>
-                        </Grid>
-                    </Grid>
-
-                    <Grid container style={{ justifyContent: "center", border: "1px solid lightgray" ,marginTop:"10px"}} >
-                        <Grid item lg={1} md={1} sm={1} xs={1.5}>
-                            <FormControl>
-                                <RadioGroup
-                                    aria-labelledby="demo-radio-buttons-group-label"
-                                    defaultValue="females"
-                                    name="radio-buttons-groups"
-                                >
-                                     <FormControlLabel value="jazcash" name="jaz" control={<Radio />}  />
-                                </RadioGroup>
-                            </FormControl>
-
-                        </Grid>
-                        <Grid item lg={2.5} md={2.5} sm={2.5} xs={2.5} className="payicon">
-                        <img src={payicon4} alt=""/>
-                       
-                        </Grid>
-                        <Grid item lg={5} md={5} sm={5} xs={5}>
-                            <p className='pay_text'><b>CASH ON DELIVERY</b></p>
-                        </Grid>
-                    </Grid>
-
-                    <div style={{ textAlign: "center", marginTop: "30px", marginBottom: "50px" }}>
-                        <Button
-                            disabled={loading}
-                            onClick={handleClick}
-                            style={{ backgroundColor: "rgb(208,13,30)", color: "white", width: "200px" }}>Place Order
-                        </Button>
-                    </div>
                 </Grid>
             </Grid>
         </Container>

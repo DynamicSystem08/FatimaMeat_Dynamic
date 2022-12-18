@@ -33,6 +33,7 @@ import mutton2 from '../Image/muttonimg2.jpg'
 import mutton3 from '../Image/muttonimg3.jpg'
 import mutton4 from '../Image/muttonimg4.jpg'
 
+//done
 import aseelLogo from '../Image/Products/aseel.jpg'
 import vealLogo from '../Image/Products/veal.jpg'
 import duckLogo from '../Image/Products/duck.jpg'
@@ -300,7 +301,7 @@ const allProducts = [
     },
     {
         id: "mutton-meat",
-        name: "Mutton",
+        name: "Mutton meat",
         images: [muttonLogo, mutton1, mutton2, mutton3, mutton4],
         meatType: [
             {
@@ -386,8 +387,8 @@ const allProducts = [
         }
     },
     {
-        id: "sheep-lamb",
-        name: "Sheep/Lamb",
+        id: "sheep-lamb-meat",
+        name: "Sheep/Lamb meat",
         images: [muttonLogo],
         meatType: [
             {
@@ -461,7 +462,7 @@ const allProducts = [
     },
     {
         id: "beef-meat",
-        name: "Beef",
+        name: "Beef meat",
         images: [beefLogo, beef1, beef2, beef3, beef4],
         meatType: [
             {
@@ -536,8 +537,8 @@ const allProducts = [
         }
     },
     {
-        id: "veel-meat",
-        name: "Veel",
+        id: "veal-meat",
+        name: "Veal meat",
         images: [vealLogo, beef2, beef3, beef4],
         meatType: [
             {
@@ -581,17 +582,17 @@ const allProducts = [
                 img: vealLogo
             },
             {
-                type: "Veel Nalli",
+                type: "Veal Nalli",
                 price: 520,
                 img: vealLogo
             },
             {
-                type: "Veel Soup bones",
+                type: "Veal Soup bones",
                 price: 420,
                 img: vealLogo
             },
             {
-                type: "Veel Liver",
+                type: "Veal Liver",
                 price: 400,
                 img: vealLogo
             },
@@ -604,7 +605,7 @@ const allProducts = [
         minPrice: 400,
         maxPrice: 1850,
         description: [
-            'Fresh and hygienic Veel Meat',
+            'Fresh and hygienic Veal Meat',
         ],
         additionalInformation: {
             weight: "1kg",
