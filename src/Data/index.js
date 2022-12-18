@@ -44,7 +44,7 @@ const allProducts = [
     {
         id: "desi-aseel-meat",
         name: "Desi Aseel Meat",
-        images: [aseelLogo, chicken2, chicken3, chicken4],
+        images: [aseelLogo],
         meatType: [
             {
                 type: "Desi Murghi 1.25KG",
@@ -202,7 +202,7 @@ const allProducts = [
     {
         id: "rabbit-meat",
         name: "Rabbit Meat",
-        images: [rabbitLogo, rabbit1, rabbit2, rabbit3, rabbit4],
+        images: [rabbitLogo, rabbit1, rabbit2],
         meatType: [
             {
                 type: "Rabbit / Kg",
@@ -234,7 +234,7 @@ const allProducts = [
     {
         id: "camel-meat",
         name: "Camel Meat",
-        images: [camelLogo, camel4, camel1, camel2, camel3],
+        images: [camelLogo],
         meatType: [
             {
                 type: "Prime Boneless (Cube zero fat)",
@@ -303,7 +303,7 @@ const allProducts = [
     {
         id: "mutton-meat",
         name: "Mutton meat",
-        images: [muttonLogo, mutton1, mutton2, mutton3, mutton4],
+        images: [muttonLogo],
         meatType: [
             {
                 type: "Mutton Chops",
