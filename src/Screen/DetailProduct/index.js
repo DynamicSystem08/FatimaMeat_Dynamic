@@ -32,7 +32,6 @@ import {
   FreeMode, Navigation, Thumbs
 } from "swiper";
 
-
 function ProductDetail() {
   // new slider
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
@@ -86,6 +85,7 @@ function ProductDetail() {
   }
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     const result = allProducts.filter((item) => {
       if (item.id == id) {
         return item
@@ -95,6 +95,7 @@ function ProductDetail() {
   }, [])
 
   useEffect(() => {
+    window.scrollTo(0, 0)
     if (selectedMeatType.price) {
       setOrderDetails({ ...orderDetails, meatType: selectedMeatType })
     }
@@ -102,20 +103,6 @@ function ProductDetail() {
       setOrderDetails({ ...orderDetails, name: id })
     }
   }, [selectedMeatType, quantity])
-
-  // useEffect(() => {
-  //   if (selectedMeatType.price) {
-  //     setOrderDetails({ ...orderDetails, meatType: selectedMeatType })
-  //   }
-  //   else {
-  //     setOrderDetails({ ...orderDetails, name: id })
-  //   }
-  // }, [selectedMeatType, quantity])
-
-  if (!data) {
-    return <div>Loading...</div>
-  }
-
 
   const objImage = [
     "https://swiperjs.com/demos/images/nature-1.jpg",
@@ -126,12 +113,12 @@ function ProductDetail() {
 
   return <div style={{ paddingTop: "120px", paddingBottom: "50px" }} className="bg_card">
     <Container style={{ paddingTop: "50px", paddingBottom: "50px" }}>
-      <h1 style={{ textAlign: "center", fontStyle: "Garamond,serif", marginBottom: "30px" }}><b>{data.name}</b></h1>
+      <h1 style={{ textAlign: "center", fontStyle: "Garamond,serif", marginBottom: "30px" }}>
+        <b>{data && data.name}</b>
+      </h1>
 
       <Grid container className="product_detail_main">
         <Grid item lg={5.5} md={5.5} sm={5.5} xs={12} className="product_detail_slider">
-
-
 
           <>
             <Swiper
@@ -175,10 +162,10 @@ function ProductDetail() {
               <SwiperSlide>
                 <img src="https://swiperjs.com/demos/images/nature-10.jpg" />
               </SwiperSlide> */}
-              {data.images.map((item, index) => {
+              {data && data.images.map((item, index) => {
                 return <div key={index}>
                   <SwiperSlide sx={{ color: "red" }}>
-                    <img src={item} alt=""  />
+                    <img src={item} alt="" />
                   </SwiperSlide>
                 </div>
               })}
@@ -192,7 +179,7 @@ function ProductDetail() {
               modules={[FreeMode, Navigation, Thumbs]}
               className="mySwiper"
             >
-              {data.images.map((item, index) => {
+              {data && data.images.map((item, index) => {
                 return <div key={index}>
                   <SwiperSlide sx={{ color: "red" }}>
                     <img src={item} alt="" />
@@ -263,10 +250,12 @@ function ProductDetail() {
               })}
             </Swiper>
           </> */}
-
         </Grid>
+
         <Grid item lg={5.5} md={5.5} sm={5.5} xs={10} className="product_detail_text">
-          <p>{data.minPrice} - {data.maxPrice}</p>
+          {
+            data && <p>{data.minPrice} - {data.maxPrice}</p>
+          }
           <Grid container>
             <Grid item lg={4} md={4} sm={4} xs={5}>
               <p style={{ fontSize: "20px", marginTop: "5px", cursor: "pointer" }}><b>Meat Type</b></p>
@@ -281,7 +270,7 @@ function ProductDetail() {
                 >
                   <MenuItem value={{ type: "Choose An Option", price: false }}>Choose An Option</MenuItem>
                   {
-                    data.meatType.map((item, index) => {
+                    data && data.meatType.map((item, index) => {
                       return <MenuItem key={index} value={item}>{item.type}</MenuItem>
                     })
                   }
@@ -291,7 +280,7 @@ function ProductDetail() {
           </Grid>
           <hr style={{ marginTop: "50px" }}></hr>
           {
-            selectedMeatType.price && <p>Rs {selectedMeatType.price}</p>
+            data && selectedMeatType.price && <p>Rs {selectedMeatType.price}</p>
           }
           <Grid container style={{ marginBottom: "25px" }}>
             <Grid item lg={2} md={2} sm={3} xs={4} className="detail_product_input">
@@ -346,9 +335,9 @@ function ProductDetail() {
       {
         screen == 'description' && <Grid container style={{ backgroundColor: "white", paddingBottom: "0px" }} className="b">
           <Grid item lg={10} md={10} sm={10} xs={10} className="Rabbit_meat_ul" npn>
-            <p>{data.name}</p>
+            <p>{data && data.name}</p>
             <ul>
-              {data.description.map((item, index) => {
+              {data && data.description.map((item, index) => {
                 return <li key={index}>{item}</li>
               })}
             </ul>

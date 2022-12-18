@@ -59,7 +59,7 @@ import { useNavigate } from 'react-router-dom';
 import "./index.css"
 export default function AllOurMeat() {
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
     useEffect(() => {
         window.scrollTo(0, 0)
