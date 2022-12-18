@@ -42,7 +42,17 @@ import duck1 from "../../Image/duckimg1.jpg"
 import duck2 from "../../Image/duckimg2.jpg"
 import duck3 from "../../Image/duckimg3.jpg"
 import duck4 from "../../Image/duckimg4.jpg"
+import aseelchicken1 from "../../Image/aseelChicenicon1.png"
+import aseelchicken2 from "../../Image/aseelChicenicon2.png"
+import aseelchicken3 from "../../Image/aseelChicenicon3.jpg"
+import aseelchicken4 from "../../Image/aseelChicenicon4.png"
+import vealimg1 from "../../Image/vealimg1.jpg"
+import vealimg2 from "../../Image/vealimg2.jpg"
+import vealimg3 from "../../Image/vealimg3.jpg"
+import vealimg4 from "../../Image/vealimg4.jpg"
+import vealicon from "../../Image/vealmeaticon.png"
 import duckicon from "../../Image/duckimg.png"
+import aseelchickenicon from "../../Image/aseelChickenicon.png"
 
 import { useNavigate } from 'react-router-dom';
 
@@ -51,9 +61,9 @@ export default function AllOurMeat() {
 
     const navigate = useNavigate()
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
 
     return <div style={{ backgroundColor: "white" }} className="product_background_image">
         <MetaData title="Fatima Meat | Our Meat" />
@@ -401,10 +411,10 @@ export default function AllOurMeat() {
 
 
             {/* {Aseel Chicken} */}
-            {/* <Grid
+         <Grid
                 container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
                 <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
-                    <img src={fish} alt="" />
+                    <img src={aseelchickenicon} alt="" />
                 </Grid>
                 <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
                     <h1>Aseel Chicken</h1>
@@ -415,39 +425,87 @@ export default function AllOurMeat() {
             >
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
-                        <img src={duck1} alt="Nature" style={{ width: "100%" }} />
+                        <img src={aseelchicken1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes1">
-                            <p>Duck Whole Carcass</p>
+                            <p>Aseel Chicken Whole Carcass</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
-                        <img src={duck2} alt="Nature" style={{ width: "100%" }} />
+                        <img src={aseelchicken4} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes1">
-                            <p>Duck Breast Boneless</p>
+                            <p>Aseel Chicken Breast Boneless</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
-                        <img src={duck3} alt="Nature" style={{ width: "100%" }} />
+                        <img src={aseelchicken3} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes1">
-                            <p>Duck Wings</p>
+                            <p>Aseel Chicken Wings</p>
                         </div>
                     </div>
                 </Grid>
                 <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
                     <div class="container_Recipes">
-                        <img src={duck4} alt="Nature" style={{ width: "100%" }} />
+                        <img src={aseelchicken2} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes1">
-                            <p>Duck Bone-Less</p>
+                            <p>Aseel Chicken Bone-Less</p>
                         </div>
                     </div>
                 </Grid>
-            </Grid> */}
+            </Grid>
 
 
+
+
+            {/* {veal meat} */}
+            <Grid
+                container style={{ borderBottom: "2px solid rgb(208,13,30)", marginTop: "10px" }}>
+                <Grid item lg={0.9} md={0.9} sm={1.4} xs={3} className="our_meat_img1">
+                    <img src={vealicon} alt="" />
+                </Grid>
+                <Grid item lg={2} md={2.5} sm={2.5} xs={2.5} className="our_meat_text2">
+                    <h1>Veal</h1>
+                </Grid>
+            </Grid>
+
+            <Grid container className='Conatainer_Recipes'
+            >
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
+                    <div class="container_Recipes">
+                        <img src={vealimg1} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes1">
+                            <p>Veal Whole Carcass</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
+                    <div class="container_Recipes">
+                        <img src={vealimg2} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes1">
+                            <p>Veal Breast Boneless</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
+                    <div class="container_Recipes">
+                        <img src={vealimg3} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes1">
+                            <p>Veal Wings</p>
+                        </div>
+                    </div>
+                </Grid>
+                <Grid item lg={2.7} md={2.5} sm={4.7} xs={12}>
+                    <div class="container_Recipes">
+                        <img src={vealimg4} alt="Nature" style={{ width: "100%" }} />
+                        <div class="text-block_Recipes1">
+                            <p>Veal Bone-Less</p>
+                        </div>
+                    </div>
+                </Grid>
+            </Grid>
 
 
         </Container>

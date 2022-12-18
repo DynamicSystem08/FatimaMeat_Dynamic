@@ -114,7 +114,9 @@ function Footer() {
                                 <LocationOnIcon style={{ fontSize: "40px", color: "rgba(208,13,30)" }} />
                             </Grid>
                             <Grid item lg={10} xs={10}>
-                                <text style={{ color: "white" }}>Suite G/5/5, 3rd Floor Mansoor Tower, Clifton Block 9, Karachi, Pakistan</text>
+                                <text style={{ color: "white" }}>Plaza no 3, Phase 6 commercial dha, Lahore<br></br>
+                                Building no 68, Shop no 1, bukhari commercial, dha, Karachi
+                                </text>
                             </Grid>
                         </Grid>
                         <Grid container style={{ marginTop: "30px" }}>

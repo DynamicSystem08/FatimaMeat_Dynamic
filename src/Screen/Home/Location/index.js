@@ -36,12 +36,12 @@ function Location() {
                     </Grid>
                 </Grid>
                 <Grid container className='our_location'>
-                    <Grid item lg={2.7} md={4} sm={5.5} xs={12} className="our_location_text">
+                    <Grid item lg={3.3} md={3.5} sm={3.5} xs={12} className="our_location_text">
                         <Grid container>
-                            <Grid item lg={2.5} >
+                            <Grid item lg={2.5} md={2} sm={2.5}>
                                 <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
-                            <Grid item lg={3} xs={7.5} className="location_text">
+                            <Grid item lg={3} md={4} sm={6} xs={7.5} className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={handleShows}>
                                     KARACHI
                                 </Button>
@@ -60,18 +60,18 @@ function Location() {
                                     {/* <hr></hr> */}
                                 </Modal>
                             </Grid>
-                            <Grid item lg={3}></Grid>
-                            <Grid item lg={2}>
+                            <Grid item lg={3} md={3}></Grid>
+                            <Grid item lg={2} md={2}>
                                 <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item lg={2.7} md={4} sm={5.5} xs={12} className="our_location_text">
+                    <Grid item lg={3.3} md={3.5} sm={3.5} xs={12} className="our_location_text">
                         <Grid container>
-                            <Grid item lg={2.5}>
+                            <Grid item lg={2.5} md={2} sm={2.5}>
                                 <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
-                            <Grid item lg={3} xs={7.5} className="location_text">
+                            <Grid item lg={3} md={7} sm={6} xs={7.5} className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={lahoreLocation}>
                                     LAHORE
                                 </Button>
@@ -90,17 +90,17 @@ function Location() {
                                 </Modal>
                             </Grid>
                             <Grid item lg={3}></Grid>
-                            <Grid item lg={2}>
+                            <Grid item lg={2} md={2}>
                                 <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item lg={2.7} sm={5.5} md={4} xs={12} className="our_location_text">
+                    <Grid item lg={3.3}  md={3.5} sm={3.5} xs={12} className="our_location_text">
                         <Grid container>
-                            <Grid item lg={2.5}>
+                            <Grid item lg={2.5} md={2} sm={2.5}>
                                 <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
-                            <Grid item lg={3} xs={7.5} className="location_text">
+                            <Grid item lg={3} md={7} xs={7.5} sm={6} className="location_text">
                                 <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={RwalpindiLocation}>
                                     RAWALPINDI
                                 </Button>
@@ -126,51 +126,12 @@ function Location() {
                                 </Modal>
                             </Grid>
                             <Grid item lg={3}></Grid>
-                            <Grid item lg={2}>
+                            <Grid item lg={2} md={2}>
                                 <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
                             </Grid>
                         </Grid>
                     </Grid>
-                    <Grid item lg={2.7} md={4} sm={5.5} xs={12} className="our_location_text">
-                        <Grid container>
-                            <Grid item lg={2.5} >
-                                <FmdGoodIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
-                            </Grid>
-                            <Grid item lg={3} xs={7.5} className="location_text">
-                                <Button style={{ backgroundColor: "transparent", color: "black", border: "none", marginTop: "-3px" }} onClick={gurJawala}>
-                                    GURJANAWALA
-                                </Button>
-                                <Modal
-                                    show={gurjawala}
-                                    onHide={gurJawalaClose}
-                                    backdrop="static"
-                                    keyboard={false}
-                                >
-                                    <Modal.Header closeButton>
-                                        <Modal.Title>GUJRANWALA</Modal.Title>
-                                    </Modal.Header>
-                                    <Modal.Body>
-                                        I will not close if you click outside me. Don't even try to press
-                                        escape key.
-                                    </Modal.Body>
-                                    <Modal.Body>
-                                        I will not close if you click outside me. Don't even try to press
-                                        escape key.
-                                    </Modal.Body>
-                                    {/* <Modal.Footer>
-                                    <Button variant="secondary" onClick={gurJawalaClose}>
-                                        Close
-                                    </Button>
-                                    <Button variant="primary">Understood</Button>
-                                </Modal.Footer> */}
-                                </Modal>
-                            </Grid>
-                            <Grid item lg={3}></Grid>
-                            <Grid item lg={2}>
-                                <AddIcon style={{ fontSize: "55px", paddingLeft: "12px", color: "rgb(208,13,30)" }} />
-                            </Grid>
-                        </Grid>
-                    </Grid>
+                   
                 </Grid>
             </Container>
         </div>
