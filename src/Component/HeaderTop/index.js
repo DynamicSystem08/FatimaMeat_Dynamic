@@ -18,7 +18,7 @@ function HeaderTop(props) {
                         {/* <Grid item lg={2} md={2} xs={2} style={{paddingRight:"30px"}}>
                             <CallIcon style={{ color: "rgba(213,188,157,0.9)",paddingTop: "3px", backgroundColor: "white", borderRadius: "50%" }} />
                         </Grid> */}
-                        <Grid item lg={10} md={12} sm={12}style={{ paddingTop: "3px", paddingBottom: "5px", color: "white" }}>
+                        <Grid item lg={10} md={12} sm={12}xs={12} style={{ paddingTop: "3px", paddingBottom: "5px", color: "white" }}>
                             <text>Call : 042-111-FATIMA</text>
                         </Grid> 
                     </Grid>
@@ -27,7 +27,7 @@ function HeaderTop(props) {
                 <Grid item lg={1.5} md={1.5} sm={2} xs={3}>
                     <text style={{ color: "white" }}>CONTACT US</text>
                 </Grid>
-                <Grid item lg={2} md={2} sm={1.5} xs={9}>
+                <Grid item lg={2} md={2} sm={1.5} xs={10}>
                     <Grid container>
                         {/* <p style={{color:"white",paddingTop:"2px",cursor:"pointer"}}>Login/Register</p> */}
                         {
