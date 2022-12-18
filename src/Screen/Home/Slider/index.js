@@ -157,9 +157,9 @@ function Slider() {
                 <Grid item lg={5.5} md={6} sm={5.5} xs={12} className="about_us">
                     <img src={aboutUs}
 
-                        data-aos="fade-left"
-                        data-aos-offset="300"
-                        data-aos-easing="ease-in"
+                        // data-aos="fade-left"
+                        // data-aos-offset="300"
+                        // data-aos-easing="ease-in"
                     />
                 </Grid>
             </Grid>

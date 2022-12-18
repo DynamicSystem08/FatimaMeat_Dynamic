@@ -178,7 +178,7 @@ function ProductDetail() {
               {data.images.map((item, index) => {
                 return <div key={index}>
                   <SwiperSlide sx={{ color: "red" }}>
-                    <img src={item} alt="" />
+                    <img src={item} alt=""  />
                   </SwiperSlide>
                 </div>
               })}

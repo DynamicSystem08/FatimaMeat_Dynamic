@@ -5,6 +5,7 @@ body {
   height: 100%;
 }
 
+
 body {
   background: #eee;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
@@ -208,4 +209,14 @@ body {
   .product_detail_text p {
     margin-top: -30px;
   }
+}
+.swiper-button-next:after, .swiper-button-prev:after {
+  font-family: swiper-icons;
+  font-size: var(--swiper-navigation-size);
+  text-transform: none!important;
+  letter-spacing: 0;
+  font-feature-settings: ;
+  font-variant: initial;
+  line-height: 1;
+  color: transparent;
 }

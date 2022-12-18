@@ -16,6 +16,10 @@
         margin-left: 50%;
     }
 
+    .responsive_headerp {
+        margin-left: 50%;
+    }
+
     .responsive_header1 {
         margin-left: 50%;
         margin-bottom: 10%;
@@ -23,51 +27,82 @@
     }
 
     .responsive_header2 {
-        margin-left: 50%;
+        margin-left: 45%;
         margin-top: -10%;
     }
+        .responsive_headero {
+        margin-left: 45%;
+    }
 
-    #img1 {
-        margin-left: 55%;
+    .responsive_headerc {
+        margin-left: 45%;
 
     }
-    .responsive_top_header
-    {
-        margin-top:-18px;
+
+    #img101 {
+        margin-left:52%;
+
     }
-    .me-auto my-2 my-lg-0 {
-        height: 500px;
+
+    .responsive_top_header {
+        margin-top: -18px;
+    }
+
+    #b {
+        height: 330px;
     }
 }
 
 @media (max-width:414px) {
     .responsive_header {
-        margin-left:40%;
+        margin-left: 39%;
     }
 
     .responsive_header1 {
-        margin-left: 40%;
+        margin-left: 45%;
         margin-bottom: 20%;
 
     }
 
     .responsive_header2 {
-        margin-left: 35%;
-        margin-top: -25%;
+        margin-left: 45%;
+        margin-top: -6%;
     }
 
-    #img1 {
-        padding-left: 30%;
-        width: 80%;
-        height: 20%;
+    #img101 {
+        margin-left:30%;
+        height: 120px;
+        width: 120px;
+        margin-top:-14%;
+        /* width: 100%; */
+        /* height: 20%; */
+        /* margin-left: 30%; */
 
     }
-    .responsive_top_header
-    {
-        margin-top:-18px;
+
+    .responsive_top_header {
+        margin-top: -18px;
     }
-    #b{
-        height: 500px;
+
+    .responsive_header {
+        margin-top: -35px;
+        margin-bottom:1px;
+    }
+
+    .responsive_headerp {
+        margin-left: 46%;
+
+    }
+
+    .responsive_headero {
+        margin-left: 45%;
+        /* margin-top: -42%; */
+    }
+
+    .responsive_headerc {
+        margin-left: 45%;
+        /* margin-top: -28%; */
+
     }
 }
 
@@ -81,6 +116,19 @@
     /* .text_Header{
     margin      -left: 40px;
    } */
+}
+
+#b {
+    height: 87px;
+    width: 100%;
+    font-size: 20px;
+    background-color: rgb(25, 25, 25);
+}
+
+@media (max-width:414px) {
+    #b {
+        height: 180px;
+    }
 }
 
 .navbar {
@@ -106,4 +154,5 @@
     --bs-navbar-toggler-transition: box-shadow 0.15s ease-in-out;
     position: relative;
     margin-top: 40px;
+
 }
