@@ -4,6 +4,8 @@ import Button from '@mui/material/Button';
 
 import { useEffect } from 'react'
 
+import MetaData from '../../Component/MetaData';
+
 import Mutton from "../../Image/cardimg3.png"
 import beef from "../../Image/cardimg2.png"
 import chicken from "../../Image/cardimg4.png"
@@ -54,6 +56,7 @@ export default function AllOurMeat() {
     }, [])
 
     return <div style={{ backgroundColor: "white" }} className="product_background_image">
+        <MetaData title="Fatima Meat | Our Meat" />
 
         {/* Meat Product */}
         <Container style={{ paddingTop: "130px", paddingBottom: "10px" }}>

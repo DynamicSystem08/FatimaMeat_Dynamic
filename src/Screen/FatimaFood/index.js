@@ -13,7 +13,7 @@ export default function ZabeehaShop() {
   })
 
   return <div style={{ marginTop: "10px", backgroundColor: "white", paddingBottom: "20px" }}>
-    <MetaData title="Fatima Meat | Fatima Foods" />
+    <MetaData title="Fatima Meat | Contact Us" />
     <Grid container>
       <Grid item lg={12} className="our_shop_bg">
         <h1 className='our_meat_text1' style={{ padding: "100px", color: "white", fontWeight: "900" }}>Our Shop</h1>

@@ -16,7 +16,7 @@ export default function Product() {
     }, [])
 
     return <div style={{ marginTop: "-10px", backgroundColor: "white" }} >
-        <MetaData title="Fatima Meat | Our Meat" />
+        <MetaData title="Fatima Meat | Products" />
         <Container>
             <h1 style={{ paddingTop: "100px", fontFamily: " Garamond, serif", fontWeight: "900" }}>SHOP</h1>
 

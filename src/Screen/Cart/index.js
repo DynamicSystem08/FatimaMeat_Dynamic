@@ -7,6 +7,8 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux'
 import { updateCartItems, removeCartItems } from '../../store/slices/cartSlice'
 
+import MetaData from '../../Component/MetaData';
+
 import swal from 'sweetalert';
 import img1 from "../../Image/footerimg.jpg"
 import "./index.css"
@@ -53,6 +55,8 @@ function Cart() {
     }, [])
 
     return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }} className="">
+        <MetaData title="Fatima Meat | Cart" />
+        
         <Container>
             <div className='Scroll_card'>
                 <Grid container className='card_detail_main'>
