@@ -148,7 +148,7 @@ function Slider() {
             <Grid container style={{ textAlign: "center", marginTop: "50px", justifyContent: "center" }}>
                 <Grid item lg={5.5} md={5.5} sm={6} xs={11} className="about_text" >
                     <h1 style={{ textAlign: "start" }}>About Us</h1>
-                    <p>Launched in February 2014, Fatima Meat is a special chain of retail stores which provides its customers with fresh, healthy and quality meat in the most affordable rates. Our primary objective is to provide customers with premium quality meat processed in a hygienic environment. Also, we offer customers with a wide range of products to choose from which includes beef, mutton and chicken. With Fatima Meat, you name it and we have it!</p>
+                    <p>Launched in February 2016, Fatima Meat is a special chain of retail stores which provides its customers with fresh, healthy and quality meat in the most affordable rates. Our primary objective is to provide customers with premium quality meat processed in a hygienic environment. Also, we offer customers with a wide range of products to choose from which includes beef, mutton and chicken. With Fatima Meat, you name it and we have it!</p>
                 </Grid>
                 <Grid item lg={1} md={0.5} sm={0.5}></Grid>
                 <Grid item lg={5.5} md={6} sm={5.5} xs={12} className="about_us">

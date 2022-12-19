@@ -124,7 +124,7 @@ function Footer() {
                                 <CallIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
                             <Grid item lg={10} xs={10}>
-                                <text style={{ color: "white" }}>PH: 042-111-FATIMA</text>
+                                <text style={{ color: "white" }}>PH: 042-111-FATIMA-328462</text>
                             </Grid>
                         </Grid>
                         <Grid container style={{ marginTop: "30px" }}>
@@ -144,7 +144,7 @@ function Footer() {
             <Container>
                 <Grid container>
                     <Grid item lg={10} md={10} sm={10} xs={10.5}>
-                        <p style={{ color: "white", paddingTop: "5px" }}>Copyright 2022 © www.FatimaMeat.com
+                        <p style={{ color: "white", paddingTop: "5px" }}>Copyright 2022 © DynamicSystem.org
                         </p>
                     </Grid>
                     <Grid item lg={1} md={1} sm={1} xs={1}>

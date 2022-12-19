@@ -85,7 +85,7 @@ function NavScrollExample() {
                 </Grid>
               </Grid>
               {/* <Grid item lg={0.5}></Grid> */}
-              <Grid item lg={1.4} md={2} sm={5} xs={12} className="logo_img">
+              <Grid item lg={1.4} md={1.5} sm={5} xs={12} className="logo_img">
                 <img src={logo} alt="" id="img101" />
               </Grid>
               <Grid item lg={0.6} md={0.6}></Grid>
@@ -101,13 +101,13 @@ function NavScrollExample() {
                 </Grid>
               </Grid>
 
-              <Grid item lg={2.3} md={1.8} sm={10} xs={10} onClick={() => navigate("/ourMeat")} style={{ cursor: "pointer" }} className="text_Header">
+              <Grid item lg={2.3} md={2} sm={10} xs={10} onClick={() => navigate("/ourMeat")} style={{ cursor: "pointer" }} className="text_Header">
                 {/* <p className='responsive_headero'>OUR MEAT</p> */}
                 <Grid container>
-                  <Grid item lg={1.4} md={2.3} xs={3}>
+                  <Grid item lg={1.4} md={2.5} xs={3}>
                     <KebabDiningIcon className="HEADER_ICON1" />
                   </Grid>
-                  <Grid item lg={9} xs={8}>
+                  <Grid item lg={9} md={7} xs={8}>
                     <p className='responsive_header'>CORPORATE PRODUCT</p>
                   </Grid>
                 </Grid>
