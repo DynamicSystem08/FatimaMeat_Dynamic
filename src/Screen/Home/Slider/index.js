@@ -18,7 +18,7 @@ import sliderchicken from "../../../Image/sliderchickenimg102.png"
 
 
 function Slider() {
-    return <div  className="slider_bg_icon">
+    return <div className="slider_bg_icon">
         <div className='slider_main1'></div>
         <div style={{ marginTop: "-90px" }} >
             <Container>
@@ -96,10 +96,10 @@ function Slider() {
         </div>
         <Container>
             <Grid container style={{ marginTop: "50px", justifyContent: "center" }}>
-                <Grid item lg={3} md={3} sm={5} xs={10} 
-                
+                <Grid item lg={3} md={3} sm={5} xs={10}
+
                 >
-                    <Grid container>
+                    <Grid container data-aos="flip-right" style={{ transition: "1s" }}>
                         <Grid item lg={2.5} md={2.5} sm={2} xs={3}>
                             <LocalShippingIcon sx={{ fontSize: "43px", marginTop: "10px", color: "rgb(208,13,30)" }} />
                         </Grid>
@@ -133,7 +133,7 @@ function Slider() {
                     </Grid>
                 </Grid>
                 <Grid item lg={3} md={3} sm={5} xs={10}>
-                    <Grid container>
+                    <Grid container data-aos="flip-right" style={{ transition: "1s" }}>
                         <Grid item lg={2.6} md={2.2} sm={2.5} xs={3}>
                             <PhonelinkLockIcon sx={{ fontSize: "43px", marginTop: "10px", color: "rgb(208,13,30)" }} />
                         </Grid>
@@ -156,8 +156,8 @@ function Slider() {
                 <Grid item lg={1} md={0.5} sm={0.5}></Grid>
                 <Grid item lg={5.5} md={6} sm={5.5} xs={12} className="about_us">
                     <img src={aboutUs}
-data-aos="fade-up"
-data-aos-duration="2400"
+                        data-aos="fade-up"
+                        data-aos-duration="2400"
                     />
                 </Grid>
             </Grid>

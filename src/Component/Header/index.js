@@ -8,6 +8,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { useNavigate } from 'react-router-dom';
 import logo from "../../Image/logo5.png"
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import "./index.css"
 import Grid from '@mui/material/Grid';
 
@@ -64,9 +65,8 @@ function NavScrollExample() {
                 <p className='responsive_headero'>OUR MEAT</p>
               </Grid>
               <Grid item lg={1} md={1} xs={10} onClick={() => navigate("/cart")} style={{ cursor: "pointer" }} className="text_Header">
-                <p className='responsive_headerc'> CART</p>
+                <p className='responsive_headerc'> <ShoppingCartIcon style={{fontSize:"35px",marginTop:"-10px"}}/></p>
               </Grid>
-
             </Grid>
           </Nav>
           {/* <Form className="d-flex">
