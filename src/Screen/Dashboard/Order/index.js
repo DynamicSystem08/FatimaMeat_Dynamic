@@ -23,7 +23,6 @@ import Button from '@mui/material/Button';
 
 function Dashboard() {
 
-
     function createData(name, calories, fat, carbs, protein) {
         return { name, calories, fat, carbs, protein };
     }
@@ -36,13 +35,12 @@ function Dashboard() {
         createData('Order Date', 356, 16.0, 49, 3.9),
     ];
 
-
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
-    const [screen, setScreen] = useState()
+    const [data, setData] = useState()
 
-    const reduxAllOrders = useSelector(state => state.orderReducer.allOrders)
+    const reduxOrders = useSelector(state => state.orderReducer.allOrders)
     const reduxUser = useSelector(state => state.userReducer.user)
 
     const callData = async () => {
@@ -55,20 +53,22 @@ function Dashboard() {
 
     useEffect(() => {
         if (reduxUser.email == "admin@fatimameat.com") {
-            console.log("admin")
             callData()
         }
         else {
-            console.log("user")
             callCurentUserOrders()
         }
-    }, [])
+    }, [data])
 
     if (!reduxUser) {
         return
     }
 
-    return <div className="slider_bg_icon">
+    if (reduxOrders == "undefined") {
+        return <div>loading</div>
+    }
+
+    return <div div className="slider_bg_icon">
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
                 <Grid item lg={3} md={3.5} sm={4} xs={12} style={{ padding: "20px",backgroundColor:"white" }} className="side_bar_dashboadr">
@@ -103,27 +103,9 @@ function Dashboard() {
 
 
                 <Grid item lg={8} md={7} sm={7} xs={12} style={{ paddingTop: "50px" }}>
-                    {/* <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
-                        <Grid item lg={2} >
-                            <h5>Order Id</h5>
-                        </Grid>
-                        <Grid item lg={3}>
-                            <h5>Customer Name</h5>
-                        </Grid>
-                        <Grid item lg={3}>
-                            <h5>Dilevery Address</h5>
-                        </Grid>
-                        <Grid item lg={2}>
-                            <h5>Order Item</h5>
-                        </Grid>
-                        <Grid item lg={2}>
-                            <h5>Order Date</h5>
-                        </Grid>
-                    </Grid> */}
-
 
                     {
-                        reduxAllOrders ? <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
+                        reduxOrders ? <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
                             <Table sx={{ minWidth: 1400 }} aria-label="simple table" stickyHeader >
                                 <TableHead>
                                     <TableRow>
@@ -138,7 +120,7 @@ function Dashboard() {
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
-                                    {reduxAllOrders[0] && reduxAllOrders.map((row) => (
+                                    {reduxOrders[0] && reduxOrders.map((row) => (
                                         <TableRow
                                             key={row.orderDetails.orderId}
                                             sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
@@ -167,12 +149,13 @@ function Dashboard() {
                                                                     .then((willDelete) => {
                                                                         if (willDelete) {
                                                                             markCompletedOrder(row.docId, row.orderDetails)
-                                                                                .then((data) => console.log(data))
+                                                                                .then((data) => {
+                                                                                    swal("Order marked as completed", {
+                                                                                        icon: "success",
+                                                                                    });
+                                                                                    setData(data)
+                                                                                })
                                                                                 .catch(e => console.log(e))
-                                                                            swal("Order marked as completed", {
-                                                                                icon: "success",
-                                                                            });
-                                                                            window.location.reload()
                                                                         }
                                                                     });
                                                             }
@@ -190,12 +173,13 @@ function Dashboard() {
                                                                     .then((willDelete) => {
                                                                         if (willDelete) {
                                                                             markPendingOrder(row.docId, row.orderDetails)
-                                                                                .then((data) => console.log(data))
+                                                                                .then((data) => {
+                                                                                    swal("Order marked as pending", {
+                                                                                        icon: "success",
+                                                                                    });
+                                                                                    setData(data)
+                                                                                })
                                                                                 .catch(e => console.log(e))
-                                                                            swal("Order marked as pending", {
-                                                                                icon: "success",
-                                                                            });
-                                                                            window.location.reload()
                                                                         }
                                                                     });
                                                             }
@@ -230,7 +214,6 @@ function Dashboard() {
                                                             </TableCell>
                                                         }
                                                     </div>
-
                                             }
 
                                         </TableRow>
@@ -248,37 +231,7 @@ function Dashboard() {
                             </div>
                     }
 
-
-                    {/* {reduxAllOrders ? reduxAllOrders.map((item) => {
-                        return <div>
-                            <Grid container style={{ justifyContent: "center" }}>
-                                <Grid item lg={2} >
-                                    <p> {item.orderId} </p>
-                                </Grid>
-                                <Grid item lg={3}>
-                                    <p> {item.CustomerName} </p>
-
-                                </Grid>
-                                <Grid item lg={3}>
-                                    <p> {item.orderId} </p>
-
-                                </Grid>
-                                <Grid item lg={2}>
-                                    <p> {item.orderNumber} </p>
-
-                                </Grid>
-                                <Grid item lg={2}>
-                                    <p> {item.orderDate} </p>
-
-                                </Grid>
-                            </Grid>
-                        </div>
-                    })
-                        :
-                        <div>No Data Found</div>
-                    } */}
                 </Grid>
-
 
             </Grid>
         </Container>

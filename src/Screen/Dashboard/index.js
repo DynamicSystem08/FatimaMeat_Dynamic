@@ -15,7 +15,6 @@ function Dashboard() {
     const navigate = useNavigate()
     const dispatch = useDispatch()
     const user = useSelector(state => state.userReducer.user)
-    console.log(user)
 
     // if (!user) {
     //     navigate('/auth')
@@ -65,9 +64,18 @@ function Dashboard() {
                     <Grid container style={{ justifyContent: "center", marginBottom: "20px" }}>
                         {
                             user && <p>
-                                Hello {user.displayName}! not {user.displayName}? Click Here To Logout
-                                From this account's dashboard. You can view your recent orders,
-                                and edit your password and account details.
+                                Hello {user.displayName}! not {user.displayName}?
+                                <>
+                                    Click Here To Logout
+                                </>
+                                From this account's dashboard. You can view
+                                <>
+                                    your recent orders here,
+                                </>
+                                and
+                                <>
+                                    edit your password and account details here.
+                                </>
                             </p>
                         }
 

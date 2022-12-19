@@ -59,11 +59,11 @@ import { useNavigate } from 'react-router-dom';
 import "./index.css"
 export default function AllOurMeat() {
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    // useEffect(() => {
-    //     window.scrollTo(0, 0)
-    // }, [])
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     return <div style={{ backgroundColor: "white" }} className="product_background_image">
         <MetaData title="Fatima Meat | Our Meat" />

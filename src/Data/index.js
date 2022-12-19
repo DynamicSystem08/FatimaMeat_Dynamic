@@ -42,262 +42,155 @@ import sheepLogo from '../Image/Products/sheepLogo.jpg'
 
 const allProducts = [
     {
-        id: "desi-aseel-meat",
-        name: "Desi Aseel Meat",
-        images: [aseelLogo],
+        id: "beef-meat",
+        name: "Beef meat",
+        images: [beefLogo, beef1, beef2, beef3, beef4],
         meatType: [
             {
-                type: "Desi Murghi 1.25KG",
-                price: 1150,
-                img: aseelLogo
-
+                type: "Undercut",
+                price: 2400,
+                img: beefLogo
             },
-            {
-                type: "Desi Murghi Breast / PC",
-                price: 850,
-                img: aseelLogo
-            },
-            {
-                type: "Desi Murghi Qeema / Per serving",
-                price: 999,
-                img: aseelLogo
-            }
-        ],
-        minPrice: 850,
-        maxPrice: 1150,
-        description: [
-            'Asil or Aseel Chicken is an ancient breed which is arrived from India.',
-            'Used for cockfighting.',
-            'Tamed all over the world especially in India and Pakistan.',
-            'Used for making different types of Meat and produces less amount of eggs.',
-            'Has the ability to survive in the cold temperature and can fight against any disease.',
-            'Powerful breed of chicken.',
-            'The breed has superiority over other breeds of chicken, because of its hardness and large fighting body.',
-            'The delicious and intense taste of Meat, rich in nutrients and has low fat.'
-        ],
-        additionalInformation: {
-            weight: "1kg",
-            meatType: "Live, Meat"
-        }
-    },
-    {
-        id: "fish-meat",
-        name: "Fish Meat",
-        images: [fishLogo],
-        meatType: [
-            {
-                type: "Fish 1KG",
-                price: 1000,
-                img: fishLogo
-
-            }
-        ],
-        minPrice: 10,
-        maxPrice: 100,
-        description: [
-            '100% fresh product.'
-        ],
-        additionalInformation: {
-            weight: "1kg",
-            meatType: "Meat"
-        }
-    },
-    {
-        id: "chicken-meat",
-        name: "Chicken Meat",
-        images: [chickenLogo, chicken1, chicken2, chicken3, chicken4],
-        meatType: [
-            {
-                type: "Chicken Breast (Boneless) 250 gm",
-                price: 203,
-                img: chickenLogo
-            },
-            {
-                type: "Whole Chicken with neck & offels",
-                price: 492,
-                img: chickenLogo
-            },
-            {
-                type: "Chicken Karahi cut / 250 gm",
-                price: 127,
-                img: chickenLogo
-            },
-            {
-                type: "Chicken Leg Tikka / 250 gm",
-                price: 125,
-                img: chickenLogo
-            },
-            {
-                type: "Chicken Qorma cut / 250 gm",
-                price: 127,
-                img: chickenLogo
-            },
-            {
-                type: "Chicken Breast Tikka / 250 gm",
-                price: 127,
-                img: chickenLogo
-            },
-            {
-                type: "Chicken Biryani cut/ 250 gm",
-                price: 203,
-                img: chickenLogo
-            },
-            {
-                type: "Chicken minced / 250 gm",
-                price: 203,
-                img: chickenLogo
-            },
-            {
-                type: "Chicken boneless handi Cut cube / 250 gm",
-                price: 203,
-                img: chickenLogo
-            },
-            {
-                type: "Chicken Drum sticks / 500 gm",
-                price: 253,
-                img: chickenLogo
-            },
-        ],
-        minPrice: 125,
-        maxPrice: 1150,
-        description: [
-            'The delicious and intense taste of Meat, rich in nutrients and has low fat.'
-        ],
-        additionalInformation: {
-            weight: "1kg",
-            meatType: "Live, Meat"
-        }
-    },
-    {
-        id: "duck-Meat",
-        name: "Duck Meat",
-        images: [duckLogo],
-        meatType: [
-            // {
-            //     type: "Live",
-            //     price: 2000,
-            //     img: ""
-            // },
-            {
-                type: "Duck Meat",
-                price: 1000,
-                img: duckLogo
-            }
-        ],
-        minPrice: 100,
-        maxPrice: 500,
-        description: [
-            'Per 100 grams, pure duck contains 23.5 grams of protein.',
-            'Excellent source of selenium and zinc, which gives good cellular metabolism.',
-            'Contains higher amounts of iron than other poultry.',
-            'Niacin substances (Vitamin B3) helps to make a smooth human digestive. Every 100 mg of duck Meat contains 5.1 mg of niacin.',
-            'Contains Vitamin B6 which helps in the metabolic system of the gastrointestinal tract.',
-            'Duck Meat can prevent anemia as it contains iron.',
-            'Healthy for your body which is full of nutrition.'
-        ],
-        additionalInformation: {
-            weight: "1kg",
-        }
-    },
-    {
-        id: "rabbit-meat",
-        name: "Rabbit Meat",
-        images: [rabbitLogo, rabbit1, rabbit2],
-        meatType: [
-            {
-                type: "Rabbit / Kg",
-                price: 1500,
-                img: rabbitLogo
-            },
-            {
-                type: "Rabbit / PC",
-                price: 1000,
-                img: rabbitLogo
-            }
-        ],
-        minPrice: 1000,
-        maxPrice: 1500,
-        description: [
-            'One of the best white Meats available on the market today.',
-            'Has a high percentage of easily digestible protein.',
-            'Contains the least amount of fat among all the other available Meats.',
-            'Cholesterol free Meat.',
-            'Has a strong delicious flavor that almost resembles Chicken flavor.',
-            'One of the most productive domestic Livestock animals.',
-            'Rabbits can produce 6 pounds of Meat on the same feed.'
-        ],
-        additionalInformation: {
-            weight: "1kg",
-            meatType: "Live, Meat"
-        }
-    },
-    {
-        id: "camel-meat",
-        name: "Camel Meat",
-        images: [camelLogo],
-        meatType: [
             {
                 type: "Prime Boneless (Cube zero fat)",
                 price: 2000,
-                img: camelLogo
+                img: beefLogo
             },
             {
                 type: "Prime Boneless",
-                price: 1000,
-                img: camelLogo
-
+                price: 1300,
+                img: beefLogo
             },
             {
-                type: "BoneLess (Mix Boti)",
-                price: 2000,
-                img: camelLogo
-
+                type: "Prime With Bone (Mix Boti)",
+                price: 1100,
+                img: beefLogo
             },
             {
                 type: "Mince (Keema)",
-                price: 1000,
-                img: camelLogo
-
+                price: 1350,
+                img: beefLogo
             },
             {
                 type: "Pasanday",
-                price: 2000,
-                img: camelLogo
-
+                price: 1500,
+                img: beefLogo
             },
             {
                 type: "Nehari Cut Boneless",
-                price: 1000,
-                img: camelLogo
-
+                price: 1400,
+                img: beefLogo
             },
             {
-                type: "Nehar Cut With Boneless",
-                price: 2000,
-                img: camelLogo
-
+                type: "Nehari Cut With Bone",
+                price: 1100,
+                img: beefLogo
             },
             {
-                type: "Camel Paya",
-                price: 1000,
-                img: camelLogo
-
-            }
+                type: "Beef Nalli",
+                price: 650,
+                img: beefLogo
+            },
+            {
+                type: "Beef Soup bones",
+                price: 370,
+                img: beefLogo
+            },
+            {
+                type: "Beef Liver",
+                price: 400,
+                img: beefLogo
+            },
+            {
+                type: "Paya / Pc",
+                price: 350,
+                img: beefLogo
+            },
         ],
-        minPrice: 100,
-        maxPrice: 500,
+        minPrice: 350,
+        maxPrice: 2400,
         description: [
-            'Camel Meat has a high proportion of Poly-unsaturated fatty acids.',
-            'Provide great health benefits.',
-            'Different from other red Meats.',
-            'Contains high protein content, iron, zinc, vitamin A and B, and amino acid which is very good to repair body tissues and build new tissues.',
-            'Camel Meat is receiving worldwide interest because of its unique taste and healthy features.',
-            'Has other medical advantages in our body as it protects your body from various dangerous diseases.',
-            'Very beneficial for our healthy body.'
+            'Fresh and hygienic Cow Meat',
         ],
         additionalInformation: {
             weight: "1kg",
-            MeatType: "Prime Boneless (Cube zero fat), Prime Boneless, Boneless (Mix Boti), With Bone (Mix Boti), Mince (Keema), Pasanday, Nehari Cut Boneless, Nehar Cut With Bone (Nalli), Undercut, Camel Paya"
+            MeatType: "Undercut, Prime Boneless (Cube zero fat), Prime Boneless, Boneless (Mix Boti), Prime With Bone (Mix Boti), Mince (Keema), Pasanday, Nehari Cut Boneless, Nehar Cut With Bone (Nalli), Beef Nalli, Beef Soup Bones, Cow Paya"
+        }
+    },
+    {
+        id: "veal-meat",
+        name: "Veal meat",
+        images: [vealLogo, beef2, beef3, beef4],
+        meatType: [
+            {
+                type: "Undercut",
+                price: 1850,
+                img: vealLogo
+            },
+            {
+                type: "Prime Boneless (Cube zero fat)",
+                price: 1450,
+                img: vealLogo
+            },
+            {
+                type: "Prime Boneless",
+                price: 1200,
+                img: vealLogo
+            },
+            {
+                type: "Prime With Bone (Mix Boti)",
+                price: 1050,
+                img: vealLogo
+            },
+            {
+                type: "Mince (Keema)",
+                price: 1030,
+                img: vealLogo
+            },
+            {
+                type: "Pasanday",
+                price: 1450,
+                img: vealLogo
+            },
+            {
+                type: "Nehari Cut Boneless",
+                price: 1150,
+                img: vealLogo
+            },
+            {
+                type: "Nehari Cut With Bone",
+                price: 1000,
+                img: vealLogo
+            },
+            {
+                type: "Veal Nalli",
+                price: 520,
+                img: vealLogo
+            },
+            {
+                type: "Veal Soup bones",
+                price: 420,
+                img: vealLogo
+            },
+            {
+                type: "Veal Liver",
+                price: 400,
+                img: vealLogo
+            },
+            {
+                type: "Paya / Pc",
+                price: 650,
+                img: vealLogo
+            },
+        ],
+        minPrice: 400,
+        maxPrice: 1850,
+        description: [
+            'Fresh and hygienic Veal Meat',
+        ],
+        additionalInformation: {
+            weight: "1kg",
+            MeatType: "Undercut, Prime Boneless (Cube zero fat), Prime Boneless, Boneless (Mix Boti), Prime With Bone (Mix Boti), Mince (Keema), Pasanday, Nehari Cut Boneless, Nehar Cut With Bone (Nalli), Beef Nalli, Beef Soup Bones, Cow Paya"
         }
     },
     {
@@ -461,158 +354,266 @@ const allProducts = [
             MeatType: "Sheep Chops, Sheep Mince (keema), Sheep Raan, Sheep Dasti, Sheep Mix Boti, Sheep Back Chop, Sheep Chakki (Tail Fat)"
         }
     },
+
     {
-        id: "beef-meat",
-        name: "Beef meat",
-        images: [beefLogo, beef1, beef2, beef3, beef4],
+        id: "desi-aseel-meat",
+        name: "Desi Aseel Meat",
+        images: [aseelLogo],
         meatType: [
             {
-                type: "Undercut",
-                price: 2400,
-                img: beefLogo
+                type: "Desi Murghi 1.25KG",
+                price: 1150,
+                img: aseelLogo
+
             },
             {
-                type: "Prime Boneless (Cube zero fat)",
-                price: 2000,
-                img: beefLogo
+                type: "Desi Murghi Breast / PC",
+                price: 850,
+                img: aseelLogo
             },
             {
-                type: "Prime Boneless",
-                price: 1300,
-                img: beefLogo
-            },
-            {
-                type: "Prime With Bone (Mix Boti)",
-                price: 1100,
-                img: beefLogo
-            },
-            {
-                type: "Mince (Keema)",
-                price: 1350,
-                img: beefLogo
-            },
-            {
-                type: "Pasanday",
-                price: 1500,
-                img: beefLogo
-            },
-            {
-                type: "Nehari Cut Boneless",
-                price: 1400,
-                img: beefLogo
-            },
-            {
-                type: "Nehari Cut With Bone",
-                price: 1100,
-                img: beefLogo
-            },
-            {
-                type: "Beef Nalli",
-                price: 650,
-                img: beefLogo
-            },
-            {
-                type: "Beef Soup bones",
-                price: 370,
-                img: beefLogo
-            },
-            {
-                type: "Beef Liver",
-                price: 400,
-                img: beefLogo
-            },
-            {
-                type: "Paya / Pc",
-                price: 350,
-                img: beefLogo
-            },
+                type: "Desi Murghi Qeema / Per serving",
+                price: 999,
+                img: aseelLogo
+            }
         ],
-        minPrice: 350,
-        maxPrice: 2400,
+        minPrice: 850,
+        maxPrice: 1150,
         description: [
-            'Fresh and hygienic Cow Meat',
+            'Asil or Aseel Chicken is an ancient breed which is arrived from India.',
+            'Used for cockfighting.',
+            'Tamed all over the world especially in India and Pakistan.',
+            'Used for making different types of Meat and produces less amount of eggs.',
+            'Has the ability to survive in the cold temperature and can fight against any disease.',
+            'Powerful breed of chicken.',
+            'The breed has superiority over other breeds of chicken, because of its hardness and large fighting body.',
+            'The delicious and intense taste of Meat, rich in nutrients and has low fat.'
         ],
         additionalInformation: {
             weight: "1kg",
-            MeatType: "Undercut, Prime Boneless (Cube zero fat), Prime Boneless, Boneless (Mix Boti), Prime With Bone (Mix Boti), Mince (Keema), Pasanday, Nehari Cut Boneless, Nehar Cut With Bone (Nalli), Beef Nalli, Beef Soup Bones, Cow Paya"
+            meatType: "Live, Meat"
         }
     },
     {
-        id: "veal-meat",
-        name: "Veal meat",
-        images: [vealLogo, beef2, beef3, beef4],
+        id: "chicken-meat",
+        name: "Chicken Meat",
+        images: [chickenLogo, chicken1, chicken2, chicken3, chicken4],
         meatType: [
             {
-                type: "Undercut",
-                price: 1850,
-                img: vealLogo
+                type: "Chicken Breast (Boneless) 250 gm",
+                price: 203,
+                img: chickenLogo
             },
             {
-                type: "Prime Boneless (Cube zero fat)",
-                price: 1450,
-                img: vealLogo
+                type: "Whole Chicken with neck & offels",
+                price: 492,
+                img: chickenLogo
             },
             {
-                type: "Prime Boneless",
-                price: 1200,
-                img: vealLogo
+                type: "Chicken Karahi cut / 250 gm",
+                price: 127,
+                img: chickenLogo
             },
             {
-                type: "Prime With Bone (Mix Boti)",
-                price: 1050,
-                img: vealLogo
+                type: "Chicken Leg Tikka / 250 gm",
+                price: 125,
+                img: chickenLogo
             },
             {
-                type: "Mince (Keema)",
-                price: 1030,
-                img: vealLogo
+                type: "Chicken Qorma cut / 250 gm",
+                price: 127,
+                img: chickenLogo
             },
             {
-                type: "Pasanday",
-                price: 1450,
-                img: vealLogo
+                type: "Chicken Breast Tikka / 250 gm",
+                price: 127,
+                img: chickenLogo
             },
             {
-                type: "Nehari Cut Boneless",
-                price: 1150,
-                img: vealLogo
+                type: "Chicken Biryani cut/ 250 gm",
+                price: 203,
+                img: chickenLogo
             },
             {
-                type: "Nehari Cut With Bone",
-                price: 1000,
-                img: vealLogo
+                type: "Chicken minced / 250 gm",
+                price: 203,
+                img: chickenLogo
             },
             {
-                type: "Veal Nalli",
-                price: 520,
-                img: vealLogo
+                type: "Chicken boneless handi Cut cube / 250 gm",
+                price: 203,
+                img: chickenLogo
             },
             {
-                type: "Veal Soup bones",
-                price: 420,
-                img: vealLogo
-            },
-            {
-                type: "Veal Liver",
-                price: 400,
-                img: vealLogo
-            },
-            {
-                type: "Paya / Pc",
-                price: 650,
-                img: vealLogo
+                type: "Chicken Drum sticks / 500 gm",
+                price: 253,
+                img: chickenLogo
             },
         ],
-        minPrice: 400,
-        maxPrice: 1850,
+        minPrice: 125,
+        maxPrice: 1150,
         description: [
-            'Fresh and hygienic Veal Meat',
+            'The delicious and intense taste of Meat, rich in nutrients and has low fat.'
         ],
         additionalInformation: {
             weight: "1kg",
-            MeatType: "Undercut, Prime Boneless (Cube zero fat), Prime Boneless, Boneless (Mix Boti), Prime With Bone (Mix Boti), Mince (Keema), Pasanday, Nehari Cut Boneless, Nehar Cut With Bone (Nalli), Beef Nalli, Beef Soup Bones, Cow Paya"
+            meatType: "Live, Meat"
         }
-    }
+    },
+    {
+        id: "fish-meat",
+        name: "Fish Meat",
+        images: [fishLogo],
+        meatType: [
+            {
+                type: "Fish 1KG",
+                price: 1000,
+                img: fishLogo
+
+            }
+        ],
+        minPrice: 10,
+        maxPrice: 100,
+        description: [
+            '100% fresh product.'
+        ],
+        additionalInformation: {
+            weight: "1kg",
+            meatType: "Meat"
+        }
+    },
+    {
+        id: "duck-Meat",
+        name: "Duck Meat",
+        images: [duckLogo],
+        meatType: [
+            // {
+            //     type: "Live",
+            //     price: 2000,
+            //     img: ""
+            // },
+            {
+                type: "Duck Meat",
+                price: 1000,
+                img: duckLogo
+            }
+        ],
+        minPrice: 100,
+        maxPrice: 500,
+        description: [
+            'Per 100 grams, pure duck contains 23.5 grams of protein.',
+            'Excellent source of selenium and zinc, which gives good cellular metabolism.',
+            'Contains higher amounts of iron than other poultry.',
+            'Niacin substances (Vitamin B3) helps to make a smooth human digestive. Every 100 mg of duck Meat contains 5.1 mg of niacin.',
+            'Contains Vitamin B6 which helps in the metabolic system of the gastrointestinal tract.',
+            'Duck Meat can prevent anemia as it contains iron.',
+            'Healthy for your body which is full of nutrition.'
+        ],
+        additionalInformation: {
+            weight: "1kg",
+        }
+    },
+    {
+        id: "rabbit-meat",
+        name: "Rabbit Meat",
+        images: [rabbitLogo, rabbit1, rabbit2],
+        meatType: [
+            {
+                type: "Rabbit / Kg",
+                price: 1500,
+                img: rabbitLogo
+            },
+            {
+                type: "Rabbit / PC",
+                price: 1000,
+                img: rabbitLogo
+            }
+        ],
+        minPrice: 1000,
+        maxPrice: 1500,
+        description: [
+            'One of the best white Meats available on the market today.',
+            'Has a high percentage of easily digestible protein.',
+            'Contains the least amount of fat among all the other available Meats.',
+            'Cholesterol free Meat.',
+            'Has a strong delicious flavor that almost resembles Chicken flavor.',
+            'One of the most productive domestic Livestock animals.',
+            'Rabbits can produce 6 pounds of Meat on the same feed.'
+        ],
+        additionalInformation: {
+            weight: "1kg",
+            meatType: "Live, Meat"
+        }
+    },
+    {
+        id: "camel-meat",
+        name: "Camel Meat",
+        images: [camelLogo],
+        meatType: [
+            {
+                type: "Prime Boneless (Cube zero fat)",
+                price: 2000,
+                img: camelLogo
+            },
+            {
+                type: "Prime Boneless",
+                price: 1000,
+                img: camelLogo
+
+            },
+            {
+                type: "BoneLess (Mix Boti)",
+                price: 2000,
+                img: camelLogo
+
+            },
+            {
+                type: "Mince (Keema)",
+                price: 1000,
+                img: camelLogo
+
+            },
+            {
+                type: "Pasanday",
+                price: 2000,
+                img: camelLogo
+
+            },
+            {
+                type: "Nehari Cut Boneless",
+                price: 1000,
+                img: camelLogo
+
+            },
+            {
+                type: "Nehar Cut With Boneless",
+                price: 2000,
+                img: camelLogo
+
+            },
+            {
+                type: "Camel Paya",
+                price: 1000,
+                img: camelLogo
+
+            }
+        ],
+        minPrice: 100,
+        maxPrice: 500,
+        description: [
+            'Camel Meat has a high proportion of Poly-unsaturated fatty acids.',
+            'Provide great health benefits.',
+            'Different from other red Meats.',
+            'Contains high protein content, iron, zinc, vitamin A and B, and amino acid which is very good to repair body tissues and build new tissues.',
+            'Camel Meat is receiving worldwide interest because of its unique taste and healthy features.',
+            'Has other medical advantages in our body as it protects your body from various dangerous diseases.',
+            'Very beneficial for our healthy body.'
+        ],
+        additionalInformation: {
+            weight: "1kg",
+            MeatType: "Prime Boneless (Cube zero fat), Prime Boneless, Boneless (Mix Boti), With Bone (Mix Boti), Mince (Keema), Pasanday, Nehari Cut Boneless, Nehar Cut With Bone (Nalli), Undercut, Camel Paya"
+        }
+    },
 ]
 
 export {

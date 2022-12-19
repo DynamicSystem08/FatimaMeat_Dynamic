@@ -53,19 +53,15 @@ export const orderSlice = createSlice({
     initialState,
     reducers: {
         setShippingDetails: (state, action) => {
-            // console.log(action.payload)
             state.shippingDetails = action.payload
         },
         setPaymentDetails: (state, action) => {
-            // console.log(action.payload)
             state.paymentDetails = action.payload
         },
         setBillAmount: (state, action) => {
-            // console.log(action.payload)
             state.totalOrderAmount = action.payload
         },
         setCartTotal: (state, action) => {
-            // console.log(action.payload)
             state.cartTotal = action.payload
         },
         deleteOrderState: (state) => {
