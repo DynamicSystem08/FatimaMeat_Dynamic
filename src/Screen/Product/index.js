@@ -35,7 +35,7 @@ export default function Product() {
                     })
                 }
             </Grid>
-            <div style={{marginTop:"15px"}}></div>
+            <div style={{marginTop:"50px"}}></div>
 
         </Container>
     </div>

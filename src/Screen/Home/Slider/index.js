@@ -5,15 +5,12 @@ import PhonelinkLockIcon from '@mui/icons-material/PhonelinkLock';
 
 import Carousel from 'react-bootstrap/Carousel';
 import "./index.css"
-import slideimg1 from "../../../Image/silderimg101.png"
-import slideimg2 from "../../../Image/sliderbeef102.png"
+import slideimg2 from "../../../Image/12.png"
 import slideimg3 from "../../../Image/slidermuttonimg102.png"
-import chicken1 from "../../../Image/sliderimg103.png"
-import chicken2 from "../../../Image/sliderrabbit102.jpg"
 import aboutUs from "../../../Image/aboutusImg.jpg"
 import beefimg3 from "../../../Image/beefimg3.jpg"
 import cuttericon from "../../../Image/cuttericon.png"
-import sliderchicken from "../../../Image/sliderchickenimg102.png"
+import sliderchicken from "../../../Image/11.png"
 
 
 
