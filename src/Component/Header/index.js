@@ -18,6 +18,22 @@ import "./index.css"
 import Grid from '@mui/material/Grid';
 
 
+import * as React from 'react';
+import Badge from '@mui/material/Badge';
+import { styled } from '@mui/material/styles';
+import IconButton from '@mui/material/IconButton';
+
+const StyledBadge = styled(Badge)(({ theme }) => ({
+  '& .MuiBadge-badge': {
+    right: 37,
+    top: -5,
+    border: `2px solid ${theme.palette.background.paper}`,
+    padding: '0 4px',
+    color:"white",
+    backgroundColor:"rgb(208,13,30)"
+  },
+}));
+
 function NavScrollExample() {
   const navigate = useNavigate()
   return <div className='responsive_top_header'>
@@ -34,7 +50,7 @@ function NavScrollExample() {
               <Grid item lg={1.3} md={1.3} sm={10} xs={12} onClick={() => navigate("/home")} className="text_Header">
                 <Grid container>
                   <Grid item lg={2.3} md={3} xs={4}>
-                    <HomeIcon  className="HEADER_ICON"/>
+                    <HomeIcon className="HEADER_ICON" />
                   </Grid>
                   <Grid item lg={9} md={6} xs={2}>
                     <p className='responsive_header'>HOME</p>
@@ -45,7 +61,7 @@ function NavScrollExample() {
                 {/* <p className='responsive_headerp'>PRODUCTS</p> */}
                 <Grid container>
                   <Grid item lg={2} md={2.5} xs={4}>
-                    <Inventory2Icon  className="HEADER_ICON" />
+                    <Inventory2Icon className="HEADER_ICON" />
                   </Grid>
                   <Grid item lg={9} xs={2}>
                     <p className='responsive_header'>PRODUCTS</p>
@@ -73,7 +89,7 @@ function NavScrollExample() {
                 {/* <p className='responsive_header2'> CONTACT US</p> */}
                 <Grid container>
                   <Grid item lg={1.5} xs={3}>
-                    <EditLocationIcon sx={{fontSize:"24px"}} className="HEADER_ICON1"/>
+                    <EditLocationIcon sx={{ fontSize: "24px" }} className="HEADER_ICON1" />
                   </Grid>
                   <Grid item lg={9} xs={8}>
                     <p className='responsive_header'>CONTACT US</p>
@@ -93,7 +109,14 @@ function NavScrollExample() {
                 </Grid>
               </Grid>
               <Grid item lg={1} md={1} xs={10} onClick={() => navigate("/cart")} style={{ cursor: "pointer" }} className="text_Header">
-                <p className='responsive_headerc'> <ShoppingCartIcon style={{ fontSize: "35px", marginTop: "-10px" }} /></p>
+                <p className='responsive_headerc'>
+                  {/* <ShoppingCartIcon style={{ fontSize: "35px", marginTop: "-10px" }} /> */}
+                  <IconButton aria-label="cart" >
+                    <StyledBadge badgeContent={1} style={{color:"white"}} >
+                      <ShoppingCartIcon style={{color:"white",fontSize:"35px",marginTop:"-10px"}} />
+                    </StyledBadge>
+                  </IconButton>
+                </p>
               </Grid>
             </Grid>
           </Nav>
@@ -115,56 +138,3 @@ function NavScrollExample() {
 
 export default NavScrollExample;
 
-
-
-// import Button from 'react-bootstrap/Button';
-// import Container from 'react-bootstrap/Container';
-// import Form from 'react-bootstrap/Form';
-// import Nav from 'react-bootstrap/Nav';
-// import Navbar from 'react-bootstrap/Navbar';
-// import NavDropdown from 'react-bootstrap/NavDropdown';
-
-// function NavScrollExample() {
-//   return (
-//     <Navbar bg="light" expand="lg">
-//       <Container fluid>
-//         <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
-//         <Navbar.Toggle aria-controls="navbarScroll" />
-//         <Navbar.Collapse id="navbarScroll">
-//           <Nav
-//             className="me-auto my-2 my-lg-0"
-//             style={{ maxHeight: '100px' }}
-//             navbarScroll
-//           >
-//             <Nav.Link href="#action1">Home</Nav.Link>
-//             <Nav.Link href="#action2">Link</Nav.Link>
-//             <NavDropdown title="Link" id="navbarScrollingDropdown">
-//               <NavDropdown.Item href="#action3">Action</NavDropdown.Item>
-//               <NavDropdown.Item href="#action4">
-//                 Another action
-//               </NavDropdown.Item>
-//               <NavDropdown.Divider />
-//               <NavDropdown.Item href="#action5">
-//                 Something else here
-//               </NavDropdown.Item>
-//             </NavDropdown>
-//             <Nav.Link href="#" disabled>
-//               Link
-//             </Nav.Link>
-//           </Nav>
-//           <Form className="d-flex">
-//             <Form.Control
-//               type="search"
-//               placeholder="Search"
-//               className="me-2"
-//               aria-label="Search"
-//             />
-//             <Button variant="outline-success">Search</Button>
-//           </Form>
-//         </Navbar.Collapse>
-//       </Container>
-//     </Navbar>
-//   );
-// }
-
-// export default NavScrollExample;
