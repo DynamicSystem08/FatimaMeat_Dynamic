@@ -96,8 +96,8 @@
     }
 
     .responsive_headerc {
-        margin-left: 45%;
-        /* margin-top: -28%; */
+        margin-left: 40%;
+        margin-top: -8%;
 
     }
 }
@@ -147,4 +147,20 @@
     position: relative;
     margin-top: 40px;
 
+}
+.HEADER_ICON{
+    margin-top: -4px;
+}
+.HEADER_ICON1{
+    margin-top: -4px;
+}
+@media(max-width:414px){
+    .HEADER_ICON{
+        margin-left: 90%;
+        margin-top: -80px;
+    }
+    .HEADER_ICON1{
+        margin-left: 154%;
+        margin-top: -80px;
+    }
 }
