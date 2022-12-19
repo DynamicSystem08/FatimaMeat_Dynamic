@@ -42,7 +42,16 @@ function Router() {
 
     const protectedRouteAuth = (component) => {
         if (!user) {
-            return <Auth />
+            return component
+        }
+        else {
+            return <Dashboard />
+        }
+    }
+
+    const protectedRouteUserAuth = (component) => {
+        if (!user) {
+            return <Auth/>
         }
         else {
             return component
@@ -72,15 +81,14 @@ function Router() {
             <Route path="/" element={<HomeComponent />} />
 
             <Route path="/home" element={<HomeComponent />} />
-            {/* <Route path="/ourMeat" element={<OurMeat />} /> */}
             <Route path="/ourMeat" element={<AllOurMeat />} />
             <Route path="/recipes" element={<Recipes />} />
-            <Route path="/products" element={<Product />} />
-            {/* <Route path="/product" element={<Product />} /> */}
             <Route path="/fatimaFood" element={<FatimaFood />} />
-            <Route path="/auth" element={protectedRouteAuth(<Auth />)} />
 
+            <Route path="/products" element={<Product />} />
             <Route path="/products/:id" element={<ProductDetail />} />
+
+            <Route path="/auth" element={protectedRouteAuth(<Auth />)} />
 
             <Route path="/cart" element={<Cart />} />
 
@@ -88,9 +96,9 @@ function Router() {
             <Route path="/checkout/confirmOrder" element={<ConformOrder />} />
             <Route path="/checkout/payment" element={<Payment />} />
 
-            <Route path="/dashboard" element={protectedRouteAuth(<Dashboard />)} />
-            <Route path='/dashboard/orders' element={protectedRouteAuth(<Order />)} />
-            <Route path='/dashboard/account-details' element={protectedRouteAuth(<AccountDetails />)} />
+            <Route path="/dashboard" element={protectedRouteUserAuth(<Dashboard />)} />
+            <Route path='/dashboard/orders' element={protectedRouteUserAuth(<Order />)} />
+            <Route path='/dashboard/account-details' element={protectedRouteUserAuth(<AccountDetails />)} />
 
         </Routes>
 

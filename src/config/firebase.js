@@ -10,12 +10,12 @@ import {
 } from "firebase/firestore";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyARJpv58bJ9bjpv0wnYkOPTbNrX6VFGUWM",
-    authDomain: "hu-fyp-erp-43bc0.firebaseapp.com",
-    projectId: "hu-fyp-erp-43bc0",
-    storageBucket: "hu-fyp-erp-43bc0.appspot.com",
-    messagingSenderId: "894076141393",
-    appId: "1:894076141393:web:f71a3d83e7f4602e80dd70"
+    apiKey: "AIzaSyChopD35ZVwOSV9Hks1hoNEiCB2QeQ8xV4",
+    authDomain: "fatimameat-124a8.firebaseapp.com",
+    projectId: "fatimameat-124a8",
+    storageBucket: "fatimameat-124a8.appspot.com",
+    messagingSenderId: "270004706470",
+    appId: "1:270004706470:web:15bca07f5582b0e12ae867"
 };
 
 const app = initializeApp(firebaseConfig);
