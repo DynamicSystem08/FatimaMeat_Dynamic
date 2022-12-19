@@ -30,7 +30,7 @@ function Cart() {
             copyCartItems[index] = copyData
             dispatch(updateCartItems(copyCartItems))
         }
-        if (key === "dec" && copyData.quantity !== 0) {
+        if (key === "dec" && copyData.quantity !== 1) {
             copyData.quantity = copyData.quantity - 1
             copyCartItems[index] = copyData
             dispatch(updateCartItems(copyCartItems))
@@ -52,11 +52,11 @@ function Cart() {
 
     useEffect(() => {
         window.scrollTo(0, 0)
-    }, [])
+    }, [1])
 
     return <div style={{ paddingTop: "100px", backgroundColor: "white", marginTop: "30px" }} className="slider_bg_icon">
         <MetaData title="Fatima Meat | Cart" />
-        
+
         <Container>
             <div className='Scroll_card'>
                 <Grid container className='card_detail_main'>
@@ -76,7 +76,7 @@ function Cart() {
                 </Grid>
                 {
                     reduxCartItems[0] ? reduxCartItems.map((item, index) => {
-
+                        console.log(item)
                         cartTotal = cartTotal + (item.meatType.price * item.quantity)
 
                         return <Grid container className='card_detail_main1'>
@@ -87,7 +87,14 @@ function Cart() {
                                     </Grid>
                                     <Grid item lg={1} md={1} sm={1} ></Grid>
                                     <Grid item lg={7} md={7} sm={7} xs={12}>
-                                        <p style={{ fontSize: "15px", paddingTop: "10px" }}>{item.name}</p>
+                                        <p style={{ fontSize: "18px", paddingTop: "10px" }}>
+                                            <b>
+                                                {item.name}:
+                                            </b>
+                                        </p>
+                                        <p style={{ fontSize: "16px" }}>
+                                            {item.meatType.type} X {item.quantity}
+                                        </p>
                                     </Grid>
                                 </Grid>
                             </Grid>

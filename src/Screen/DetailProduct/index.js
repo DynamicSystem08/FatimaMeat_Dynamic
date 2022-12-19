@@ -38,7 +38,7 @@ function ProductDetail() {
   const params = useParams()
   const { id } = params
   const [data, setData] = useState()
-  const [quantity, setQuantity] = useState(0)
+  const [quantity, setQuantity] = useState(1)
   const [screen, setScreen] = useState('description')
   const [meatType, setMeatType] = useState()
   const [selectedMeatType, setSelectedMeatType] = useState({
@@ -74,7 +74,7 @@ function ProductDetail() {
 
   const updateQuantity = (type) => {
     if (type) {
-      if (!quantity == 0) {
+      if (quantity !== 1) {
         setQuantity(quantity - 1)
       }
     }
@@ -95,7 +95,6 @@ function ProductDetail() {
   }, [])
 
   useEffect(() => {
-    window.scrollTo(0, 0)
     if (selectedMeatType.price) {
       setOrderDetails({ ...orderDetails, meatType: selectedMeatType })
     }

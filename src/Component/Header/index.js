@@ -1,4 +1,4 @@
-
+import { useSelector } from 'react-redux'
 
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
@@ -14,9 +14,9 @@ import EditLocationIcon from '@mui/icons-material/EditLocation';
 import HomeIcon from '@mui/icons-material/Home';
 import KebabDiningIcon from '@mui/icons-material/KebabDining';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
-import "./index.css"
 import Grid from '@mui/material/Grid';
 
+import "./index.css"
 
 import * as React from 'react';
 import Badge from '@mui/material/Badge';
@@ -29,13 +29,17 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
     top: -5,
     border: `2px solid ${theme.palette.background.paper}`,
     padding: '0 4px',
-    color:"white",
-    backgroundColor:"rgb(208,13,30)"
+    color: "white",
+    backgroundColor: "rgb(208,13,30)"
   },
 }));
 
 function NavScrollExample() {
   const navigate = useNavigate()
+
+  const reduxCartItems = useSelector(state => state.cartReducer.cart)
+  console.log(reduxCartItems.length)
+
   return <div className='responsive_top_header'>
     <Navbar style={{ backgroundColor: "black" }} expand="lg" className="sticky-top " >
       <Container fluid id="header" style={{ position: "fixed", marginTop: "50px", width: "100%", backgroundColor: "rgb(25,25,25)" }} >
@@ -112,9 +116,11 @@ function NavScrollExample() {
                 <p className='responsive_headerc'>
                   {/* <ShoppingCartIcon style={{ fontSize: "35px", marginTop: "-10px" }} /> */}
                   <IconButton aria-label="cart" >
-                    <StyledBadge badgeContent={1} style={{color:"white"}} >
-                      <ShoppingCartIcon style={{color:"white",fontSize:"35px",marginTop:"-10px"}} />
+
+                    <StyledBadge badgeContent={reduxCartItems.length}  >
+                      <ShoppingCartIcon style={{ color: "white", fontSize: "35px", marginTop: "-10px" }} />
                     </StyledBadge>
+
                   </IconButton>
                 </p>
               </Grid>

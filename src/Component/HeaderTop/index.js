@@ -6,7 +6,6 @@ import Container from '@mui/material/Container';
 import { useNavigate } from 'react-router-dom';
 import { styles } from '../Colors';
 
-
 function HeaderTop(props) {
     const navigate = useNavigate()
 
