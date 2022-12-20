@@ -12,13 +12,13 @@ import chicken from "../../Image/cardimg4.png"
 import fish from "../../Image/cardImg1.png"
 import Beaf from "../../Image/cardImg1.png"
 
-import muttonimg1 from "../../Image/muttonimg1.jpg"
-import muttonimg2 from "../../Image/muttonimg2.jpg"
+import muttonimg1 from "../../Image/muttonwholenewimg.png"
+import muttonimg2 from "../../Image/muttonlegnewimg.png"
 import muttonimg3 from "../../Image/muttonimg3.jpg"
 import muttonimg4 from "../../Image/muttonimg4.jpg"
-import chickenimg1 from "../../Image/chickenimg1011.png"
+import chickenimg1 from "../../Image/chickenwholeimgnewimg.jpg"
 import chickenimg2 from "../../Image/chickenimg2.jpg"
-import chickenimg3 from "../../Image/chickenimg3.jpg"
+import chickenimg3 from "../../Image/chickenwigsnewimg.jpg"
 import chickenimg4 from "../../Image/chickenimg4.jpg"
 import beefimg1 from "../../Image/beefimg1.jpeg"
 import beefimg2 from "../../Image/beefimg2.jpg"
@@ -37,16 +37,16 @@ import cameIcon from "../../Image/cardimg6.png"
 import fish1 from "../../Image/fishimg1.jpg"
 import fish2 from "../../Image/fishimg2.jpeg"
 import fish3 from "../../Image/fishimg3.jpg"
-import fish4 from "../../Image/fishimg4.jpg"
+import fish4 from "../../Image/fishbonelessimgnew.png"
 import duck1 from "../../Image/duckimg1.jpg"
 import duck2 from "../../Image/duckimg2.jpg"
-import duck3 from "../../Image/duckimg3.jpg"
+import duck3 from "../../Image/buckwingsnewing.jpg"
 import duck4 from "../../Image/duckimg4.jpg"
-import aseelchicken1 from "../../Image/aseelChicenicon1.png"
-import aseelchicken2 from "../../Image/aseelChicenicon2.png"
-import aseelchicken3 from "../../Image/aseelChicenicon3.jpg"
+import aseelchicken1 from "../../Image/aseelchickenbwholecarcassimg.png"
+import aseelchicken2 from "../../Image/aseelchickenbonelessnewimg.png"
+import aseelchicken3 from "../../Image/chickenwingsnewimg.jpg"
 import aseelchicken4 from "../../Image/aseelChicenicon4.png"
-import vealimg1 from "../../Image/vealimg1.jpg"
+import vealimg1 from "../../Image/beefwholenewimg.png"
 import vealimg2 from "../../Image/vealimg2.jpg"
 import vealimg3 from "../../Image/vealimg3.jpg"
 import vealimg4 from "../../Image/vealimg4.jpg"
@@ -61,9 +61,9 @@ export default function AllOurMeat() {
 
     // const navigate = useNavigate()
 
-    useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    // useEffect(() => {
+    //     window.scrollTo(0, 0)
+    // }, [])
 
     return <div style={{ backgroundColor: "white" }} className="product_background_image">
         <MetaData title="Fatima Meat | Our Meat" />
