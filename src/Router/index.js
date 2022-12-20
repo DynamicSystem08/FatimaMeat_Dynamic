@@ -87,7 +87,7 @@ function Router() {
 
             <Route path="/products" element={<Product />} />
             <Route path="/products/:id" element={<ProductDetail />} />
-            <Route path="/location" element={<Location />} />
+            <Route path="/contactUs" element={<Location />} />
 
             <Route path="/auth" element={protectedRouteAuth(<Auth />)} />
 

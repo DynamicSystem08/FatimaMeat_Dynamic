@@ -89,7 +89,7 @@ function NavScrollExample() {
                 <img src={logo} alt="" id="img101" />
               </Grid>
               <Grid item lg={0.6} md={0.6}></Grid>
-              <Grid item lg={1.7} md={2} sm={10} xs={10} onClick={() => navigate("/location")} style={{ cursor: "pointer" }} className="text_Header" >
+              <Grid item lg={1.7} md={2} sm={10} xs={10} onClick={() => navigate("/contactUs")} style={{ cursor: "pointer" }} className="text_Header" >
                 {/* <p className='responsive_header2'> CONTACT US</p> */}
                 <Grid container>
                   <Grid item lg={1.5} xs={3}>

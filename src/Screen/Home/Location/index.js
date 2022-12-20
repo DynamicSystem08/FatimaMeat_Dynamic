@@ -3,7 +3,7 @@ import Container from '@mui/material/Container';
 import FmdGoodIcon from '@mui/icons-material/FmdGood';
 import AddIcon from '@mui/icons-material/Add';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import MetaData from '../../../Component/MetaData';
@@ -22,6 +22,10 @@ function Location() {
     const [gurjawala, setGurjawal] = useState(false)
     const gurJawala = () => setGurjawal(true)
     const gurJawalaClose = () => setGurjawal(false)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
 
     return <div style={{ backgroundColor: "white", marginTop: "52px" }}>
