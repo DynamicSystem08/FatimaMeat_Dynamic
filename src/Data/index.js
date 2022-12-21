@@ -35,7 +35,8 @@ import mutton4 from '../Image/muttonimg4.jpg'
 
 //done
 import aseelLogo from '../Image/Products/aseel.jpg'
-import vealLogo from '../Image/Products/veal.jpg'
+// import vealLogo from '../Image/Products/veal.jpg'
+import vealLogo from '../Image/Products/vealNew.jpeg'
 import duckLogo from '../Image/Products/duck.jpg'
 import fishLogo from '../Image/Products/fish.jpg'
 import sheepLogo from '../Image/Products/sheepLogo.jpg'
