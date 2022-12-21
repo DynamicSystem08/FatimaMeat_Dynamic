@@ -29,7 +29,6 @@ function Dashboard() {
     const [data, setData] = useState()
 
     const reduxOrders = useSelector(state => state.orderReducer.allOrders)
-    console.log(reduxOrders)
     const reduxUser = useSelector(state => state.userReducer.user)
 
     const callData = async () => {
