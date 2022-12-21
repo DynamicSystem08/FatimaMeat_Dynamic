@@ -59,7 +59,7 @@ function Dashboard() {
     return <div div className="slider_bg_icon">
         <Container style={{ paddingTop: "140px", paddingBottom: "50px" }}>
             <Grid container>
-                <Grid item lg={3} md={3.5} sm={4} xs={12} style={{ padding: "20px",backgroundColor:"white" }} className="side_bar_dashboadr">
+                <Grid item lg={3} md={3.5} sm={4} xs={12} style={{ padding: "20px", backgroundColor: "white" }} className="side_bar_dashboadr">
                     <h2><b>My Account</b></h2>
                     <hr></hr><br></br>
                     <p onClick={() => navigate("/dashboard")}>Dashboard</p><br></br>
@@ -102,6 +102,7 @@ function Dashboard() {
                                         <TableCell align="right"><b>Delivery City</b></TableCell>
                                         <TableCell align="center"><b>Delivery Address</b></TableCell>
                                         <TableCell align="right"><b>Ordered Items</b></TableCell>
+                                        <TableCell align="center"><b>Cart Total</b></TableCell>
                                         <TableCell align="center"><b>Order Date</b></TableCell>
                                         <TableCell align="right"><b>Order Status</b></TableCell>
                                         <TableCell align="right"><b>Order Actions</b></TableCell>
@@ -119,7 +120,24 @@ function Dashboard() {
                                             <TableCell align="center">{row.buyerDetails.displayName}</TableCell>
                                             <TableCell align="center">{row.shippingDetails.city}</TableCell>
                                             <TableCell align="center">{row.shippingDetails.address}</TableCell>
-                                            <TableCell align="center">{row.carbs}</TableCell>
+
+                                            <TableBody>
+                                                <TableRow
+
+                                                >
+                                                    {
+                                                        row.cartItems.map((item, index) => {
+                                                            console.log(item)
+                                                            return <div key={index}>
+                                                                {item.name}-{item.meatType.type}-x{item.quantity}
+                                                            </div >
+                                                        })
+                                                    }
+                                                </TableRow>
+                                            </TableBody>
+
+                                            <TableCell align="center">{row.cartInfo.totalOrderAmount}</TableCell>
+
                                             <TableCell align="center">{row.orderDetails.orderDateTime}</TableCell>
                                             <TableCell align="center">{row.orderDetails.orderStatus}</TableCell>
                                             {
