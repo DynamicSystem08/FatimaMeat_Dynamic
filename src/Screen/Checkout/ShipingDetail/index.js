@@ -25,11 +25,11 @@ function Shippingdetails() {
     const cartItems = useSelector(state => state.cartReducer.cart)
 
     const [details, setDetails] = useState({
-        name: "Test Name",
-        address: "Test Address",
-        city: "Test City",
-        zipCode: "012345",
-        phoneNumber: "03362319053"
+        // name: "Test Name",
+        // address: "Test Address",
+        // city: "Test City",
+        // zipCode: "012345",
+        // phoneNumber: "03362319053"
     })
 
     const handelChange = (key, value) => {
@@ -118,7 +118,7 @@ function Shippingdetails() {
 
                     <Grid item lg={12} md={12} sm={12} xs={13} id="create1" style={{ marginBottom: "20px", marginTop: "-1px" }} className="input12">
                         <div style={{ border: "1px solid lightgray", width: "280px", marginLeft: "50px", marginRight: "50px", marginTop: "50px", marginBottom: "20px" }} className="shping_detail_input">< HomeIcon style={{ paddingLeft: "20px", fontSize: "40px", color: "rgb(208,13,30)" }} />
-                            <input type="text" placeholder='Enter Name ' onChange={(e) => handelChange("name", e.target.value)} value={details.name}
+                            <input type="text" placeholder='Name ' onChange={(e) => handelChange("name", e.target.value)} value={details.name}
                                 style={{ outline: "none", textDecoration: "none", marginTop: "20px", marginBottom: "10px", paddingLeft: "20px", border: "none", fontSize: "15px" }} />
                         </div>
                         {/* <input type="text" placeholder="Enter Nme" /> */}
