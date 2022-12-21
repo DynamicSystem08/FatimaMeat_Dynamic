@@ -44,7 +44,9 @@ function ProductDetail() {
   const [selectedMeatType, setSelectedMeatType] = useState({
     type: 'select an option', price: false
   })
-  const [orderDetails, setOrderDetails] = useState()
+  const [orderDetails, setOrderDetails] = useState({
+    quantity: 1
+  })
 
   const dispatch = useDispatch()
 

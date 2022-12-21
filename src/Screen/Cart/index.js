@@ -18,7 +18,7 @@ function Cart() {
     const dispatch = useDispatch()
     const reduxCartItems = useSelector(state => state.cartReducer.cart)
     let cartTotal = 0
-
+    
     const navigate = useNavigate()
 
     const updateQuantity = (key, item, index) => {

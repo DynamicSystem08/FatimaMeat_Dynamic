@@ -38,7 +38,6 @@ function NavScrollExample() {
   const navigate = useNavigate()
 
   const reduxCartItems = useSelector(state => state.cartReducer.cart)
-  console.log(reduxCartItems.length)
 
   return <div className='responsive_top_header'>
     <Navbar style={{ backgroundColor: "black" }} expand="lg" className="sticky-top " >

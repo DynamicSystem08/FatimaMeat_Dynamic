@@ -23,24 +23,13 @@ import Button from '@mui/material/Button';
 
 function Dashboard() {
 
-    function createData(name, calories, fat, carbs, protein) {
-        return { name, calories, fat, carbs, protein };
-    }
-
-    const rows = [
-        createData('Order Id', 159, 6.0, 24, 4.0),
-        createData('Customer Name', 237, 9.0, 37, 4.3),
-        createData('Delivery Address', 262, 16.0, 24, 6.0),
-        createData('Order Item', 305, 3.7, 67, 4.3),
-        createData('Order Date', 356, 16.0, 49, 3.9),
-    ];
-
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
     const [data, setData] = useState()
 
     const reduxOrders = useSelector(state => state.orderReducer.allOrders)
+    console.log(reduxOrders)
     const reduxUser = useSelector(state => state.userReducer.user)
 
     const callData = async () => {
