@@ -115,7 +115,7 @@ function Footer() {
                             </Grid>
                             <Grid item lg={10} xs={10}>
                                 <text style={{ color: "white" }}>Plaza no 3, Phase 6 commercial dha, Lahore<br></br>
-                                Building no 68, Shop no 1, bukhari commercial, dha, Karachi
+                                    Building no 68, Shop no 1, bukhari commercial, dha, Karachi
                                 </text>
                             </Grid>
                         </Grid>
@@ -124,7 +124,10 @@ function Footer() {
                                 <CallIcon style={{ fontSize: "40px", color: "rgba(208,13,30)", marginTop: "-10px" }} />
                             </Grid>
                             <Grid item lg={10} xs={10}>
-                                <text style={{ color: "white" }}>PH: 042-111-FATIMA-328462</text>
+                                <text style={{ color: "white" }}>PH: 042-111-FATIMA</text>
+                                <div>
+                                    <text style={{ color: "white" }}>PH: 042-111-328462</text>
+                                </div>
                             </Grid>
                         </Grid>
                         <Grid container style={{ marginTop: "30px" }}>
