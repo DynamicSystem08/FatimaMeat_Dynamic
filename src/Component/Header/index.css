@@ -30,7 +30,8 @@
         margin-left: 45%;
         margin-top: -10%;
     }
-        .responsive_headero {
+
+    .responsive_headero {
         margin-left: 45%;
     }
 
@@ -40,7 +41,7 @@
     }
 
     .img101 {
-        margin-left:52%;
+        margin-left: 52%;
 
     }
 
@@ -70,10 +71,10 @@
     }
 
     .logo_img img {
-        margin-left:30%;
+        margin-left: 30%;
         height: 120px;
         width: 120px;
-        margin-top:-14%;
+        margin-top: -14%;
     }
 
     .responsive_top_header {
@@ -82,9 +83,21 @@
 
     .responsive_header {
         margin-top: -35px;
-        margin-bottom:1px;
+        margin-bottom: 1px;
+    }
+    .HEADER_ICONR{
+        margin-left: 90%;
+        margin-top: -70%;
+    }
+    .responsive_headerR{
+        margin-left:40%;
+        margin-top: -60%; 
     }
 
+    .responsive_headerC{
+        margin-top: -18%;
+        margin-left: 33%;
+    }
     .responsive_headerp {
         margin-left: 46%;
 
@@ -148,19 +161,60 @@
     margin-top: 40px;
 
 }
-.HEADER_ICON{
+
+.HEADER_ICON {
     margin-top: -4px;
 }
-.HEADER_ICON1{
+
+.HEADER_ICON1 {
     margin-top: -4px;
 }
-@media(max-width:414px){
-    .HEADER_ICON{
+
+@media(max-width:414px) {
+    .HEADER_ICON {
         margin-left: 90%;
         margin-top: -80px;
     }
-    .HEADER_ICON1{
+
+    .HEADER_ICON1 {
         margin-left: 144%;
         margin-top: -80px;
     }
+}
+
+@media((max-width:890px) and (min-width:415px)) {
+    .HEADER_ICON {
+        margin-left: 135%;
+    }
+
+    .responsive_header {
+        margin-left: 100%;
+    }
+    .HEADER_ICONR{
+        margin-left: 108%;
+    }
+    .responsive_headerR{
+        margin-left:40%; 
+    }
+    .HEADER_ICON1{
+        margin-left: 170%;
+        margin-top: -40%;
+    }
+    .responsive_headerC{
+        margin-top: -7%;
+        margin-left: 33%;
+    }
+    .responsive_headerc{
+        margin-left: 40%;
+    }
+    .logo_img img {
+        margin-left: 85%;
+        height: 120px;
+        width: 120px;
+        margin-top: -6%;
+    }
+    #b {
+        height: 180px;
+    }
+    
 }

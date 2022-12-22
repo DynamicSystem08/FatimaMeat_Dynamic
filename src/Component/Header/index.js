@@ -38,6 +38,7 @@ function NavScrollExample() {
   const navigate = useNavigate()
 
   const reduxCartItems = useSelector(state => state.cartReducer.cart)
+  console.log(reduxCartItems.length)
 
   return <div className='responsive_top_header'>
     <Navbar style={{ backgroundColor: "black" }} expand="lg" className="sticky-top " >
@@ -76,10 +77,10 @@ function NavScrollExample() {
                 {/* <p className='responsive_header1'>RECIPES</p> */}
                 <Grid container>
                   <Grid item lg={2} md={3.5} xs={5}>
-                    <MenuBookIcon className="HEADER_ICON" />
+                    <MenuBookIcon className="HEADER_ICONR" />
                   </Grid>
                   <Grid item lg={9} xs={2.5}>
-                    <p className='responsive_header'>RECIPES</p>
+                    <p className='responsive_headerR'>RECIPES</p>
                   </Grid>
                 </Grid>
               </Grid>
@@ -95,7 +96,7 @@ function NavScrollExample() {
                     <EditLocationIcon sx={{ fontSize: "24px" }} className="HEADER_ICON1" />
                   </Grid>
                   <Grid item lg={9} xs={8}>
-                    <p className='responsive_header'>CONTACT US</p>
+                    <p className='responsive_headerC'>CONTACT US</p>
                   </Grid>
                 </Grid>
               </Grid>
@@ -107,7 +108,7 @@ function NavScrollExample() {
                     <KebabDiningIcon className="HEADER_ICON1" />
                   </Grid>
                   <Grid item lg={9} md={7} xs={8}>
-                    <p className='responsive_header'>CORPORATE PRODUCT</p>
+                    <p className='responsive_headerC'>CORPORATE PRODUCT</p>
                   </Grid>
                 </Grid>
               </Grid>
