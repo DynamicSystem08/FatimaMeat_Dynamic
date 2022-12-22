@@ -8,7 +8,8 @@ import LocationOnIcon from '@mui/icons-material/LocationOn';
 import CallIcon from '@mui/icons-material/Call';
 import MarkunreadIcon from '@mui/icons-material/Markunread';
 import FacebookIcon from '@mui/icons-material/Facebook';
-
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import { emailSupportTeam } from '../../store/slices/userSlice'
 
 import "./index.css"
@@ -146,13 +147,18 @@ function Footer() {
         <div style={{ backgroundColor: "black" }}>
             <Container>
                 <Grid container>
-                    <Grid item lg={10} md={10} sm={10} xs={10.5}>
+                    <Grid item lg={10} md={10} sm={10} xs={12}>
                         <p style={{ color: "white", paddingTop: "5px" }}>Copyright 2022 © DynamicSystem.org
                         </p>
                     </Grid>
-                    <Grid item lg={1} md={1} sm={1} xs={1}>
+                    <Grid item lg={0.6} md={0.6} sm={0.6} xs={1.7}>
                         <FacebookIcon style={{ fontSize: "40px", color: "rgb(208,13,30)", paddingTop: "5px" }} />
-
+                    </Grid>
+                    <Grid item lg={0.6} md={0.6} sm={0.6} xs={1.7}>
+                        <InstagramIcon style={{ fontSize: "40px", color: "rgb(208,13,30)", paddingTop: "5px" }} />
+                    </Grid>
+                    <Grid item lg={0.6} md={0.6} sm={0.6} xs={1.7}>
+                        <TwitterIcon style={{ fontSize: "40px", color: "rgb(208,13,30)", paddingTop: "5px" }} />
                     </Grid>
                 </Grid>
             </Container>

@@ -5,7 +5,6 @@ import PhonelinkLockIcon from '@mui/icons-material/PhonelinkLock';
 
 import Carousel from 'react-bootstrap/Carousel';
 import "./index.css"
-import slideimg2 from "../../../Image/12.png"
 import slideimg3 from "../../../Image/slidermuttonimg102.png"
 import aboutUs from "../../../Image/aboutusImg.jpg"
 import beefimg3 from "../../../Image/beefimg3.jpg"
@@ -33,7 +32,6 @@ function Slider() {
                         </Container>
                     </Carousel.Item>
                     <Carousel.Item>
-
                         <Container>
                             <Grid container className='silder_main'>
                                 <Grid item lg={5} md={5} sm={3.5} xs={5} className="slider_text" data-aos="zoom-in" style={{ transition: "1s" }}>
@@ -42,7 +40,7 @@ function Slider() {
                                 <Grid item lg={6.6} md={6} sm={6.6} xs={5.5} className="slider_img" >
                                     <img
                                         class="animate__animated animate__slideInLeft animate__delay-1s"
-                                        src={slideimg2} alt="" />
+                                        src="http://www.khaasmeat.net/public/images/22731-beef.png" alt="" />
                                 </Grid>
                             </Grid>
                         </Container>
