@@ -140,7 +140,7 @@ export default function AllOurMeat() {
                     <div class="container_Recipes">
                         <img src={chickenimg1} alt="Nature" style={{ width: "100%" }} />
                         <div class="text-block_Recipes1">
-                            <p>Chicken Whole Neck</p>
+                            <p>Chicken Whole carcass</p>
                         </div>
                     </div>
                 </Grid>
