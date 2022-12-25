@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
+import TablePagination from '@mui/material/TablePagination';
 import { useNavigate } from 'react-router-dom';
 
 import swal from 'sweetalert';
@@ -22,6 +23,17 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 
 function Dashboard() {
+
+    const [page, setPage] = useState(0);
+    const [rowsPerPage, setRowsPerPage] = useState(10);
+
+    const handleChangePage = (event, newPage) => {
+        setPage(newPage);
+    };
+    const handleChangeRowsPerPage = (event) => {
+        setRowsPerPage(+event.target.value);
+        setPage(0);
+    };
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -87,25 +99,27 @@ function Dashboard() {
                         }}
                     >Logout</p><br></br>
                 </Grid>
-                <Grid item lg={1} md={1} sm={1}></Grid>
+                <Grid item lg={0.5} md={1} sm={1}></Grid>
 
 
-                <Grid item lg={8} md={7} sm={7} xs={12} style={{ paddingTop: "50px" }}>
+                <Grid item lg={8.5} md={7} sm={7} xs={12} style={{ paddingTop: "50px" }}>
 
                     {
-                        reduxOrders ? <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, maxWidth: 700, minWidth: 300 }}>
+                        reduxOrders ? 
+                    <Paper sx={{ width: '100%', overflow: 'hidden' }}>
+                        <TableContainer component={Paper} sx={{ maxHeight: 270, minHeight: 270, minWidth: 300 }}>
                             <Table sx={{ minWidth: 1400 }} aria-label="simple table" stickyHeader >
                                 <TableHead>
                                     <TableRow>
                                         <TableCell><b>Order Id</b></TableCell>
-                                        <TableCell align="right"><b>Customer Name</b></TableCell>
-                                        <TableCell align="right"><b>Delivery City</b></TableCell>
-                                        <TableCell align="center"><b>Delivery Address</b></TableCell>
-                                        <TableCell align="right"><b>Ordered Items</b></TableCell>
-                                        <TableCell align="center"><b>Cart Total</b></TableCell>
-                                        <TableCell align="center"><b>Order Date</b></TableCell>
-                                        <TableCell align="right"><b>Order Status</b></TableCell>
-                                        <TableCell align="right"><b>Order Actions</b></TableCell>
+                                        <TableCell align="center" style={{width:"12%"}}><b>Customer Name</b></TableCell>
+                                        <TableCell align="center" style={{width:"12%"}}><b>Delivery City</b></TableCell>
+                                        <TableCell align="center" style={{width:"12%"}}><b>Delivery Address</b></TableCell>
+                                        <TableCell align="center" style={{width:"12%"}}><b>Ordered Items</b></TableCell>
+                                        <TableCell align="center" style={{width:"12%"}}><b>Cart Total</b></TableCell>
+                                        <TableCell align="center" style={{width:"12%"}}><b>Order Date</b></TableCell>
+                                        <TableCell align="center"><b>Order Status</b></TableCell>
+                                        <TableCell align="center"><b>Order Actions</b></TableCell>
                                     </TableRow>
                                 </TableHead>
                                 <TableBody>
@@ -226,7 +240,19 @@ function Dashboard() {
                                     ))}
                                 </TableBody>
                             </Table>
+                      
                         </TableContainer>
+      <TablePagination 
+                                rowsPerPageOptions={[1, 25, 100] }
+                                component="div"
+                                count={reduxOrders && reduxOrders.length}
+                                rowsPerPage={rowsPerPage}
+                                page={page}
+                                onPageChange={handleChangePage}
+                                onRowsPerPageChange={handleChangeRowsPerPage}
+                            />
+
+</Paper>
                             :
                             <div>
                                 <div>You Currently have no orders</div>
