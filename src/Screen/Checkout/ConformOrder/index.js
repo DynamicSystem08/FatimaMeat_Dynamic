@@ -106,14 +106,13 @@ function ConfirmOrder() {
                                 <Grid item lg={2} md={2} sm={2.5} xs={2.5} className="confirm_order_img" >
                                     <img src={item.meatType.img} />
                                 </Grid>
+
                                 <Grid item lg={2} md={2.3} sm={3.5} xs={3} className="confirm_Order_text" >
-                                    <p>{item.name}
-                                    {/* {" ("}x{item.quantity}{")"} */}
-                                    </p>
+                                    <p><b>{item.name}</b> {item.meatType.type} <b>x{item.quantity}</b></p>
                                 </Grid>
-                                <Grid item lg={1} md={5} sm={3} xs={3} style={{ marginTop: "20px" }}>
-                                    <p>X{item.quantity}</p>
-                                </Grid>
+                                {/* <Grid item lg={1} md={5} sm={3} xs={3} style={{ marginTop: "20px" }}>
+                                    <p>{item.meatType.type} x{item.quantity}</p>
+                                </Grid> */}
                                 <Grid item lg={6} sm={1.5} style={{ textAlign: "end", marginTop: "20px" }} >
                                     <p>Rs. {item.meatType.price} </p>
                                 </Grid>
