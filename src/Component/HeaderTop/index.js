@@ -22,8 +22,8 @@ function HeaderTop(props) {
                         </Grid> 
                     </Grid>
                 </Grid>
-                <Grid item lg={5.5} md={5} sm={3} ></Grid>
-                <Grid item lg={1.5} md={1.5} sm={2} xs={3}>
+                <Grid item lg={5.5} md={5} sm={3}></Grid>
+                <Grid item lg={1.5} md={1.5} sm={2} xs={4.5}>
                     <text style={{ color: "white" }}>Your Account</text>
                 </Grid>
                 <Grid item lg={2} md={2} sm={1.5} xs={10}>
